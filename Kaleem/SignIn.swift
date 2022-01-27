@@ -30,6 +30,10 @@ struct SignInForm: View {
                 } else {
                     self.email = ""
                     self.password = ""
+                    NavigationLink(destination: Home() ) {
+                        //Text("Login")
+                      //  LoginButtonContent()
+                    }
                 }
             }
         }
@@ -49,8 +53,8 @@ struct SignInForm: View {
             VStack(alignment: .center) {
                 HelloText().padding(.bottom,55)
                 //UserImage()
-                UsernameTextField(username: $email)
-                PasswordSecureField(password: $password)
+                EmailTextField(email: $email)
+                SecureInputView("كلمة المرور", text: $password)
                 if (error) {
                            
                     Text("معلومات الدخول غير صحيحة ، الرجاء المحاولة مرة أخرى")
@@ -65,9 +69,15 @@ struct SignInForm: View {
                 }).padding(.bottom,35)
                 
                 
-                Button(action: signIn) {
-                    LoginButtonContent()
+               Button(action: signIn) {
+                   LoginButtonContent()
                 }
+                
+                //NavigationLink(destination: Home() ) {
+                    //Text("Login")
+                  //  LoginButtonContent()
+                //}
+                
             }.padding(.bottom,140)
             
             //.fixedSize(horizontal: <#T##Bool#>, vertical: true
@@ -141,12 +151,12 @@ struct LoginButtonContent: View {
     }
 }
 
-struct UsernameTextField: View {
+struct EmailTextField: View {
     
-    @Binding var username: String
+    @Binding var email: String
     
     var body: some View {
-        TextField("البريد الإلكتروني", text: $username)
+        TextField("البريد الإلكتروني", text: $email)
             .padding()
             .background(lightGreyColor)
             .cornerRadius(5.0)
@@ -164,5 +174,40 @@ struct PasswordSecureField: View {
             .background(lightGreyColor)
             .cornerRadius(5.0)
             .padding(.bottom, 20)
+    }
+}
+
+
+struct SecureInputView: View {
+    
+    @Binding private var text: String
+    @State private var isSecured: Bool = true
+    private var title: String
+    
+    init(_ title: String, text: Binding<String>) {
+        self.title = title
+        self._text = text
+    }
+    
+    var body: some View {
+        ZStack(alignment: .trailing) {
+            if isSecured {
+                SecureField(title, text: $text).padding()
+                    .background(lightGreyColor)
+                    .cornerRadius(5.0)
+                    //.padding(.bottom, 20)
+            } else {
+                TextField(title, text: $text).padding()
+                    .background(lightGreyColor)
+                    .cornerRadius(5.0)
+                   
+            }
+            Button(action: {
+                isSecured.toggle()
+            }) {
+                Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                    .accentColor(.gray).padding(.trailing, 20)
+            }
+        }
     }
 }

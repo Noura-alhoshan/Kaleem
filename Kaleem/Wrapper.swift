@@ -25,7 +25,7 @@ struct ContentView: View {
         
         Group {
             if (session.session != nil) {
-               Text("Home")//home screen
+               Home()//home screen
              
             }
             else {

@@ -14,6 +14,7 @@
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
 		26554F3F27A2D96F0041ECB5 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F3E27A2D96F0041ECB5 /* Auth.swift */; };
 		26554F4127A2DC3F0041ECB5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F4027A2DC3F0041ECB5 /* SignIn.swift */; };
+		26554F4327A2F1650041ECB5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F4227A2F1650041ECB5 /* Home.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26554F3E27A2D96F0041ECB5 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		26554F4027A2DC3F0041ECB5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		26554F4227A2F1650041ECB5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
 				14FD4F34279F2D1200E4947D /* Wrapper.swift */,
+				26554F4227A2F1650041ECB5 /* Home.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
 				26554F3E27A2D96F0041ECB5 /* Auth.swift */,
@@ -219,6 +222,7 @@
 				26554F3F27A2D96F0041ECB5 /* Auth.swift in Sources */,
 				26554F4127A2DC3F0041ECB5 /* SignIn.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
+				26554F4327A2F1650041ECB5 /* Home.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
