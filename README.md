@@ -1,1 +1,54 @@
-# Kaleem
+<br> 
+
+
+<h1 align="center">  Getting Started <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="50px">  </h1> 
+
+<br> <br>
+
+<p align="center">
+<img src="./dash.svg" alt="" /> </p>
+<h1> What is "Kaleem" 👂🏻🗣❔  </h1>
+ <p align="center">
+<img width="500" alt="Picturjje1" src="https://user-images.githubusercontent.com/59771760/150033082-fb278dc9-cfd3-4882-b443-77b60a497401.png" style="margin-left: 100px;">
+ <br> <br> <br>  
+
+ <a href="https://twitter.com/intent/follow?screen_name=Kaleemapp&tw_p=followbutton">
+  <img src="https://img.shields.io/twitter/follow/Kaleemapp?label=%40Kaleemapp&style=social"> </a>
+  <br><br>
+ 
+</p>
+<p>
+ "Kaleem" is an Arabic mobile application named “Kaleem" that enables Arabic users with communication
+disabilities to access their desires readily and speedily. As it will provide a voice for
+the voiceless via real-time translation from sign language to speech and translating
+from written text into a spoken words and phrases. “Kaleem” will allow people with
+communication disabilities to express their desires without any need for their voice
+whether by tracking the user’s hand movements towards the camera using words,
+phrases, or sentences that are ready to be used in “Kaleem” application
+  
+  </p>
+  <br> <br>
+  
+  <h1> "Kaleem" objective 💡</h1>
+  <p> The main goal of “Kaleem” is to provide an application that supports Arabic
+language and works as an assistant for people with communication difficulties.
+This project tends to embrace the kingdom’s vision 2030 in developing applications to
+help the community by using Artificial Intelligence (AI) and enhancing the quality of
+life.
+In addition, “Kaleem” will provide an opportunity for the people who are suffering
+from communication difficulties to share their knowledge; As this point will increase
+the national qualifications and a huge variety of sectors, private or public will embrace,
+empower, and qualify these talents. Moreover, boosting self-confidence for those who
+want to participate in social events.
+Moreover, “Kaleem” will enrich the Arabic technologies since it is considered as the
+first non-educational application that supports Arabic language. Besides, it will
+participate in evolving the technology era by making technologies available to all
+people under all circumstances. </p>
+
+<h2 align="center">
+ 
+![giphy (4)](https://user-images.githubusercontent.com/59771760/150480555-ccd752b8-1fff-4d65-897b-452b1d140e52.gif)
+
+</h2>
+
+
