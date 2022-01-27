@@ -17,7 +17,7 @@ struct KaleemApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(SessionStore())
         }
     }
 }
