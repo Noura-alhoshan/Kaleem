@@ -1,0 +1,6 @@
+framework module Pods_Kaleem {
+  umbrella header "Pods-Kaleem-umbrella.h"
+
+  export *
+  module * { export * }
+}
