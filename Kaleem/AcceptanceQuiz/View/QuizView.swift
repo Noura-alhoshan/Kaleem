@@ -4,7 +4,7 @@
 //
 //  Created by نوره سعد on 26/06/1443 AH.
 //
-/*
+///*
 import SwiftUI
 
 struct TriviaView: View {
@@ -45,5 +45,5 @@ struct TriviaView_Previews: PreviewProvider {
             .environmentObject(TriviaManager())
     }
 }
- */
+// */
 

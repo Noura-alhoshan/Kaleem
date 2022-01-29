@@ -4,7 +4,7 @@
 //
 //  Created by نوره سعد on 26/06/1443 AH.
 //
-/*
+///*
 import Foundation
 import SwiftUI
 
@@ -95,4 +95,4 @@ class TriviaManager: ObservableObject {
         }
     }
 }
-*/
+//*/

@@ -14,8 +14,6 @@
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
 		14FD4F6527A58E9400E4947D /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6427A58E9400E4947D /* QuizManager.swift */; };
 		14FD4F6727A58EBE00E4947D /* TheQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6627A58EBE00E4947D /* TheQuiz.swift */; };
-		14FD4F6927A58ED800E4947D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6827A58ED800E4947D /* Extensions.swift */; };
-		14FD4F6C27A58EF800E4947D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6B27A58EF800E4947D /* ContentView.swift */; };
 		14FD4F6E27A58F1500E4947D /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6D27A58F1500E4947D /* QuestionView.swift */; };
 		14FD4F7027A58F2E00E4947D /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6F27A58F2E00E4947D /* QuizView.swift */; };
 		14FD4F7327A58F6A00E4947D /* RowAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7227A58F6A00E4947D /* RowAnswers.swift */; };
@@ -23,6 +21,8 @@
 		14FD4F7727A58F9E00E4947D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7627A58F9E00E4947D /* PrimaryButton.swift */; };
 		14FD4F7A27A590A600E4947D /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7927A590A600E4947D /* AnswerModel.swift */; };
 		14FD4F7C27A590BA00E4947D /* QuestionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7B27A590BA00E4947D /* QuestionsModel.swift */; };
+		14FD4F7E27A59B6100E4947D /* QuizContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7D27A59B6100E4947D /* QuizContentView.swift */; };
+		14FD4F8027A59EF000E4947D /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7F27A59EF000E4947D /* Extenstions.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +35,6 @@
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14FD4F6427A58E9400E4947D /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		14FD4F6627A58EBE00E4947D /* TheQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheQuiz.swift; sourceTree = "<group>"; };
-		14FD4F6827A58ED800E4947D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		14FD4F6B27A58EF800E4947D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14FD4F6D27A58F1500E4947D /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		14FD4F6F27A58F2E00E4947D /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		14FD4F7227A58F6A00E4947D /* RowAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowAnswers.swift; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		14FD4F7627A58F9E00E4947D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		14FD4F7927A590A600E4947D /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		14FD4F7B27A590BA00E4947D /* QuestionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsModel.swift; sourceTree = "<group>"; };
+		14FD4F7D27A59B6100E4947D /* QuizContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContentView.swift; sourceTree = "<group>"; };
+		14FD4F7F27A59EF000E4947D /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 				14FD4F6A27A58EE000E4947D /* View */,
 				14FD4F6427A58E9400E4947D /* QuizManager.swift */,
 				14FD4F6627A58EBE00E4947D /* TheQuiz.swift */,
-				14FD4F6827A58ED800E4947D /* Extensions.swift */,
+				14FD4F7F27A59EF000E4947D /* Extenstions.swift */,
 			);
 			path = AcceptanceQuiz;
 			sourceTree = "<group>";
@@ -116,9 +116,9 @@
 		14FD4F6A27A58EE000E4947D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				14FD4F6B27A58EF800E4947D /* ContentView.swift */,
 				14FD4F6D27A58F1500E4947D /* QuestionView.swift */,
 				14FD4F6F27A58F2E00E4947D /* QuizView.swift */,
+				14FD4F7D27A59B6100E4947D /* QuizContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,11 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FD4F6927A58ED800E4947D /* Extensions.swift in Sources */,
 				14FD4F7727A58F9E00E4947D /* PrimaryButton.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
 				14FD4F7C27A590BA00E4947D /* QuestionsModel.swift in Sources */,
-				14FD4F6C27A58EF800E4947D /* ContentView.swift in Sources */,
+				14FD4F7E27A59B6100E4947D /* QuizContentView.swift in Sources */,
 				14FD4F6E27A58F1500E4947D /* QuestionView.swift in Sources */,
 				14FD4F6527A58E9400E4947D /* QuizManager.swift in Sources */,
 				14FD4F7027A58F2E00E4947D /* QuizView.swift in Sources */,
@@ -287,6 +286,7 @@
 				14FD4F7A27A590A600E4947D /* AnswerModel.swift in Sources */,
 				14FD4F7527A58F8700E4947D /* ProgressBar.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
+				14FD4F8027A59EF000E4947D /* Extenstions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

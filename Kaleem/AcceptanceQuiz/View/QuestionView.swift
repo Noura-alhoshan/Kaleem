@@ -4,7 +4,7 @@
 //
 //  Created by نوره سعد on 26/06/1443 AH.
 //
-/*
+///*
 import SwiftUI
 
 struct QuestionView: View {
@@ -14,7 +14,7 @@ struct QuestionView: View {
         VStack(spacing: 40) {
             HStack {
                 Text("Trivia Game")
-                    .lilacTitle()
+                   .lilacTitle()
                 
                 Spacer()
                 
@@ -61,4 +61,4 @@ struct QuestionView_Previews: PreviewProvider {
 }
 
  
- */
+ //*/

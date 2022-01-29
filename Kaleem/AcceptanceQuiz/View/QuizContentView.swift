@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  QuizContentView.swift
 //  Kaleem
 //
 //  Created by نوره سعد on 26/06/1443 AH.
