@@ -4,7 +4,7 @@
 //
 //  Created by نوره سعد on 21/06/1443 AH.
 //
-
+///*
 import SwiftUI
 
 struct ContentView: View {
@@ -19,3 +19,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+//*/
