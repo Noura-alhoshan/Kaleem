@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  SignIn.swift
 //  Shared
 //
-//  Created by Sara S on 19/06/1443 AH.
+//  Created by Sarah S on 19/06/1443 AH.
 //
 
 import SwiftUI
@@ -21,33 +21,25 @@ struct SignInForm: View {
        
 
         func signIn () {
+            
             loading = true
             error = false
             session.signIn(email: email, password: password) { (result, error) in
                 self.loading = false
+                   
                 if error != nil {
                     self.error = true
-                } else {
-                    self.email = ""
-                    self.password = ""
-                    NavigationLink(destination: Home() ) {
-                        //Text("Login")
-                      //  LoginButtonContent()
-                    }
+                }
+                else {
+                    //self.email = ""
+                    //self.password = ""
+                    session.signInStraem(email: email, password: password)//u can put it in line 29 and remove the comment in SessionStore class
                 }
             }
         }
     
     
-    //@State var username: String = ""
-    //@State var password: String = ""
-    
-   // @State var authenticationDidFail: Bool = false
-    //@State var authenticationDidSucceed: Bool = false
-    
     var body: some View {
-        
-      
                
         VStack {
             VStack(alignment: .center) {
@@ -61,6 +53,8 @@ struct SignInForm: View {
                         .offset(y: -10)
                         .foregroundColor(.red)
                 }
+               
+        
                 
                 
                 Button(action: {}, label: {
@@ -73,11 +67,7 @@ struct SignInForm: View {
                    LoginButtonContent()
                 }
                 
-                //NavigationLink(destination: Home() ) {
-                    //Text("Login")
-                  //  LoginButtonContent()
-                //}
-                
+               
             }.padding(.bottom,140)
             
             //.fixedSize(horizontal: <#T##Bool#>, vertical: true
@@ -99,19 +89,10 @@ struct SignInForm: View {
             )
             .padding()
            
-//            if authenticationDidSucceed {
-//                Text("Login succeeded!")
-//                    .font(.headline)
-//                    .frame(width: 250, height: 80)
-//                    .background(Color.yellow)
-//                    .cornerRadius(20.0)
-//                    .animation(Animation.default)
-//            }
         }
     }
 
     
-        
     }
 
 
@@ -157,19 +138,8 @@ struct EmailTextField: View {
     
     var body: some View {
         TextField("البريد الإلكتروني", text: $email)
-            .padding()
-            .background(lightGreyColor)
-            .cornerRadius(5.0)
-            .padding(.bottom, 20)
-    }
-}
-
-struct PasswordSecureField: View {
-    
-    @Binding var password: String
-    
-    var body: some View {
-        SecureField("كلمة المرور", text: $password)
+            .disableAutocorrection(true)
+            .autocapitalization(.none)
             .padding()
             .background(lightGreyColor)
             .cornerRadius(5.0)
@@ -197,7 +167,10 @@ struct SecureInputView: View {
                     .cornerRadius(5.0)
                     //.padding(.bottom, 20)
             } else {
-                TextField(title, text: $text).padding()
+                TextField(title, text: $text)
+                    .disableAutocorrection(true)
+                    .autocapitalization(.none)
+                    .padding()
                     .background(lightGreyColor)
                     .cornerRadius(5.0)
                    

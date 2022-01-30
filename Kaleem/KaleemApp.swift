@@ -5,6 +5,7 @@
 //  Created by نوره سعد on 21/06/1443 AH.
 //
 
+
 import SwiftUI
 import Firebase
 
@@ -17,7 +18,8 @@ struct KaleemApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(SessionStore())
+           // let viewModel = AppViewModel()
+            Wrraper().environmentObject(SessionStore())
         }
     }
 }
