@@ -100,10 +100,9 @@ struct Home : View {
                 
                 /*CONTAINER*/
                 .padding()
-                .padding(.bottom, 5) //زetween button and forget
-                
+                .padding(.bottom, 65)
                 /*WITHIT OR WITHOUT IT?*/
-               .background(Color.gray.opacity(0.1))
+          //     .background(Color.gray.opacity(0.1))
                 .cornerRadius(15)
                 .padding(.horizontal,20)
                 
@@ -122,29 +121,15 @@ struct Home : View {
                 }
                 .offset(y:25)
 
-                
             .padding(.horizontal)
+            .padding(.top,10)
+            }
                 
-                /*signup*/
-                HStack{
-                    
-                    Button(action: {
-                        
-                    }){
-                        Text("ليس لديك حساب؟ سجل الان")
-                            .foregroundColor(Color("Kcolor").opacity(0.6))
-                    }
-                    .padding(.horizontal)
-                    .padding(.top,30)
             }
-            }
-     
-            }
-        
-     
-        
-    
-        .padding(.top,80)
+
+
+
+        .padding(.top,100)
         .background(Color(.white).edgesIgnoringSafeArea(.all))
         }
 }
