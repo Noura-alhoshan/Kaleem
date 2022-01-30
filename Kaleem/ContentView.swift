@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var triviaManager = TriviaManager()
+    @StateObject var QuizManager1 = QuizManager()
 
     var body: some View {
         NavigationView {
@@ -16,8 +16,8 @@ struct ContentView: View {
         VStack(spacing: 40) {
             
             NavigationLink {
-                TriviaView()
-                  .environmentObject(triviaManager)
+                QuizView()
+                  .environmentObject(QuizManager1)
             } label: {
                 PrimaryButton(text: "Let's go!")
             }.background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
