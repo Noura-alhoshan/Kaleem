@@ -29,7 +29,7 @@ phrases, or sentences that are ready to be used in “Kaleem” application
   </p>
   <br> <br>
   
-  <h1> "Kaleem" objective 💡</h1>
+  <h1> <li> "Kaleem" objective 💡 </li> </h1>
   <p> The main goal of “Kaleem” is to provide an application that supports Arabic
 language and works as an assistant for people with communication difficulties.
 This project tends to embrace the kingdom’s vision 2030 in developing applications to
