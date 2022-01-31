@@ -1,6 +1,6 @@
 //
 //  SignIn.swift
-//  Shared
+//  Kaleem
 //
 //  Created by Sarah S on 19/06/1443 AH.
 //
@@ -17,6 +17,8 @@ struct SignInForm: View {
         @State var password: String = ""
         @State var loading = false
         @State var error = false
+        @State var showSignUp: Bool = false
+        @State var showResetPassword: Bool = false
 
        
 
@@ -24,6 +26,7 @@ struct SignInForm: View {
             
             loading = true
             error = false
+            email = email.trimmingCharacters(in: .whitespaces)
             session.signIn(email: email, password: password) { (result, error) in
                 self.loading = false
                    
@@ -42,6 +45,11 @@ struct SignInForm: View {
     var body: some View {
                
         VStack {
+           // NavigationView{
+            
+                NavigationLink(destination: ForgotPasswordForm(), isActive: $showResetPassword, label: {EmptyView()} )
+                        
+           // }
             VStack(alignment: .center) {
                 HelloText().padding(.bottom,55)
                 //UserImage()
@@ -57,7 +65,9 @@ struct SignInForm: View {
         
                 
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    self.showResetPassword = true
+                }, label: {
                     Text("هل نسيت كلمة المرور؟").fontWeight(.bold).foregroundColor(.blue)
                     
                 }).padding(.bottom,35)
@@ -70,7 +80,7 @@ struct SignInForm: View {
                
             }.padding(.bottom,140)
             
-            //.fixedSize(horizontal: <#T##Bool#>, vertical: true
+            //.fixedSize(horizontal: T##Bool, vertical: true
             //)
             .overlay(
                 HStack{
