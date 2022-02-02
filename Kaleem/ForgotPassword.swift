@@ -45,7 +45,7 @@ struct ForgotPasswordForm: View {
             VStack(alignment: .center) {
                 ForgotText().padding(.bottom,55)
                 //UserImage()
-                EmailTextField(email: $email)
+              // TextField( $email)
                
                 if (error) {
                            

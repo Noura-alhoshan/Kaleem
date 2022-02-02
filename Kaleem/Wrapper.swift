@@ -17,7 +17,8 @@ struct Wrraper: View{
             
             }
             else{
-                SignInForm()
+                SignIn()
+                //SignInForm()
             }
         }.onAppear {session.signedIn = session.isSignedIn}
     }

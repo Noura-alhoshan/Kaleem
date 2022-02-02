@@ -2,160 +2,214 @@
 //  SignIn.swift
 //  Kaleem
 //
-//  Created by Sarah S on 19/06/1443 AH.
+//  Created by Sarah S on 01/07/1443 AH.
 //
+
 
 import SwiftUI
 
-let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
-
-struct SignInForm: View {
+struct SignIn : View {
     
-        @EnvironmentObject var session: SessionStore
-        @State var email: String = ""
-        @State var password: String = ""
-        @State var loading = false
-        @State var error = false
-        @State var showSignUp: Bool = false
-        @State var showResetPassword: Bool = false
-
-       
-
-        func signIn () {
-            
-            loading = true
-            error = false
-            email = email.trimmingCharacters(in: .whitespaces)
-            session.signIn(email: email, password: password) { (result, error) in
-                self.loading = false
-                   
-                if error != nil {
-                    self.error = true
-                }
-                else {
-                    //self.email = ""
-                    //self.password = ""
-                    session.signInStraem(email: email, password: password)//u can put it in line 29 and remove the comment in SessionStore class
-                }
+    @EnvironmentObject var session: SessionStore
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var loading = false
+    @State var error = false
+    @State var showSignUp: Bool = false
+    @State var showResetPassword: Bool = false
+    
+    func signIn () {
+        
+        loading = true
+        error = false
+        email = email.trimmingCharacters(in: .whitespaces)
+        session.signIn(email: email, password: password) { (result, error) in
+            self.loading = false
+               
+            if error != nil {
+                self.error = true
+            }
+            else {
+                //self.email = ""
+                //self.password = ""
+                session.signInStraem(email: email, password: password)//u can put it in line 29 and remove the comment in SessionStore class
             }
         }
+    }
     
     
     var body: some View {
-               
-        VStack {
-           // NavigationView{
-            
-                NavigationLink(destination: ForgotPasswordForm(), isActive: $showResetPassword, label: {EmptyView()} )
-                        
-           // }
-            VStack(alignment: .center) {
-                HelloText().padding(.bottom,55)
-                //UserImage()
-                EmailTextField(email: $email)
-                SecureInputView("كلمة المرور", text: $password)
-                if (error) {
-                           
-                    Text("معلومات الدخول غير صحيحة ، الرجاء المحاولة مرة أخرى")
-                        .offset(y: -10)
-                        .foregroundColor(.red)
-                }
-               
         
-                
-                
-                Button(action: {
-                    self.showResetPassword = true
-                }, label: {
-                    Text("هل نسيت كلمة المرور؟").fontWeight(.bold).foregroundColor(.blue)
-                    
-                }).padding(.bottom,35)
-                
-                
-               Button(action: signIn) {
-                   LoginButtonContent()
-                }
-                
+       
                
-            }.padding(.bottom,140)
+        GeometryReader{_ in
             
-            //.fixedSize(horizontal: T##Bool, vertical: true
-            //)
-            .overlay(
+            VStack{
+                TopBar()
+                
+                NavigationLink(destination: ForgotPasswordForm(), isActive: $showResetPassword, label: {EmptyView()} )
+                
+                  
+                Image("Logo")
+                     .resizable()
+                     .scaledToFit()
+                     .frame(width: 150.0, height: 70.0)
+                     .padding(.top, 75)
+                
+               Text("مرحبا بك مجددًا")
+                    .foregroundColor(.black)
+                    .font(.title)
+                    
+                    .fontWeight(.bold)
+                    .padding(.bottom, 30)
+                //    .padding(.top, 70)
+                
+              
+
+
+                
+                VStack{
+                    HStack{
+                        Text("تسجيل دخول")
+                            .foregroundColor(.black)
+                            .font(.title2)
+                            .fontWeight(.bold)
+                    }
+                    
+                    
+                    /* EMAIL FIELD*/
+                    VStack{
+                        HStack(spacing: 15)  {
+                            TextField("البريد الإلكتروني", text: self.$email
+                            )
+                                .disableAutocorrection(true)
+                                .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+
+
+                            Image(systemName: "envelope.fill")
+                                .foregroundColor(Color("Kcolor"))
+                            
+                        }
+                        Divider().background(Color("Kcolor").opacity(0.5))
+                    }
+                    
+                    .padding(.horizontal)
+                    .padding(.top,20)
+                
+                    /*PASS FIELD*/
+                    SecureInputView("كلمة المرور", text: $password)
+              
+
+                    if (error) {
+                               
+                        Text("معلومات الدخول غير صحيحة ، حاول مرة أخرى")
+                            //.offset(y: -10)
+                            .foregroundColor(.red).padding(.top,13)
+                    }
+                    else {
+                        Text(" ").foregroundColor(.red).padding(.top,13)
+                    }
+                    
+                    /*FORGET PASS*/
                 HStack{
                     
-                    Button(action: {}, label: {
-                        Text("إنشاء حساب").fontWeight(.bold).foregroundColor(.blue)
-                        
-                    })
+                    Button(action: {
+                        self.showResetPassword = true
+                    }){
+                        Text("هل نسيت كلمة المرور؟")
+                            .foregroundColor(Color.black)
+                            
+                    }
+            }
+                .padding(.horizontal)
+                .padding(.top,10)
                     
-                    Text("ليس لديك حساب؟ ").fontWeight(.bold)
-                        .foregroundColor(.gray)
                     
-                    
+            
+                } // the big one
+   
+                
+                /*CONTAINER*/
+                .padding()
+                .padding(.bottom, 5)
+                /*WITHIT OR WITHOUT IT?*/
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(15)
+                .padding(.horizontal,20)
+                
+                /*BUTTON*/
+                Button(action: signIn){
+                    Text("دخول")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .padding(.horizontal,50)
+                        .background(Color("Kcolor"))
+                        .clipShape(Capsule())
+                        .shadow(color: Color.red.opacity(0.1), radius:5 , x: 0, y: 5)
                 }
-                ,alignment: .bottom
-            )
-            .padding()
-           
+                .offset(y:25)
+
+            .padding(.horizontal)
+            .padding(.top,20)
+                
+                
+                
+                /*SIGN UP*/
+                VStack{
+                    HStack(spacing: 6)  {
+                        
+                        Button(action: {
+                            self.showSignUp = true
+                        }){
+                            Text("سجل الان")
+                                .foregroundColor(Color("Kcolor"))
+                        }
+                        Text("ليس لديك حساب؟")
+                          
+                      
+                }
+                    }
+                
+                .padding(.horizontal)
+                .padding(.top,130)
+                
+            }
+            
+            
+                
+            }
+
+
+      //  .padding(.top,10)
+        .background(Color(.white).edgesIgnoringSafeArea(.all))
         }
-    }
-
-    
-    }
+}
 
 
 
-
-
-struct HelloText: View {
+/*TOP BAR*/
+struct TopBar : View{
     var body: some View {
-        Text("مرحبًا بك مرة أخرى")
-            .font(.largeTitle)
-            .fontWeight(.semibold)
-            .padding(.bottom, 20)
+        VStack( spacing: 20){
+            HStack{
+               Spacer()
+            }
+        }.padding()
+            .background(Color("Kcolor"))
+        
     }
 }
 
-//struct UserImage: View {
-//    var body: some View {
-//        Image("userImage")
-//            .resizable()
-//            .aspectRatio(contentMode: .fill)
-//            .frame(width: 150, height: 150)
-//            .clipped()
-//            .cornerRadius(150)
-//            .padding(.bottom, 75)
-//    }
-//}
-
-struct LoginButtonContent: View {
-    var body: some View {
-        Text("دخول")
-            .font(.headline)
-            .foregroundColor(.white)
-            .padding()
-            .frame(width: 220, height: 60)
-            .background(Color.black)
-            .cornerRadius(35.0)
+struct SignIn_Previews: PreviewProvider{
+    static var previews: some View{
+        SignIn()
     }
 }
 
-struct EmailTextField: View {
-    
-    @Binding var email: String
-    
-    var body: some View {
-        TextField("البريد الإلكتروني", text: $email)
-            .disableAutocorrection(true)
-            .autocapitalization(.none)
-            .padding()
-            .background(lightGreyColor)
-            .cornerRadius(5.0)
-            .padding(.bottom, 20)
-    }
-}
+
+
 
 
 struct SecureInputView: View {
@@ -170,27 +224,32 @@ struct SecureInputView: View {
     }
     
     var body: some View {
-        ZStack(alignment: .trailing) {
+        VStack{
+        HStack(spacing: 15)  {
             if isSecured {
-                SecureField(title, text: $text).padding()
-                    .background(lightGreyColor)
-                    .cornerRadius(5.0)
+                SecureField(title, text: $text).multilineTextAlignment(TextAlignment.trailing)
+                   // .background(lightGreyColor)
+                   //.cornerRadius(5.0)
                     //.padding(.bottom, 20)
             } else {
                 TextField(title, text: $text)
                     .disableAutocorrection(true)
-                    .autocapitalization(.none)
-                    .padding()
-                    .background(lightGreyColor)
-                    .cornerRadius(5.0)
+                    .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+//                    .padding()
+//                    .background(lightGreyColor)
+//                    .cornerRadius(5.0)
                    
             }
             Button(action: {
                 isSecured.toggle()
             }) {
                 Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                    .accentColor(.gray).padding(.trailing, 20)
+                    .foregroundColor(Color("Kcolor")) 
             }
         }
-    }
+            Divider().background(Color("Kcolor").opacity(0.5))
+                           }
+                    .padding(.horizontal)
+                    .padding(.top,30)
+}
 }
