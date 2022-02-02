@@ -48,9 +48,13 @@ struct SignIn : View {
             VStack{
                 TopBar()
                 
-                NavigationLink(destination: ForgotPasswordForm(), isActive: $showResetPassword, label: {EmptyView()} )
+                //TO NAVIGATE TO FORGOT PASSWORD PAGE
+                NavigationLink(destination: ForgotPassword(), isActive: $showResetPassword, label: {EmptyView()} )
                 
-                  
+                //TO NAVIGATE TO SIGN UP PAGE
+               // NavigationLink(destination: ..(), isActive: $showSignUp, label: {EmptyView()} )
+                
+                
                 Image("Logo")
                      .resizable()
                      .scaledToFit()
