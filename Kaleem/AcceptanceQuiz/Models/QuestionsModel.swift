@@ -17,12 +17,13 @@ struct QuizModel  {
 var answers: [Answer]
 }
 
-//final quiz is an array of quizmodel
-var myQuiz1 : [QuizModel] = [
+//final quiz is an array of quizmodel\
+var myQuiz1 : [QuizModel] =
+[
 
     QuizModel(
  
-        question: "q1",
+        question: "ContentView().a[0].name",
         correctAnswer: "q1",
         incorrectAnswers: ["ans1","ans2","ans4 correct"],
         answers: [Answer(text: "q1", isCorrect: true),Answer(text: "q2", isCorrect: false),Answer(text: "q1", isCorrect: true),Answer(text: "q1", isCorrect: true)]
