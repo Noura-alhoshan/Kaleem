@@ -13,6 +13,8 @@
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
+		F572FADE27A3BCCD001C7143 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F572FADD27A3BCCD001C7143 /* SplashScreen.swift */; };
+		F5C0577B27A92DB10031CEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C0577A27A92DB10031CEE7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,9 @@
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
+		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F572FADD27A3BCCD001C7143 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		F5C0577A27A92DB10031CEE7 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,8 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
+				F572FADC27A3B7FB001C7143 /* View */,
+				F572FADA27A3B669001C7143 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
@@ -91,8 +98,16 @@
 				DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */,
 				325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F572FADC27A3B7FB001C7143 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F572FADD27A3BCCD001C7143 /* SplashScreen.swift */,
+				F5C0577A27A92DB10031CEE7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */,
+				F5C0577B27A92DB10031CEE7 /* LaunchScreen.storyboard in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
 				14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */,
 			);
@@ -210,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F572FADE27A3BCCD001C7143 /* SplashScreen.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 			);
@@ -345,9 +362,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kaleem/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -374,9 +393,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Kaleem/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
