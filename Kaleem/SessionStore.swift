@@ -13,12 +13,10 @@ import Firebase
 class User {
     var uid: String
     var email: String?
-   // var displayName: String?
 
     init(uid: String,  email: String?) {
         self.uid = uid
         self.email = email
-        //self.displayName = displayName
     }
     
     
@@ -32,7 +30,9 @@ class SessionStore : ObservableObject {
     var session: User? { didSet { self.didChange.send(self) }}
     var handle: AuthStateDidChangeListenerHandle?
     let authh = Auth.auth()
+    let db = Firestore.firestore()
 
+    @Published var UserType: String = ""
     @Published var signedIn = false
     @Published var isError = false
     
@@ -40,30 +40,29 @@ class SessionStore : ObservableObject {
         return authh.currentUser != nil
     }
     
-    //this is to know if user signed in or not
+    
+    //To know if user signed in or not
     func signInStraem(email: String, password: String)
     {
-//        authh.signIn(withEmail: email, password: password){ [weak self]
-//            result,error in guard result != nil,error == nil else {
-//                return
-//            }
-            
             DispatchQueue.main.async {
                 self.signedIn = true
                 self.isError = false
+               // self.listen()
+             
             }
-            
-        //}
+//        print("self.UserType")
+//        print(self.UserType)
     }
     
     
-    //this is to sign in the right user (control errors)
+    //To sign in the right user (control errors)
     func signIn(
         email: String,
         password: String,
         handler: @escaping AuthDataResultCallback
         ) {
         Auth.auth().signIn(withEmail: email, password: password, completion: handler)
+        
     }
 
    
@@ -71,37 +70,79 @@ class SessionStore : ObservableObject {
        try? authh.signOut()
         
         self.signedIn = false
+        self.UserType = ""
     }
     
+    
+    //To monitor authentication changes using firebase
     func listen () {
-           // monitor authentication changes using firebase
            handle = Auth.auth().addStateDidChangeListener { (auth, user) in
                if let user = user {
                    // if we have a user, create a new user model
-                   print("Got user: \(user)")
+                   
                    self.session = User(
                        uid: user.uid,
-                       //displayName: user.displayName
                        email: user.email
                        
                    )
+                   print("Got user: \(user.uid)")
+                  
+                   self.getUserType(userid: user.uid)//✅✅✅ To record the user type in UserType variable
+                   
                } else {
-                   // if we don't have a user, set our session to nil
                    self.session = nil
                }
            }
+   
        }
-   
     
-//
-//    func unbind () {
-//            if let handle = handle {
-//                Auth.auth().removeStateDidChangeListener(handle)
-//            }
-//        }
-}
-
-
-
-
+    
    
+    //To get user's type from DB
+    func getUserType(userid: String) {
+        let docRef = db.collection("Volunteer").document(userid)
+        
+        docRef.getDocument { (document, error) in 
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                self.UserType = document["Type"] as! String
+                print("Document data: \(dataDescription)")
+               
+            } else {
+                print("Document does not exist")
+                 }
+        }
+        
+        
+        if (self.UserType == "")
+        {
+            db.collection("Speech-impaired").document(userid)
+            .getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    self.UserType = document["Type"] as! String
+                    print("Document data: \(dataDescription)")
+                } else {
+                    print("Document does not exist")
+                     }
+            }
+        }
+        
+        if (self.UserType == "")
+        {
+            db.collection("Admin").document(userid)
+            .getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    self.UserType = document["Type"] as! String
+                    print("Document data: \(dataDescription)")
+                } else {
+                    print("Document does not exist")
+                     }
+            }
+        }
+        
+    }
+    
+    
+}//end of class

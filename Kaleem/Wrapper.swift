@@ -5,21 +5,36 @@
 //
 
 import SwiftUI
-
+import Firebase
 
 struct Wrraper: View{
     @EnvironmentObject var session: SessionStore
     
     var body: some View {
+        
         NavigationView{
-            if session.signedIn{
-                Home()
-            
+           
+            if !session.signedIn{
+                SignIn()
             }
             else{
-                SignIn()
-                //SignInForm()
+                switch session.UserType
+                {
+                case "Volunteer":
+                    VolunteerHome()
+                    
+                case "Impaired":
+                    ImpairedHome()
+                    
+                case "Admin":
+                    AdminHome()
+                    
+                default:
+                   ProgressView()
+                    //AdminHome()
+                }
+                
             }
-        }.onAppear {session.signedIn = session.isSignedIn}
+        }.onAppear {session.signedIn = session.isSignedIn; session.listen()}//✅✅✅ very important to solve infinite indicator problem
     }
 }

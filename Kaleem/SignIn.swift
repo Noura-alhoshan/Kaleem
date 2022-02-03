@@ -33,7 +33,23 @@ struct SignIn : View {
             else {
                 //self.email = ""
                 //self.password = ""
-                session.signInStraem(email: email, password: password)//u can put it in line 29 and remove the comment in SessionStore class
+                session.signInStraem(email: email, password: password)
+                //u can put it in line 29 and remove the comment in SessionStore class
+                session.listen()
+               // print(session.UserType)
+            NavigationView{
+                switch session.UserType {
+                case "Volunteer":
+                    VolunteerHome()
+                case "Impaired":
+                    ImpairedHome()
+                    
+                case "":
+                    AdminHome()
+                default:
+                    ForgotPassword()
+                }
+                }
             }
         }
     }
@@ -53,7 +69,6 @@ struct SignIn : View {
                 
                 //TO NAVIGATE TO SIGN UP PAGE
                // NavigationLink(destination: ..(), isActive: $showSignUp, label: {EmptyView()} )
-                
                 
                 Image("Logo")
                      .resizable()
