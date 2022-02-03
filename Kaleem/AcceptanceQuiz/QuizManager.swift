@@ -19,7 +19,7 @@ var h = 0
     @Published private(set) var length = 0
     @Published private(set) var index = 0
     @Published private(set) var question = ""
-    @Published private(set) var answerChoices: [Answer] = []
+    @Published private(set) var answerChoices: [QuestionModel.Answer] = []
     @Published private(set) var score = 0
     @Published private(set) var progress: CGFloat = 0.00
     @Published private(set) var answerSelected = false
@@ -49,13 +49,24 @@ var h = 0
                                 let data = i.data()
                                 let question = data["question"] as? String ?? ""
                                 let correctAnswer = data["correctAnswer"] as? String ?? ""
-                                let text = data["text"] as? String ?? ""
+                                let answer1 = data["answer1"] as? String ?? ""
+                                let answer2 = data["answer2"] as? String ?? ""
+                                let answer3 = data["answer3"] as? String ?? ""
+                                let answer4 = data["answer4"] as? String ?? ""
+
 
                                 //    print(self.datas[i].name)
                                 
                                 print("hello2")
                                 
-                                self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,answers: [Answer(text: text, isCorrect: true )]))
+                                self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,answers: [
+                                    QuestionModel.Answer(text: answer1, isCorrect: answer1.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text: answer2, isCorrect: answer2.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text: answer3, isCorrect: answer3.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text: answer4, isCorrect: answer4.elementsEqual(correctAnswer) ),
+                                
+                                
+                                ]))
                                  print(self.myQuiz1[self.h].question)
                                 //Answer(text: $0["text"] as! String
                                 self.h = self.h+1
@@ -111,7 +122,7 @@ var h = 0
         }
     }
     
-    func selectAnswer(answer: Answer) {
+    func selectAnswer(answer: QuestionModel.Answer) {
         answerSelected = true
         
         if answer.isCorrect {

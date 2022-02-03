@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnswerRow: View {
     @EnvironmentObject var QuizManager1: QuizManager
-    var answer: Answer
+    var answer: QuestionModel.Answer
     @State private var isSelected = false
 
     // Custom colors
@@ -49,7 +49,7 @@ struct AnswerRow: View {
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(answer: Answer(text: "Single", isCorrect:  false))
+        AnswerRow(answer: QuestionModel.Answer(text: "Single", isCorrect:  false))
             .environmentObject(QuizManager())
     }
 }
