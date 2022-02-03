@@ -7,9 +7,15 @@
 ///*
 import Foundation
 import SwiftUI
+import Firebase
 
 class QuizManager: ObservableObject {
+    let db = Firestore.firestore()
     // Variables to set attributes of quiz
+    @Published var myQuiz1: [QuestionModel] = []
+    @Published var test: [User] = []
+var h = 0
+    
     @Published private(set) var length = 0
     @Published private(set) var index = 0
     @Published private(set) var question = ""
@@ -22,22 +28,65 @@ class QuizManager: ObservableObject {
     init() {
         Task.init {
             await fetchQuiz()
+            print(myQuiz1.count)
         }
     }
     
     func fetchQuiz() async {
         do {
             DispatchQueue.main.async {
-                self.index = 0
-                self.score = 0
-                self.progress = 0.00
-                self.reachedEnd = false
-                self.length = myQuiz1.count
-                self.setQuestion()
+                
+                self.db.collection("items").getDocuments { (snap, err) in
+                    DispatchQueue.main.async {
+                        if err != nil {
+                            print((err?.localizedDescription)!)
+                            //completion(.failure(err!))
+                            return
+                        } else {
+                           // var users = [User]()
+                            for i in snap!.documents{
+                                
+                                let data = i.data()
+                                let question = data["question"] as? String ?? ""
+                                let correctAnswer = data["correctAnswer"] as? String ?? ""
+                                let text = data["text"] as? String ?? ""
+
+                                //    print(self.datas[i].name)
+                                
+                                print("hello2")
+                                
+                                self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,answers: [Answer(text: text, isCorrect: true )]))
+                                 print(self.myQuiz1[self.h].question)
+                                //Answer(text: $0["text"] as! String
+                                self.h = self.h+1
+                                
+                            }
+                            //completion(.success(users))
+                        }
+                        self.index = 0
+                        self.score = 0
+                        self.progress = 0.00
+                        self.reachedEnd = false
+                        self.length = self.myQuiz1.count
+                        self.setQuestion()
+                    }
+                }
+                
+      
             }
         }
     }
     
+    func fetchQuizRestart() async {
+   
+                        self.index = 0
+                        self.score = 0
+                        self.progress = 0.00
+                        self.reachedEnd = false
+                        self.length = self.myQuiz1.count
+                        self.setQuestion()
+                    }
+                
     
     func goToNextQuestion() {
         if index + 1 < length {
@@ -48,13 +97,16 @@ class QuizManager: ObservableObject {
         }
     }
     
-
+    
     func setQuestion() {
+   
+        print("setQuestion")
+
         answerSelected = false
         progress = CGFloat(Double((index + 1)) / Double(length) * 350)
         if index < length {
             let currentQuizQuestion = myQuiz1[index]
-            question = currentQuizQuestion.question!
+            question = currentQuizQuestion.question
             answerChoices = currentQuizQuestion.answers
         }
     }

@@ -22,7 +22,7 @@ struct QuizView: View {
                 
                 Button {
                     Task.init {
-                        await QuizManager1.fetchQuiz()
+                        await QuizManager1.fetchQuizRestart()
                     }
                 } label: {
                     PrimaryButton(text: "Play again")

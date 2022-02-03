@@ -95,37 +95,37 @@ private var db = Firestore.firestore()
 
     
     
-    func fetchData(completion: @escaping (Result<[User],Error>) -> Void) {
-    print("hello1")
-
-    db.collection("items").addSnapshotListener { (snap, err) in
-        DispatchQueue.main.async {
-        if err != nil {
-            print((err?.localizedDescription)!)
-            completion(.failure(err!))
-            return
-        } else {
-          var users = [User]()
-        for i in snap!.documents{
-                
-            let data = i.data()
-            let name = data["name"] as? String ?? ""
-            let surname = data["msg"] as? String ?? ""
-        //    print(self.datas[i].name)
-
-            print("hello2")
-
-            users.append(User( name: name, surname: surname))
-           // print(self.datas[self.h].name)
-           // self.h = self.h+1
-
-            }
-            completion(.success(users))
-        }
-        }
-    }
-    //print(self.datas[0].name)
-
-}
+//    func fetchData(completion: @escaping (Result<[User],Error>) -> Void) {
+//    print("hello1")
+//
+//    db.collection("items").addSnapshotListener { (snap, err) in
+//        DispatchQueue.main.async {
+//        if err != nil {
+//            print((err?.localizedDescription)!)
+//            completion(.failure(err!))
+//            return
+//        } else {
+//          var users = [User]()
+//        for i in snap!.documents{
+//
+//            let data = i.data()
+//            let name = data["name"] as? String ?? ""
+//            let surname = data["msg"] as? String ?? ""
+//        //    print(self.datas[i].name)
+//
+//            print("hello2")
+//
+//            users.append(User( name: name, surname: surname))
+//           // print(self.datas[self.h].name)
+//           // self.h = self.h+1
+//
+//            }
+//            completion(.success(users))
+//        }
+//        }
+//    }
+//    //print(self.datas[0].name)
+//
+//}
 
 }
