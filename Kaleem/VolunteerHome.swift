@@ -15,32 +15,9 @@ struct VolunteerHome: View {
    
     var body: some View {
         
-     
-        
-     //   let curUser =  self.session.session?.uid ?? " "
-        
         VStack{
             Text("Hello Volunteer!")
-            
-            //if (self.session.session?.uid != nil)
-//            Text(curUser)
-//           // Print(User.uid)
-//
-//            Button(action: {
-//                call()
-//            }, label: {
-//                Text("تسجيل ")
-//                    .font(.headline)
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .frame(width: 220, height: 60)
-//                    .background(Color.black)
-//                    .cornerRadius(35.0)
-//            })
-//
-//            Text(UserType)
-//
-            
+
         Button(action: {
             session.signOut()
         }, label: {
