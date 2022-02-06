@@ -51,4 +51,8 @@ people under all circumstances. </p>
 
 </h2>
 <h1> <li> Why "Kaleem" ❔ </li> </h1>
+Table 1 below shows a brief review of what was concluded after studying the features
+of the above systems compared to the "Kaleem".
+<img width="598" alt="Screen Shot 1443-07-05 at 7 01 07 AM" src="https://user-images.githubusercontent.com/59771760/152667262-1e61c1c2-2c74-4514-bae8-8d2ede44b472.png">
 
+<p align="center">Table 1 Domain comparison table</p>
