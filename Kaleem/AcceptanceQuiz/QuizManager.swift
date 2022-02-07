@@ -13,7 +13,6 @@ class QuizManager: ObservableObject {
     let db = Firestore.firestore()
     // Variables to set attributes of quiz
     @Published var myQuiz1: [QuestionModel] = []
-    @Published var test: [User] = []
 var h = 0
     
     @Published private(set) var length = 0
@@ -36,7 +35,7 @@ var h = 0
         do {
             DispatchQueue.main.async {
                 
-                self.db.collection("items").getDocuments { (snap, err) in
+                self.db.collection("AcceptanceQuiz").getDocuments { (snap, err) in
                     DispatchQueue.main.async {
                         if err != nil {
                             print((err?.localizedDescription)!)
@@ -56,21 +55,14 @@ var h = 0
 
 
                                 //    print(self.datas[i].name)
-                                
-                                print("hello2")
-                                
+                                                                
                                 self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,answers: [
                                     QuestionModel.Answer(text: answer1, isCorrect: answer1.elementsEqual(correctAnswer) ),
                                     QuestionModel.Answer(text: answer2, isCorrect: answer2.elementsEqual(correctAnswer) ),
                                     QuestionModel.Answer(text: answer3, isCorrect: answer3.elementsEqual(correctAnswer) ),
                                     QuestionModel.Answer(text: answer4, isCorrect: answer4.elementsEqual(correctAnswer) ),
                                 
-                                
                                 ]))
-                                 print(self.myQuiz1[self.h].question)
-                                //Answer(text: $0["text"] as! String
-                                self.h = self.h+1
-                                
                             }
                             //completion(.success(users))
                         }

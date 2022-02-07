@@ -17,12 +17,15 @@ struct AnswerRow: View {
     var red = Color(red: 0.71, green: 0.094, blue: 0.1)
     
     var body: some View {
+
         HStack(spacing: 20) {
-            Image(systemName: "circle.fill")
-                .font(.caption)
+         
             
             Text(answer.text)
                 .bold()
+            
+            Image(systemName: "circle.fill")
+                .font(.caption)
             
             if isSelected {
                 Spacer()
@@ -32,9 +35,9 @@ struct AnswerRow: View {
             }
         }
         .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .trailing)
         .foregroundColor(QuizManager1.answerSelected ? (isSelected ? Color("AccentColor") : .gray) : Color("AccentColor"))
-        .background(.white)
+        .background(.gray)
         .cornerRadius(10)
         .shadow(color: isSelected ? answer.isCorrect ? green : red : .gray, radius: 5, x: 0.5, y: 0.5)
         .onTapGesture {
@@ -49,7 +52,7 @@ struct AnswerRow: View {
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(answer: QuestionModel.Answer(text: "Single", isCorrect:  false))
+        AnswerRow(answer: QuestionModel.Answer(text: "الجواب الاول", isCorrect:  false))
             .environmentObject(QuizManager())
     }
 }
