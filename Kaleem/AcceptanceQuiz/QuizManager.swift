@@ -57,10 +57,10 @@ var h = 0
                                 //    print(self.datas[i].name)
                                                                 
                                 self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,answers: [
-                                    QuestionModel.Answer(text: answer1, isCorrect: answer1.elementsEqual(correctAnswer) ),
-                                    QuestionModel.Answer(text: answer2, isCorrect: answer2.elementsEqual(correctAnswer) ),
-                                    QuestionModel.Answer(text: answer3, isCorrect: answer3.elementsEqual(correctAnswer) ),
-                                    QuestionModel.Answer(text: answer4, isCorrect: answer4.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text: "أ. "+answer1, isCorrect: answer1.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text: "ب. "+answer2, isCorrect: answer2.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text: "ج. "+answer3, isCorrect: answer3.elementsEqual(correctAnswer) ),
+                                    QuestionModel.Answer(text:"د. "+answer4, isCorrect: answer4.elementsEqual(correctAnswer) ),
                                 
                                 ]))
                             }

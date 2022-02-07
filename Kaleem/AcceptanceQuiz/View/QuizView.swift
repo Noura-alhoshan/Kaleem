@@ -28,7 +28,7 @@ struct QuizView: View {
                     PrimaryButton(text: "Play again")
                 }
             }
-            .foregroundColor(Color("AccentColor"))
+            .foregroundColor(Color("Kaleem"))
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
