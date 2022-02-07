@@ -22,22 +22,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="KaleemFinalLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-l1-y1Y">
-                                <rect key="frame" x="62" y="324" width="290" height="177"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KaleemFinalLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fVo-BT-M7c">
+                                <rect key="frame" x="82" y="384" width="250" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="4M5-hX-MOp"/>
-                                    <constraint firstAttribute="width" constant="240" id="Ghl-oJ-61p"/>
+                                    <constraint firstAttribute="height" constant="128" id="2Oe-lm-N53"/>
+                                    <constraint firstAttribute="width" constant="250" id="dwb-wM-IaJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fVo-BT-M7c" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5D4-Ta-NLx"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
+                            <constraint firstItem="fVo-BT-M7c" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="MI1-F1-Tcp"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
-                            <constraint firstItem="Ll7-l1-y1Y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WQU-A5-6x4"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="Ll7-l1-y1Y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mCB-jB-fLC"/>
                         </constraints>
                     </view>
                 </viewController>
