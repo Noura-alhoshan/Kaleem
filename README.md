@@ -52,9 +52,9 @@ people under all circumstances. </p>
 </h2>
 <h1> <li> Why "Kaleem" ❔ </li> </h1>
 <h3> <li> Benchmarks </li> <h3>
-The process of studying the domain aims to comprehend previously developed
+<p> The process of studying the domain aims to comprehend previously developed
 similar systems [1]. In this section, the available similar applications will be reviewed,
-and their main functionalities will be compared to “Kaleem” application.
+ and their main functionalities will be compared to “Kaleem” application. </p>
 
 <p> Table 1️⃣ below shows a brief review of what was concluded after studying the features
 of the above systems compared to the "Kaleem". </p>
