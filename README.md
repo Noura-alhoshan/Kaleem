@@ -67,3 +67,6 @@ Table 1️⃣ Domain comparison table</p>
  
  
 <h1> <li>References ✔️</li> </h1> 
+ 
+ <p> <i> [1] Csis.org. 2021. Reading the Signs: Diverse Arabic Sign Languages. [online]
+Available at: <https://www.csis.org/analysis/reading-signs-diverse-arabic-signlanguages-0> [Accessed 11 September 2021]. </i> </p>
