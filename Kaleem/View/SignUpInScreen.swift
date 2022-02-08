@@ -39,7 +39,7 @@ struct SignUpInScreen: View {
                     )
                     
                     NavigationLink(
-                        destination: SignUpInScreen().navigationBarHidden(true),
+                        destination: SignIn().navigationBarHidden(true),
                         label: {
                             Text("تسجيل الدخول")
                                 .font(.title3)
