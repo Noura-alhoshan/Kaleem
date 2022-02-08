@@ -12,13 +12,15 @@
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
+		14FD4F6527A58E9400E4947D /* AQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */; };
+		14FD4F6E27A58F1500E4947D /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6D27A58F1500E4947D /* AQuestionV.swift */; };
+		14FD4F7027A58F2E00E4947D /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6F27A58F2E00E4947D /* AQuizV.swift */; };
+		14FD4F7327A58F6A00E4947D /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */; };
+		14FD4F7527A58F8700E4947D /* AProgressBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */; };
+		14FD4F7727A58F9E00E4947D /* APrimaryButtonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */; };
+		14FD4F7C27A590BA00E4947D /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7B27A590BA00E4947D /* AQuestionM.swift */; };
+		14FD4F7E27A59B6100E4947D /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
-		F50D1A2027B2BF5A00B3EE94 /* SignUpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */; };
-		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
-		F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */; };
-		F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */; };
-		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
-		F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,16 +30,17 @@
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizManagerVM.swift; sourceTree = "<group>"; };
+		14FD4F6D27A58F1500E4947D /* AQuestionV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
+		14FD4F6F27A58F2E00E4947D /* AQuizV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
+		14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARowAnswersVM.swift; sourceTree = "<group>"; };
+		14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AProgressBarVM.swift; sourceTree = "<group>"; };
+		14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APrimaryButtonVM.swift; sourceTree = "<group>"; };
+		14FD4F7B27A590BA00E4947D /* AQuestionM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuestionM.swift; sourceTree = "<group>"; };
+		14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizContentV.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
-		F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpV.swift; path = Kaleem/SignUpV.swift; sourceTree = SOURCE_ROOT; };
-		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/SignUpM.swift; sourceTree = SOURCE_ROOT; };
-		F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpVM.swift; path = Kaleem/SignUpVM.swift; sourceTree = SOURCE_ROOT; };
-		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInScreen.swift; sourceTree = "<group>"; };
-		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +76,7 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
-				F50D1A3E27B2F2BB00B3EE94 /* Model */,
-				F50D1A3D27B2F23900B3EE94 /* ViewModel */,
-				F50D1A3C27B2F22C00B3EE94 /* Components */,
-				F572FADC27A3B7FB001C7143 /* View */,
-				F572FADA27A3B669001C7143 /* Info.plist */,
+				14FD4F6327A58E2C00E4947D /* AcceptanceQuiz */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
@@ -93,6 +92,45 @@
 				14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14FD4F6327A58E2C00E4947D /* AcceptanceQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				14FD4F7827A58FAC00E4947D /* Models */,
+				14FD4F7127A58F3B00E4947D /* ViewModel */,
+				14FD4F6A27A58EE000E4947D /* View */,
+			);
+			path = AcceptanceQuiz;
+			sourceTree = "<group>";
+		};
+		14FD4F6A27A58EE000E4947D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14FD4F6D27A58F1500E4947D /* AQuestionV.swift */,
+				14FD4F6F27A58F2E00E4947D /* AQuizV.swift */,
+				14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14FD4F7127A58F3B00E4947D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */,
+				14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */,
+				14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */,
+				14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		14FD4F7827A58FAC00E4947D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14FD4F7B27A590BA00E4947D /* AQuestionM.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CB39F81B522694707316D239 /* Frameworks */ = {
@@ -112,40 +150,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F50D1A3C27B2F22C00B3EE94 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		F50D1A3D27B2F23900B3EE94 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		F50D1A3E27B2F2BB00B3EE94 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F572FADC27A3B7FB001C7143 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */,
-				F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */,
-				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
-				F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */,
-				F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */,
-				F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,7 +161,7 @@
 				14FD4F2B279F2D1200E4947D /* Sources */,
 				14FD4F2C279F2D1200E4947D /* Frameworks */,
 				14FD4F2D279F2D1200E4947D /* Resources */,
-				3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */,
+				060546DEC643A184749E5C47 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,17 +211,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */,
-				F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
 				14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */,
-				F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */ = {
+		060546DEC643A184749E5C47 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,12 +265,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50D1A2027B2BF5A00B3EE94 /* SignUpV.swift in Sources */,
-				F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */,
+				14FD4F7727A58F9E00E4947D /* APrimaryButtonVM.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
-				F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */,
+				14FD4F7C27A590BA00E4947D /* AQuestionM.swift in Sources */,
+				14FD4F7E27A59B6100E4947D /* AQuizContentV.swift in Sources */,
+				14FD4F6E27A58F1500E4947D /* AQuestionV.swift in Sources */,
+				14FD4F6527A58E9400E4947D /* AQuizManagerVM.swift in Sources */,
+				14FD4F7027A58F2E00E4947D /* AQuizV.swift in Sources */,
+				14FD4F7327A58F6A00E4947D /* ARowAnswersVM.swift in Sources */,
+				14FD4F7527A58F8700E4947D /* AProgressBarVM.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
-				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,14 +406,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaleem/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,14 +435,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaleem/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
