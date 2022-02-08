@@ -8,34 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F32279F2D1200E4947D /* KaleemApp.swift */; };
-		14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F34279F2D1200E4947D /* ContentView.swift */; };
+		14FD4F35279F2D1200E4947D /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F34279F2D1200E4947D /* Wrapper.swift */; };
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
+		2632F6B327A73E53009B9942 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2632F6B227A73E53009B9942 /* ForgotPassword.swift */; };
+		26554F3F27A2D96F0041ECB5 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F3E27A2D96F0041ECB5 /* SessionStore.swift */; };
+		26554F4127A2DC3F0041ECB5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F4027A2DC3F0041ECB5 /* SignIn.swift */; };
+		26554F4327A2F1650041ECB5 /* VolunteerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F4227A2F1650041ECB5 /* VolunteerHome.swift */; };
+		2673CACE27AB36550091184B /* ImpairedHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673CACD27AB36550091184B /* ImpairedHome.swift */; };
+		2673CAD027AB36B30091184B /* AdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673CACF27AB36B30091184B /* AdminHome.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
-		F50D1A2027B2BF5A00B3EE94 /* SignUpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */; };
-		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
-		F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */; };
-		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
-		F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
-		14FD4F34279F2D1200E4947D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		14FD4F34279F2D1200E4947D /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2632F6B227A73E53009B9942 /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		26554F3E27A2D96F0041ECB5 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		26554F4027A2DC3F0041ECB5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		26554F4227A2F1650041ECB5 /* VolunteerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerHome.swift; sourceTree = "<group>"; };
+		2673CACD27AB36550091184B /* ImpairedHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedHome.swift; sourceTree = "<group>"; };
+		2673CACF27AB36B30091184B /* AdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHome.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
-		F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpV.swift; path = Kaleem/SignUpV.swift; sourceTree = SOURCE_ROOT; };
-		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/SignUpM.swift; sourceTree = SOURCE_ROOT; };
-		F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpVM.swift; path = Kaleem/SignUpVM.swift; sourceTree = SOURCE_ROOT; };
-		F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInScreen.swift; sourceTree = "<group>"; };
-		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +72,17 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
-				F572FADC27A3B7FB001C7143 /* View */,
-				F572FADA27A3B669001C7143 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
-				14FD4F34279F2D1200E4947D /* ContentView.swift */,
+				14FD4F34279F2D1200E4947D /* Wrapper.swift */,
+				26554F4227A2F1650041ECB5 /* VolunteerHome.swift */,
+				2673CACF27AB36B30091184B /* AdminHome.swift */,
+				2673CACD27AB36550091184B /* ImpairedHome.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
+				26554F3E27A2D96F0041ECB5 /* SessionStore.swift */,
+				26554F4027A2DC3F0041ECB5 /* SignIn.swift */,
+				2632F6B227A73E53009B9942 /* ForgotPassword.swift */,
 			);
 			path = Kaleem;
 			sourceTree = "<group>";
@@ -105,18 +110,6 @@
 				325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		F572FADC27A3B7FB001C7143 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */,
-				F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */,
-				F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */,
-				F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */,
-				F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +173,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */,
-				F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
 				14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */,
 			);
@@ -235,12 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50D1A2027B2BF5A00B3EE94 /* SignUpV.swift in Sources */,
-				F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */,
-				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
-				F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */,
+				14FD4F35279F2D1200E4947D /* Wrapper.swift in Sources */,
+				26554F3F27A2D96F0041ECB5 /* SessionStore.swift in Sources */,
+				2673CACE27AB36550091184B /* ImpairedHome.swift in Sources */,
+				26554F4127A2DC3F0041ECB5 /* SignIn.swift in Sources */,
+				2673CAD027AB36B30091184B /* AdminHome.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
-				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
+				26554F4327A2F1650041ECB5 /* VolunteerHome.swift in Sources */,
+				2632F6B327A73E53009B9942 /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,14 +366,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 897969UUNJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaleem/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,14 +396,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 897969UUNJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaleem/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
