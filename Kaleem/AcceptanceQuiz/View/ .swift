@@ -14,7 +14,7 @@ struct QuestionView: View {
         VStack(spacing: 25) {
             HStack {
                 
-                Text("\(QuizManager1.length) من \(QuizManager1.index + 1)"+" أسئلة")
+                Text("\(QuizManager1.index + 1) من \(QuizManager1.length)"+" أسئلة")
                     .foregroundColor(Color("Kaleem"))
                     .fontWeight(.heavy)
                 
