@@ -8,10 +8,10 @@
 import SwiftUI
 import Firebase //
 
-struct QuizContentView: View {
+struct AQuizContentV: View {
     
 
-   @StateObject var quizManager1 = QuizManager()
+   @StateObject var quizManager1 = AQuizManagerVM()
 
    var body: some View {
 
@@ -21,11 +21,11 @@ struct QuizContentView: View {
                
                NavigationLink {
                    
-                   QuizView()
+                   AQuizV()
                      .environmentObject(quizManager1)
                    
                } label: {
-                   PrimaryButton(text: "Let's go!"+"")
+                   APrimaryButtonVM(text: "Let's go!"+"")
                }.onTapGesture {
                    Task.init {
                        await quizManager1.fetchQuiz()
@@ -36,9 +36,9 @@ struct QuizContentView: View {
    }
 }
 
-struct QuizContentView_Previews: PreviewProvider {
+struct AQuizContentV_Previews: PreviewProvider {
     static var previews: some View {
-        QuizContentView()
+        AQuizContentV()
       
     }
 }

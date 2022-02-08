@@ -7,40 +7,46 @@
 ///*
 import SwiftUI
 
-struct QuestionView: View {
-    @EnvironmentObject var quizManager1: QuizManager
+struct AQuestionV: View {
+    @EnvironmentObject var quizManager1: AQuizManagerVM
 
     var body: some View {
         VStack(spacing: 25) {
-            HStack {
+           // HStack {
                 
-                Text("\(quizManager1.length) من \(quizManager1.index + 1)"+" أسئلة")
-                    .foregroundColor(Color("Kaleem"))
-                    .fontWeight(.heavy)
-                
-                Spacer()
+            
+               // Spacer()
 
                 Text("اختبار القبول")
                    .foregroundColor(Color("Kaleem"))
                    .fontWeight(.heavy).font(Font.system(size: 22))
+            
+            VStack(alignment: .trailing) {
+
+            Text("\(quizManager1.index + 1) من \(quizManager1.length)"+" أسئلة")
+                    .foregroundColor(Color("Kaleem")).frame(width: 333, height: 25,alignment: .topTrailing)
+                
                 
             }
+              //  .fontWeight(.heavy)}
             
-            ProgressBar(progress: quizManager1.progress)
+                
+         //   }
+            
+            AProgressBarVM(progress: quizManager1.progress)
             
           
             VStack( spacing: 10) {
 
                 AsyncImage(url: URL(string: quizManager1.question), scale: 3.0).frame(width: 330, height: 180 )}
-            VStack(alignment: .trailing) {
 
                 Text("ماذا تعني هذه الإشارة؟")
                     .font(.system(size: 20))
                     .bold()
-                    .foregroundColor(.gray)}
+                    .foregroundColor(.gray)
 
                 ForEach(quizManager1.answerChoices, id: \.id) { answer in
-                    AnswerRow(answer: answer)
+                    ARowAnswersVM(answer: answer)
                         .environmentObject(quizManager1)
                 
             }
@@ -48,7 +54,7 @@ struct QuestionView: View {
             Button {
                 quizManager1.goToNextQuestion()
             } label: {
-                PrimaryButton(text: "التالي", background: quizManager1.answerSelected ? Color("Kaleem") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                APrimaryButtonVM(text: "التالي", background: quizManager1.answerSelected ? Color("Kaleem") : Color("AnsRow"))
             }
             .disabled(!quizManager1.answerSelected)
             
@@ -61,10 +67,10 @@ struct QuestionView: View {
     }
 }
 
-struct QuestionView_Previews: PreviewProvider {
+struct AQuestionV_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView()
-            .environmentObject(QuizManager())
+        AQuestionV()
+            .environmentObject(AQuizManagerVM())
     }
 }
 

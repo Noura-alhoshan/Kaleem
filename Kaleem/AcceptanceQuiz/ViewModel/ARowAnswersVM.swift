@@ -7,8 +7,8 @@
 ///*
 import SwiftUI
 
-struct AnswerRow: View {
-    @EnvironmentObject var quizManager1: QuizManager
+struct ARowAnswersVM: View {
+    @EnvironmentObject var quizManager1: AQuizManagerVM
     var answer: QuestionModel.Answer
     @State private var isSelected = false
 
@@ -24,7 +24,7 @@ struct AnswerRow: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .trailing)
         .foregroundColor(quizManager1.answerSelected ? (isSelected ? Color("Kaleem") : .gray) : Color("Kaleem"))
-        .background(Color("AnsRow"))
+        .background(Color .gray.opacity(0.1))
         .cornerRadius(10)
         .shadow(color: isSelected ? answer.isCorrect ? .orange : .orange : .gray, radius: 5, x: 0.5, y: 0.5)
         .onTapGesture {
@@ -37,10 +37,10 @@ struct AnswerRow: View {
     }
 }
 
-struct AnswerRow_Previews: PreviewProvider {
+struct ARowAnswersVM_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(answer: QuestionModel.Answer(text: "الجواب الاول", isCorrect:  false))
-            .environmentObject(QuizManager())
+        ARowAnswersVM(answer: QuestionModel.Answer(text: "الجواب الاول", isCorrect:  false))
+            .environmentObject(AQuizManagerVM())
     }
 }
 //*/

@@ -12,14 +12,14 @@
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
-		14FD4F6527A58E9400E4947D /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6427A58E9400E4947D /* QuizManager.swift */; };
-		14FD4F6E27A58F1500E4947D /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6D27A58F1500E4947D /* QuestionView.swift */; };
-		14FD4F7027A58F2E00E4947D /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6F27A58F2E00E4947D /* QuizView.swift */; };
-		14FD4F7327A58F6A00E4947D /* RowAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7227A58F6A00E4947D /* RowAnswers.swift */; };
-		14FD4F7527A58F8700E4947D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7427A58F8700E4947D /* ProgressBar.swift */; };
-		14FD4F7727A58F9E00E4947D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7627A58F9E00E4947D /* PrimaryButton.swift */; };
-		14FD4F7C27A590BA00E4947D /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7B27A590BA00E4947D /* QuestionModel.swift */; };
-		14FD4F7E27A59B6100E4947D /* QuizContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7D27A59B6100E4947D /* QuizContentView.swift */; };
+		14FD4F6527A58E9400E4947D /* AQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */; };
+		14FD4F6E27A58F1500E4947D /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6D27A58F1500E4947D /* AQuestionV.swift */; };
+		14FD4F7027A58F2E00E4947D /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6F27A58F2E00E4947D /* AQuizV.swift */; };
+		14FD4F7327A58F6A00E4947D /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */; };
+		14FD4F7527A58F8700E4947D /* AProgressBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */; };
+		14FD4F7727A58F9E00E4947D /* APrimaryButtonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */; };
+		14FD4F7C27A590BA00E4947D /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7B27A590BA00E4947D /* AQuestionM.swift */; };
+		14FD4F7E27A59B6100E4947D /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,14 +30,14 @@
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		14FD4F6427A58E9400E4947D /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
-		14FD4F6D27A58F1500E4947D /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
-		14FD4F6F27A58F2E00E4947D /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
-		14FD4F7227A58F6A00E4947D /* RowAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowAnswers.swift; sourceTree = "<group>"; };
-		14FD4F7427A58F8700E4947D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		14FD4F7627A58F9E00E4947D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
-		14FD4F7B27A590BA00E4947D /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		14FD4F7D27A59B6100E4947D /* QuizContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizContentView.swift; sourceTree = "<group>"; };
+		14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizManagerVM.swift; sourceTree = "<group>"; };
+		14FD4F6D27A58F1500E4947D /* AQuestionV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
+		14FD4F6F27A58F2E00E4947D /* AQuizV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
+		14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARowAnswersVM.swift; sourceTree = "<group>"; };
+		14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AProgressBarVM.swift; sourceTree = "<group>"; };
+		14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APrimaryButtonVM.swift; sourceTree = "<group>"; };
+		14FD4F7B27A590BA00E4947D /* AQuestionM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuestionM.swift; sourceTree = "<group>"; };
+		14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizContentV.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,9 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F7827A58FAC00E4947D /* Models */,
-				14FD4F7127A58F3B00E4947D /* Component */,
+				14FD4F7127A58F3B00E4947D /* ViewModel */,
 				14FD4F6A27A58EE000E4947D /* View */,
-				14FD4F6427A58E9400E4947D /* QuizManager.swift */,
 			);
 			path = AcceptanceQuiz;
 			sourceTree = "<group>";
@@ -108,27 +107,28 @@
 		14FD4F6A27A58EE000E4947D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				14FD4F6D27A58F1500E4947D /* QuestionView.swift */,
-				14FD4F6F27A58F2E00E4947D /* QuizView.swift */,
-				14FD4F7D27A59B6100E4947D /* QuizContentView.swift */,
+				14FD4F6D27A58F1500E4947D /* AQuestionV.swift */,
+				14FD4F6F27A58F2E00E4947D /* AQuizV.swift */,
+				14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		14FD4F7127A58F3B00E4947D /* Component */ = {
+		14FD4F7127A58F3B00E4947D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				14FD4F7227A58F6A00E4947D /* RowAnswers.swift */,
-				14FD4F7427A58F8700E4947D /* ProgressBar.swift */,
-				14FD4F7627A58F9E00E4947D /* PrimaryButton.swift */,
+				14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */,
+				14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */,
+				14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */,
+				14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */,
 			);
-			path = Component;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		14FD4F7827A58FAC00E4947D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				14FD4F7B27A590BA00E4947D /* QuestionModel.swift */,
+				14FD4F7B27A590BA00E4947D /* AQuestionM.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,15 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14FD4F7727A58F9E00E4947D /* PrimaryButton.swift in Sources */,
+				14FD4F7727A58F9E00E4947D /* APrimaryButtonVM.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
-				14FD4F7C27A590BA00E4947D /* QuestionModel.swift in Sources */,
-				14FD4F7E27A59B6100E4947D /* QuizContentView.swift in Sources */,
-				14FD4F6E27A58F1500E4947D /* QuestionView.swift in Sources */,
-				14FD4F6527A58E9400E4947D /* QuizManager.swift in Sources */,
-				14FD4F7027A58F2E00E4947D /* QuizView.swift in Sources */,
-				14FD4F7327A58F6A00E4947D /* RowAnswers.swift in Sources */,
-				14FD4F7527A58F8700E4947D /* ProgressBar.swift in Sources */,
+				14FD4F7C27A590BA00E4947D /* AQuestionM.swift in Sources */,
+				14FD4F7E27A59B6100E4947D /* AQuizContentV.swift in Sources */,
+				14FD4F6E27A58F1500E4947D /* AQuestionV.swift in Sources */,
+				14FD4F6527A58E9400E4947D /* AQuizManagerVM.swift in Sources */,
+				14FD4F7027A58F2E00E4947D /* AQuizV.swift in Sources */,
+				14FD4F7327A58F6A00E4947D /* ARowAnswersVM.swift in Sources */,
+				14FD4F7527A58F8700E4947D /* AProgressBarVM.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
