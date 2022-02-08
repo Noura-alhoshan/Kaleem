@@ -26,6 +26,15 @@
 		F59F0BBA27B3238F0036DD47 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BB927B3238F0036DD47 /* ForgotPassword.swift */; };
 		F59F0BBC27B323960036DD47 /* AdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BBB27B323960036DD47 /* AdminHome.swift */; };
 		F59F0BBE27B324220036DD47 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BBD27B324220036DD47 /* Wrapper.swift */; };
+		F59F0BC327B326D60036DD47 /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BBF27B326D60036DD47 /* ARowAnswersVM.swift */; };
+		F59F0BC427B326D60036DD47 /* AProgressBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BC027B326D60036DD47 /* AProgressBarVM.swift */; };
+		F59F0BC527B326D60036DD47 /* APrimaryButtonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BC127B326D60036DD47 /* APrimaryButtonVM.swift */; };
+		F59F0BC627B326D60036DD47 /* AQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BC227B326D60036DD47 /* AQuizManagerVM.swift */; };
+		F59F0BCA27B326E30036DD47 /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BC727B326E30036DD47 /* AQuizContentV.swift */; };
+		F59F0BCB27B326E30036DD47 /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BC827B326E30036DD47 /* AQuizV.swift */; };
+		F59F0BCC27B326E30036DD47 /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BC927B326E30036DD47 /* AQuestionV.swift */; };
+		F59F0BCE27B326F20036DD47 /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BCD27B326F20036DD47 /* AQuestionM.swift */; };
+		F59F0BD227B3275B0036DD47 /* AdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59F0BD127B3275B0036DD47 /* AdminHome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +61,15 @@
 		F59F0BB927B3238F0036DD47 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ForgotPassword.swift; path = "../../../../Downloads/Kaleem-signIn/Kaleem/ForgotPassword.swift"; sourceTree = "<group>"; };
 		F59F0BBB27B323960036DD47 /* AdminHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminHome.swift; path = "../../../../Downloads/Kaleem-signIn/Kaleem/AdminHome.swift"; sourceTree = "<group>"; };
 		F59F0BBD27B324220036DD47 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wrapper.swift; path = "../../../../Downloads/Kaleem-signIn/Kaleem/Wrapper.swift"; sourceTree = "<group>"; };
+		F59F0BBF27B326D60036DD47 /* ARowAnswersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARowAnswersVM.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/ViewModel/ARowAnswersVM.swift"; sourceTree = "<group>"; };
+		F59F0BC027B326D60036DD47 /* AProgressBarVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AProgressBarVM.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/ViewModel/AProgressBarVM.swift"; sourceTree = "<group>"; };
+		F59F0BC127B326D60036DD47 /* APrimaryButtonVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APrimaryButtonVM.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/ViewModel/APrimaryButtonVM.swift"; sourceTree = "<group>"; };
+		F59F0BC227B326D60036DD47 /* AQuizManagerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQuizManagerVM.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/ViewModel/AQuizManagerVM.swift"; sourceTree = "<group>"; };
+		F59F0BC727B326E30036DD47 /* AQuizContentV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQuizContentV.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/View/AQuizContentV.swift"; sourceTree = "<group>"; };
+		F59F0BC827B326E30036DD47 /* AQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQuizV.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/View/AQuizV.swift"; sourceTree = "<group>"; };
+		F59F0BC927B326E30036DD47 /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQuestionV.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/View/AQuestionV.swift"; sourceTree = "<group>"; };
+		F59F0BCD27B326F20036DD47 /* AQuestionM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AQuestionM.swift; path = "../../../../Downloads/Kaleem-quiz/Kaleem/AcceptanceQuiz/Models/AQuestionM.swift"; sourceTree = "<group>"; };
+		F59F0BD127B3275B0036DD47 /* AdminHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminHome.swift; path = "../../../../Downloads/Kaleem-signIn/Kaleem/AdminHome.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +157,10 @@
 			children = (
 				F59F0BB327B323630036DD47 /* SignInVM.swift */,
 				F59F0BBD27B324220036DD47 /* Wrapper.swift */,
+				F59F0BC127B326D60036DD47 /* APrimaryButtonVM.swift */,
+				F59F0BC027B326D60036DD47 /* AProgressBarVM.swift */,
+				F59F0BC227B326D60036DD47 /* AQuizManagerVM.swift */,
+				F59F0BBF27B326D60036DD47 /* ARowAnswersVM.swift */,
 				F59F0BB927B3238F0036DD47 /* ForgotPassword.swift */,
 				F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */,
 			);
@@ -148,6 +170,7 @@
 		F50D1A3E27B2F2BB00B3EE94 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F59F0BCD27B326F20036DD47 /* AQuestionM.swift */,
 				F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */,
 			);
 			path = Model;
@@ -158,6 +181,10 @@
 			children = (
 				F59F0BBB27B323960036DD47 /* AdminHome.swift */,
 				F59F0BB727B323820036DD47 /* ImpairedHome.swift */,
+				F59F0BD127B3275B0036DD47 /* AdminHome.swift */,
+				F59F0BC927B326E30036DD47 /* AQuestionV.swift */,
+				F59F0BC727B326E30036DD47 /* AQuizContentV.swift */,
+				F59F0BC827B326E30036DD47 /* AQuizV.swift */,
 				F59F0BB127B3235A0036DD47 /* VolunteerHome.swift */,
 				F59F0BB527B3236D0036DD47 /* SignInV.swift */,
 				F50D1A1627B2BF5900B3EE94 /* SignUpV.swift */,
@@ -287,15 +314,24 @@
 				F59F0BBC27B323960036DD47 /* AdminHome.swift in Sources */,
 				F50D1A2027B2BF5A00B3EE94 /* SignUpV.swift in Sources */,
 				F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */,
+				F59F0BCA27B326E30036DD47 /* AQuizContentV.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
+				F59F0BCE27B326F20036DD47 /* AQuestionM.swift in Sources */,
 				F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */,
+				F59F0BCC27B326E30036DD47 /* AQuestionV.swift in Sources */,
+				F59F0BC527B326D60036DD47 /* APrimaryButtonVM.swift in Sources */,
+				F59F0BC327B326D60036DD47 /* ARowAnswersVM.swift in Sources */,
 				F59F0BBE27B324220036DD47 /* Wrapper.swift in Sources */,
 				F59F0BB427B323630036DD47 /* SignInVM.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
+				F59F0BD227B3275B0036DD47 /* AdminHome.swift in Sources */,
 				F59F0BB227B3235A0036DD47 /* VolunteerHome.swift in Sources */,
+				F59F0BCB27B326E30036DD47 /* AQuizV.swift in Sources */,
+				F59F0BC627B326D60036DD47 /* AQuizManagerVM.swift in Sources */,
 				F59F0BB627B3236D0036DD47 /* SignInV.swift in Sources */,
 				F59F0BB827B323820036DD47 /* ImpairedHome.swift in Sources */,
+				F59F0BC427B326D60036DD47 /* AProgressBarVM.swift in Sources */,
 				F59F0BBA27B3238F0036DD47 /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
