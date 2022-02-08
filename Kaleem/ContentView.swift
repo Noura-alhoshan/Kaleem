@@ -42,11 +42,11 @@ struct WalkthroughScreen: View {
          }
          
          if currentPage == 2{
-             ScreenView(image: "Location", title: "الموقع", detail:"يوّفر كليم ميزة استخراج الجمل أو الكلمات المناسبة لموقع المستخدم الحالي")
+             ScreenView(image: "Location-1", title: "الموقع", detail:"يوّفر كليم ميزة استخراج الجمل أو الكلمات المناسبة لموقع المستخدم الحالي")
                  .transition(.scale)
          }
          if currentPage == 3{
-             ScreenView(image: "VC", title: "الاستعانة بمتطوع", detail: "يمكنك كمستخدم لكليم بالاستعانة بمتطوعي تطبيق كليم لمساعدتك في الترجمة للطرف الآخر من خلال الاتصال المرئي")
+             ScreenView(image: "VideoCall", title: "الاستعانة بمتطوع", detail: "يمكنك كمستخدم لكليم بالاستعانة بمتطوعي تطبيق كليم لمساعدتك في الترجمة للطرف الآخر من خلال الاتصال المرئي")
                  .transition(.scale)
          }
          
@@ -80,11 +80,11 @@ struct WalkthroughScreen: View {
             //Circular Slider..
                 .overlay(ZStack{
                     Circle()
-                        .stroke(Color.black.opacity(0.04),lineWidth: 20)
+                        .stroke(Color.black.opacity(0.05),lineWidth: 20)
                     
                     Circle()
                         .trim(from: 0, to: CGFloat(currentPage) / CGFloat(totalPages))
-                        .stroke(Color.white, lineWidth: 20)
+                        .stroke(Color("Color"), lineWidth: 20)
                         .rotationEffect(.init(degrees: -90))
                 }
                             .padding(-15)
@@ -171,15 +171,15 @@ struct ScreenView: View {
             
             .foregroundColor(.black)
             .padding()
-      
-            Spacer(minLength: 0)
-            Image(image).resizable().aspectRatio( contentMode: .fit)
-            
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-                .padding(.top)
+                .padding(.top,70)
+           // Spacer(minLength: 0)
+            Image(image).resizable().aspectRatio( contentMode: .fit)
+            
+          
             
             Text(detail)
                 .fontWeight(.semibold)

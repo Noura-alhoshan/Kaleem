@@ -73,6 +73,9 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
+				F50D1A3E27B2F2BB00B3EE94 /* Model */,
+				F50D1A3D27B2F23900B3EE94 /* ViewModel */,
+				F50D1A3C27B2F22C00B3EE94 /* Components */,
 				F572FADC27A3B7FB001C7143 /* View */,
 				F572FADA27A3B669001C7143 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
@@ -107,6 +110,27 @@
 				325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F50D1A3C27B2F22C00B3EE94 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F50D1A3D27B2F23900B3EE94 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F50D1A3E27B2F2BB00B3EE94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F572FADC27A3B7FB001C7143 /* View */ = {

@@ -16,10 +16,12 @@ struct SignUpInScreen: View {
                  
                    
                     
-                    Image("KaleemFinalLogo").resizable().aspectRatio( contentMode: .fit)
-               
+                    Image("KaleemFinalLogo")  .resizable()
+                        .scaledToFit()
+                        .frame(width: 270.0, height: 190.0)
+                        .padding(.top, -55)
                  //   PrimaryButton(title: "Get Started")
-                        .padding(.bottom,100)
+                        .padding(.bottom,20)
                     NavigationLink(
                         destination: SignUpTaps().navigationBarHidden(true),
                         label: {
@@ -45,7 +47,7 @@ struct SignUpInScreen: View {
                                 .foregroundColor(Color("Color"))
                                 .padding()
                                 .frame(width: 300)
-                                .background(Color("HandColor"))
+                                .background(Color.gray.opacity(0.1))
                                 .cornerRadius(50.0)
                                 .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                                 .padding(.vertical)
