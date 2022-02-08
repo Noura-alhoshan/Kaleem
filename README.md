@@ -63,7 +63,7 @@ of the above systems compared to the "Kaleem". </p>
 <p align="center">
 Table 1️⃣ Domain comparison table</p>
  
- <p> After studying and comparing the different related applications shown in table 2 that
+ <p> After studying and comparing the different related applications shown in <b> <i> Table 1️⃣ </i> </b> that
 serve people with communication disabilities, we can see that each one of these developed
 applications has a unique main feature the application focuses on, for example translation
 from text to speech, or providing verbal sentences for images.
