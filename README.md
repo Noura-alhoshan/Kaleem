@@ -63,6 +63,8 @@ of the above systems compared to the "Kaleem". </p>
 <p align="center">
 Table 1️⃣ Domain comparison table</p>
  
+ <br><br>
+ 
  <p> After studying and comparing the different related applications shown in <b> <i> Table 1️⃣ </i> </b> that
 serve people with communication disabilities, we can see that each one of these developed
 applications has a unique main feature the application focuses on, for example translation
@@ -71,7 +73,7 @@ from text to speech, or providing verbal sentences for images.
 adds translation from Arabic sign language to speech and real time help via crowdsourcing
   features. </p>
  
- 
+  <br><br>
 <h1> <li>References ✔️</li> </h1> 
  
  <p> <i> [1] Csis.org. 2021. Reading the Signs: Diverse Arabic Sign Languages. [online]
