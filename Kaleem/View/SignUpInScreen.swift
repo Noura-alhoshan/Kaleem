@@ -21,7 +21,7 @@ struct SignUpInScreen: View {
                  //   PrimaryButton(title: "Get Started")
                         .padding(.bottom,100)
                     NavigationLink(
-                        destination: SignUpInScreen().navigationBarHidden(true),
+                        destination: SignUpTaps().navigationBarHidden(true),
                         label: {
                             Text("الانضمام لكليم !")
                                 .font(.title3)
