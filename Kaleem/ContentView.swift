@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         if currentPage > totalPages{
             
-            Home()
+            SignUpInScreen()
         }
         
         else {
@@ -43,16 +43,16 @@ struct WalkthroughScreen: View {
      ZStack{
          //Changing b/w views
          if currentPage == 1{
-             ScreenView(image: "T", title: "الترجمة المُباشرة", detail: "details")
+             ScreenView(image: "TT", title: "الترجمة المُباشرة", detail: "يُتيح كليم خاصية الترجمة المباشرة لايماءات لغة الإشارة إلى نص مقروء أو مسموع")
                  .transition(.scale)
          }
          
          if currentPage == 2{
-             ScreenView(image: "Location", title: "الموقع", detail: "details")
+             ScreenView(image: "Location", title: "الموقع", detail:"يوّفر كليم ميزة استخراج الجمل أو الكلمات المناسبة لموقع المستخدم الحالي")
                  .transition(.scale)
          }
          if currentPage == 3{
-             ScreenView(image: "VC", title: "الاستعانة بمتطوع", detail: "details")
+             ScreenView(image: "VC", title: "الاستعانة بمتطوع", detail: "يمكنك كمستخدم لكليم بالاستعانة بمتطوعي تطبيق كليم لمساعدتك في الترجمة للطرف الآخر من خلال الاتصال المرئي")
                  .transition(.scale)
          }
          
@@ -99,6 +99,7 @@ struct WalkthroughScreen: View {
      
      )
             .padding(.bottom,20)
+          
         ,alignment: .bottom
      )
         
@@ -112,9 +113,10 @@ struct ScreenView: View {
     
     @AppStorage("currentPage") var currentPage = 1
     var body: some View {
+        Image("Test").resizable().aspectRatio( contentMode: .fit)
+
         VStack(spacing: 20){
             HStack{
-                
                 
                 
                 Spacer()
@@ -147,6 +149,7 @@ struct ScreenView: View {
                 }
                 
                 else {
+               
                     Spacer(minLength: 50)
                     //Back btn
                     Button(action: {
@@ -174,7 +177,7 @@ struct ScreenView: View {
             
             .foregroundColor(.black)
             .padding()
-            
+      
             Spacer(minLength: 0)
             Image(image).resizable().aspectRatio( contentMode: .fit)
             
@@ -189,6 +192,7 @@ struct ScreenView: View {
             
                 .kerning(1.3)
                 .multilineTextAlignment(.center)
+                .padding(.bottom,20)
             //Minimum spacing when Phone is reducing
             Spacer(minLength: 120)
             
