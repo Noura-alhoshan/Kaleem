@@ -63,7 +63,13 @@ of the above systems compared to the "Kaleem". </p>
 <p align="center">
 Table 1️⃣ Domain comparison table</p>
  
- 
+ <p> After studying and comparing the different related applications shown in table 2 that
+serve people with communication disabilities, we can see that each one of these developed
+applications has a unique main feature the application focuses on, for example translation
+from text to speech, or providing verbal sentences for images.
+"Kaleem" is a comprehensive Arabic application that supports all available features and
+adds translation from Arabic sign language to speech and real time help via crowdsourcing
+  features. </p>
  
  
 <h1> <li>References ✔️</li> </h1> 
