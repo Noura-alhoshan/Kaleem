@@ -28,13 +28,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 // Home Page....
-struct Home: View {
-    var body: some View{
-        Text("Welcome To Home !!!")
-            .font(.title)
-        .fontWeight(.heavy)}
-    
-}
+
 // WalkThrough SCreen....
 struct WalkthroughScreen: View {
       @AppStorage("currentPage") var currentPage = 1

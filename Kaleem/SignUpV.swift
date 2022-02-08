@@ -8,14 +8,14 @@
 
 import SwiftUI
 import Combine
-struct ContentView: View {
-    var body: some View {
-        
-        Home()
-            // for light status bar...**
-           // .preferredColorScheme(.dark)
-    }
-}
+//struct ContentView: View {
+//    var body: some View {
+//        
+//        Home()
+//            // for light status bar...**
+//           // .preferredColorScheme(.dark)
+//    }
+//}
 
 /*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
