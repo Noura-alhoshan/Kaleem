@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @EnvironmentObject var QuizManager1: QuizManager
+    @EnvironmentObject var quizManager1: QuizManager
 
     var body: some View {
         VStack(spacing: 25) {
             HStack {
                 
-                Text("\(QuizManager1.length) من \(QuizManager1.index + 1)"+" أسئلة")
+                Text("\(quizManager1.length) من \(quizManager1.index + 1)"+" أسئلة")
                     .foregroundColor(Color("Kaleem"))
                     .fontWeight(.heavy)
                 
@@ -26,12 +26,12 @@ struct QuestionView: View {
                 
             }
             
-            ProgressBar(progress: QuizManager1.progress)
+            ProgressBar(progress: quizManager1.progress)
             
           
             VStack( spacing: 10) {
 
-                AsyncImage(url: URL(string: QuizManager1.question), scale: 3.0).frame(width: 330, height: 180 )}
+                AsyncImage(url: URL(string: quizManager1.question), scale: 3.0).frame(width: 330, height: 180 )}
             VStack(alignment: .trailing) {
 
                 Text("ماذا تعني هذه الإشارة؟")
@@ -39,25 +39,24 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(.gray)}
 
-                ForEach(QuizManager1.answerChoices, id: \.id) { answer in
+                ForEach(quizManager1.answerChoices, id: \.id) { answer in
                     AnswerRow(answer: answer)
-                        .environmentObject(QuizManager1)
+                        .environmentObject(quizManager1)
                 
             }
             
             Button {
-                QuizManager1.goToNextQuestion()
+                quizManager1.goToNextQuestion()
             } label: {
-                PrimaryButton(text: "التالي", background: QuizManager1.answerSelected ? Color("Kaleem") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+                PrimaryButton(text: "التالي", background: quizManager1.answerSelected ? Color("Kaleem") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
             }
-            .disabled(!QuizManager1.answerSelected)
+            .disabled(!quizManager1.answerSelected)
             
             Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
         .background(.white)
-            //Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         .navigationBarHidden(true)
     }
 }

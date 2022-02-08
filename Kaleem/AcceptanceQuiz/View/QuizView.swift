@@ -8,33 +8,24 @@
 import SwiftUI
 
 struct QuizView: View {
-    @EnvironmentObject var QuizManager1: QuizManager
+    @EnvironmentObject var quizManager1: QuizManager
 
     var body: some View {
-        if QuizManager1.reachedEnd {
+        if quizManager1.reachedEnd {
             VStack(spacing: 20) {
-                Text("Signs")
-                    .lilacTitle()
 
-                Text("Congratulations, you completed the game! ")
+                // the reguesteration logic 
+                Text("You scored \(quizManager1.score) out of \(quizManager1.length)")
                 
-                Text("You scored \(QuizManager1.score) out of \(QuizManager1.length)")
-                
-                Button {
-                    Task.init {
-                        await QuizManager1.fetchQuizRestart()
-                    }
-                } label: {
-                    PrimaryButton(text: "Play again")
-                }
+   
             }
             .foregroundColor(Color("Kaleem"))
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+            .background( Color("AnsRow"))
         } else {
             QuestionView()
-                .environmentObject(QuizManager1)
+                .environmentObject(quizManager1)
         }
     }
 }

@@ -11,7 +11,7 @@ import Firebase //
 struct QuizContentView: View {
     
 
-   @StateObject var QuizManager1 = QuizManager()
+   @StateObject var quizManager1 = QuizManager()
 
    var body: some View {
 
@@ -22,13 +22,13 @@ struct QuizContentView: View {
                NavigationLink {
                    
                    QuizView()
-                     .environmentObject(QuizManager1)
+                     .environmentObject(quizManager1)
                    
                } label: {
                    PrimaryButton(text: "Let's go!"+"")
                }.onTapGesture {
                    Task.init {
-                       await QuizManager1.fetchQuiz()
+                       await quizManager1.fetchQuiz()
                    }               }.background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
 
            }
