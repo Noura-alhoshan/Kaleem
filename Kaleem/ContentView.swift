@@ -121,6 +121,7 @@ struct ScreenView: View {
                     }
                 }, label: {
                     Text("تخطي")
+                        .font(Font.custom("Almarai-Light", size: 18))
                         .fontWeight(.semibold)
                         .kerning (1.4)
                  
@@ -132,6 +133,7 @@ struct ScreenView: View {
                 
                 if currentPage == 1{
                     Text ("أهلاً بك")
+                        .font(Font.custom("Almarai-Regular", size: 18))
                     
                     
                         . font(.title)

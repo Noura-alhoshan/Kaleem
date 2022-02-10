@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 //struct ContentView: View {
 //    var body: some View {
-//
+//        
 //        Home()
 //            // for light status bar...**
 //           // .preferredColorScheme(.dark)
@@ -23,7 +23,7 @@ import Combine
     }
 }*/
 
-struct SignUpTaps : View {
+struct Home : View {
     
     @State var index = 1
     
