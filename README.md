@@ -73,6 +73,9 @@ from text to speech, or providing verbal sentences for images.
 adds translation from Arabic sign language to speech and real time help via crowdsourcing
   features. </p>
  
+ 
+ <p> <li> Platfoorm and tools</li> </p>
+ 
   <br><br>
 <h1> <li>References ✔️</li> </h1> 
  
