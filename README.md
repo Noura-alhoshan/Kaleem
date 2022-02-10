@@ -74,7 +74,7 @@ adds translation from Arabic sign language to speech and real time help via crow
   features. </p>
  
  
- <p> <li> Platfoorm and tools</li> </p>
+ <h1> <li> Platfoorm and tools</li> </h1>
  
   <br><br>
 <h1> <li>References ✔️</li> </h1> 
