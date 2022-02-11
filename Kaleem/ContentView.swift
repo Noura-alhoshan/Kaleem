@@ -133,11 +133,10 @@ struct ScreenView: View {
                 
                 if currentPage == 1{
                     Text ("أهلاً بك")
-                        .font(Font.custom("Almarai-Regular", size: 18))
-                    
-                    
-                        . font(.title)
                         .fontWeight(.semibold)
+                        .foregroundColor(.gray)
+                        //.font(Font.custom("Almarai-Regular", size: 20))
+                        . font(.title)
                     // Letter Spacing...
                         .kerning (1.2)
                     
@@ -176,6 +175,7 @@ struct ScreenView: View {
             Text(title)
                 .font(.title)
                 .fontWeight(.bold)
+                .font(Font.custom("Almarai-Light", size: 25))
                 .foregroundColor(.black)
                 .padding(.top,70)
            // Spacer(minLength: 0)
@@ -185,7 +185,7 @@ struct ScreenView: View {
             
             Text(detail)
                 .fontWeight(.semibold)
-            
+                .font(Font.custom("Almarai-Light", size: 20))
                 .kerning(1.3)
                 .multilineTextAlignment(.center)
                 .padding(.bottom,20)

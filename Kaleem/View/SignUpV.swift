@@ -23,7 +23,7 @@ import Combine
     }
 }*/
 
-struct Home : View {
+struct SignUpTaps : View {
     
     @State var index = 1
     
