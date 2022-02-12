@@ -11,12 +11,24 @@ import Firebase
 
 struct ImpairedHome: View {
     @EnvironmentObject var session: SessionStore
-    
+    @State var TextToTranslate: String = ""
    
     var body: some View {
         
         VStack{
             Text("Hello Impaired!")
+            
+            Button(action: {
+                //session.signOut()
+            }, label: {
+                Text("ترجمة ")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 220, height: 60)
+                    .background(Color.black)
+                    .cornerRadius(35.0)
+            })
             
         Button(action: {
             session.signOut()

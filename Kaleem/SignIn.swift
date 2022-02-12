@@ -36,20 +36,20 @@ struct SignIn : View {
                 session.signInStraem(email: email, password: password)
                 //u can put it in line 29 and remove the comment in SessionStore class
                 session.listen()
-               // print(session.UserType)
-            NavigationView{
-                switch session.UserType {
-                case "Volunteer":
-                    VolunteerHome()
-                case "Impaired":
-                    ImpairedHome()
-                    
-                case "":
-                    AdminHome()
-                default:
-                    ForgotPassword()
-                }
-                }
+//               // print(session.UserType)
+//            NavigationView{
+//                switch session.UserType {
+//                case "Volunteer":
+//                    VolunteerHome()
+//                case "Impaired":
+//                    ImpairedHome()
+//
+//                case "":
+//                    AdminHome()
+//                default:
+//                    ForgotPassword()
+//                }
+//                }
             }
         }
     }
