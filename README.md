@@ -51,7 +51,7 @@ people under all circumstances. </p>
 
 </h2>
 <h1> <li> Why "Kaleem" ❔ </li> </h1>
-<h3> <li> Benchmarks </li> <h3>
+<h3> <li> Benchmarking </li> <h3>
 <p> The process of studying the domain aims to comprehend previously developed
 similar systems [1]. In this section, the available similar applications will be reviewed,
  and their main functionalities will be compared to “Kaleem” application. </p>
