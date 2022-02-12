@@ -17,6 +17,11 @@
 		F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */; };
 		F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */; };
 		F52F2F5F27B794FF0022A0B9 /* Almarai-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F52F2F5E27B794FF0022A0B9 /* Almarai-Bold.ttf */; };
+		F52F2F6127B7A1410022A0B9 /* OnboardingScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F2F6027B7A1410022A0B9 /* OnboardingScreens.swift */; };
+		F52F2F6327B7A78F0022A0B9 /* OnboardingIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F2F6227B7A78F0022A0B9 /* OnboardingIntro.swift */; };
+		F52F2F7127B81DAD0022A0B9 /* Helper in Resources */ = {isa = PBXBuildFile; fileRef = F52F2F7027B81DAD0022A0B9 /* Helper */; };
+		F52F2F7327B824710022A0B9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F2F7227B824710022A0B9 /* Extension.swift */; };
+		F52F2F7527B824AB0022A0B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52F2F7427B824AB0022A0B9 /* Constants.swift */; };
 		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
 		F54AA68927B4CC6600EAC7E5 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54AA68827B4CC6600EAC7E5 /* ForgotPassword.swift */; };
 		F54AA68B27B4CC6F00EAC7E5 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54AA68A27B4CC6F00EAC7E5 /* Wrapper.swift */; };
@@ -45,6 +50,11 @@
 		F50D1A1B27B2BF5A00B3EE94 /* SignUpVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpVM.swift; path = Kaleem/ViewModel/SignUpVM.swift; sourceTree = SOURCE_ROOT; };
 		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		F52F2F5E27B794FF0022A0B9 /* Almarai-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Almarai-Bold.ttf"; path = "../../../../../Downloads/Almarai/Almarai-Bold.ttf"; sourceTree = "<group>"; };
+		F52F2F6027B7A1410022A0B9 /* OnboardingScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreens.swift; sourceTree = "<group>"; };
+		F52F2F6227B7A78F0022A0B9 /* OnboardingIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntro.swift; sourceTree = "<group>"; };
+		F52F2F7027B81DAD0022A0B9 /* Helper */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Helper; path = "../../Qarar-signup 2/Qarar/Helper"; sourceTree = "<group>"; };
+		F52F2F7227B824710022A0B9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F52F2F7427B824AB0022A0B9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInScreen.swift; sourceTree = "<group>"; };
 		F54AA68827B4CC6600EAC7E5 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		F54AA68A27B4CC6F00EAC7E5 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
@@ -93,6 +103,7 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
+				F52F2F7027B81DAD0022A0B9 /* Helper */,
 				F50D1A3E27B2F2BB00B3EE94 /* Model */,
 				F50D1A3D27B2F23900B3EE94 /* ViewModel */,
 				F50D1A3C27B2F22C00B3EE94 /* Components */,
@@ -136,6 +147,8 @@
 				F572FADA27A3B669001C7143 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
+				F52F2F7227B824710022A0B9 /* Extension.swift */,
+				F52F2F7427B824AB0022A0B9 /* Constants.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -170,6 +183,8 @@
 				F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */,
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
 				F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */,
+				F52F2F6027B7A1410022A0B9 /* OnboardingScreens.swift */,
+				F52F2F6227B7A78F0022A0B9 /* OnboardingIntro.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +264,7 @@
 				F59F0BD727B3D89C0036DD47 /* Almarai-Light.ttf in Resources */,
 				F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */,
 				F59F0BD927B3D8A70036DD47 /* Almarai-Regular.ttf in Resources */,
+				F52F2F7127B81DAD0022A0B9 /* Helper in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
 				14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */,
 				F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */,
@@ -304,14 +320,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52F2F7327B824710022A0B9 /* Extension.swift in Sources */,
 				F50D1A2527B2BF5A00B3EE94 /* SignUpVM.swift in Sources */,
 				F54AA68B27B4CC6F00EAC7E5 /* Wrapper.swift in Sources */,
+				F52F2F6127B7A1410022A0B9 /* OnboardingScreens.swift in Sources */,
 				F54AA69327B4CD5E00EAC7E5 /* VolunteerHome.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
 				F54AA68D27B4CC9400EAC7E5 /* AdminHome.swift in Sources */,
 				F54AA69027B4CCAB00EAC7E5 /* SignInV.swift in Sources */,
+				F52F2F6327B7A78F0022A0B9 /* OnboardingIntro.swift in Sources */,
 				F54AA68927B4CC6600EAC7E5 /* ForgotPassword.swift in Sources */,
 				F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */,
+				F52F2F7527B824AB0022A0B9 /* Constants.swift in Sources */,
 				F59F0BB427B323630036DD47 /* SignInVM.swift in Sources */,
 				F54AA69127B4CCAC00EAC7E5 /* ImpairedHome.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,

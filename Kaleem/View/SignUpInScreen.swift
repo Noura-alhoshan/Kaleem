@@ -12,6 +12,7 @@ struct SignUpInScreen: View {
         NavigationView {
             ZStack {
                 Color("AppIcon").edgesIgnoringSafeArea(.all)
+               // Color.gray.edgesIgnoringSafeArea(.all)
                 VStack {
                  
                    

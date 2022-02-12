@@ -118,6 +118,12 @@ struct Login : View {
     @State var repass = ""
     @Binding var index : Int
     
+    @State var usernameErr = ""
+    @State var emailErr = ""
+    @State var phoneNoErr = ""
+    @State var passErr = ""
+    @State var repassErr = ""
+    
     // call from SignUpVM : View Model (firebase)
      func V_SignUp (/*user: User2*/){
          // for Auth.
@@ -159,12 +165,19 @@ struct Login : View {
                         
                         TextField("اسم المستخدم", text: self.$username)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+                            .onChange(of: self.username, perform: {newValue in self.usernameErr = VM.validateUserName(username: self.username)})
                         Image(systemName: "person.fill")
                             .foregroundColor(Color("Kcolor"))
-
                     }
-                    
+                
                     Divider().background(Color("Kcolor").opacity(0.5))
+                    if self.usernameErr != "" {
+                        Text(self.usernameErr)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 40)
@@ -176,13 +189,20 @@ struct Login : View {
                         
                         TextField("رقم الجوال", text: self.$phoneNo)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                        
+                            .onChange(of: self.phoneNo, perform: {newValue in self.phoneNoErr = VM.validatePhoneNo(phone: self.phoneNo)})
                         Image(systemName: "phone.fill")
                             .foregroundColor(Color("Kcolor"))
 
                     }
                     
                     Divider().background(Color("Kcolor").opacity(0.5))
+                    if self.phoneNoErr != "" {
+                        Text(self.phoneNoErr)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 30)
@@ -194,19 +214,41 @@ struct Login : View {
                         
                         TextField("البريد الإلكتروني", text: self.$email)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                        
+                            .onChange(of: self.email, perform: {newValue in self.emailErr = VM.validateEmail(email: self.email)})
                         Image(systemName: "envelope.fill")
                             .foregroundColor(Color("Kcolor"))
 
                     }
-                    
+
                     Divider().background(Color("Kcolor").opacity(0.5))
+                    if self.emailErr != "" {
+                        Text(self.emailErr)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
+
                 }
                 .padding(.horizontal)
                 .padding(.top, 30)
                 
                 /*PASS FIELD*/
-                SecureInputView2("كلمة المرور", text: $pass)
+                VStack{
+                SecureInputView2("كلمة المرور", text: $pass).onChange(of: self.pass, perform: {newValue in self.passErr = VM.validatePass(pass: self.pass)})
+                    
+                    if self.passErr != "" {
+                        Text(self.passErr)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
+                
+                }
+         .padding(.horizontal)
+         .padding(.top,30)
+                
                 /* VStack{
                     
                     HStack(spacing: 15){
@@ -226,7 +268,24 @@ struct Login : View {
                 .padding(.top, 30)
                 */
                 /*CONFIRM PASS FIELD*/
-                SecureInputView2("تأكيد كلمة المرور", text: $repass)                /*VStack{
+                VStack{
+                SecureInputView2("تأكيد كلمة المرور", text: $repass)
+                        .onChange(of: self.repass, perform: { newValue in
+                           
+                            if self.pass != self.repass {
+                                self.repassErr = "لا تطابق كلمة المرور"
+                            }
+                        })
+                    if self.repassErr != "" {
+                        Text(self.repassErr)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                           // .padding(.bottom)
+                          //  .multilineTextAlignment(.center)
+                    }                        }
+                 .padding(.horizontal)
+                 .padding(.top,30)
+                    /*VStack{
                     
                     HStack(spacing: 15){
                         
@@ -300,6 +359,13 @@ struct SignUP : View {
     @State var repass2 = ""
     @Binding var index : Int
     
+    
+    @State var usernameErr2 = ""
+    @State var emailErr2 = ""
+    @State var phoneNoErr2 = ""
+    @State var passErr2 = ""
+    @State var repassErr2 = ""
+    
     // call from SignUpVM : View Model (firebase)
      func S_SignUp (/*user: User2*/){
          // for Auth.
@@ -340,11 +406,19 @@ struct SignUP : View {
                         
                         TextField("اسم المستخدم", text: self.$username2)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+                            .onChange(of: self.username2, perform: {newValue in self.usernameErr2 = VM.validateUserName(username: self.username2)})
                         Image(systemName: "person.fill")
                             .foregroundColor(Color("Kcolor"))
                     }
                     
                     Divider().background(Color("Kcolor").opacity(0.5))
+                    if self.usernameErr2 != "" {
+                        Text(self.usernameErr2)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 40)
@@ -356,13 +430,20 @@ struct SignUP : View {
                     
                         TextField("رقم الجوال", text: self.$phoneNo2)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                        
+                            .onChange(of: self.phoneNo2, perform: {newValue in self.phoneNoErr2 = VM.validatePhoneNo(phone: self.phoneNo2)})
                         Image(systemName: "phone.fill")
                             .foregroundColor(Color("Kcolor"))
 
                     }
                     
                     Divider().background(Color("Kcolor").opacity(0.5))
+                    if self.phoneNoErr2 != "" {
+                        Text(self.phoneNoErr2)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 30)
@@ -374,19 +455,39 @@ struct SignUP : View {
                         
                         TextField("البريد الإلكتروني", text: self.$email2)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                        
+                            .onChange(of: self.email2, perform: {newValue in self.emailErr2 = VM.validateEmail(email: self.email2)})
                         Image(systemName: "envelope.fill")
                             .foregroundColor(Color("Kcolor"))
 
                     }
                     
                     Divider().background(Color("Kcolor").opacity(0.5))
+                    if self.emailErr2 != "" {
+                        Text(self.emailErr2)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.top, 30)
                 
                 /*PASS FIELD*/
-                SecureInputView2("كلمة المرور", text: $pass2)
+                VStack{
+                SecureInputView2("كلمة المرور", text: $pass2).onChange(of: self.pass2, perform: {newValue in self.passErr2 = VM.validatePass(pass: self.pass2)})
+                    
+                    if self.passErr2 != "" {
+                        Text(self.passErr2)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                            //.padding(.bottom)
+                            //.multilineTextAlignment(TextAlignment.trailing)
+                    }
+                
+                }
+         .padding(.horizontal)
+         .padding(.top,30)
                 /*
                 VStack{
                     
@@ -408,8 +509,25 @@ struct SignUP : View {
                 // replacing forget password with reenter password...
                 // so same height will be maintained...
                 /*CONFIRM PASS FIELD*/
-                SecureInputView2("تأكيد كلمة المرور", text: $repass2)                 /*
                 VStack{
+                SecureInputView2("تأكيد كلمة المرور", text: $repass2)
+                        .onChange(of: self.repass2, perform: { newValue in
+                           
+                            if self.pass2 != self.repass2 {
+                                self.repassErr2 = "لا تطابق كلمة المرور"
+                            }
+                        })
+                    if self.repassErr2 != "" {
+                        Text(self.repassErr2)
+                            .foregroundColor(.red)
+                            .font(.system(size: 10))
+                           // .padding(.bottom)
+                          //  .multilineTextAlignment(.center)
+                    }                        }
+                 .padding(.horizontal)
+                 .padding(.top,30)
+                
+/*                VStack{
                     
                     HStack(spacing: 15){
                                                 
@@ -485,7 +603,7 @@ struct SecureInputView2: View {
     }
     
     var body: some View {
-        VStack{
+       // VStack{
         HStack(spacing: 15)  {
             if isSecured {
                 SecureField(title, text: $text).autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
@@ -504,8 +622,8 @@ struct SecureInputView2: View {
             }
         }
             Divider().background(Color("Kcolor").opacity(0.5))
-                           }
+                         /*  }
                     .padding(.horizontal)
-                    .padding(.top,30)
+                    .padding(.top,30)*/
 }
 }
