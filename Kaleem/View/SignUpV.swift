@@ -58,60 +58,8 @@ struct SignUpTaps : View {
                 }
                 .padding(.top, 50)
                 
-                  /* HStack(spacing: 15){
-                    
-                    Rectangle()
-                          .fill(Color.gray)
-                    .frame(height: 1)
-                    
-                    Text("OR")
-                    
-                    Rectangle()
-                          .fill(Color.gray)
-                    .frame(height: 1)
-                }
-                  
-                .padding(.horizontal, 30)
-                .padding(.top, 50) */
-                
-                // because login button is moved 25 in y axis and 25 padding = 50
-                
-              /*  HStack(spacing: 25){
-                    
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Image("apple")
-                        .resizable()
-                        .renderingMode(.original)
-                        .frame(width: 50, height: 50)
-                        .clipShape(Circle())
-                    }
-                    
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Image("fb")
-                        .resizable()
-                        .renderingMode(.original)
-                        .frame(width: 50, height: 50)
-                        .clipShape(Circle())
-                    }
-                    
-                    Button(action: {
-                        
-                    }) {
-                        
-                        Image("twitter")
-                        .resizable()
-                        .renderingMode(.original)
-                        .frame(width: 50, height: 50)
-                        .clipShape(Circle())
-                    }
-                }
-                .padding(.top, 30) */
+               
+            
             }
             .padding(.vertical)
                

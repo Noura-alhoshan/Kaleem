@@ -38,6 +38,11 @@ class SignUpVM : ObservableObject {
             }
         }
     }
+    
+    func validateUserName (username: String){
+        
+        if username == "" {}
+    }
 }
 
 /*struct SignUp_Previews: PreviewProvider {

@@ -26,6 +26,7 @@ struct SignUpInScreen: View {
                         destination: SignUpTaps().navigationBarHidden(true),
                         label: {
                             Text("الانضمام لكليم !")
+                                .font(Font.custom("Almarai-Bold", size: 20))
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.white)
@@ -42,6 +43,7 @@ struct SignUpInScreen: View {
                         destination: SignIn().navigationBarHidden(true),
                         label: {
                             Text("تسجيل الدخول")
+                                .font(Font.custom("Almarai-Regular", size: 20))
                                 .font(.title3)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color("Color"))

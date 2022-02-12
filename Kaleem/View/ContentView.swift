@@ -121,8 +121,10 @@ struct ScreenView: View {
                     }
                 }, label: {
                     Text("تخطي")
-                        .font(Font.custom("Almarai-Light", size: 18))
                         .fontWeight(.semibold)
+                        .font(Font.custom("Almarai-Light", size: 18))
+                       
+                        .foregroundColor(Color("DarkGray"))
                         .kerning (1.4)
                  
                 })
@@ -133,8 +135,9 @@ struct ScreenView: View {
                 
                 if currentPage == 1{
                     Text ("أهلاً بك")
+                        .kerning (1.7)
                         .fontWeight(.semibold)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color("DarkGray"))
                         //.font(Font.custom("Almarai-Regular", size: 20))
                         . font(.title)
                     // Letter Spacing...
@@ -157,7 +160,8 @@ struct ScreenView: View {
                             .foregroundColor(.white)
                             .padding(.vertical,10)
                             .padding(.horizontal)
-                            .background(Color.black.opacity(0.4))
+                           // .background(Color.black.opacity(0.4))
+                            .background(Color("Color"))
                             .cornerRadius(10)
                      
                     })
@@ -174,9 +178,10 @@ struct ScreenView: View {
             .padding()
             Text(title)
                 .font(.title)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
                 .font(Font.custom("Almarai-Light", size: 25))
-                .foregroundColor(.black)
+                .foregroundColor(Color("DarkGray"))
+                .kerning(1.9)
                 .padding(.top,70)
            // Spacer(minLength: 0)
             Image(image).resizable().aspectRatio( contentMode: .fit)
@@ -186,9 +191,11 @@ struct ScreenView: View {
             Text(detail)
                 .fontWeight(.semibold)
                 .font(Font.custom("Almarai-Light", size: 20))
-                .kerning(1.3)
+                .foregroundColor(Color("DarkGray"))
+                .kerning(1.1)
                 .multilineTextAlignment(.center)
                 .padding(.bottom,20)
+                .padding(30)
             //Minimum spacing when Phone is reducing
             Spacer(minLength: 120)
             
