@@ -25,7 +25,8 @@ struct Wrraper: View{
                     
                 case "Impaired":
                     TextToSpeechV()
-                    
+                    //testt()
+                    //testCircle()
                 case "Admin":
                     AdminHome()
                     

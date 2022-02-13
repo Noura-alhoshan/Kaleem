@@ -16,10 +16,11 @@
 		26554F3F27A2D96F0041ECB5 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F3E27A2D96F0041ECB5 /* SessionStore.swift */; };
 		26554F4127A2DC3F0041ECB5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F4027A2DC3F0041ECB5 /* SignIn.swift */; };
 		26554F4327A2F1650041ECB5 /* VolunteerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26554F4227A2F1650041ECB5 /* VolunteerHome.swift */; };
-		2660FE1027B84C1E000FBF78 /* MicrophoneMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2660FE0F27B84C1E000FBF78 /* MicrophoneMonitor.swift */; };
 		2673CACE27AB36550091184B /* ImpairedHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673CACD27AB36550091184B /* ImpairedHome.swift */; };
 		2673CAD027AB36B30091184B /* AdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673CACF27AB36B30091184B /* AdminHome.swift */; };
 		26D9204027B459B0007961C4 /* TextToSpeechV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D9203F27B459B0007961C4 /* TextToSpeechV.swift */; };
+		26FB089427B9043100CA2E3D /* TextToSpeechVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB089327B9043100CA2E3D /* TextToSpeechVM.swift */; };
+		26FB089627B9052C00CA2E3D /* TextToSpeechM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FB089527B9052C00CA2E3D /* TextToSpeechM.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +35,12 @@
 		26554F3E27A2D96F0041ECB5 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		26554F4027A2DC3F0041ECB5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		26554F4227A2F1650041ECB5 /* VolunteerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerHome.swift; sourceTree = "<group>"; };
-		2660FE0F27B84C1E000FBF78 /* MicrophoneMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneMonitor.swift; sourceTree = "<group>"; };
 		2660FE1127B85213000FBF78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2673CACD27AB36550091184B /* ImpairedHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedHome.swift; sourceTree = "<group>"; };
 		2673CACF27AB36B30091184B /* AdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHome.swift; sourceTree = "<group>"; };
 		26D9203F27B459B0007961C4 /* TextToSpeechV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
+		26FB089327B9043100CA2E3D /* TextToSpeechVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechVM.swift; sourceTree = "<group>"; };
+		26FB089527B9052C00CA2E3D /* TextToSpeechM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechM.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,12 +82,13 @@
 				2660FE1127B85213000FBF78 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
-				2660FE0F27B84C1E000FBF78 /* MicrophoneMonitor.swift */,
 				14FD4F34279F2D1200E4947D /* Wrapper.swift */,
 				26554F4227A2F1650041ECB5 /* VolunteerHome.swift */,
 				2673CACF27AB36B30091184B /* AdminHome.swift */,
 				2673CACD27AB36550091184B /* ImpairedHome.swift */,
 				26D9203F27B459B0007961C4 /* TextToSpeechV.swift */,
+				26FB089327B9043100CA2E3D /* TextToSpeechVM.swift */,
+				26FB089527B9052C00CA2E3D /* TextToSpeechM.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
 				26554F3E27A2D96F0041ECB5 /* SessionStore.swift */,
@@ -240,10 +243,11 @@
 				2673CACE27AB36550091184B /* ImpairedHome.swift in Sources */,
 				26554F4127A2DC3F0041ECB5 /* SignIn.swift in Sources */,
 				2673CAD027AB36B30091184B /* AdminHome.swift in Sources */,
+				26FB089627B9052C00CA2E3D /* TextToSpeechM.swift in Sources */,
+				26FB089427B9043100CA2E3D /* TextToSpeechVM.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 				26554F4327A2F1650041ECB5 /* VolunteerHome.swift in Sources */,
 				26D9204027B459B0007961C4 /* TextToSpeechV.swift in Sources */,
-				2660FE1027B84C1E000FBF78 /* MicrophoneMonitor.swift in Sources */,
 				2632F6B327A73E53009B9942 /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

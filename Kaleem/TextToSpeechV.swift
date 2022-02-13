@@ -9,43 +9,14 @@ import SwiftUI
 import AVFoundation
 
 
+
 struct TextToSpeechV: View {
     
-    @EnvironmentObject var session: SessionStore
     @State var TextToTranslate: String = ""
-    @State var NoVoiceError = false
-    @State var visulize = false
-    @ObservedObject private var mic = MicrophoneMonitor(numberOfSamples: numberOfSamples)
-      
-     
-     
+    @StateObject var speaker: Speaker = Speaker()
+    @State  var animateAquaColor =  false
+    @State  var animateSkyColor = false
     
-    private func readText(_ text:String){
-        
-        if let language = NSLinguisticTagger.dominantLanguage(for: text) {
-            let utterance = AVSpeechUtterance(string: text)
-            utterance.voice = AVSpeechSynthesisVoice(language: language)
-
-            //To control speed and pitch
-           // utterance.pitchMultiplier = 1
-          //  utterance.rate =
-
-            let synth = AVSpeechSynthesizer()
-            synth.speak(utterance)
-            self.NoVoiceError = false
-            self.visulize = true
-            
-
-        } else {
-            print("Unknown language")
-            self.NoVoiceError = true
-            self.visulize = false
-        }
-        
-        //mic.stopMonitoring()
-        //self.visulize = true
-    }
-
     
     
     private func errorVibration() {
@@ -54,110 +25,201 @@ struct TextToSpeechV: View {
     }
     
     
-    private func normalizeSoundLevel(level: Float) -> CGFloat {
-        let level = max(0.2, CGFloat(level) + 50) / 2 // between 0.1 and 25
-        
-        return CGFloat(level * (300 / 25)) // scaled to max at 300 (our height of our bar)
-    }
-    
-    
     var body: some View {
         
         VStack{
-        VStack{
-               HStack(spacing: 15)  {
-               TextField(" أدخل النص", text: self.$TextToTranslate
-               )
-                   .disableAutocorrection(true)
-                   .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                   
-               }
-            Divider()
-               .background(Color("Kcolor").opacity(0.5))
-            
-           }
-                   .padding(.horizontal)
-                   .padding(.top,20)
-                   .padding(.bottom,20)
-               
-            
-            if (NoVoiceError) {
-                       
-                Text(" الرجاء إدخال نص صحيح")
-                    .onAppear(perform: {let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                        impactMed.impactOccurred()})
-                    //.offset(y: -10)
-                    .foregroundColor(.red).padding(.top,13)
-            }
-            else {
-                Text(" ").foregroundColor(.red).padding(.top,13)
+            VStack{
+                HStack(spacing: 15)  {
+                    
+                    ZStack(alignment: .topTrailing) {
+                        TextEditor(text: $TextToTranslate)
+                            .multilineTextAlignment(TextAlignment.trailing)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                            .font(.system(size: 18.5))
+                            .background(Color.gray.opacity(0.1))
+                            .frame(height: 100)
+                        
+                        // .padding()
+                        //.border(Color(uiColor: .opaqueSeparator), width: 0.5)
+                            .cornerRadius(15)
+                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
+                            .onTapGesture {
+                                //self.hideKeyboard()
+                            }
+                        //Spacer()
+                        Text("أدخل النص")
+                            .fontWeight(.light)
+                            .foregroundColor(.black.opacity(0.25))
+                            .font(.system(size: 18.5))
+                        //.multilineTextAlignment(TextAlignment.trailing)
+                        // .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                            .padding(8).hidden(!TextToTranslate.isEmpty)
+                    }
+                    
+                    
+                }
                 
-            }
-            
-            if (visulize){
                 
-                HStack(spacing: 3) {
-                             // 4
-                            ForEach(mic.soundSamples, id: \.self) { level in
-                                BarView(value: self.normalizeSoundLevel(level: level))
+                //.padding(.horizontal)
+                .padding(.top,20)
+                //.padding(.bottom,20)
+                
+                
+                if (speaker.isShowingSpeakingErrorAlert) {
+                    
+                    Text(" الرجاء إدخال نص صحيح")
+                        .foregroundColor(.red).padding(.top,10)
+                }
+                else {
+                    Text(" ").foregroundColor(.red).padding(.top,10)
+                    
+                }
+                
+                
+                
+                
+                if (speaker.isSpeaking) {
+                    SpeechStack()
+                }
+                else {
+                    ZStack
+                    {
+                        Circle() // Sky
+                            .frame(width: 120, height: 120)
+                            .foregroundColor(Color.red).opacity(0.1)
+                            .scaleEffect(animateSkyColor ? 1: 0.8)
+                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
+                        // .animation( Animation.easeInOut (duration:
+                        // 8.5))
+                        //value: speaker.isSpeaking ? true : false)
+                            .onAppear() {
+                                // self.animateSkyColor.toggle()
                                 
                             }
+                        
+                        
+                        Circle() // Aqua
+                            .frame (width: 120, height: 120)
+                            .foregroundColor(Color.teal).opacity(0.5)
+                            .scaleEffect(animateSkyColor ? 1: 0.8)
+                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
+                        // .animation(Animation.easeInOut(duration:
+                        //  0.5)) //, value: speaker.isSpeaking ? true : false)
+                            .onAppear() {
+                                // self.animateAquaColor.toggle()
+                                
+                            }
+                        
+                        
+                        Button(action: {
+                            speaker.speak(TextToTranslate)
+                            if (speaker.isShowingSpeakingErrorAlert) {
+                                UINotificationFeedbackGenerator().notificationOccurred(.error)
+                            }
+                            self.hideKeyboard()
+                        }, label: {
+                            Image(systemName: "speaker.wave.2.circle")
+                                .resizable()
+                                .frame(width: 55, height: 55).colorMultiply(Color.red)
+                                .shadow(color: Color.gray.opacity(0.2), radius:5 , x: 0, y: 5)
+                        })
+                        
+                    }
                     
-                        }
-        
-            }
-            
-            else{
-                HStack(spacing: 3) {
-                             // 4
-                            
-                        }
-            }
-            
-            
-               Button(action: {
-                   readText(TextToTranslate)
+                    
+                }
                 
-                   if (NoVoiceError) {
-                       UINotificationFeedbackGenerator().notificationOccurred(.error)
-                   }
-               }, label: {
-                   Text("ترجمة ")
-                       .font(.headline)
-                       .foregroundColor(.white)
-                       .padding()
-                       .frame(width: 220, height: 60)
-                       .background(Color.black)
-                       .cornerRadius(35.0)
-               })
+            }
+            
+        } /*CONTAINER*/
+        
+        .padding()
+        .padding(.bottom, 5)
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(15)
+        .padding(.horizontal,20)
+        .onTapGesture {
+            self.hideKeyboard()
+        }
     }
+    
+}
+
+
+
+struct SpeechStack: View {
+    
+    @State  var animateAquaColor =  false
+    @State  var animateSkyColor = false
+    
+    var body: some View {
+        ZStack
+        {
+            Circle() // Sky Animation.default.repeat(while: active))
+                .frame(width: 120, height: 120)
+                .foregroundColor(Color.gray).opacity(0.19)
+                .scaleEffect(animateSkyColor ? 1: 0.8)
+                .animation( Animation.easeInOut (duration:
+                                                    6.5).repeatForever(autoreverses: true).speed(2))
+            
+            Circle() // Sky Animation.default.repeat(while: active))
+                .frame(width: 120, height: 120)
+                .foregroundColor(Color.green).opacity(0.2)
+                .scaleEffect(animateSkyColor ? 1: 0.8)
+                .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
+                .scaleEffect(animateSkyColor ? 1: 0.8)
+                .animation( Animation.easeInOut (duration:
+                                                    2.5).repeatForever(autoreverses: true).speed(2))
+            //value: speaker.isSpeaking ? true : false)
+                .onAppear() {
+                    self.animateSkyColor.toggle()
+                    
+                }
+            
+            
+            Circle() // Aqua
+                .frame (width: 120, height: 120)
+                .foregroundColor(Color("Kcolor")).opacity(0.2)
+                .scaleEffect(animateSkyColor ? 1: 0.8)
+                .animation(Animation.easeInOut(duration:
+                                                0.75).repeatForever(autoreverses: true).speed(2)) //, value: speaker.isSpeaking ? true : false)
+                .onAppear() {
+                    self.animateAquaColor.toggle()
+                    
+                }
+            
+            Image(systemName: "speaker.wave.2.circle")
+                .resizable()
+                .frame(width: 55, height: 55)
+        }
+        
+        
     }
 }
+
+
+extension View {
+    @ViewBuilder public func hidden(_ shouldHide: Bool) -> some View {
+        switch shouldHide {
+        case true: self.hidden()
+        case false: self
+        }
+    }
+}
+
+#if canImport(UIKit)
+extension View {
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+#endif
+
 
 struct TextToSpeechV_Previews: PreviewProvider {
     static var previews: some View {
         TextToSpeechV()
         
-    }
-}
-
-
-
-let numberOfSamples: Int = 10
-
-struct BarView: View {
-   // 1
-    var value: CGFloat
-
-    var body: some View {
-        ZStack {
-           // 2
-            RoundedRectangle(cornerRadius: 20)
-                .fill(LinearGradient(gradient: Gradient(colors: [.purple, .blue]),
-                                     startPoint: .top,
-                                     endPoint: .bottom))
-                // 3
-                .frame(width: (UIScreen.main.bounds.width - CGFloat(numberOfSamples) * 4) / CGFloat(numberOfSamples), height: value)
-        }
     }
 }
