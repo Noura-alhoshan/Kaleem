@@ -66,7 +66,7 @@ struct Onboarding: View {
                                 }
                             })
                         
-                            .onEnded({value in}) // HERE ==========================
+                            .onEnded({value in}) // Raneem stopped here ==========================
                     
                     )
             })

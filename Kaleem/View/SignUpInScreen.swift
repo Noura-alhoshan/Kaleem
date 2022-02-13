@@ -11,7 +11,7 @@ struct SignUpInScreen: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color("AppIcon").edgesIgnoringSafeArea(.all)
+                Color("AppIcon").edgesIgnoringSafeArea(.all) // THIS cause an error =========
                // Color.gray.edgesIgnoringSafeArea(.all)
                 VStack {
                  
