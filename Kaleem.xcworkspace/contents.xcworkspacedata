@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Kaleem/Info.plist">
-   </FileRef>
-   <FileRef
       location = "group:Kaleem.xcodeproj">
    </FileRef>
    <FileRef
