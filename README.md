@@ -85,7 +85,7 @@ adds translation from Arabic sign language to speech and real time help via crow
 <h1> <li>References ✔️</li> </h1> 
  
  <p>  <li> <i> [1] Csis.org. 2021. Reading the Signs: Diverse Arabic Sign Languages. [online]
-Available at: <https://www.csis.org/analysis/reading-signs-diverse-arabic-signlanguages-0> [Accessed 11 September 2021]. </i>  <li> 
+Available at: <https://www.csis.org/analysis/reading-signs-diverse-arabic-signlanguages-0> [Accessed 11 September 2021]. </i>  <li> </p>
   
-  <li> <i> [2]  Firebase Documentation. [online] Available at: <https://firebase.google.com/docs/firestore> [Accessed 22 November 2021]. </i>
+<p>  <li> <i> [2]  Firebase Documentation. [online] Available at: <https://firebase.google.com/docs/firestore> [Accessed 22 November 2021]. </i>
 </li></p>
