@@ -11,7 +11,7 @@ import Combine
 struct ContentView: View {
     var body: some View {
         
-        Home()
+        SignUpTaps()
             // for light status bar...**
            // .preferredColorScheme(.dark)
     }
@@ -23,7 +23,7 @@ struct ContentView: View {
     }
 }*/
 
-struct Home : View {
+struct SignUpTaps : View {
     
     @State var index = 1
     
