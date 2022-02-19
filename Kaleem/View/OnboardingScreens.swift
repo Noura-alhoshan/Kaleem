@@ -12,10 +12,10 @@ struct Onboarding: View {
     @State var intros: [Intro] = [
         Intro(title: "Plan", subTitle: "your routes",
             description: "View your collection route Follow", pic:
-            "Pic1",color: Color("Green")),
-        Intro(title: "Quick Waste", subTitle: "Transfer Note",description: "Record oil collections easily", pic: "Pic2",color:
-            Color("DarkGrey")),
-        Intro(title: "Invite", subTitle:"restaurants", description: "Know some restaurant who want to", pic: "Pic3",color: Color("Yellow")),
+                "TT",color: Color.white),
+        Intro(title: "Quick Waste", subTitle: "Transfer Note",description: "Record oil collections easily", pic: "Location-1",color:
+            Color("Grey")),
+        Intro(title: "Invite", subTitle:"restaurants", description: "Know some restaurant who want to", pic: "VideoCall",color: Color("Color")),
    
         ]
     
@@ -31,11 +31,48 @@ struct Onboarding: View {
                 index in
                 IntroView(intro: intros[index])
                 //Custom Liquid Shape ..
-                    .clipShape(LiquidShape(offset: intros[index].offset))
-                    .padding(.trailing)
+                    .clipShape(LiquidShape(offset: intros[index].offset, curvePoint: fakeIndex == index ? 50 : 0))
+                    .padding(.trailing, fakeIndex == index ? 15 : 0)
                     .ignoresSafeArea()
                 
             }
+            
+            HStack(spacing: 8){
+                
+                // Indicator ...
+                ForEach( 0..<intros.count - 2, id: \.self){
+                    index in
+                    
+                    Circle()
+                        .fill(.white)
+                        .frame(width: 8, height: 8)
+                        .scaleEffect(currentIndex == index ? 1.15 : 0.85)
+                        .opacity(currentIndex == index ? 1 : 0.25)
+                    
+                }
+                Spacer()
+                
+                NavigationLink(
+                    destination: SignUpTaps().navigationBarHidden(true),
+                    label: {
+                        Text("تخطي")
+                            .font(Font.custom("Almarai-Bold", size: 20))
+                            .font(.title3)
+                            .fontWeight(.bold)
+//                            .foregroundColor(Color.white)
+//                            .padding()
+//                            .frame(width: 300)
+//                            .background(Color("Color"))
+//                            .cornerRadius(50.0)
+//                            .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
+//                            .padding(.vertical)
+                    }
+                )
+                
+            }
+            .padding()
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             
         }
         //arrow with Drag Gesture ...
@@ -46,7 +83,7 @@ struct Onboarding: View {
                 Image(systemName: "chevron.left")
                     .font(.largeTitle)
                     .frame(width: 50, height: 50)
-                    .foregroundColor(.red)
+                    .foregroundColor(.white)
                     .contentShape (Rectangle())
                     .gesture(
                         
@@ -60,18 +97,93 @@ struct Onboarding: View {
                                 value in
                                 // updating offset
                                 withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+                                    intros[fakeIndex].offset = value.translation
                                     
-                                    
-                                    intros[currentIndex].offset = value.translation
+                                
                                 }
                             })
                         
-                            .onEnded({value in}) // Raneem stopped here ==========================
+                            .onEnded({value in
+                                
+                                withAnimation(.spring()) {
+                                    
+                                    //checking
+                                    if -intros[fakeIndex].offset.width > getRect().width / 2{
+                                        
+                                        
+                                        // setting width to height...
+                                        intros[fakeIndex].offset.width = -getRect().height * 1.5
+                                        
+                                        //Updating Index ...
+                                        fakeIndex+=1
+                                        
+                                        //Updating Orignal index
+                                        if currentIndex == intros.count - 3 {
+                                            
+                                            currentIndex = 0
+                                        }
+                                        
+                                        else {
+                                            
+                                            currentIndex += 1
+                                        }
+                                        
+                                         // when fake index reaches the element that is before last one
+                                        // shifting again to first last so that it will
+                                       // create a feel like infinite carousel...
+                                        
+                                        // some delay to finish the swipe animation ...
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4){
+                                            
+                                            if fakeIndex == (intros.count - 2){
+                                                 for index in 0..<intros.count - 2{
+                                                       intros[index].offset = .zero
+                                                // updating current index...
+                                                 fakeIndex = 0
+                                            }
+                                            
+                                            }}
+                                        
+                                    }
+                                    
+                                    else {
+                                        
+                                        intros[fakeIndex].offset = .zero
+                                    }
+                                            
+                                          
+                                }
+                                
+                            }) // Raneem stopped here ==========================
                     
                     )
             })
                     .offset(y: 53)
+                    .opacity(isDragging ? 0 : 1)
+                    .animation(.linear, value: isDragging)
                  ,alignment: .topTrailing)
+        
+        .onAppear{
+            
+            //Inserting last element to first
+            //and first to last to create a feel like infinite carousel...
+            
+            guard let first = intros.first else{
+                return
+            }
+            
+            guard var last = intros.last else {
+                return
+            }
+            
+            last.offset.width = -getRect().height * 1.5
+            intros.append(first)
+            intros.insert(last, at: 0)
+            
+            //updating fake index...
+            fakeIndex = 1
+            
+        }
     }//End Body
     
     @ViewBuilder
@@ -138,6 +250,24 @@ struct Onboarding_Previews: PreviewProvider {
 
 struct LiquidShape: Shape{
     var offset: CGSize
+    var curvePoint: CGFloat
+    
+    //Multiple Animatable Data ...
+    // Animating Shapes...
+    var animatableData: AnimatablePair<CGSize.AnimatableData, CGFloat>{
+        
+        get{
+            
+            return AnimatablePair(offset.animatableData, curvePoint)
+        }
+        
+        set{
+            
+            offset.animatableData = newValue.first
+            curvePoint = newValue.second
+        }
+        
+    }
     
     func path(in rect: CGRect) -> Path {
         
@@ -159,6 +289,16 @@ struct LiquidShape: Shape{
             //from
             let from = 80 + (offset.width)
             path.move(to: CGPoint(x:rect.width,y: from > 80 ? 80 : from))
+            
+            //Also Adding Height..
+            var to = 180 + (offset.height) + (-offset.width)
+            to = to < 180 ? 180 : to
+            
+            // Mid b/w 80-180...
+            let mid : CGFloat = 80 + ((to - 80) / 2)
+            
+        //   path.addCurve(to: <#T##CGPoint#>(x: rect.width, y: to), control1: <#T##CGPoint#>(x: width - curvePoint, y: mid), control2: CGPoint(x: width - curvePoint, y: mid))
+            
         }
     }
 }

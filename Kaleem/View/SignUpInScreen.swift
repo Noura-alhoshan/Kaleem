@@ -26,7 +26,7 @@ struct SignUpInScreen: View {
                     NavigationLink(
                         destination: SignUpTaps().navigationBarHidden(true),
                         label: {
-                            Text("الانضمام لكليم !")
+                            Text("الانضمام لكليم ")
                                 .font(Font.custom("Almarai-Bold", size: 20))
                                 .font(.title3)
                                 .fontWeight(.bold)
@@ -57,6 +57,62 @@ struct SignUpInScreen: View {
                         }
                     )
                         .navigationBarHidden(true)
+                    
+                    
+                    
+                    
+                    Text("بالمتابعة، فإنك توافق على شروط كليـم\nوتقر بأنك قرأت سياسة  الخصوصية")
+                        .font(Font.custom("Almarai-Regular", size: 20))
+                        .font(.title3)
+                        .foregroundColor(Color("Gray"))
+                        .kerning (1.2)
+                        .multilineTextAlignment(.center)
+                      //  .fontWeight(.bold)
+                       
+                        .padding()
+                                            .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
+                  //  Text("[Privacy Policy](signIn())")
+                    
+            
+                    VStack {
+                               Text(" بالمتابعة ، فإنك توافق على ")
+                            .font(Font.custom("Almarai-Regular", size: 20))
+                            .font(.title3)
+                            .foregroundColor(Color("Gray"))
+                            .kerning (1.2)
+                            .multilineTextAlignment(.center)
+                               HStack(spacing: 0) {
+                                
+                               
+                               //    Button(" الخصوصية ") {
+                                   NavigationLink(
+                                    destination: SignIn().navigationBarHidden(true),
+                                    label: {
+                                        Text(" الخصوصية ")
+                                   
+                                        
+                                    })
+                                       
+                                 //  }
+                                   Text("كليـم وتقر بأنك قرأت سياسة ")
+                                       .font(Font.custom("Almarai-Regular", size: 20))
+                                       .font(.title3)
+                                       .foregroundColor(Color("Gray"))
+                                       .kerning (1.2)
+                                       .multilineTextAlignment(.center)
+                                   
+                                   NavigationLink(
+                                    destination: SignIn().navigationBarHidden(true),
+                                    label: {
+                                        Text(" شروط ")
+                                         
+                                        
+                                    })
+                                  
+                                //   Text("")
+                               }
+                           }
+                    
                     
                 }
                 .padding()
