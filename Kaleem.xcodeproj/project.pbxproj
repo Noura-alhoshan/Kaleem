@@ -33,6 +33,11 @@
 		F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */; };
 		F542D1C227C1A5D500A1E9ED /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1C127C1A5D500A1E9ED /* SignUpVM.swift */; };
 		F542D1C427C233B700A1E9ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1C327C233B700A1E9ED /* ContentView.swift */; };
+		F542D1C727C236FB00A1E9ED /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1C527C236FB00A1E9ED /* Extension.swift */; };
+		F542D1C827C236FB00A1E9ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1C627C236FB00A1E9ED /* Constants.swift */; };
+		F542D1CB27C2487800A1E9ED /* OnboardingIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1C927C2487800A1E9ED /* OnboardingIntro.swift */; };
+		F542D1CC27C2487800A1E9ED /* OnboardingScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1CA27C2487800A1E9ED /* OnboardingScreens.swift */; };
+		F542D1CE27C2F6BC00A1E9ED /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = F542D1CD27C2F6BB00A1E9ED /* Fonts */; };
 		F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +71,11 @@
 		F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
 		F542D1C127C1A5D500A1E9ED /* SignUpVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		F542D1C327C233B700A1E9ED /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../../Downloads/Kaleem-Stage/Kaleem/ContentView.swift"; sourceTree = "<group>"; };
+		F542D1C527C236FB00A1E9ED /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = "../../../../.Trash/Qarar-signup/Qarar/Helper/Extension.swift"; sourceTree = "<group>"; };
+		F542D1C627C236FB00A1E9ED /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../../.Trash/Qarar-signup/Qarar/Helper/Constants.swift"; sourceTree = "<group>"; };
+		F542D1C927C2487800A1E9ED /* OnboardingIntro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingIntro.swift; sourceTree = "<group>"; };
+		F542D1CA27C2487800A1E9ED /* OnboardingScreens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingScreens.swift; sourceTree = "<group>"; };
+		F542D1CD27C2F6BB00A1E9ED /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +153,9 @@
 		F50D1A3C27B2F22C00B3EE94 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				F542D1CD27C2F6BB00A1E9ED /* Fonts */,
+				F542D1C627C236FB00A1E9ED /* Constants.swift */,
+				F542D1C527C236FB00A1E9ED /* Extension.swift */,
 				F572FADA27A3B669001C7143 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
@@ -177,6 +190,8 @@
 		F572FADC27A3B7FB001C7143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F542D1C927C2487800A1E9ED /* OnboardingIntro.swift */,
+				F542D1CA27C2487800A1E9ED /* OnboardingScreens.swift */,
 				F542D1B727C1A54B00A1E9ED /* AdminHome.swift */,
 				F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */,
 				F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */,
@@ -254,6 +269,7 @@
 				14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */,
 				F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
+				F542D1CE27C2F6BC00A1E9ED /* Fonts in Resources */,
 				14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */,
 				F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */,
 			);
@@ -314,15 +330,19 @@
 				F542D1BA27C1A54B00A1E9ED /* ImpairedHome.swift in Sources */,
 				F542D1AB27C1A54000A1E9ED /* AProgressBarVM.swift in Sources */,
 				F542D1AF27C1A54000A1E9ED /* AQuizManagerVM.swift in Sources */,
+				F542D1C827C236FB00A1E9ED /* Constants.swift in Sources */,
+				F542D1CB27C2487800A1E9ED /* OnboardingIntro.swift in Sources */,
 				F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */,
 				F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
+				F542D1CC27C2487800A1E9ED /* OnboardingScreens.swift in Sources */,
 				F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */,
 				F542D1C427C233B700A1E9ED /* ContentView.swift in Sources */,
 				F542D1AD27C1A54000A1E9ED /* SignInVM.swift in Sources */,
 				F542D1C227C1A5D500A1E9ED /* SignUpVM.swift in Sources */,
 				F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */,
+				F542D1C727C236FB00A1E9ED /* Extension.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
 				F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */,
 				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,
