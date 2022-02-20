@@ -10,25 +10,25 @@ class SignUpVM : ObservableObject {
    // var user: User2? { didSet { self.didChange.send(self) }} // why '?'
     // OR
    // @ObservedObject var user = User2
-    
+
     let auth = Auth.auth()
     let db = Firestore.firestore()
-    
+
     // create user in Firebase Auth.
     func createNewAccount(email: String, password: String) { // I change it because it was display an error (var > String) ########
-        
-        auth.createUser(withEmail: email, password: password)
-   
-    } // END crrate user
-    
-     func addDataToCollection(userType: String, username: String, phone: String, email: String) {
-        
-        
 
-        
+        auth.createUser(withEmail: email, password: password)
+
+    } // END crrate user
+
+     func addDataToCollection(userType: String, username: String, phone: String, email: String) {
+
+
+
+
         // Add a document to a collection
         db.collection(userType).addDocument(data: ["username":username, "phoneNo":phone, "email":email]) { error in
-            
+
             // Check for errors
             if error == nil {
                 // No errors
@@ -49,7 +49,7 @@ class SignUpVM : ObservableObject {
         }
         return err
     }
-    
+
     func validateEmail (email: String) -> String {
         var err = ""
         if email == "" {
@@ -65,7 +65,7 @@ class SignUpVM : ObservableObject {
         print(err) // =======
         return err
     }
-    
+
     func isEmailExisted(email: String, handler: @escaping (Bool, String) -> Void) {
         if (email ).isValidEmail {
             db.collection("Volunteer").getDocuments { (snapshot, error) in
@@ -85,7 +85,7 @@ class SignUpVM : ObservableObject {
                        handler(false, "")
                    }
                } // end else
-                
+
             }
             db.collection("Deaf").getDocuments { (snapshot, error) in
                if let error = error  {
@@ -103,7 +103,7 @@ class SignUpVM : ObservableObject {
                        handler(false, "")
                    }
                } // end else
-                
+
             }
         }
     }
@@ -113,11 +113,11 @@ class SignUpVM : ObservableObject {
             err = "*كلمة المرور مطلوبة"
         }else if !pass.containsUppercase || !pass.containsNumbers || !pass.containsSpecialCharacters || pass.count < 7 {
             err = "*كلمة المرور يجب أن تحتوي على حرف كبير، حرف صغير، رقم، رمز، و ٨ خانات على الأقل"
-        } 
-        
+        }
+
         return err
     }
-    
+
     func validatePhoneNo (phone: String)-> String {
         var err = ""
         if phone == "" {
@@ -127,6 +127,6 @@ class SignUpVM : ObservableObject {
         }
         return err
     }
-    
+
 }
 
