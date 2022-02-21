@@ -38,7 +38,7 @@ struct TextToSpeechV: View {
                             .autocapitalization(.none)
                             .font(.system(size: 18.5))
                             .background(Color.gray.opacity(0.1))
-                            .frame(height: 100)
+                            .frame(height: 130)
                         
                         // .padding()
                         //.border(Color(uiColor: .opaqueSeparator), width: 0.5)
