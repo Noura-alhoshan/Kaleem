@@ -15,7 +15,8 @@ struct Wrraper: View{
         NavigationView{
            
             if !session.signedIn{
-                SignIn()
+               // SignIn()
+                ContentView()
             }
             else{
                 switch session.UserType
@@ -31,7 +32,7 @@ struct Wrraper: View{
                     
                 default:
                    ProgressView()
-                    //AdminHome()
+                   // AdminHome()
                 }
                 
             }
