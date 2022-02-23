@@ -23,7 +23,7 @@ struct SignUpInScreen: View {
                  //   PrimaryButton(title: "Get Started")
                         .padding(.bottom,20)
                     NavigationLink(
-                        destination: SignUpTaps().navigationBarHidden(true),
+                        destination: AQuizV().environmentObject(AQuizManagerVM()).navigationBarHidden(true),
                         label: {
                             Text("الانضمام لكليم !")
                                 .font(.title3)

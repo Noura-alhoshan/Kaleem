@@ -11,13 +11,30 @@ import Firebase
 
 struct AdminHome: View {
     @EnvironmentObject var session: SessionStore
-    
+    @State var showAccQuiz: Bool = false
    
     var body: some View {
         
         VStack{
+            
+            NavigationLink(destination: testListV(), isActive: $showAccQuiz, label: {EmptyView()} )
+
             Text("Hello Admin!")
        
+            Button(action: {
+                //AddAccQuizV()
+                showAccQuiz = true
+            }, label: {
+                Text("اختبار القبول")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 220, height: 60)
+                    .background(Color.black)
+                    .cornerRadius(35.0)
+            })
+            
+            
         Button(action: {
             session.signOut()
         }, label: {
