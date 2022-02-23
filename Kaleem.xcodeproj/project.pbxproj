@@ -35,7 +35,6 @@
 		26554F3E27A2D96F0041ECB5 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		26554F4027A2DC3F0041ECB5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		26554F4227A2F1650041ECB5 /* VolunteerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerHome.swift; sourceTree = "<group>"; };
-		2660FE1127B85213000FBF78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2673CACD27AB36550091184B /* ImpairedHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedHome.swift; sourceTree = "<group>"; };
 		2673CACF27AB36B30091184B /* AdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHome.swift; sourceTree = "<group>"; };
 		26D9203F27B459B0007961C4 /* TextToSpeechV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
@@ -79,7 +78,6 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
-				2660FE1127B85213000FBF78 /* Info.plist */,
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
 				14FD4F34279F2D1200E4947D /* Wrapper.swift */,

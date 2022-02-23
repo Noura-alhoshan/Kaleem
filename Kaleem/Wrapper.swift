@@ -31,7 +31,7 @@ struct Wrraper: View{
                     AdminHome()
                     
                 default:
-                   ProgressView()
+                  ProgressView()
                     //AdminHome()
                 }
                 
