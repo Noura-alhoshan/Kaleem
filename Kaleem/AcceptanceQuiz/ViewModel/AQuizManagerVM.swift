@@ -92,7 +92,7 @@ var h = 0
                 
     
     func goToNextQuestion() {
-        if index + 1 < length {
+        if index + 1 < 7 {
             index += 1
             setQuestion()
         } else {

@@ -23,7 +23,7 @@ struct AQuestionV: View {
             
             VStack(alignment: .trailing) {
 
-            Text("\(quizManager1.index + 1) من \(quizManager1.length)"+" أسئلة")
+            Text("\(quizManager1.index + 1) من 7"+" أسئلة")
                     .foregroundColor(Color("Kaleem")).frame(width: 333, height: 25,alignment: .topTrailing)
                 
                 
