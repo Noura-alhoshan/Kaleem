@@ -29,11 +29,11 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            if let location = locationManager {
-                Text(""+locationManager.CalculateDistance().toString())
+          
+                Text(String(locationManager.CalculateDistance()))
  
               //  Text("Your location: \(location.latitude), \(location.longitude)")
-            }
+            
 
             LocationButton {
                 locationManager.requestLocation()
