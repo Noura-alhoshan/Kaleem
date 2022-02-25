@@ -105,7 +105,7 @@ class SessionStore : ObservableObject {
         docRef.getDocument { (document, error) in 
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                self.UserType = document["Type"] as! String
+                self.UserType = document["Type"] as! String 
                 print("Document data: \(dataDescription)")
                
             } else {
@@ -144,5 +144,7 @@ class SessionStore : ObservableObject {
         
     }
     
+
+
     
 }//end of class
