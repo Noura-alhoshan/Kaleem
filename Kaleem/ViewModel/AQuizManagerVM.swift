@@ -10,7 +10,7 @@ import SwiftUI
 import Firebase
 
 class AQuizManagerVM: ObservableObject {
-    let db = Firestore.firestore()
+    let db = Firestore.firestore() 
     // Variables to set attributes of quiz
     @Published var myQuiz1: [QuestionModel] = []
 var h = 0

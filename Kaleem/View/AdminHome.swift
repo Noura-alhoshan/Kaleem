@@ -17,7 +17,7 @@ struct AdminHome: View {
         
         VStack{
             
-            NavigationLink(destination: testListV(), isActive: $showAccQuiz, label: {EmptyView()} )
+            NavigationLink(destination: BrowseAccQuizV(), isActive: $showAccQuiz, label: {EmptyView()} )
 
             Text("Hello Admin!")
        

@@ -186,7 +186,7 @@ struct Stars: View {
 //**************************************************************************************    HERE
 struct smallcardView: View {
     
-    var p: ListData
+    var p: QuestionModel
     let namespace: Namespace.ID
     
     var body: some View {
@@ -196,30 +196,30 @@ struct smallcardView: View {
                   
                     
                     VStack(alignment: .leading) {
-                        blurTags(tags: p.postType, namespace: namespace)
+                        //blurTags(tags: p.correctAnswer, namespace: namespace)
                         Spacer()
-                        Text(p.title)
-                            .foregroundColor(Color.textColor)
+                        Text("p.title")
+                            .foregroundColor(Color.red)
                             .matchedGeometryEffect(id: "title", in: namespace)
                         Spacer()
-                        HStack {
-                            Stars(star: p.stars)
-                                .matchedGeometryEffect(id: "stars", in: namespace)
-                            Text("(100)")
-                                .font(.caption2)
-                                .foregroundColor(.subtextColor)
-                                .matchedGeometryEffect(id: "ratingNum", in: namespace)
-                        }
-                    }.padding(.leading)
-                    Spacer()
+//                        HStack {
+//                            Stars(star: p.stars)
+//                                .matchedGeometryEffect(id: "stars", in: namespace)
+//                            Text("(100)")
+//                                .font(.caption2)
+//                                .foregroundColor(.subtextColor)
+//                                .matchedGeometryEffect(id: "ratingNum", in: namespace)
+//                        }
+ }.padding(.leading)
+//                    Spacer()
                     VStack {
                         Image(systemName: "ellipsis")
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.black)
                             .matchedGeometryEffect(id: "ellipsis", in: namespace)
                         Spacer()
                     }
                     
-                    Image(p.Image)
+                    Image(p.question)
                         .resizable()
                         .frame(width: 120, height: 90)
                         .cornerRadius(10)
@@ -229,15 +229,15 @@ struct smallcardView: View {
             }
         }
     }
-}
+    }
 
 struct bigcardView: View {
-    var p: ListData
+    var p: QuestionModel
     let namespace: Namespace.ID
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                Image(p.Image)
+                Image(p.question)
                     .resizable()
                     .frame(height: 160)
                     .frame(maxHeight: .infinity)
@@ -246,35 +246,36 @@ struct bigcardView: View {
                 Spacer()
                 VStack(alignment: .leading) {
                     HStack {
-                        blurTags(tags: p.postType, namespace: namespace)
+                        //blurTags(tags: p.answers, namespace: namespace)
                         Spacer()
                         Image(systemName: "ellipsis")
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color.black)
                             .matchedGeometryEffect(id: "ellipsis", in: namespace)
                     }
                     
                     Spacer()
-                    Text(p.title)
-                        .foregroundColor(Color.textColor)
+                    Text("p.title")
+                        .foregroundColor(Color.red)
                         .matchedGeometryEffect(id: "title", in: namespace)
                     Spacer()
-                    HStack {
-                        Stars(star: p.stars)
-                            .matchedGeometryEffect(id: "stars", in: namespace)
-                        Text("(100)")
-                            .font(.caption2)
-                            .foregroundColor(.subtextColor)
-                            .matchedGeometryEffect(id: "ratingNum", in: namespace)
-                    }
+//                    HStack {
+//                        Stars(star: p.stars)
+//                            .matchedGeometryEffect(id: "stars", in: namespace)
+//                        Text("(100)")
+//                            .font(.caption2)
+//                            .foregroundColor(.subtextColor)
+//                            .matchedGeometryEffect(id: "ratingNum", in: namespace)
+               }
+                    
                 }
-                Spacer()
+//                Spacer()
                 VStack {
                     Spacer()
                 }
             }
         }
     }
-}
+
 
 enum CardPosition: CaseIterable {
     case small, big
@@ -282,7 +283,7 @@ enum CardPosition: CaseIterable {
 
 struct CardDetector: View {
     
-    var p: ListData
+    var p: QuestionModel
     @State var position: CardPosition
     @Namespace var namespace
     var body: some View {
@@ -358,9 +359,9 @@ struct BlurryBackGroundView: View {
 //                            .foregroundColor(Color.white)
                         //}.padding(.horizontal)
                     VStack {
-                        ForEach(data, id: \.self) { p in
-                            CardDetector(p:p, position: self.position)
-                        }
+                        //ForEach(data, id: \.self) { p in
+                           // CardDetector(p:p, position: self.position)
+                        //}
                     }
                 }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
