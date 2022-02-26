@@ -48,6 +48,7 @@ var h = 0
                                 let data = i.data()
                                 let question = data["question"] as? String ?? ""
                                 let correctAnswer = data["correctAnswer"] as? String ?? ""
+                                let questionText = data["questionText"] as? String ?? ""
                                 let answer1 = data["answer1"] as? String ?? ""
                                 let answer2 = data["answer2"] as? String ?? ""
                                 let answer3 = data["answer3"] as? String ?? ""
@@ -56,12 +57,12 @@ var h = 0
 
                                 //    print(self.datas[i].name)
                                                                 
-                                self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,answers: [
+                                self.myQuiz1.append(QuestionModel( question: question, correctAnswer: correctAnswer,questionText: questionText, answers: [
                                     QuestionModel.Answer(text: "أ. "+answer1, isCorrect: answer1.elementsEqual(correctAnswer) ),
                                     QuestionModel.Answer(text: "ب. "+answer2, isCorrect: answer2.elementsEqual(correctAnswer) ),
                                     QuestionModel.Answer(text: "ج. "+answer3, isCorrect: answer3.elementsEqual(correctAnswer) ),
                                     QuestionModel.Answer(text:"د. "+answer4, isCorrect: answer4.elementsEqual(correctAnswer) ),
-                                
+                                    
                                 ]))
                             }
                             //completion(.success(users))

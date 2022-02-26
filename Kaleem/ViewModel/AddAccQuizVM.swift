@@ -24,6 +24,7 @@ class ContactViewModel: ObservableObject {
             self.contacts = documents.map { (queryDocumentSnapshot) -> QuestionModel in
                 let data = queryDocumentSnapshot.data()
                 let question = data["question"] as? String ?? ""
+                let questionText = data["questionText"] as? String ?? ""
                 let correctA = data["correctAnswer"] as? String ?? ""
                 let answer1 = data["answer1"] as? String ?? ""
                 let answer2 = data["answer2"] as? String ?? ""
@@ -37,7 +38,7 @@ class ContactViewModel: ObservableObject {
                 let a3 = QuestionModel.Answer (id: UUID() , text: answer3, isCorrect: answer3 == correctA ? true: false)
                 let a4 = QuestionModel.Answer (id: UUID() , text: answer4, isCorrect: answer4 == correctA ? true: false)
                 
-                return QuestionModel(question: question, correctAnswer: correctA, answers: [a1,a2,a3,a4])
+                return QuestionModel(question: question, correctAnswer: correctA, questionText: questionText, answers: [a1,a2,a3,a4])
             }
         }
     }

@@ -7,11 +7,14 @@
 
 import SwiftUI
 import Combine
+import FirebaseStorage
+import Firebase
 
 struct FreshForm: View {
     
     
     @State private var showingImagePicker = false
+    @State private var isError = false
     @State private var image: Image?
     @State private var inputImage: UIImage?
     @State var Question: String = ""
@@ -22,11 +25,18 @@ struct FreshForm: View {
     @State var answer3: String = ""
     @State var answer4: String = ""
     
-    func loadImage() {
-        guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
+    func addQuestion(){
+        if (inputImage == nil || Question == "" || CorrectAnswer == "" || answer1 == "" || answer2 == "" || answer3 == "" || answer4 == "" ){
+            isError = true
+        }
+        
+        else{
+            isError = false
+            uploadImage(image: inputImage!)
+            
+        }
     }
-    
+
     
     var body: some View {
         
@@ -164,9 +174,20 @@ struct FreshForm: View {
                 .padding(.horizontal,20)
                 
                 
+                if (isError) {
+                           
+                    Text("معلومات الدخول غير صحيحة ، حاول مرة أخرى")
+                        //.offset(y: -10)
+                        .foregroundColor(.red).padding(.top,13)
+                }
+                else {
+                    Text(" ").foregroundColor(.red).padding(.top,13)
+                }
+                
                 Button(action: {
                     // addto()
                     // checkAnswers()
+                    addQuestion()
                      print (CorrectAnswer)
                     //AddAccQuizV()
                     // showAccQuiz = true
@@ -194,6 +215,47 @@ struct FreshForm: View {
         
         
     }//view body
+ 
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    }
+    
+    
+    func uploadImage(image:UIImage){
+        if let imageData = image.jpegData(compressionQuality: 1){
+            let storage = Storage.storage()
+            let storageRef = storage.reference().child("\(UUID().uuidString).jpg")
+            storageRef.putData(imageData, metadata: nil){
+                (ref, err) in
+                if let err = err {
+                    print("an error has occurred - \(err.localizedDescription)")
+
+                } else {
+                    storageRef.downloadURL(completion: { (url, error) in
+                    print("Image URL: \((url?.absoluteString)!)")
+                        Firestore.firestore().collection("AcceptanceQuiz").addDocument(data: ["question":(url?.absoluteString)!,
+                            "answer1": answer1,
+                            "answer2":answer2,
+                            "answer3": answer3,
+                            "answer4": answer4,
+                            "correctAnswer": CorrectAnswer,
+                            "questionText": Question])
+                    })
+                    print("image uploaded successfully")
+                    //stringph = (ref?.path)!
+                    //Firestore.firestore().collection("AcceptanceQuiz").addDocument(data: ["username":stringph])
+                    }
+                
+            }
+        } else {
+            print("coldn't unwrap/case image to data")
+        }
+    }//end of method
+
+    
+    
     
 }//struct
 

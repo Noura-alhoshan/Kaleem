@@ -11,6 +11,7 @@ struct QuestionModel: Identifiable {
     var id: UUID = UUID()
     var question: String
     var correctAnswer: String
+    var questionText: String
     var answers: [Answer]
     
     struct Answer: Identifiable {

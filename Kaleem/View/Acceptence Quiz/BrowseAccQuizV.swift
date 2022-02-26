@@ -14,10 +14,10 @@ struct BrowseAccQuizV: View {
     @ObservedObject private var viewModel = ContactViewModel()
     @State var showDetails: Bool = false
     @State var showAddQestion: Bool = false
-    @State var SelectedQuestion: QuestionModel = QuestionModel(question: "String", correctAnswer: "correct", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-        QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-        QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-        QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true)])
+    @State var SelectedQuestion: QuestionModel = QuestionModel(question: "String", correctAnswer: "correct", questionText: "String", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+                  QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+                  QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+                  QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true)])
     
     
     var body: some View {
@@ -44,7 +44,7 @@ struct BrowseAccQuizV: View {
                         .frame(width: 70, height: 70, alignment: .center)
                         
                         VStack(alignment: .trailing) {
-                            Text("ماذا تعني هذه الإشارة؟")
+                            Text(Qmodel.questionText)
                                 .foregroundColor( .black.opacity(0.5))
                                 .font(.headline)
                                 .fontWeight(.bold)
@@ -67,7 +67,7 @@ struct BrowseAccQuizV: View {
                     
                 }   //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
                 .onTapGesture {
-                    SelectedQuestion = QuestionModel(question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, answers:Qmodel.answers)
+                    SelectedQuestion = QuestionModel(question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, questionText: Qmodel.questionText, answers:Qmodel.answers)
                     showDetails = true;
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 15))//.listStyle(InsetGroupedListStyle())
