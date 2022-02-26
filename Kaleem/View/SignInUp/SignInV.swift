@@ -67,7 +67,9 @@ struct SignIn : View {
                 
                 //TO NAVIGATE TO SIGN UP PAGE
                 NavigationLink(destination: ContentView(), isActive: $showSignUp, label: {EmptyView()} )
+              
                 HStack(alignment: .center, spacing: 0){
+                    
                 Image("Logo")
                      .resizable()
                      .scaledToFit()
