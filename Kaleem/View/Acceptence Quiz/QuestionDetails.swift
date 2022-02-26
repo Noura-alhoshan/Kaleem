@@ -32,7 +32,6 @@ struct QuestionDetails: View {
                 
             }
             
-
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
