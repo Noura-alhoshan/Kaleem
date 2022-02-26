@@ -18,6 +18,7 @@ struct SignIn : View {
     @State var error = false
     @State var showSignUp: Bool = false
     @State var showResetPassword: Bool = false
+   
     
     func signIn () {
         
@@ -141,9 +142,7 @@ struct SignIn : View {
             }
                 .padding(.horizontal)
                 .padding(.top,10)
-                    
-                    
-            
+                          
                 } // the big one
    
                 

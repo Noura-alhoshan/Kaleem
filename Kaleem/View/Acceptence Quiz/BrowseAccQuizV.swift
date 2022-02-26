@@ -22,13 +22,15 @@ struct BrowseAccQuizV: View {
     
     var body: some View {
         
-        
-        NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
-        
-        NavigationLink(destination: AddQuizForm(SelectedQuestion: SelectedQuestion).environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
+        NavigationLink(destination: FreshForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
+      
         
         
         ZStack(alignment: .bottomTrailing) {//to hold the floating + button
+            
+            NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
+            
+       
             
             List(viewModel.contacts) { Qmodel in
                 ZStack(alignment: .trailing) {
