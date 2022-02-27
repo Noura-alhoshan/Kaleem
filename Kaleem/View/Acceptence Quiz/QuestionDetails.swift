@@ -14,7 +14,7 @@ struct QuestionDetails: View {
             Text(SelectedQuestion.questionText)
                     .font(.system(size: 20))
                     .bold()
-                    .foregroundColor(.gray)
+                    .foregroundColor(.gray).multilineTextAlignment(.trailing)
 
                 ForEach(SelectedQuestion.answers, id: \.id) { answer in
                     HStack(spacing: 20) {

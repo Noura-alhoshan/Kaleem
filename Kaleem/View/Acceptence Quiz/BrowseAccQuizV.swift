@@ -22,7 +22,7 @@ struct BrowseAccQuizV: View {
     
     var body: some View {
         
-        NavigationLink(destination: FreshForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
+        NavigationLink(destination: AddQuizForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
       
         
         
@@ -53,7 +53,10 @@ struct BrowseAccQuizV: View {
                             
                             HStack(alignment: .center) {
                                 Spacer()
-                                Text(Qmodel.correctAnswer).foregroundColor( .black.opacity(0.5)) .padding(.trailing, 6)
+                                Text(Qmodel.correctAnswer)
+                                    .foregroundColor( .black.opacity(0.5))
+                                    .padding(.trailing, 6)
+                                    .multilineTextAlignment(TextAlignment.trailing)
                                 Image(systemName: "checkmark").font(.title.weight(.semibold)) .foregroundColor(.green) .padding(.trailing, 4)
                                 
                             }

@@ -5,6 +5,10 @@
 //  Created by Sarah S on 22/07/1443 AH.
 //
 
+
+//************************* This is to browse all question in acceptance quiz ****************************
+
+
 import Foundation
 import FirebaseFirestore
 
