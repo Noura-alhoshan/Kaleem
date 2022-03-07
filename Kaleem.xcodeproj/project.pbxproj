@@ -15,6 +15,7 @@
 		262C1A2B27C83978009DA50E /* QuestionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C1A2A27C83978009DA50E /* QuestionDetails.swift */; };
 		262C1A3027C86E0B009DA50E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262C1A2F27C86E0B009DA50E /* ImagePicker.swift */; };
 		263F0F5727CAFD79005D2CDC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263F0F5627CAFD79005D2CDC /* Alert.swift */; };
+		263F0F5927CB0F96005D2CDC /* EditAccQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263F0F5827CB0F96005D2CDC /* EditAccQuiz.swift */; };
 		26A4C00B27C6A9B2009E3777 /* BrowseAccQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4C00A27C6A9B1009E3777 /* BrowseAccQuizV.swift */; };
 		26A4C00D27C6BCFE009E3777 /* AddAccQuizVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A4C00C27C6BCFE009E3777 /* AddAccQuizVM.swift */; };
 		26F2D30727C9A23B007886F6 /* AddQuizFormV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F2D30627C9A23B007886F6 /* AddQuizFormV.swift */; };
@@ -52,6 +53,7 @@
 		262C1A2A27C83978009DA50E /* QuestionDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetails.swift; sourceTree = "<group>"; };
 		262C1A2F27C86E0B009DA50E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		263F0F5627CAFD79005D2CDC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		263F0F5827CB0F96005D2CDC /* EditAccQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccQuiz.swift; sourceTree = "<group>"; };
 		26A4C00A27C6A9B1009E3777 /* BrowseAccQuizV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAccQuizV.swift; sourceTree = "<group>"; };
 		26A4C00C27C6BCFE009E3777 /* AddAccQuizVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccQuizVM.swift; sourceTree = "<group>"; };
 		26F2D30627C9A23B007886F6 /* AddQuizFormV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuizFormV.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				263F0F5627CAFD79005D2CDC /* Alert.swift */,
 				262C1A2F27C86E0B009DA50E /* ImagePicker.swift */,
 				26A4C00A27C6A9B1009E3777 /* BrowseAccQuizV.swift */,
+				263F0F5827CB0F96005D2CDC /* EditAccQuiz.swift */,
 				262C1A2A27C83978009DA50E /* QuestionDetails.swift */,
 			);
 			path = "Acceptence Quiz";
@@ -352,6 +355,7 @@
 				F542D1C227C1A5D500A1E9ED /* SignUpVM.swift in Sources */,
 				26A4C00D27C6BCFE009E3777 /* AddAccQuizVM.swift in Sources */,
 				F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */,
+				263F0F5927CB0F96005D2CDC /* EditAccQuiz.swift in Sources */,
 				26A4C00B27C6A9B2009E3777 /* BrowseAccQuizV.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
 				263F0F5727CAFD79005D2CDC /* Alert.swift in Sources */,

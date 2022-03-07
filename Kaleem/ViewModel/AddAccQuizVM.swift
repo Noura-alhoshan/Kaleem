@@ -14,18 +14,20 @@ import FirebaseFirestore
 
 class ContactViewModel: ObservableObject {
     
-    @Published var contacts = [QuestionModel]()
+    @Published var questions = [QuestionModel]()
     
     private var db = Firestore.firestore()
+    var docID = ""
     
     func fetchData() {
         db.collection("AcceptanceQuiz").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
+                
                 return
             }
             
-            self.contacts = documents.map { (queryDocumentSnapshot) -> QuestionModel in
+            self.questions = documents.map { (queryDocumentSnapshot) -> QuestionModel in
                 let data = queryDocumentSnapshot.data()
                 let question = data["question"] as? String ?? ""
                 let questionText = data["questionText"] as? String ?? ""
@@ -34,7 +36,8 @@ class ContactViewModel: ObservableObject {
                 let answer2 = data["answer2"] as? String ?? ""
                 let answer3 = data["answer3"] as? String ?? ""
                 let answer4 = data["answer4"] as? String ?? ""
-                
+                let questionID = queryDocumentSnapshot.documentID
+                //docID = documents.documentID
                // let identifier = UUID()
                 
                 let a1 = QuestionModel.Answer (id: UUID() , text: answer1, isCorrect: answer1 == correctA ? true: false)
@@ -42,7 +45,7 @@ class ContactViewModel: ObservableObject {
                 let a3 = QuestionModel.Answer (id: UUID() , text: answer3, isCorrect: answer3 == correctA ? true: false)
                 let a4 = QuestionModel.Answer (id: UUID() , text: answer4, isCorrect: answer4 == correctA ? true: false)
                 
-                return QuestionModel(question: question, correctAnswer: correctA, questionText: questionText, answers: [a1,a2,a3,a4])
+                return QuestionModel( Qid: questionID, question: question, correctAnswer: correctA, questionText: questionText, answers: [a1,a2,a3,a4])
             }
         }
     }

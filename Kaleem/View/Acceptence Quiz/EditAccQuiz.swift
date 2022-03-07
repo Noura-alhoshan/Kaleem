@@ -10,7 +10,7 @@ import Combine
 import FirebaseStorage
 import Firebase
 
-struct AddQuizForm: View {
+struct EditAccQuizForm: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var showingImagePicker = false
@@ -19,12 +19,16 @@ struct AddQuizForm: View {
     @State private var image: Image?
     @State private var inputImage: UIImage?
     @State var selection: String = ""
-    @State var Question: String = ""
-    @State var CorrectAnswer: String = ""
-    @State var answer1: String = ""
-    @State var answer2: String = ""
-    @State var answer3: String = ""
-    @State var answer4: String = ""
+    
+    @State var QID: String//the id to use in the database 
+    @State var Question: String
+    @State var ImageQuestion: String
+    @State var CorrectAnswer: String
+    //here
+    @State var answer1: String
+    @State var answer2: String
+    @State var answer3: String
+    @State var answer4: String
     
     let questionTextLimit = 30
     let answerTextLimit = 20
@@ -70,14 +74,16 @@ struct AddQuizForm: View {
     
     
     //validate all fields the call another func to send the quiz info
-    func addQuestion(){
-        if (inputImage == nil || Question == "" || CorrectAnswer == "" || answer1 == "" || answer2 == "" || answer3 == "" || answer4 == "" ){
+    func UpdateQuestion(){
+        
+            
+        if ( Question == "" || CorrectAnswer == "" || answer1 == "" || answer2 == "" || answer3 == "" || answer4 == "" ){
             isError = true
         }
         
         else{
             isError = false
-            sendQuestion(image: inputImage!)
+            sendQuestion()
             
         }
     }
@@ -86,8 +92,21 @@ struct AddQuizForm: View {
     
     
     //add question to database
-    func sendQuestion(image:UIImage){
-        if let imageData = image.jpegData(compressionQuality: 1){
+    func sendQuestion(){
+        if (inputImage == nil ){
+            Firestore.firestore().collection("AcceptanceQuiz").document(self.QID).setData(["question":self.ImageQuestion,
+                                                                                  "answer1": answer1,
+                                                                                  "answer2":answer2,
+                                                                                  "answer3": answer3,
+                                                                                  "answer4": answer4,
+                                                                                  "correctAnswer": CorrectAnswer,
+                                                                                  "questionText": Question])
+            showAlert = true
+        }
+        
+        else{
+        
+        if let imageData = inputImage!.jpegData(compressionQuality: 1){
             let storage = Storage.storage()
             let storageRef = storage.reference().child("\(UUID().uuidString).jpg")
             storageRef.putData(imageData, metadata: nil){
@@ -98,7 +117,7 @@ struct AddQuizForm: View {
                 } else {
                     storageRef.downloadURL(completion: { (url, error) in
                         print("Image URL: \((url?.absoluteString)!)")
-                        Firestore.firestore().collection("AcceptanceQuiz").addDocument(data: ["question":(url?.absoluteString)!,
+                        Firestore.firestore().collection("AcceptanceQuiz").document(self.QID).setData(["question":(url?.absoluteString)!,
                                                                                               "answer1": answer1,
                                                                                               "answer2":answer2,
                                                                                               "answer3": answer3,
@@ -116,6 +135,9 @@ struct AddQuizForm: View {
         } else {
             print("coldn't unwrap/case image to data")
         }
+            
+        }//big else
+        
     }//end of method
     
     
@@ -125,20 +147,24 @@ struct AddQuizForm: View {
         ScrollView{
             VStack {
                 ZStack {
-                    Rectangle()
-                        .fill(.secondary)
-                        .frame(width: 310, height: 280)
-                        .foregroundColor(.gray.opacity(0.2))
-                        .padding(.bottom, 20)
-                        .cornerRadius(5)
                     
-                    Image(systemName: "plus.circle.fill")
+                    
+                    //AsyncImage(url: URL(string: self.ImageQuestion)!
+                               AsyncImage(url: URL(string: self.ImageQuestion), scale: 3.0).frame(width: 330, height: 180 )
+//                    Rectangle()
+//                        .fill(.secondary)
+//                        .frame(width: 310, height: 280)
+//                        .foregroundColor(.gray.opacity(0.2))
+//                        .padding(.bottom, 20)
+//                        .cornerRadius(5)
+                    
+                    Image(systemName: "pencil.circle.fill")
                         .resizable()
-                        .frame(width: 70, height: 70)
+                        .frame(width: 40, height: 40)
                         .foregroundColor(.gray.opacity(0.3))
                         .shadow(color: .gray, radius: 0.2, x: 1, y: 1)
-                        .padding(.bottom, 30)
-                    
+                        .padding(.trailing, 240)///////////////////////////////////////////////////////////////////////////////////// control the position + the line below
+                        .padding(.top, 135)
                     
                     
                     image?
@@ -150,6 +176,7 @@ struct AddQuizForm: View {
                     showingImagePicker = true
                 }
                 
+                Spacer(minLength: 25)
                 
                 TextField("السؤال", text: self.$Question)
                     .onReceive(Just(Question)) { _ in limitQuestion(questionTextLimit) }
@@ -159,10 +186,10 @@ struct AddQuizForm: View {
                     .background(Color.gray.opacity(0.1))//Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0) )
                     .cornerRadius(15)
                     .padding(.horizontal,20)
-                
                 Divider().background(Color("Kcolor").opacity(0.8))
                 
                     .padding(.vertical)
+                    
                 
                 VStack{
                     VStack{
@@ -220,9 +247,9 @@ struct AddQuizForm: View {
                     Spacer(minLength: 30)
                     
                     HStack(spacing: 15){
-                        
+                      
                         VStack {
-                            Picker("الإجابة", selection: $selection ) {
+                            Picker(selection: $selection, label: Text("Select") ) {
                                 // Text("hey").tag("answer1")
                                 Text(answer1).tag(answer1)
                                 Text(answer2).tag(answer2)
@@ -235,6 +262,9 @@ struct AddQuizForm: View {
                                 .background( Color .green.opacity(0.1))
                                 .cornerRadius(10)
                                 .onReceive(Just(selection)) {
+                                    if (selection == ""){///////////////////////////////////////////////// NEW
+                                        selection = CorrectAnswer
+                                    }
                                     CorrectAnswer = selection
                                     print("Selected: \($0)")
                                 }
@@ -274,7 +304,7 @@ struct AddQuizForm: View {
                 Button(action: {
                     // addto()
                     // checkAnswers()
-                    addQuestion()
+                    UpdateQuestion()
                     print (CorrectAnswer)
                     //AddAccQuizV()
                     // showAccQuiz = true
@@ -291,7 +321,7 @@ struct AddQuizForm: View {
                     
                     Alert(
                         title: Text("تمت العملية بنجاح"),
-                        message: Text("تم إضافة السؤال إلى اختبار القبول"),
+                        message: Text("تم تعديل معلومات السؤال"),
                         dismissButton: .default(
                                         Text("إغلاق"),
                                         action: { self.mode.wrappedValue.dismiss() })
@@ -317,12 +347,4 @@ struct AddQuizForm: View {
     
     
 }//struct
-
-
-struct AddQuizForm_Previews: PreviewProvider {
-    static var previews: some View {
-        AddQuizForm()
-    }
-}
-
 

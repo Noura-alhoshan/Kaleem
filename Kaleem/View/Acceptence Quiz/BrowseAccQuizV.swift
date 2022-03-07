@@ -14,11 +14,11 @@ struct BrowseAccQuizV: View {
     @ObservedObject private var viewModel = ContactViewModel()
     @State var showDetails: Bool = false
     @State var showAddQestion: Bool = false
-    @State var SelectedQuestion: QuestionModel = QuestionModel(question: "String", correctAnswer: "correct", questionText: "String", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+    @State var SelectedQuestion: QuestionModel = QuestionModel(Qid: "whatever", question: "String", correctAnswer: "correct", questionText: "String", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
                   QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
                   QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-                  QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true)])
-    
+                  QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true)])//this is just temp until i fill it below
+    @State var QuestionID = ""
     
     var body: some View {
         
@@ -28,11 +28,11 @@ struct BrowseAccQuizV: View {
         
         ZStack(alignment: .bottomTrailing) {//to hold the floating + button
             
-            NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
+            NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
             
        
             
-            List(viewModel.contacts) { Qmodel in
+            List(viewModel.questions) { Qmodel in
                 ZStack(alignment: .trailing) {
                     
                     HStack {
@@ -70,14 +70,16 @@ struct BrowseAccQuizV: View {
                     
                 }   //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
                 .onTapGesture {
-                    SelectedQuestion = QuestionModel(question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, questionText: Qmodel.questionText, answers:Qmodel.answers)
+                    SelectedQuestion = QuestionModel(Qid: Qmodel.Qid, question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, questionText: Qmodel.questionText, answers:Qmodel.answers)
                     showDetails = true;
+                    QuestionID = viewModel.docID
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 15))//.listStyle(InsetGroupedListStyle())
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
             }
             
             .onAppear() { self.viewModel.fetchData()}
+            
             Button(action: {
                 //self.showMenu()
                 showAddQestion = true
