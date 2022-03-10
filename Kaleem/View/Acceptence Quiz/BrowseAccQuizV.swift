@@ -82,7 +82,6 @@ struct BrowseAccQuizV: View {
             .onAppear() { self.viewModel.fetchData()}
             
             Button(action: {
-                //self.showMenu()
                 showAddQestion = true
             }) {
                 Image(systemName: "plus.circle.fill")

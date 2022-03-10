@@ -108,8 +108,6 @@ struct AddQuizForm: View {
                     })
                     print("image uploaded successfully")
                     showAlert = true
-//                    CustomAlert(shown: $isError, closureA: .cancel , imgName: "String", title: "title", message: "mess")
-                   
                 }
                 
             }
@@ -254,7 +252,6 @@ struct AddQuizForm: View {
                 }  /*CONTAINER*/
                 .padding()
                 .padding(.bottom, 5)
-                /*WITHIT OR WITHOUT IT?*/
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(15)
                 .padding(.horizontal,20)
@@ -272,12 +269,8 @@ struct AddQuizForm: View {
                 }
                 
                 Button(action: {
-                    // addto()
-                    // checkAnswers()
                     addQuestion()
                     print (CorrectAnswer)
-                    //AddAccQuizV()
-                    // showAccQuiz = true
                 }, label: {
                     Text("حفظ")
                         .foregroundColor(Color.white)
@@ -324,5 +317,3 @@ struct AddQuizForm_Previews: PreviewProvider {
         AddQuizForm()
     }
 }
-
-
