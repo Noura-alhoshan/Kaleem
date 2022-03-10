@@ -25,8 +25,6 @@ struct EditAccQuizForm: View {
     @State var Question: String
     @State var ImageQuestion: String
     @State var CorrectAnswer: String
-    //here
-   // @State var answers:  [String]
     
     @State var answer1: String
     @State var answer2: String
@@ -86,7 +84,8 @@ struct EditAccQuizForm: View {
             
             
         }
-    else if (CorrectAnswer != answer1 && CorrectAnswer != answer2 && CorrectAnswer != answer3 && CorrectAnswer != answer4){
+      //to make sure the answer matches one of the choices in Picker
+        else if (CorrectAnswer != answer1 && CorrectAnswer != answer2 && CorrectAnswer != answer3 && CorrectAnswer != answer4){
         isDifferent = true}
         
         else{
@@ -138,8 +137,6 @@ struct EditAccQuizForm: View {
                     })
                     print("image uploaded successfully")
                     showAlert = true
-//                    CustomAlert(shown: $isError, closureA: .cancel , imgName: "String", title: "title", message: "mess")
-                   
                 }
                 
             }
@@ -159,15 +156,7 @@ struct EditAccQuizForm: View {
             VStack {
                 ZStack {
                     
-                    
-                    //AsyncImage(url: URL(string: self.ImageQuestion)!
-                               AsyncImage(url: URL(string: self.ImageQuestion), scale: 3.0).frame(width: 330, height: 180 )
-//                    Rectangle()
-//                        .fill(.secondary)
-//                        .frame(width: 310, height: 280)
-//                        .foregroundColor(.gray.opacity(0.2))
-//                        .padding(.bottom, 20)
-//                        .cornerRadius(5)
+                    AsyncImage(url: URL(string: self.ImageQuestion), scale: 3.0).frame(width: 330, height: 180 )
                     
                     Image(systemName: "pencil.circle.fill")
                         .resizable()
@@ -261,8 +250,7 @@ struct EditAccQuizForm: View {
                     HStack(spacing: 15){
                       
                         VStack {
-                            Picker(selection: $CorrectAnswer, label: Text("Select") ) {//update 3/8 : changed from $selection to $CorrectAnswer
-                                // Text("hey").tag("answer1")
+                            Picker(selection: $CorrectAnswer, label: Text("Select") ) {//update 3/8 : changed from $selection to
                                 Text(answer1).tag(answer1)
                                 Text(answer2).tag(answer2)
                                 Text(answer3).tag(answer3)
@@ -273,11 +261,11 @@ struct EditAccQuizForm: View {
                                 .frame(width: 180, height: 50)
                                 .background( Color .green.opacity(0.1))
                                 .cornerRadius(10)
-                                .onReceive(Just(selection)) {
-                                    if (selection == ""){///////////////////////////////////////////////// NEW
-                                        selection = CorrectAnswer
-                                    }
-                                    CorrectAnswer = selection
+                                .onReceive(Just(CorrectAnswer)) {
+//                                    if (selection == ""){///////////////////////////////////////////////// NEW
+//                                        selection = CorrectAnswer
+//                                    }
+                                   // CorrectAnswer = selection
                                     print("Selected: \($0)")
                                 }
                                 .onAppear(perform: {
@@ -300,7 +288,6 @@ struct EditAccQuizForm: View {
                 }  /*CONTAINER*/
                 .padding()
                 .padding(.bottom, 5)
-                /*WITHIT OR WITHOUT IT?*/
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(15)
                 .padding(.horizontal,20)
@@ -324,12 +311,8 @@ struct EditAccQuizForm: View {
                 }
                 
                 Button(action: {
-                    // addto()
-                    // checkAnswers()
                     UpdateQuestion()
                     print (CorrectAnswer)
-                    //AddAccQuizV()
-                    // showAccQuiz = true
                 }, label: {
                     Text("حفظ")
                         .foregroundColor(Color.white)

@@ -71,8 +71,9 @@ struct BrowseAccQuizV: View {
                 }
                 .onTapGesture {
                     SelectedQuestion = QuestionModel(Qid: Qmodel.Qid, question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, questionText: Qmodel.questionText, answers:Qmodel.answers)
-                    showDetails = true;
                     QuestionID = viewModel.docID//IMPORTANT
+                    showDetails = true;
+                    
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 15))//.listStyle(InsetGroupedListStyle())
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
@@ -92,19 +93,7 @@ struct BrowseAccQuizV: View {
             }
                 .padding()
         }
-        
-        
-        //.navigationBarItems(trailing:
-        //                                    Button(action: {
-        //                                        //self.presentationMode.wrappedValue.dismiss()
-        //                                    }) {
-        //                                        HStack {
-        //                                            //Image(systemName: "arrow.left")
-        //                                            Text("إضافة")//.foregroundColor(.red)
-        //                                        }
-        //                                })
-        
-        
+ 
         
     }
 }
