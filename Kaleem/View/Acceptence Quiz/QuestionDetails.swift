@@ -23,7 +23,7 @@ struct QuestionDetails: View {
            
             VStack( spacing: 19) {
 
-                AsyncImage(url: URL(string: viewModel.oneQuestion.question), scale: 3.0).frame(width: 330, height: 180 )}
+                AsyncImage(url: URL(string: viewModel.oneQuestion.question), scale: 4.0).frame(width: 330, height: 180 )}
 
             Text(viewModel.oneQuestion.questionText)
                     .font(.system(size: 20))

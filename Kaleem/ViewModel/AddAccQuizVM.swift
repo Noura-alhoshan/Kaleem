@@ -15,10 +15,10 @@ import FirebaseFirestore
 class ContactViewModel: ObservableObject {
     
     @Published var questions = [QuestionModel]()
-    @Published var oneQuestion: QuestionModel = QuestionModel(Qid: "whatever", question: "String", correctAnswer: "correct", questionText: "String", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-                                          QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-                                          QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
-                                          QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true)])//this is just temp
+    @Published var oneQuestion: QuestionModel = QuestionModel(Qid: "-", question: "-", correctAnswer: "-", questionText: "-", answers: [QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  true),
+                                          QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  false),
+                                          QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  false),
+                                          QuestionModel.Answer (id: UUID() , text: "=", isCorrect:  false)])//this is just temp
     
     
     
@@ -77,15 +77,8 @@ class ContactViewModel: ObservableObject {
                     //print("Document data: \(dataDescription)")
                 } else {
                     print("Document does not exist")
-                    //return
+
                      }
-            
-             //   print("No documents")
-                
-             //   return
-           // }
-                
-               
             }
         }
     

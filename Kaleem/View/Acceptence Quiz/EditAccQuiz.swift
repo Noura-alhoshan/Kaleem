@@ -156,7 +156,7 @@ struct EditAccQuizForm: View {
             VStack {
                 ZStack {
                     
-                    AsyncImage(url: URL(string: self.ImageQuestion), scale: 3.0).frame(width: 330, height: 180 )
+                    AsyncImage(url: URL(string: self.ImageQuestion), scale: 4.0).frame(width: 330, height: 180 )
                     
                     Image(systemName: "pencil.circle.fill")
                         .resizable()
