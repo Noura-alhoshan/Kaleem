@@ -2,15 +2,20 @@ import SwiftUI
 
 struct QuestionDetails: View {
     @EnvironmentObject var quizManager1: AQuizManagerVM
+    @ObservedObject private var viewModel = ContactViewModel()
     @State var SelectedQuestion: QuestionModel
     @State private var showEditForm = false
     @State var QuestionID: String
     
     var body: some View {
         VStack(spacing: 30) {
-            
-            //here
-            NavigationLink(destination:  EditAccQuizForm( QID: SelectedQuestion.Qid ,Question: SelectedQuestion.questionText, ImageQuestion: SelectedQuestion.question, CorrectAnswer: SelectedQuestion.correctAnswer, answer1: SelectedQuestion.answers[0].text, answer2: SelectedQuestion.answers[1].text, answer3: SelectedQuestion.answers[2].text, answer4: SelectedQuestion.answers[3].text).environmentObject(AQuizManagerVM()), isActive: $showEditForm, label: {EmptyView()} )
+
+            NavigationLink(destination:  EditAccQuizForm( QID: SelectedQuestion.Qid ,Question: SelectedQuestion.questionText, ImageQuestion: SelectedQuestion.question, CorrectAnswer: SelectedQuestion.correctAnswer,
+                                                          answer1: SelectedQuestion.answers[0].text,
+                                                          answer2: SelectedQuestion.answers[1].text,
+                                                          answer3: SelectedQuestion.answers[2].text,
+                                                          answer4: SelectedQuestion.answers[3].text)
+                            .environmentObject(AQuizManagerVM()), isActive: $showEditForm, label: {EmptyView()} )
             
            
             VStack( spacing: 19) {
@@ -38,7 +43,9 @@ struct QuestionDetails: View {
                 
             }
             
-        }
+        }.onAppear(perform: {
+           // viewModel.fetchQuestion(Qid: QuestionID)          
+        })
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
         .background(.white)

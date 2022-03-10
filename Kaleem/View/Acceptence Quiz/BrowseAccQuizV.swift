@@ -68,11 +68,11 @@ struct BrowseAccQuizV: View {
                     .padding(30)
                     
                     
-                }   //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
+                }
                 .onTapGesture {
                     SelectedQuestion = QuestionModel(Qid: Qmodel.Qid, question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, questionText: Qmodel.questionText, answers:Qmodel.answers)
                     showDetails = true;
-                    QuestionID = viewModel.docID
+                    QuestionID = viewModel.docID//IMPORTANT
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 15))//.listStyle(InsetGroupedListStyle())
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))

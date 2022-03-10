@@ -16,6 +16,7 @@ struct EditAccQuizForm: View {
     @State private var showingImagePicker = false
     @State private var showAlert = false
     @State private var isError = false
+    @State private var isDifferent = false
     @State private var image: Image?
     @State private var inputImage: UIImage?
     @State var selection: String = ""
@@ -25,6 +26,8 @@ struct EditAccQuizForm: View {
     @State var ImageQuestion: String
     @State var CorrectAnswer: String
     //here
+   // @State var answers:  [String]
+    
     @State var answer1: String
     @State var answer2: String
     @State var answer3: String
@@ -76,16 +79,24 @@ struct EditAccQuizForm: View {
     //validate all fields the call another func to send the quiz info
     func UpdateQuestion(){
         
+        
             
         if ( Question == "" || CorrectAnswer == "" || answer1 == "" || answer2 == "" || answer3 == "" || answer4 == "" ){
             isError = true
+            
+            
         }
+    else if (CorrectAnswer != answer1 && CorrectAnswer != answer2 && CorrectAnswer != answer3 && CorrectAnswer != answer4){
+        isDifferent = true}
         
         else{
             isError = false
+            isDifferent = false
             sendQuestion()
             
         }
+    
+    
     }
     
     
@@ -186,8 +197,9 @@ struct EditAccQuizForm: View {
                     .background(Color.gray.opacity(0.1))//Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0) )
                     .cornerRadius(15)
                     .padding(.horizontal,20)
-                Divider().background(Color("Kcolor").opacity(0.8))
                 
+                Divider().background(Color("Kcolor").opacity(0.8))
+                    .padding(.horizontal,20)
                     .padding(.vertical)
                     
                 
@@ -249,7 +261,7 @@ struct EditAccQuizForm: View {
                     HStack(spacing: 15){
                       
                         VStack {
-                            Picker(selection: $selection, label: Text("Select") ) {
+                            Picker(selection: $CorrectAnswer, label: Text("Select") ) {//update 3/8 : changed from $selection to $CorrectAnswer
                                 // Text("hey").tag("answer1")
                                 Text(answer1).tag(answer1)
                                 Text(answer2).tag(answer2)
@@ -268,6 +280,10 @@ struct EditAccQuizForm: View {
                                     CorrectAnswer = selection
                                     print("Selected: \($0)")
                                 }
+                                .onAppear(perform: {
+                                    //$selection =
+
+                                })
                         }
                         
                         Text("الإجابة:")
@@ -290,7 +306,13 @@ struct EditAccQuizForm: View {
                 .padding(.horizontal,20)
                 
 
-                
+                if (isDifferent){
+                    Text("الرجاء التأكد من مطابقة الإجابة لأحد الخيارات ")
+                    //.offset(y: -10)
+                        .foregroundColor(.red).padding(.top,13)
+
+                }
+                else
                 if (isError) {
                     
                     Text("الرجاء التحقق من تعبئة جميع الحقول")
@@ -342,8 +364,6 @@ struct EditAccQuizForm: View {
         
         
     }//view body
-    
-    
     
     
 }//struct

@@ -161,7 +161,7 @@ struct AddQuizForm: View {
                     .padding(.horizontal,20)
                 
                 Divider().background(Color("Kcolor").opacity(0.8))
-                
+                    .padding(.horizontal,20)
                     .padding(.vertical)
                 
                 VStack{

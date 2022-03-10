@@ -15,6 +15,12 @@ import FirebaseFirestore
 class ContactViewModel: ObservableObject {
     
     @Published var questions = [QuestionModel]()
+    @Published var oneQuestion: QuestionModel = QuestionModel(Qid: "whatever", question: "String", correctAnswer: "correct", questionText: "String", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+                                          QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+                                          QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
+                                          QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true)])//this is just temp
+    
+    
     
     private var db = Firestore.firestore()
     var docID = ""
@@ -49,4 +55,42 @@ class ContactViewModel: ObservableObject {
             }
         }
     }
+    
+    
+    func fetchQuestion(Qid: String ) {
+       // db.collection("AcceptanceQuiz").addSnapshotListener { (querySnapshot, error) in
+            db.collection("AcceptanceQuiz").document(Qid).getDocument { (document, error) in
+                if let document = document, document.exists {
+                   // let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                    self.oneQuestion.question = document["question"] as? String ?? ""
+                    self.oneQuestion.questionText = document["questionText"] as? String ?? ""
+                    self.oneQuestion.correctAnswer = document["correctAnswer"] as? String ?? ""
+                    self.oneQuestion.answers[0].text = document["answer1"] as? String ?? ""
+                    self.oneQuestion.answers[1].text = document["answer2"] as? String ?? ""
+                    self.oneQuestion.answers[2].text = document["answer3"] as? String ?? ""
+                    self.oneQuestion.answers[3].text = document["answer4"] as? String ?? ""
+                    self.oneQuestion.Qid = document.documentID
+                    //docID = documents.documentID
+                   // let identifier = UUID()
+                    
+                    //return QuestionModel( Qid: questionID, question: question, correctAnswer: correctA, questionText: questionText, answers: [a1,a2,a3,a4])
+                    //print("Document data: \(dataDescription)")
+                } else {
+                    print("Document does not exist")
+                    //return
+                     }
+            
+             //   print("No documents")
+                
+             //   return
+           // }
+                
+               
+            }
+        }
+    
+    
+    
 }
+
+
