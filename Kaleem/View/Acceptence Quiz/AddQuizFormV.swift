@@ -119,9 +119,30 @@ struct AddQuizForm: View {
     
     
     var body: some View {
-        
+        HStack{
+            Spacer()
+            Button(action: {
+                                
+                                withAnimation(.easeInOut){
+                                    self.mode.wrappedValue.dismiss()
+                                }
+                            }, label: {
+                                Image(systemName: "chevron.right")
+                                     .foregroundColor(.white)
+                                     .padding(.vertical,10)
+                                     .padding(.horizontal)
+                                    // .background(Color.black.opacity(0.4))
+                                     .background(Color("Color"))
+                                     .cornerRadius(10)
+                             
+                            }).padding(.horizontal,25)
+        }
         ScrollView{
+           
+            
             VStack {
+                
+                
                 ZStack {
                     Rectangle()
                         .fill(.secondary)
@@ -302,7 +323,8 @@ struct AddQuizForm: View {
             .onChange(of: inputImage) { _ in loadImage() }
             
         }//scroller
-        
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
         
     }//view body
     

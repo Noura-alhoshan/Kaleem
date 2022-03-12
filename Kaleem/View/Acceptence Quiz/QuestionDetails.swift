@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct QuestionDetails: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
     @EnvironmentObject var quizManager1: AQuizManagerVM
     @ObservedObject var viewModel = ContactViewModel()
     @State var SelectedQuestion: QuestionModel
@@ -10,9 +12,28 @@ struct QuestionDetails: View {
     var body: some View {
         
         ZStack(alignment: .bottomLeading) {//to hold the floating + button
+           
             
         VStack(spacing: 30) {
-
+            HStack{
+                Spacer()
+                Button(action: {
+                                    
+                                    withAnimation(.easeInOut){
+                                        self.mode.wrappedValue.dismiss()
+                                    }
+                                }, label: {
+                                    Image(systemName: "chevron.right")
+                                         .foregroundColor(.white)
+                                         .padding(.vertical,10)
+                                         .padding(.horizontal)
+                                        // .background(Color.black.opacity(0.4))
+                                         .background(Color("Color"))
+                                         .cornerRadius(10)
+                                 
+                                }).padding(.horizontal,25)
+            }
+            
             NavigationLink(destination:  EditAccQuizForm( QID: SelectedQuestion.Qid ,Question: viewModel.oneQuestion.questionText, ImageQuestion: viewModel.oneQuestion.question, CorrectAnswer: viewModel.oneQuestion.correctAnswer,
                                                           answer1: viewModel.oneQuestion.answers[0].text,
                                                           answer2: viewModel.oneQuestion.answers[1].text,
@@ -68,6 +89,7 @@ struct QuestionDetails: View {
             }
                 .padding()
             
-        }
+        }.navigationBarTitle("")
+         .navigationBarHidden(true)
     }
 }

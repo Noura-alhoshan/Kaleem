@@ -76,7 +76,9 @@ struct CustomAlert: View {
         }
 
             .background(
-                Color.primary.opacity(0.35).padding(-400))
+                Color.primary.opacity(0.35)
+                    .padding(-200)
+            )
         }
 }
 

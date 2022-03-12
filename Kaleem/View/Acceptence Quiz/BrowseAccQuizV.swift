@@ -10,10 +10,12 @@ import SwiftUI
 
 
 struct BrowseAccQuizV: View {
-    
+   // @Environment(\.presentationMode) var mode: Binding<PresentationMode> //this one caused error 
+
     @ObservedObject private var viewModel = ContactViewModel()
     @State var showDetails: Bool = false
     @State var showAddQestion: Bool = false
+    @State var goBack: Bool = false
     @State var SelectedQuestion: QuestionModel = QuestionModel(Qid: "whatever", question: "String", correctAnswer: "correct", questionText: "String", answers: [QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
                   QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
                   QuestionModel.Answer (id: UUID() , text: "answer1", isCorrect:  true),
@@ -23,14 +25,34 @@ struct BrowseAccQuizV: View {
     var body: some View {
         
         NavigationLink(destination: AddQuizForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
+        NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
+        NavigationLink(destination:AdminHome(), isActive: $goBack, label: {EmptyView()} )
+        
+   
       
+        HStack{
+            Spacer()
+            Button(action: {
+                                
+                                withAnimation(.easeInOut){
+                                    self.goBack = true
+                                }
+                            }, label: {
+                                Image(systemName: "chevron.right")
+                                     .foregroundColor(.white)
+                                     .padding(.vertical,10)
+                                     .padding(.horizontal)
+                                    // .background(Color.black.opacity(0.4))
+                                     .background(Color("Color"))
+                                     .cornerRadius(10)
+                             
+                            }).padding(.horizontal,25)
+        }
         
         
         ZStack(alignment: .bottomLeading) {//to hold the floating + button
             
-            NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
-            
-       
+   
             
             List(viewModel.questions) { Qmodel in
                 ZStack(alignment: .trailing) {
@@ -92,7 +114,8 @@ struct BrowseAccQuizV: View {
             }
                 .padding()
         }
- 
+        .navigationBarTitle("")
+         .navigationBarHidden(true)
         
     }
 }

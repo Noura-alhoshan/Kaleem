@@ -18,6 +18,7 @@ struct EditAccQuizForm: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var showingImagePicker = false
     @State private var showAlert = false
+    @State private var goBack = false
     @State private var isError = false
     @State private var isDifferent = false
     @State private var image: Image?
@@ -154,9 +155,35 @@ struct EditAccQuizForm: View {
     
     
     var body: some View {
+       // NavigationView{
+        
+      //  NavigationLink(destination: QuestionDetails(SelectedQuestion: <#QuestionModel#>, QuestionID: <#String#>) , isActive: $goBack, label: {EmptyView()}) .navigationBarBackButtonHidden(true)
+        
+        
         
         ScrollView{
+            
+            HStack{
+                Spacer()
+                Button(action: {
+                                    
+                                    withAnimation(.easeInOut){
+                                        self.mode.wrappedValue.dismiss()
+                                    }
+                                }, label: {
+                                    Image(systemName: "chevron.right")
+                                         .foregroundColor(.white)
+                                         .padding(.vertical,10)
+                                         .padding(.horizontal)
+                                        // .background(Color.black.opacity(0.4))
+                                         .background(Color("Color"))
+                                         .cornerRadius(10)
+                                 
+                                }).padding(.horizontal,25)
+            }
+            
             VStack {
+                
                 ZStack {
                     
                     AsyncImage(url: URL(string: self.ImageQuestion), scale: 4.0).frame(width: 330, height: 180 )
@@ -179,6 +206,8 @@ struct EditAccQuizForm: View {
                     showingImagePicker = true
                 }
                 
+               
+                
                 Spacer(minLength: 25)
                 
                 TextField("السؤال", text: self.$Question)
@@ -194,6 +223,11 @@ struct EditAccQuizForm: View {
                     .padding(.horizontal,20)
                     .padding(.vertical)
                     
+                
+                if showAlert {
+                    CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء")
+                    
+                }
                 
                 VStack{
                     VStack{
@@ -347,12 +381,10 @@ struct EditAccQuizForm: View {
             
             .onChange(of: inputImage) { _ in loadImage() }
             
+          
         }//scroller
-        if showAlert {
-            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء")
-            
-        }
-
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
         
     }//view body
     
