@@ -83,10 +83,6 @@ struct SignIn : View {
                     .padding(.bottom, 30)
                 //    .padding(.top, 70)
                 
-              
-
-
-                
                 VStack{
                     HStack{
                         Text("تسجيل دخول")
@@ -136,7 +132,8 @@ struct SignIn : View {
                         self.showResetPassword = true
                     }){
                         Text("هل نسيت كلمة المرور؟")
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color("Kcolor"))
+                        
                             .underline()
                             
                     }
@@ -146,14 +143,15 @@ struct SignIn : View {
                     
                     
             
-                } // the big one
+                }// the big one
    
                 
                 /*CONTAINER*/
                 .padding()
                 .padding(.bottom, 5)
                 /*WITHIT OR WITHOUT IT?*/
-                .background(Color.gray.opacity(0.1))
+              //  .background(Color.gray.opacity(0.1))
+                .background(Color("KGray"))
                 .cornerRadius(15)
                 .padding(.horizontal,20)
                 
