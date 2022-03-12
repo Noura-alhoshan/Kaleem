@@ -105,7 +105,7 @@ var h = 0
     
     func setQuestion() {
    
-        print("setQuestion")
+//        print("setQuestion")
 
         answerSelected = false
         progress = CGFloat(Double((index + 1)) / Double(length) * 350)
@@ -123,6 +123,33 @@ var h = 0
         if answer.isCorrect {
             score += 1
         }
+    }
+    func updateStatus (status : String){
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print ("Get FAILED!!! in AQuizManagerVM")
+            return }
+        db.collection("Volunteer").document(uid).updateData(["accStatus": status
+         ])
+        
+    }
+    
+ func deleteUser()  {
+
+        if let user = Auth.auth().currentUser {
+            //        1- delete from Auth
+            user.delete { error in
+                if let error = error {
+                   print("FAIL TO DELETE user: \(error)")
+                } else {
+                    print("USER DELETED ")
+                }
+            }
+            
+            //        1- delete from firestore
+            db.collection("Volunteer").document(user.uid).delete()
+        }
+       
+        
     }
 }
 //*/
