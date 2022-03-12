@@ -43,7 +43,7 @@ class SignUpVM : ObservableObject {
        //  db.collection(/*userType*/"Volunteer").addDocument(data: ["uid":uid/*, "username":username, "phoneNo":phone, "email":email*/])
          // Add a document to a collection
          db.collection(userType).document(uid).setData(["uid":uid,
-             "username":username, "phoneNo":phone, "email":email
+                                                        "username":username, "phoneNo":phone, "email":email, "userType": userType
           ])         { error in
             
             // Check for errors

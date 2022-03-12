@@ -7,4 +7,3 @@ struct AcceptCharacter {
     static let aplhaNumberLetter = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
     static let nameletter = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ.")
 }
-

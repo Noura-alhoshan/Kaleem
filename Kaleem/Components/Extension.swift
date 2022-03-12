@@ -83,11 +83,40 @@ extension String {
        }
        return true
     }
-              
-    var isPhoneNo: Bool {
-                let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
-                let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-                let result = phoneTest.evaluate(with: self)
-                return result
+    
+    var customSubstring: String {
+        let str = self
+        let reqIndex = str.index(str.startIndex, offsetBy: 3)
+        let finalStr = String(str[..<reqIndex])
+        return finalStr
+    }
+       
+    var validPhone: Bool {
+        //let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
+        let PHONE_REGEX2 = "^(9665|05)(5|0|3|6|4|9|1|8|7)\\d{7}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX2)
+        let result = phoneTest.evaluate(with: self)
+        return result
+            }
+    
+    // another way to validate phone with the next three function togather
+    var KSAPhoneKey: Bool {
+        let PHONE_REGEX2 = "^(009665|9665|05|5)"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX2)
+        let result = phoneTest.evaluate(with: self)
+        return result
+            }
+    var phoneCompany: Bool {
+        let PHONE_REGEX2 = "(5|0|3|6|4|9|1|8|7)"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX2)
+        let result = phoneTest.evaluate(with: self)
+        return result
+            }
+    
+    var anySevenDigits: Bool {
+        let PHONE_REGEX2 = "\\d{7}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX2)
+        let result = phoneTest.evaluate(with: self)
+        return result
             }
 }

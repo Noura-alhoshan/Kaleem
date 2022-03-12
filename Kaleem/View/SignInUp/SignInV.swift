@@ -20,7 +20,6 @@ struct SignIn : View {
     @State var showResetPassword: Bool = false
     
     func signIn () {
-        
         loading = true
         error = false
         email = email.trimmingCharacters(in: .whitespaces)
@@ -62,25 +61,25 @@ struct SignIn : View {
     
             VStack(alignment: .center){
                // TopBar()
-                //TO NAVIGATE TO FORGOT PASSWORD PAGE
-                NavigationLink(destination: ForgotPassword(), isActive: $showResetPassword, label: {EmptyView()} )
                 
-                //TO NAVIGATE TO SIGN UP PAGE
-                NavigationLink(destination: ContentView(), isActive: $showSignUp, label: {EmptyView()} )
+             
+                //TO NAVIGATE TO FORGOT PASSWORD PAGE
+               NavigationLink(destination: ForgotPassword(), isActive: $showResetPassword, label: {EmptyView()} )
               
+                //TO NAVIGATE TO SIGN UP PAGE
+                NavigationLink(destination: SignUpTaps(), isActive: $showSignUp, label: {EmptyView()} )
                 HStack(alignment: .center, spacing: 0){
-                    
                 Image("Logo")
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, -30)
+                     .padding(.top, -10)
                 }
                Text("مرحبا بك مجددًا")
                     .foregroundColor(.black)
                     .font(.title)
                     
-                    .fontWeight(.bold)
+                 //   .fontWeight(.bold)
                     .padding(.bottom, 30)
                 //    .padding(.top, 70)
                 
@@ -93,7 +92,7 @@ struct SignIn : View {
                         Text("تسجيل دخول")
                             .foregroundColor(.black)
                             .font(.title2)
-                            .fontWeight(.bold)
+                           // .fontWeight(.bold)
                     }
                     
                     
@@ -138,6 +137,7 @@ struct SignIn : View {
                     }){
                         Text("هل نسيت كلمة المرور؟")
                             .foregroundColor(Color.black)
+                            .underline()
                             
                     }
             }
@@ -184,6 +184,7 @@ struct SignIn : View {
                         }){
                             Text("سجل الان")
                                 .foregroundColor(Color("Kcolor"))
+                                .underline()
                         }
                         Text("ليس لديك حساب؟")
                           
@@ -192,7 +193,7 @@ struct SignIn : View {
                     }
                 
                 .padding(.horizontal)
-                .padding(.top,130)
+                .padding(.top,60)
                 
             }
             
