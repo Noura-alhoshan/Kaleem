@@ -13,7 +13,7 @@ import SwiftUI
 
 struct SentencesVM: View {
     @EnvironmentObject var sentDBVM: SentencesDBVM
-
+  
     var body: some View {
         
 
@@ -53,7 +53,7 @@ var SentenceDBArray = [
 
 
 struct ListviewSentencesV: View {
-  
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View{
       
         
@@ -68,6 +68,8 @@ struct ListviewSentencesV: View {
                 Button(action: {
                     
                     withAnimation(.easeInOut){
+                        
+                        self.mode.wrappedValue.dismiss()
                       
                     }
                 }, label: {

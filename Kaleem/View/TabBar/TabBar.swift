@@ -18,8 +18,8 @@ struct ImpairedTabBar: View{
         HStack(spacing: 0){
             // Tab bar buttons
             TabBarButton(image: "person", selectedTab: $selectedTab, tabPoints: $tabPoints)
+            TabBarButton(image: "heart", selectedTab: $selectedTab, tabPoints: $tabPoints)
             TabBarButton(image: "hand.raised", selectedTab: $selectedTab, tabPoints: $tabPoints)
-            TabBarButton(image: "square.grid.2x2", selectedTab: $selectedTab, tabPoints: $tabPoints)
             TabBarButton(image: "house", selectedTab: $selectedTab, tabPoints: $tabPoints)
             
         }
@@ -52,9 +52,9 @@ struct ImpairedTabBar: View{
             switch selectedTab {
             case "person":
                 return tabPoints[0]
-            case "hand.raised":
+            case "heart":
                 return tabPoints[1]
-            case "square.grid.2x2":
+            case "hand.raised":
                 return tabPoints[2]
             default:
                 return tabPoints[3]
