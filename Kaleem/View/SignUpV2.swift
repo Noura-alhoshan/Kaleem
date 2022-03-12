@@ -7,28 +7,9 @@ struct SignUpTaps : View {
     
     @State var index = 1
     @State var showAlert = false
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-
     
     var body: some View{
-        HStack{
-            Spacer()
-            Button(action: {
-                self.mode.wrappedValue.dismiss()
-                                withAnimation(.easeInOut){
-                                  
-                                }
-                            }, label: {
-                                Image(systemName: "chevron.right")
-                                     .foregroundColor(.white)
-                                     .padding(.vertical,10)
-                                     .padding(.horizontal)
-                                    // .background(Color.black.opacity(0.4))
-                                     .background(Color("Kcolor"))
-                                     .cornerRadius(10)
-                            }).padding(.horizontal,25)
-
-        }
+        
         GeometryReader{_ in
             VStack{
                 
@@ -36,7 +17,7 @@ struct SignUpTaps : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, 20)
+                     .padding(.top, -55)
                 
               Text("انشاء حساب")
                      .foregroundColor(.black)
@@ -80,16 +61,19 @@ struct V_SignUp : View {
     @State var passErr = ""
     @State var repassErr = ""
     @State var allEmptyErr = ""
-    
+    @State var showQuiz = false
     // call from SignUpVM : View Model (firebase)
      func V_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email, password: pass, userType: "Volunteer", username: username, phone: phoneNo)
+         VM.createNewAccount(email: email, password: pass, userType: "Volunteer", username: username, phone: phoneNo, accStatus: "rejected")
+ 
     }
-    
     var body: some View{
         
+
         ZStack(alignment: .bottom) {
+            
+            NavigationLink(destination: AQuizV().environmentObject(AQuizManagerVM()), isActive: $showQuiz, label: {EmptyView()} )
             
             VStack{
                 
@@ -263,7 +247,11 @@ struct V_SignUp : View {
                 }
                 else{
                 allEmptyErr = ""
-                V_SignUp() // Submit
+//                    print ("EMAIL %%%% \(email) &&&&&&&&& PASSWORD: \(pass) IN SUV")
+                    V_SignUp()
+                    showQuiz = true
+            
+                
                 }
             
             }) {
@@ -292,6 +280,7 @@ struct V_SignUp : View {
     }
 }
 
+
 // Speech-impaired Sign Up Tab..
 
 struct S_SignUp : View {
@@ -319,7 +308,7 @@ struct S_SignUp : View {
     // call from SignUpVM : View Model (firebase)
      func S_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email2, password: pass2, userType: "Deaf", username: username2, phone: phoneNo2)
+         VM.createNewAccount(email: email2, password: pass2, userType: "Speech-impaired", username: username2, phone: phoneNo2, accStatus: "none")
     }
     var body: some View{
         
@@ -524,8 +513,7 @@ struct S_SignUp : View {
                     // shadow...
                     .shadow(color: Color.gray.opacity(0.1), radius: 5, x: 0, y: 5)
             }
-            } .navigationBarTitle("")
-                .navigationBarHidden(true)  
+            }
             // moving view down..
             .offset(y: 25)
             // hiding view when its in background...
@@ -537,7 +525,7 @@ struct S_SignUp : View {
         
 // TO SHOW ALERT ####################
         if showAlert {
-            CustomAlert(shown: $showAlert, closureA: $alertAction,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح")
+            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: false,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء")
             
         }
     }
