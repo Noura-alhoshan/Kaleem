@@ -6,10 +6,12 @@ target 'Kaleem' do
   use_frameworks!
 
   # Pods for Kaleem
+
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Firebase/Analytics'
+  pod 'FirebaseFirestoreSwift'
 
 
 end

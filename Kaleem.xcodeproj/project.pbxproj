@@ -11,9 +11,8 @@
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
-		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
+		50B5D1DCFBD2EA648CC23331 /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAED8C963394AFF723BB2CF /* Pods_Kaleem.framework */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
-		F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */; };
 		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
 		F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */; };
 		F542D1AA27C1A54000A1E9ED /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */; };
@@ -38,7 +37,6 @@
 		F573F81327C9BA0A0086B8C9 /* ImpairedServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81227C9BA0A0086B8C9 /* ImpairedServices.swift */; };
 		F573F81927C9D9E00086B8C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81727C9D9E00086B8C9 /* Constants.swift */; };
 		F573F81A27C9D9E00086B8C9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81827C9D9E00086B8C9 /* Extension.swift */; };
-		F573F81C27C9E1060086B8C9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F573F81B27C9E1060086B8C9 /* Launch Screen.storyboard */; };
 		F573F81F27CA84650086B8C9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81E27CA84650086B8C9 /* List.swift */; };
 		F573F82527CA8A520086B8C9 /* SentencesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F82427CA8A520086B8C9 /* SentencesVM.swift */; };
 		F594CE0C27C52D01004B9476 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE0B27C52D01004B9476 /* NavBar.swift */; };
@@ -48,17 +46,19 @@
 		F594CE2627C71636004B9476 /* VolunteerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE2527C71636004B9476 /* VolunteerProfile.swift */; };
 		F594CE2A27C71928004B9476 /* ImpairedProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE2927C71928004B9476 /* ImpairedProfile.swift */; };
 		F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */; };
+		F5B74C9327DC6292003D4327 /* SentencesDBVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B74C9227DC6292003D4327 /* SentencesDBVM.swift */; };
+		F5B74C9527DC7462003D4327 /* SentencesM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B74C9427DC7462003D4327 /* SentencesM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11AFFA951AB39EA7DFBC5557 /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
-		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
+		46D0A88EA8719032439DB769 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
+		DEAED8C963394AFF723BB2CF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/Model/SignUpM.swift; sourceTree = SOURCE_ROOT; };
 		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInScreen.swift; sourceTree = "<group>"; };
@@ -96,6 +96,8 @@
 		F594CE2527C71636004B9476 /* VolunteerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerProfile.swift; sourceTree = "<group>"; };
 		F594CE2927C71928004B9476 /* ImpairedProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedProfile.swift; sourceTree = "<group>"; };
 		F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5B74C9227DC6292003D4327 /* SentencesDBVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencesDBVM.swift; sourceTree = "<group>"; };
+		F5B74C9427DC7462003D4327 /* SentencesM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencesM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */,
+				50B5D1DCFBD2EA648CC23331 /* Pods_Kaleem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +118,7 @@
 				14FD4F31279F2D1200E4947D /* Kaleem */,
 				14FD4F30279F2D1200E4947D /* Products */,
 				DC4E6917AD79762840AC5AD9 /* Pods */,
-				CB39F81B522694707316D239 /* Frameworks */,
+				FB4C4D8B1497864927E871BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,19 +152,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CB39F81B522694707316D239 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		DC4E6917AD79762840AC5AD9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */,
-				325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */,
+				11AFFA951AB39EA7DFBC5557 /* Pods-Kaleem.debug.xcconfig */,
+				46D0A88EA8719032439DB769 /* Pods-Kaleem.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -201,6 +195,7 @@
 			children = (
 				F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */,
 				F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */,
+				F5B74C9727DCB4C3003D4327 /* Location */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +203,7 @@
 		F572FADC27A3B7FB001C7143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F5B74C9627DCB48E003D4327 /* Location */,
 				F573F81D27CA841A0086B8C9 /* FavoriteList */,
 				F594CE1627C6D9D2004B9476 /* Onboarding  */,
 				F594CE1827C6DA24004B9476 /* AcceptanceQuiz */,
@@ -229,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				F573F82427CA8A520086B8C9 /* SentencesVM.swift */,
+				F5B74C9227DC6292003D4327 /* SentencesDBVM.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -281,6 +278,29 @@
 			path = SignInUp;
 			sourceTree = "<group>";
 		};
+		F5B74C9627DCB48E003D4327 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		F5B74C9727DCB4C3003D4327 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				F5B74C9427DC7462003D4327 /* SentencesM.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		FB4C4D8B1497864927E871BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEAED8C963394AFF723BB2CF /* Pods_Kaleem.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -288,11 +308,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14FD4F3D279F2D1400E4947D /* Build configuration list for PBXNativeTarget "Kaleem" */;
 			buildPhases = (
-				A1451CE580D0763BAE6D1457 /* [CP] Check Pods Manifest.lock */,
+				BFB4B06CC31B7E9126090775 /* [CP] Check Pods Manifest.lock */,
 				14FD4F2B279F2D1200E4947D /* Sources */,
 				14FD4F2C279F2D1200E4947D /* Frameworks */,
 				14FD4F2D279F2D1200E4947D /* Resources */,
-				3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */,
+				D457910079166E1FB660E602 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,32 +366,13 @@
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
 				F542D1CE27C2F6BC00A1E9ED /* Fonts in Resources */,
 				14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */,
-				F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */,
-				F573F81C27C9E1060086B8C9 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kaleem/Pods-Kaleem-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kaleem/Pods-Kaleem-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kaleem/Pods-Kaleem-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A1451CE580D0763BAE6D1457 /* [CP] Check Pods Manifest.lock */ = {
+		BFB4B06CC31B7E9126090775 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,6 +392,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D457910079166E1FB660E602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kaleem/Pods-Kaleem-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kaleem/Pods-Kaleem-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kaleem/Pods-Kaleem-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -426,6 +444,8 @@
 				F573F81927C9D9E00086B8C9 /* Constants.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
 				F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */,
+				F5B74C9327DC6292003D4327 /* SentencesDBVM.swift in Sources */,
+				F5B74C9527DC7462003D4327 /* SentencesM.swift in Sources */,
 				F573F81A27C9D9E00086B8C9 /* Extension.swift in Sources */,
 				F594CE0C27C52D01004B9476 /* NavBar.swift in Sources */,
 				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,
@@ -557,7 +577,7 @@
 		};
 		14FD4F3E279F2D1400E4947D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */;
+			baseConfigurationReference = 11AFFA951AB39EA7DFBC5557 /* Pods-Kaleem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -568,7 +588,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaleem/Info.plist;
+				INFOPLIST_FILE = Kaleem/Components/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -591,7 +611,7 @@
 		};
 		14FD4F3F279F2D1400E4947D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */;
+			baseConfigurationReference = 46D0A88EA8719032439DB769 /* Pods-Kaleem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -602,7 +622,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Kaleem/Info.plist;
+				INFOPLIST_FILE = Kaleem/Components/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

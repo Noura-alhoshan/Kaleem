@@ -25,7 +25,7 @@ struct AQuizV: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             }else{
                 VStack(spacing: 20) {
-                    Text("نعتذر قدرتك المعرفية في لغة الاشارة اقل من اللازم")
+                    Text("نعتذر قدرتك المعرفية في لغة الاشارة أقل من اللازم")
                 }
                 .foregroundColor(Color("Kaleem"))
                 .padding()
