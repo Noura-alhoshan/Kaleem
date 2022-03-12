@@ -13,12 +13,16 @@ enum AlertAction {
 }
 struct CustomAlert: View {
     @Binding var shown: Bool
-        @Binding var closureA: AlertAction?
+    @Binding var closureA: AlertAction?
+    var oneBtn: Bool
+
        // var isSuccess: Bool
     var imgName: String
     var title: String
-        var message: String
-    
+    var message: String
+    var btn1: String
+    var btn2: String
+
         
         var body: some View {
            
@@ -33,7 +37,7 @@ struct CustomAlert: View {
                // Divider()
                 HStack {
                     //dialog btn 1
-                    Button("إلغاء") {
+                    Button(btn1) {
                         closureA = .cancel
                         shown.toggle()
                     }.frame(width: UIScreen.main.bounds.width/2-60, height: 40) // this btn width is consistent with the dialog box width
@@ -41,8 +45,10 @@ struct CustomAlert: View {
                         .background(Color("Kcolor"))
                         .clipShape(Capsule())
 .padding(10)
+                    if (!oneBtn)
+                    {
                     // dialog btn 2
-                                            Button("تأكيد") {
+                    Button(btn2) {
                         closureA = .ok
                         shown.toggle()
                     }.frame(width: UIScreen.main.bounds.width/2-60, height: 40) // this btn width is consistent with the dialog box width
@@ -50,12 +56,11 @@ struct CustomAlert: View {
                         .background(Color("Kcolor"))
                         .clipShape(Capsule())
                         .padding(10)
-
+                    }
                 }
                 
-            } 
+            }
             // dialog
-           // .overlay(content: Image(systemName: "checkmark.circle.fill"))
             .frame(width: UIScreen.main.bounds.width-50, height: 200)
             .background(Color.white)
             .cornerRadius(12)
@@ -69,10 +74,11 @@ struct CustomAlert: View {
        }
             
         }
-            //.background(BlurView())
-           // .frame (maxWidth: .infinity, maxHeight: .infinity)
+
             .background(
-                Color.primary.opacity(0.35).padding(-400))
+                Color.primary.opacity(0.35)
+                    .padding(-400)
+            )
         }
 }
 
