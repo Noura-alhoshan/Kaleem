@@ -26,7 +26,7 @@ struct BrowseAccQuizV: View {
       
         
         
-        ZStack(alignment: .bottomTrailing) {//to hold the floating + button
+        ZStack(alignment: .bottomLeading) {//to hold the floating + button
             
             NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
             

@@ -12,6 +12,9 @@ import Firebase
 
 struct EditAccQuizForm: View {
     
+    // confirmation alert vars
+    @State var alertAction: AlertAction?
+    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var showingImagePicker = false
     @State private var showAlert = false
@@ -322,19 +325,20 @@ struct EditAccQuizForm: View {
                         .background(Color("Kcolor"))
                         .clipShape(Capsule())
                         .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
-                }).alert(isPresented: $showAlert) {
-                    
-                    Alert(
-                        title: Text("تمت العملية بنجاح"),
-                        message: Text("تم تعديل معلومات السؤال"),
-                        dismissButton: .default(
-                                        Text("إغلاق"),
-                                        action: { self.mode.wrappedValue.dismiss() })
-                    )
-                    } .padding(.bottom, 10)
+                })
+//                    .alert(isPresented: $showAlert) {
+//
+//                    Alert(
+//                        title: Text("تمت العملية بنجاح"),
+//                        message: Text("تم تعديل معلومات السؤال"),
+//                        dismissButton: .default(
+//                                        Text("إغلاق"),
+//                                        action: { self.mode.wrappedValue.dismiss() })
+//                    )
+//                    } .padding(.bottom, 10)
                 
-                
-                
+                // TO SHOW ALERT ####################
+                        
             }//big vstack
             .padding([.horizontal, .bottom])
             
@@ -344,7 +348,11 @@ struct EditAccQuizForm: View {
             .onChange(of: inputImage) { _ in loadImage() }
             
         }//scroller
-        
+        if showAlert {
+            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء")
+            
+        }
+
         
     }//view body
     

@@ -9,7 +9,7 @@ struct QuestionDetails: View {
     
     var body: some View {
         
-        ZStack(alignment: .bottomTrailing) {//to hold the floating + button
+        ZStack(alignment: .bottomLeading) {//to hold the floating + button
             
         VStack(spacing: 30) {
 
