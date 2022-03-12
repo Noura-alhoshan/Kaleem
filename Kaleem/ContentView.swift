@@ -6,82 +6,34 @@
 //
 
 import SwiftUI
-import Firebase
+import MapKit
+import Combine
 
 struct ContentView: View {
     
-    @ObservedObject var model = ViewModel()
+    @ObservedObject private var locationManager = LocationManager()
+    @State private var region = MKCoordinateRegion.defaultRegion
+    @State private var cancellable: AnyCancellable?
     
-    @State var name = ""
-    @State var notes = ""
+    private func setCurrentLocation() {
+        cancellable = locationManager.$location.sink { location in
+            region = MKCoordinateRegion(center: location?.coordinate ?? CLLocationCoordinate2D(), latitudinalMeters: 500, longitudinalMeters: 500)
+        }
+    }
     
     var body: some View {
         
         VStack {
-        
-            List (model.list) { item in
-                
-                HStack {
-                    Text(item.name)
-                    Spacer()
-                    
-                    // Update button
-                    Button(action: {
-                        
-                        // Delete todo
-                        model.updateData(todoToUpdate: item)
-                    }, label: {
-                        Image(systemName: "pencil")
-                    })
-                    .buttonStyle(BorderlessButtonStyle())
-                    
-                    
-                    // Delete button
-                    Button(action: {
-                        
-                        // Delete todo
-                        model.deleteData(todoToDelete: item)
-                    }, label: {
-                        Image(systemName: "minus.circle")
-                    })
-                    .buttonStyle(BorderlessButtonStyle())
-                    
-                }
+            if locationManager.location != nil {
+                Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: true, userTrackingMode: nil)
+            } else {
+                Text("Locating user location...")
             }
-            
-            Divider()
-            
-            VStack(spacing: 5) {
-                
-                TextField("Name", text: $name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                TextField("Notes", text: $notes)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button(action: {
-                    
-                    // Call add data
-                    model.addData(name: name, notes: notes)
-                    
-                    // Clear the text fields
-                    name = ""
-                    notes = ""
-                    
-                }, label: {
-                    Text("Add Todo Item")
-                })
-                
-            }
-            .padding()
-            
         }
         
-        
-    }
-    
-    init() {
-        model.getData()
+        .onAppear {
+            setCurrentLocation()
+        }
     }
 }
 

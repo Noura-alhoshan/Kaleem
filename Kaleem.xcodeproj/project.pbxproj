@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149B23F627DCC86600DF5D1B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B23F527DCC86600DF5D1B /* LocationManager.swift */; };
+		149B23F827DCC89F00DF5D1B /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B23F727DCC89F00DF5D1B /* MKCoordinateRegion+Extensions.swift */; };
 		14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F32279F2D1200E4947D /* KaleemApp.swift */; };
 		14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F34279F2D1200E4947D /* ContentView.swift */; };
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149B23F527DCC86600DF5D1B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		149B23F727DCC89F00DF5D1B /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
 		14FD4F34279F2D1200E4947D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				14FD4F40279F319000E4947D /* GoogleService-Info.plist */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
+				149B23F527DCC86600DF5D1B /* LocationManager.swift */,
+				149B23F727DCC89F00DF5D1B /* MKCoordinateRegion+Extensions.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
 			);
@@ -224,7 +230,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
+				149B23F827DCC89F00DF5D1B /* MKCoordinateRegion+Extensions.swift in Sources */,
 				14FD4F44279F364200E4947D /* model.swift in Sources */,
+				149B23F627DCC86600DF5D1B /* LocationManager.swift in Sources */,
 				14FD4F46279F367300E4947D /* ViewModel.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 			);
