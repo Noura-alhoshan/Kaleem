@@ -83,7 +83,7 @@ extension String {
        }
        return true
     }
-    
+
     var customSubstring: String {
         let str = self
         let reqIndex = str.index(str.startIndex, offsetBy: 3)
