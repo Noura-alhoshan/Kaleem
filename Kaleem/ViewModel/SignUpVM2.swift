@@ -20,20 +20,21 @@ class SignUpVM : ObservableObject {
     
     
     // create user in Firebase Auth.
-    func createNewAccount(email: String, password: String, userType: String, username: String, phone: String) { // I change it because it was display an error (var > String) ########
+    func createNewAccount(email: String, password: String, userType: String, username: String, phone: String, accStatus: String) { // I change it because it was display an error (var > String) ########
         
         auth.createUser(withEmail: email, password: password){ result, err in
             if let err = err {
+                print ("PASSWORD IN VM: \(password)")
                 print("Failed to create user:", err)
                 return
             }
 
             print("Successfully created user: \(result?.user.uid ?? "")")
 
-            self.addDataToCollection(userType: userType, username: username, phone: phone, email: email)        }
+            self.addDataToCollection(userType: userType, username: username, phone: phone, email: email, accStatus: accStatus)        }
     } // END crrate user
     
-     func addDataToCollection(userType: String, username: String, phone: String, email: String) {
+     func addDataToCollection(userType: String, username: String, phone: String, email: String, accStatus: String) {
         
          guard let uid = Auth.auth().currentUser?.uid else {
              print ("Get FAILED!!!!!!!!!!!!!!!!!!!!!!111")
@@ -42,8 +43,10 @@ class SignUpVM : ObservableObject {
         // Add a document to a collection
        //  db.collection(/*userType*/"Volunteer").addDocument(data: ["uid":uid/*, "username":username, "phoneNo":phone, "email":email*/])
          // Add a document to a collection
+
+         if (userType == "Speech-impaired"){
          db.collection(userType).document(uid).setData(["uid":uid,
-                                                        "username":username, "phoneNo":phone, "email":email, "userType": userType
+                                                        "name":username, "phoneNo":phone, "email":email, "type": userType
           ])         { error in
             
             // Check for errors
@@ -54,6 +57,24 @@ class SignUpVM : ObservableObject {
                 // Handle the error
             }
         }
+     }
+         else{
+             print("AccountStatus#### \(accStatus)")
+             db.collection(userType).document(uid).setData(["uid":uid,
+                                                            "name":username, "phoneNo":phone, "email":email, "type": userType,
+                                                            "accStatus" : accStatus
+              ])         { error in
+                
+                // Check for errors
+                if error == nil {
+                    // No errors
+                }
+                else {
+                    // Handle the error
+                }
+            }
+             
+         }
     }
    /*
     // create user in Firebase Auth.
