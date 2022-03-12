@@ -21,8 +21,8 @@ struct AQuizContentV: View {
                
                NavigationLink {
                    
-                   AQuizV()
-                     .environmentObject(quizManager1)
+//                   AQuizV()
+//                     .environmentObject(quizManager1)
                    
                } label: {
                    APrimaryButtonVM(text: "Let's go!"+"")
