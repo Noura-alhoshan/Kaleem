@@ -62,6 +62,7 @@ struct SignIn : View {
             VStack(alignment: .center){
                // TopBar()
                 
+             
                 //TO NAVIGATE TO FORGOT PASSWORD PAGE
                NavigationLink(destination: ForgotPassword(), isActive: $showResetPassword, label: {EmptyView()} )
               
@@ -72,7 +73,7 @@ struct SignIn : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, -30)
+                     .padding(.top, -10)
                 }
                Text("مرحبا بك مجددًا")
                     .foregroundColor(.black)
@@ -192,7 +193,7 @@ struct SignIn : View {
                     }
                 
                 .padding(.horizontal)
-                .padding(.top,130)
+                .padding(.top,60)
                 
             }
             
