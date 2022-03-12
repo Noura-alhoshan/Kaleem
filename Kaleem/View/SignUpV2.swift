@@ -7,9 +7,28 @@ struct SignUpTaps : View {
     
     @State var index = 1
     @State var showAlert = false
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
     
     var body: some View{
-        
+        HStack{
+            Spacer()
+            Button(action: {
+                self.mode.wrappedValue.dismiss()
+                                withAnimation(.easeInOut){
+                                  
+                                }
+                            }, label: {
+                                Image(systemName: "chevron.right")
+                                     .foregroundColor(.white)
+                                     .padding(.vertical,10)
+                                     .padding(.horizontal)
+                                    // .background(Color.black.opacity(0.4))
+                                     .background(Color("Kcolor"))
+                                     .cornerRadius(10)
+                            }).padding(.horizontal,25)
+
+        }
         GeometryReader{_ in
             VStack{
                 
@@ -17,7 +36,7 @@ struct SignUpTaps : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, -55)
+                     .padding(.top, 20)
                 
               Text("انشاء حساب")
                      .foregroundColor(.black)
@@ -505,7 +524,8 @@ struct S_SignUp : View {
                     // shadow...
                     .shadow(color: Color.gray.opacity(0.1), radius: 5, x: 0, y: 5)
             }
-            }
+            } .navigationBarTitle("")
+                .navigationBarHidden(true)  
             // moving view down..
             .offset(y: 25)
             // hiding view when its in background...
