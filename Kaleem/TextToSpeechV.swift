@@ -7,32 +7,74 @@
 
 import SwiftUI
 import AVFoundation
-
+import Foundation
+import Combine
 
 
 struct TextToSpeechV: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State var TextToTranslate: String = ""
     @StateObject var speaker: Speaker = Speaker()
     @State  var animateAquaColor =  false
     @State  var animateSkyColor = false
     
-    
+    let TextLimit = 100
     
     private func errorVibration() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.error)
     }
     
+    func limitText(_ upper: Int ) {
+           if TextToTranslate.count > upper {
+               TextToTranslate = String(TextToTranslate.prefix(upper))
+           }
+       }
     
     var body: some View {
         
+       // GeometryReader{_ in
+       //     VStack{
+            HStack{
+                Text("الترجمة الصوتية")
+                    .foregroundColor(.black.opacity(0.7))
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.horizontal,22)
+                    .padding(.top,12)
+
+                Spacer()
+                Button(action: {
+                                    
+                                    withAnimation(.easeInOut){
+                                        self.mode.wrappedValue.dismiss()
+                                    }
+                                }, label: {
+                                    Image(systemName: "chevron.right")
+                                         .foregroundColor(.white)
+                                         .padding(.vertical,10)
+                                         .padding(.horizontal)
+                                        // .background(Color.black.opacity(0.4))
+                                         .background(Color("Kcolor"))
+                                         .cornerRadius(10)
+                                 
+                                }).padding(.horizontal,25)
+                
+            }
+            
+        //    }
+        .padding(.bottom, 150)/////////////////here to change the space between arrow and gray box
+        
+     // Spacer(minLength: 160)/////////////////here to change the
+   GeometryReader{_ in
         VStack{
-            VStack{
+                  
                 HStack(spacing: 15)  {
                     
                     ZStack(alignment: .topTrailing) {
                         TextEditor(text: $TextToTranslate)
+                            .onReceive( Just(TextToTranslate)) { _ in limitText(TextLimit) }
                             .multilineTextAlignment(TextAlignment.trailing)
                             .disableAutocorrection(true)
                             .autocapitalization(.none)
@@ -90,28 +132,15 @@ struct TextToSpeechV: View {
                             .foregroundColor(Color.red).opacity(0.1)
                             .scaleEffect(animateSkyColor ? 1: 0.8)
                             .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
-                        // .animation( Animation.easeInOut (duration:
-                        // 8.5))
-                        //value: speaker.isSpeaking ? true : false)
-                            .onAppear() {
-                                // self.animateSkyColor.toggle()
-                                
-                            }
-                        
+                         // .onAppear() { self.animateSkyColor.toggle()  }
                         
                         Circle() // Aqua
                             .frame (width: 120, height: 120)
                             .foregroundColor(Color.teal).opacity(0.5)
                             .scaleEffect(animateSkyColor ? 1: 0.8)
                             .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
-                        // .animation(Animation.easeInOut(duration:
-                        //  0.5)) //, value: speaker.isSpeaking ? true : false)
-                            .onAppear() {
-                                // self.animateAquaColor.toggle()
-                                
-                            }
-                        
-                        
+                          // .onAppear() { self.animateAquaColor.toggle() }
+                         
                         Button(action: {
                             speaker.speak(TextToTranslate)
                             if (speaker.isShowingSpeakingErrorAlert) {
@@ -126,13 +155,10 @@ struct TextToSpeechV: View {
                         })
                         
                     }
-                    
-                    
                 }
-                
-            }
-            
-        } /*CONTAINER*/
+        
+    
+        } /*CONTAINER big vstack */
         
         .padding()
         .padding(.bottom, 5)
@@ -141,6 +167,9 @@ struct TextToSpeechV: View {
         .padding(.horizontal,20)
         .onTapGesture {
             self.hideKeyboard()
+        }
+        .navigationBarTitle("")
+         .navigationBarHidden(true)
         }
     }
     
@@ -154,6 +183,7 @@ struct SpeechStack: View {
     @State  var animateSkyColor = false
     
     var body: some View {
+        
         ZStack
         {
             Circle() // Sky Animation.default.repeat(while: active))

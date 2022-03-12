@@ -10,18 +10,23 @@ import FirebaseAuth
 import Firebase
 
 struct ImpairedHome: View {
+    
     @EnvironmentObject var session: SessionStore
-    @State var TextToTranslate: String = ""
+    @State var showAccQuiz: Bool = false
    
     var body: some View {
         
         VStack{
-            Text("Hello Impaired!")
             
+            NavigationLink(destination:TextToSpeechV(), isActive: $showAccQuiz, label: {EmptyView()} )
+
+            Text("Hello impaired!")
+       
             Button(action: {
-                //session.signOut()
+                //AddAccQuizV()
+                showAccQuiz = true
             }, label: {
-                Text("ترجمة ")
+                Text("trans ")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()
@@ -29,6 +34,7 @@ struct ImpairedHome: View {
                     .background(Color.black)
                     .cornerRadius(35.0)
             })
+            
             
         Button(action: {
             session.signOut()
@@ -41,10 +47,9 @@ struct ImpairedHome: View {
                 .background(Color.black)
                 .cornerRadius(35.0)
         })
-        } //Text("looooong time").bold()
+        }
     }
 }
-
 struct ImpairedHome_Previews: PreviewProvider {
     static var previews: some View {
         ImpairedHome()
