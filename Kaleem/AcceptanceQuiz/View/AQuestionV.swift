@@ -40,7 +40,7 @@ struct AQuestionV: View {
 
                 AsyncImage(url: URL(string: quizManager1.question), scale: 3.0).frame(width: 330, height: 180 )}
 
-                Text("ماذا تعني هذه الإشارة؟")
+            Text( quizManager1.questionText )
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
