@@ -15,6 +15,8 @@ struct ForgotPassword : View{
     @State var loading = false
     @State var error = false
     @State var showAlert: Bool = false
+    @State var backToSignIn: Bool = false
+
     
     func forgotPassword () {
         
@@ -36,19 +38,39 @@ struct ForgotPassword : View{
 
 
         var body: some View {
+            HStack{
+                Spacer()
+                Button(action: {
+                    self.mode.wrappedValue.dismiss()
+                                    withAnimation(.easeInOut){
+                                      
+                                    }
+                                }, label: {
+                                    Image(systemName: "chevron.right")
+                                         .foregroundColor(.white)
+                                         .padding(.vertical,10)
+                                         .padding(.horizontal)
+                                        // .background(Color.black.opacity(0.4))
+                                         .background(Color("Kcolor"))
+                                         .cornerRadius(10)
+                                }).padding(.horizontal,25)
+                NavigationLink(destination: SignIn(), isActive: $backToSignIn, label: {EmptyView()} )
+
+            }
             
             GeometryReader{_ in
-                
+            
                 VStack{
                       //  TopBar()
              
-                  
+                                    
+    
                    Text("إعادة تعيين كلمة المرور")
                         .foregroundColor(.black)
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding(.bottom, 50)
-                        .padding(.top, 70)
+                        .padding(.bottom, 20)
+                        .padding(.top, 150)
                     
                     HStack{
                         Text("الرجاء إدخال بريدك الإلكتروني ليصلك رابط إعادة تعيين كلمة المرور ")
@@ -138,7 +160,8 @@ struct ForgotPassword : View{
 
 
           //  .padding(.top,10)
-            .background(Color(.white).edgesIgnoringSafeArea(.all))
+            .navigationBarTitle("")
+                            .navigationBarHidden(true)            .background(Color(.white).edgesIgnoringSafeArea(.all))
             }
     }
 struct ForgotPass_Previews: PreviewProvider {
@@ -146,3 +169,5 @@ struct ForgotPass_Previews: PreviewProvider {
         ForgotPassword()
     }
 }
+
+

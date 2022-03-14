@@ -43,8 +43,8 @@ struct TabCurve: Shape {
         }
   }
 }
-struct TabCurve_Previews: PreviewProvider {
-    static var previews: some View {
-        ImpairedHome()
-    }
-}
+//struct TabCurve_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ImpairedHome()
+//    }
+//}

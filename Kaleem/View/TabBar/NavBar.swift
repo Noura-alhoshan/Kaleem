@@ -153,9 +153,9 @@ struct CustomShape: Shape {
          }
          }
          }
-
-struct ImpairedNavBar_Previews: PreviewProvider {
-    static var previews: some View {
-        ImpairedHome()
-    }
-}
+//
+//struct ImpairedNavBar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ImpairedHome()
+//    }
+//}
