@@ -13,7 +13,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     let manager = CLLocationManager()
 
     @Published var location: CLLocationCoordinate2D?
-    @Published private(set) var hos = 0.0
 
 
 
@@ -21,7 +20,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     override init() {
         super.init()
         manager.delegate = self
-        self.hos = CalculateHospitalDistance()
     }
 
     func requestLocation() {

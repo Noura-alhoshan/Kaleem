@@ -47,9 +47,17 @@ struct ContentView: View {
      //       .frame(height: 44)
       //      .padding()
             
+    
+            
+                
+           
             
             
-            if(locationManager.hos<1000){
+            
+            
+            
+            
+            if(locationManager.CalculateHospitalDistance()<1000  && locationManager.CalculateHospitalDistance()>1.1 ){
                        Text(String(locationManager.CalculateHospitalDistance()))
                 Text("you are in hospital")
                 Text("you are in hospital")
@@ -57,12 +65,18 @@ struct ContentView: View {
 
             }
             else
-                if(locationManager.CalculateUniDistance()<1000){
+                if(locationManager.CalculateUniDistance()<1000  && locationManager.CalculateHospitalDistance()>1.1 ){
                     Text(String(locationManager.CalculateUniDistance()))
              Text("you are in uni")
                 }
             else
-            {             Text("Nothing")
+                if(locationManager.CalculateUniDistance()==0.0 || locationManager.CalculateHospitalDistance()==0.0 ){
+                    Text(String(locationManager.CalculateUniDistance()))
+             Text("لاظهار الجمل المساعدة الرجاء السماح بالموقع في الزر في الاسفل ")
+                }
+            else
+                
+            {             Text("نعتذر موقعك الحالي غير مضاف حاليا")
 }
            // NavigationLink(destination: testView(), isActive: $showTest, label: {EmptyView()} )
           
@@ -80,17 +94,18 @@ struct ContentView: View {
 //            } label: {   Text("Your")     }.onTapGesture {
 //                             }.background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
 
-        
-//            Button(action: {
-//                    locationManager.requestLocation()
-//                print("in button")
+            
+//            LocationButton {
+//                     locationManager.requestLocation()
+//                     //  self.showTest = true
+//                                print(String(locationManager.CalculateHospitalDistance()))
 //
-//                          self.showTest = true
-//                       }){
-//                          Text("location")
-//                                .foregroundColor(Color.black)
-//
-//                        }
+//                   }
+//            .frame(width: 100, height: 100)
+//                     .cornerRadius(100)
+//                     .labelStyle(.iconOnly)
+//                     .symbolVariant(.fill)
+//                     .foregroundColor(.white)
         }
         }
    // }
