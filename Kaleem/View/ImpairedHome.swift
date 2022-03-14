@@ -21,7 +21,7 @@ struct ImpairedHome: View {
         NavigationView{
         VStack{
             Text("Hello Impaired!")
-            NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} ).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
+//            NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} ).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
 
             /*Calling function*/
             Button( action: {

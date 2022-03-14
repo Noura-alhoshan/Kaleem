@@ -98,7 +98,7 @@ extension AppDelegate: MessagingDelegate {
     
     func application(application: UIApplication,
                          didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData ) {
-          Messaging.messaging().apnsToken = deviceToken  as! Data
+        Messaging.messaging().apnsToken = deviceToken  as! Data
         }
 }
 
