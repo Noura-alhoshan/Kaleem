@@ -223,11 +223,6 @@ struct TopBar : View{
     }
 }
 
-struct SignIn_Previews: PreviewProvider{
-    static var previews: some View{
-        SignIn()
-    }
-}
 
 
 
