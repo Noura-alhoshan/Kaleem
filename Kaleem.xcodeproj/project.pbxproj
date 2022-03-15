@@ -29,9 +29,10 @@
 		2645C5AB27E0309B0017EEF2 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C5A727E0309B0017EEF2 /* CustomAlert.swift */; };
 		2645C5AC27E0309B0017EEF2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C5A827E0309B0017EEF2 /* Constants.swift */; };
 		2645C5AE27E0374F0017EEF2 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C5AD27E0374F0017EEF2 /* ProfileVM.swift */; };
-		265D7C3A27E0256300E3420F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D7C3927E0256300E3420F /* ProfileView.swift */; };
+		265D7C3A27E0256300E3420F /* ProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D7C3927E0256300E3420F /* ProfileV.swift */; };
 		265D7C3C27E028B800E3420F /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D7C3B27E028B800E3420F /* SignUpVM.swift */; };
 		265D7C4027E0291700E3420F /* SignUpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D7C3F27E0291700E3420F /* SignUpV.swift */; };
+		26C8847827E13C8B001E7E51 /* EditProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8847727E13C8B001E7E51 /* EditProfileV.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
 		F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */; };
@@ -77,9 +78,10 @@
 		2645C5A727E0309B0017EEF2 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		2645C5A827E0309B0017EEF2 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2645C5AD27E0374F0017EEF2 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
-		265D7C3927E0256300E3420F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		265D7C3927E0256300E3420F /* ProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileV.swift; sourceTree = "<group>"; };
 		265D7C3B27E028B800E3420F /* SignUpVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		265D7C3F27E0291700E3420F /* SignUpV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpV.swift; sourceTree = "<group>"; };
+		26C8847727E13C8B001E7E51 /* EditProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileV.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,7 +234,8 @@
 				F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */,
 				F542D1B627C1A54B00A1E9ED /* AQuizV.swift */,
 				F542D1B227C1A54B00A1E9ED /* ImpairedHome.swift */,
-				265D7C3927E0256300E3420F /* ProfileView.swift */,
+				265D7C3927E0256300E3420F /* ProfileV.swift */,
+				26C8847727E13C8B001E7E51 /* EditProfileV.swift */,
 				F542D1B427C1A54B00A1E9ED /* SignInV.swift */,
 				265D7C3F27E0291700E3420F /* SignUpV.swift */,
 				F542D1B127C1A54B00A1E9ED /* VolunteerHome.swift */,
@@ -383,6 +386,7 @@
 				2645C59A27E02F930017EEF2 /* TextToSpeechV.swift in Sources */,
 				2645C5A027E02FB30017EEF2 /* TextToSpeechVM.swift in Sources */,
 				F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */,
+				26C8847827E13C8B001E7E51 /* EditProfileV.swift in Sources */,
 				F542D1AD27C1A54000A1E9ED /* SignInVM.swift in Sources */,
 				2645C59927E02F930017EEF2 /* ImagePicker.swift in Sources */,
 				265D7C3C27E028B800E3420F /* SignUpVM.swift in Sources */,
@@ -396,7 +400,7 @@
 				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
 				2645C5A927E0309B0017EEF2 /* CustomAlertQuiz.swift in Sources */,
-				265D7C3A27E0256300E3420F /* ProfileView.swift in Sources */,
+				265D7C3A27E0256300E3420F /* ProfileV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
