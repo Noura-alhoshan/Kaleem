@@ -9,7 +9,7 @@ import Firebase
 
 struct Wrraper: View{
     @EnvironmentObject var session: SessionStore
-    
+
     var body: some View {
         
         NavigationView{
@@ -36,6 +36,9 @@ struct Wrraper: View{
                 }
                 
             }
-        }.onAppear {session.signedIn = session.isSignedIn; session.listen()}//✅✅✅ very important to solve infinite indicator problem
+        }.onAppear {
+            session.signedIn = session.isSignedIn;
+            session.listen();
+        }//✅✅✅ very important to solve infinite indicator problem
     }
 }

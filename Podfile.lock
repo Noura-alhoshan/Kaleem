@@ -357,6 +357,9 @@ PODS:
   - Firebase/Firestore (8.10.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 8.10.0)
+  - Firebase/Messaging (8.10.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 8.10.0)
   - Firebase/Storage (8.10.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 8.10.0)
@@ -410,6 +413,15 @@ PODS:
     - GoogleUtilities/Environment (~> 7.6)
     - GoogleUtilities/UserDefaults (~> 7.6)
     - PromisesObjC (< 3.0, >= 1.2)
+  - FirebaseMessaging (8.10.0):
+    - FirebaseCore (~> 8.0)
+    - FirebaseInstallations (~> 8.0)
+    - GoogleDataTransport (~> 9.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
+    - GoogleUtilities/Environment (~> 7.6)
+    - GoogleUtilities/Reachability (~> 7.6)
+    - GoogleUtilities/UserDefaults (~> 7.6)
+    - nanopb (~> 2.30908.0)
   - FirebaseStorage (8.10.0):
     - FirebaseCore (~> 8.0)
     - GTMSessionFetcher/Core (~> 1.5)
@@ -493,6 +505,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
+  - Firebase/Messaging
   - Firebase/Storage
 
 SPEC REPOS:
@@ -506,6 +519,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseInstallations
+    - FirebaseMessaging
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleDataTransport
@@ -527,6 +541,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 56fb7216d87e0e6ec2feddefa9d8a392fe8b2c18
   FirebaseFirestore: 0e7321a508cc9de54316ec45400caba6b5719beb
   FirebaseInstallations: 830327b45345ffc859eaa9c17bcd5ae893fd5425
+  FirebaseMessaging: b0aeba17332ee1ee610662b4d1e02a86db82f08f
   FirebaseStorage: 815410224b548172c578f02554a86bbc8f817f50
   GoogleAppMeasurement: a3311dbcf3ea651e5a070fe8559b57c174ada081
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
@@ -538,6 +553,6 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 9ff6795f8072537704c56d191dddf4af721b90e0
+PODFILE CHECKSUM: ecf23bbe073bb6a2f9611ad33de54b028f95dec8
 
 COCOAPODS: 1.11.2

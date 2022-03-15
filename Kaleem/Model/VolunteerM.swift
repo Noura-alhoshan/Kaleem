@@ -9,6 +9,8 @@ import Foundation
 
 struct Volunteer : Identifiable {
     var id : String = UUID().uuidString
-    var username : String /*WE NEED TO CHANGE IT TO NAME!*/
-    var phoneNo : String 
+    var name : String /*WE NEED TO CHANGE IT TO NAME!*/
+    var phoneNo : String
+    var email: String
+    //var type: String
 }

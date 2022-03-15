@@ -11,13 +11,31 @@ import Firebase
 
 struct VolunteerHome: View {
     @EnvironmentObject var session: SessionStore
-    
-   
+    @State var showProfile: Bool = false
+    @ObservedObject private var PViewModel = ProfileVM()
+ 
     var body: some View {
         
+       
+        
         VStack{
-            Text("Hello Volunteer!")
+            NavigationLink(destination: ProfileView(), isActive: $showProfile, label: {EmptyView()} )
 
+            Text("Hello Volunteer!")
+            
+            Button(action: {
+              //  PViewModel.fetchUser()
+                showProfile = true
+            }, label: {
+                Text("profile ")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 220, height: 60)
+                    .background(Color.black)
+                    .cornerRadius(35.0)
+            })
+            
         Button(action: {
             session.signOut()
         }, label: {
@@ -33,8 +51,3 @@ struct VolunteerHome: View {
     }
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        VolunteerHome()
-    }
-}
