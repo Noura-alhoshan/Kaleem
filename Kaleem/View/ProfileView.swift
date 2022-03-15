@@ -21,7 +21,6 @@ struct ProfileView: View {
        
         
         GeometryReader{proxy -> AnyView in
-
             let height = proxy.frame (in: .global).height
             return AnyView (
                 VStack{
