@@ -8,6 +8,8 @@
 import SwiftUI
 import Combine
 import Foundation
+import Firebase
+import FirebaseAuth
 
 struct EditProfileV: View {
     
@@ -17,11 +19,47 @@ struct EditProfileV: View {
     @State var username: String
     @State var phoneNo: String
     @State var email: String
- 
+    @State var type: String
     @State var usernameErr = ""
     @State var emailErr = ""
     @State var phoneNoErr = ""
-    @State var allEmptyErr = ""
+    @State var isError = false
+    @State var showAlert = false
+    
+    
+    func updataInfo(){
+        
+        
+        if (usernameErr != "" || emailErr != "" || phoneNoErr != "" ){
+            isError = true
+        }
+        else {
+            isError = false
+            
+//            let user = Auth.auth().currentUser
+//            var credential: AuthCredential
+//
+//             user?.reauthenticate(with: credential) { user1, error in
+//              if let error = error {
+//                print ("An error happened.")
+//              } else {
+//                // User re-authenticated.
+//              }
+//            }
+            
+            Auth.auth().currentUser?.updateEmail(to: email) { error in
+              print(error)
+            }
+            
+            
+            Firestore.firestore().collection(self.type)
+            .document(Auth.auth().currentUser!.uid).setData(
+                ["name":self.username,
+                  "phoneNo": phoneNo,
+                    "email": email], merge: true)
+            showAlert = true
+        }
+    }
     
     
     var body: some View {
@@ -139,7 +177,7 @@ struct EditProfileV: View {
                                 
                                 TextField("البريد الإلكتروني", text: self.$email)
                                     .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                                    .keyboardType(.emailAddress)
+                                    .keyboardType(.emailAddress).disableAutocorrection(true)
                                     .onChange(of: self.email, perform: { newValue in
                                         self.emailErr = VM.validateEmail(email: self.email)
                                         
@@ -172,9 +210,20 @@ struct EditProfileV: View {
                         .padding(.horizontal)
                         .padding(.top,20)
                     
+                        if (isError) {
+                            
+                            Text("الرجاء التحقق من صحة جميع البيانات")
+                            //.offset(y: -10)
+                                .foregroundColor(.red).padding(.top,13)
+                        }
+                        else {
+                            Text(" ").foregroundColor(.red).padding(.top,13)
+                        }
+                        
+                        
                         Button(action: {
-                           // UpdateQuestion()
-                           // print (CorrectAnswer)
+                          
+                            updataInfo()
                         }, label: {
                             Text("حفظ")
                                 .foregroundColor(Color.white)

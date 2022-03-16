@@ -19,7 +19,7 @@ struct ProfileView: View {
     
     var body: some View {
         
-        NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email) , isActive: $showEditForm, label: {EmptyView()} )
+        NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type) , isActive: $showEditForm, label: {EmptyView()} )
         
         
         HStack{

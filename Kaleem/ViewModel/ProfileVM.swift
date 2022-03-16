@@ -16,7 +16,7 @@ import Firebase
 
 class ProfileVM: ObservableObject {
     
-    @Published var KaleemUser: Volunteer = Volunteer(name: "-", phoneNo: "-", email: "-")
+    @Published var KaleemUser: UserInfo = UserInfo(name: "-", phoneNo: "-", email: "-", type: "-")
     let authh = Auth.auth()
     
     private var db = Firestore.firestore()
@@ -29,6 +29,7 @@ class ProfileVM: ObservableObject {
                 self.KaleemUser.name = document["name"] as? String ?? ""
                 self.KaleemUser.email = document["email"] as? String ?? ""
                 self.KaleemUser.phoneNo = document["phoneNo"] as? String ?? ""
+                self.KaleemUser.type = "Speech-impaired"
             }
             else {
                 self.db.collection("Volunteer").document(Auth.auth().currentUser!.uid)
@@ -37,6 +38,7 @@ class ProfileVM: ObservableObject {
                         self.KaleemUser.name = document["name"] as? String ?? ""
                         self.KaleemUser.email = document["email"] as? String ?? ""
                         self.KaleemUser.phoneNo = document["phoneNo"] as? String ?? ""
+                        self.KaleemUser.type = "Volunteer"
                         print(self.KaleemUser.name)
                  }
                }
