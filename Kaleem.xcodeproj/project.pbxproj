@@ -10,6 +10,11 @@
 		149B23FA27DE0DA700DF5D1B /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B23F927DE0DA700DF5D1B /* test.swift */; };
 		149B23FC27DE968D00DF5D1B /* uni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B23FB27DE968D00DF5D1B /* uni.swift */; };
 		149B23FE27DE96E500DF5D1B /* hos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B23FD27DE96E500DF5D1B /* hos.swift */; };
+		149B240027E20CA300DF5D1B /* SentencesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B23FF27E20CA300DF5D1B /* SentencesVM.swift */; };
+		149B240227E2111B00DF5D1B /* SentencesM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B240127E2111A00DF5D1B /* SentencesM.swift */; };
+		149B240427E211C200DF5D1B /* SentencesDBVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B240327E211C200DF5D1B /* SentencesDBVM.swift */; };
+		149B240627E3553200DF5D1B /* coffe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B240527E3553200DF5D1B /* coffe.swift */; };
+		149B240827E3567F00DF5D1B /* NoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149B240727E3567F00DF5D1B /* NoResult.swift */; };
 		14BF9B4527C82C0700059C68 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BF9B4427C82C0700059C68 /* Location.swift */; };
 		14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F32279F2D1200E4947D /* KaleemApp.swift */; };
 		14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F34279F2D1200E4947D /* ContentView.swift */; };
@@ -23,6 +28,11 @@
 		149B23F927DE0DA700DF5D1B /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		149B23FB27DE968D00DF5D1B /* uni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uni.swift; sourceTree = "<group>"; };
 		149B23FD27DE96E500DF5D1B /* hos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hos.swift; sourceTree = "<group>"; };
+		149B23FF27E20CA300DF5D1B /* SentencesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencesVM.swift; sourceTree = "<group>"; };
+		149B240127E2111A00DF5D1B /* SentencesM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencesM.swift; sourceTree = "<group>"; };
+		149B240327E211C200DF5D1B /* SentencesDBVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencesDBVM.swift; sourceTree = "<group>"; };
+		149B240527E3553200DF5D1B /* coffe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coffe.swift; sourceTree = "<group>"; };
+		149B240727E3567F00DF5D1B /* NoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResult.swift; sourceTree = "<group>"; };
 		14BF9B4427C82C0700059C68 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
@@ -73,9 +83,14 @@
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
 				149B23FB27DE968D00DF5D1B /* uni.swift */,
 				149B23FD27DE96E500DF5D1B /* hos.swift */,
+				149B240527E3553200DF5D1B /* coffe.swift */,
 				149B23F927DE0DA700DF5D1B /* test.swift */,
+				149B240727E3567F00DF5D1B /* NoResult.swift */,
+				149B23FF27E20CA300DF5D1B /* SentencesVM.swift */,
 				14BF9B4427C82C0700059C68 /* Location.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
+				149B240127E2111A00DF5D1B /* SentencesM.swift */,
+				149B240327E211C200DF5D1B /* SentencesDBVM.swift */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
 			);
 			path = Kaleem;
@@ -221,12 +236,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149B240427E211C200DF5D1B /* SentencesDBVM.swift in Sources */,
+				149B240227E2111B00DF5D1B /* SentencesM.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
+				149B240627E3553200DF5D1B /* coffe.swift in Sources */,
 				149B23FA27DE0DA700DF5D1B /* test.swift in Sources */,
 				149B23FC27DE968D00DF5D1B /* uni.swift in Sources */,
 				14BF9B4527C82C0700059C68 /* Location.swift in Sources */,
+				149B240027E20CA300DF5D1B /* SentencesVM.swift in Sources */,
 				149B23FE27DE96E500DF5D1B /* hos.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
+				149B240827E3567F00DF5D1B /* NoResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

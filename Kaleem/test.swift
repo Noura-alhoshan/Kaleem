@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreLocation
+//import CoreLocation
 import CoreLocationUI
 
 struct testView: View {
@@ -14,6 +14,8 @@ struct testView: View {
     @StateObject var locationManager = LocationManager()
     @State var showhos: Bool = false
     @State var showuni: Bool = false
+    @State var showcoffe: Bool = false
+    @State var showNoResult: Bool = false
 
 
 
@@ -26,31 +28,41 @@ struct testView: View {
             
             NavigationLink(destination: uniView(), isActive: $showuni, label: {EmptyView()} )
 
+            NavigationLink(destination: coffeView(), isActive: $showcoffe, label: {EmptyView()} )
+            
+            NavigationLink(destination: NoResultView(), isActive: $showNoResult, label: {EmptyView()} )
+
+
             LocationButton {
               locationManager.requestLocation()
-         
+
             action: do {
-                if(locationManager.CalculateHospitalDistance()<1000  && locationManager.CalculateHospitalDistance()>1.1 ){
+                if(locationManager.CalculateHospitalDistance() != 1.0 ){
                 self.showhos = true
                 }
-                else{
-                 //   if(locationManager.CalculateUniDistance()<1000  && locationManager.CalculateHospitalDistance()>1.1 ){
+                else
+                    if(locationManager.CalculateUniDistance() != 1.0 ){
                     self.showuni = true
-                    
                 }
-                   // }
-                
+                else
+                    if(locationManager.CalculateCoffeDistance() != 1.0 ){
+                    self.showcoffe = true
+                }
+                    else{
+                        self.showNoResult = true}
+
+
                 locationManager.requestLocation()
                 print(String(locationManager.CalculateHospitalDistance()))
 
                 }
             }
-           // .frame(  width: 100, height: 100)
+           // .frame(  width: 900, height: 950)
             .symbolVariant(.fill)
             .foregroundColor(.white)
-            .cornerRadius(150)
+            .cornerRadius(50.0)
             .labelStyle(.iconOnly)
-            .tint(.blue)
+            .tint(.blue).font(.largeTitle)
 
 
             }
