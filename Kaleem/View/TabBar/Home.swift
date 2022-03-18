@@ -463,6 +463,8 @@ struct HomeAll: View{
                 Spacer()
                 
             }
+            .navigationBarTitle("")
+                            .navigationBarHidden(true)
             
             //moving view up
             //giving only space 10 b/w

@@ -18,12 +18,19 @@
 		F505C78327DFBFD000BB4224 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78227DFBFD000BB4224 /* University.swift */; };
 		F505C78727E0B27B00BB4224 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78627E0B27B00BB4224 /* UserName.swift */; };
 		F505C78927E25AF500BB4224 /* CoffeeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78827E25AF500BB4224 /* CoffeeVM.swift */; };
-		F505C78B27E2604A00BB4224 /* CoffeeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78A27E2604A00BB4224 /* CoffeeV.swift */; };
+		F505C78B27E2604A00BB4224 /* UrbanCoffeeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78A27E2604A00BB4224 /* UrbanCoffeeV.swift */; };
 		F505C78D27E31EFF00BB4224 /* AdminTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78C27E31EFE00BB4224 /* AdminTabBar.swift */; };
 		F505C78F27E31F1B00BB4224 /* ImpairedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78E27E31F1B00BB4224 /* ImpairedTabBar.swift */; };
 		F505C79127E31F5500BB4224 /* VolunteerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C79027E31F5500BB4224 /* VolunteerTabBar.swift */; };
 		F505C79327E3463500BB4224 /* SignOutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C79227E3463500BB4224 /* SignOutV.swift */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
+		F5399E2227E48D9500CECCE4 /* IvCoffeeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2127E48D9500CECCE4 /* IvCoffeeV.swift */; };
+		F5399E2427E4F1C100CECCE4 /* SaudHosV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2327E4F1C100CECCE4 /* SaudHosV.swift */; };
+		F5399E2627E4F1D900CECCE4 /* HabibHosV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2527E4F1D900CECCE4 /* HabibHosV.swift */; };
+		F5399E2827E4F1EA00CECCE4 /* FahadHosV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2727E4F1EA00CECCE4 /* FahadHosV.swift */; };
+		F5399E2A27E4F20600CECCE4 /* SaudUniV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2927E4F20600CECCE4 /* SaudUniV.swift */; };
+		F5399E2C27E4F21900CECCE4 /* ImamUniV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2B27E4F21900CECCE4 /* ImamUniV.swift */; };
+		F5399E2E27E4F23000CECCE4 /* SultanUniV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E2D27E4F23000CECCE4 /* SultanUniV.swift */; };
 		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
 		F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */; };
 		F542D1AA27C1A54000A1E9ED /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */; };
@@ -234,7 +241,7 @@
 		F505C78227DFBFD000BB4224 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		F505C78627E0B27B00BB4224 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		F505C78827E25AF500BB4224 /* CoffeeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeVM.swift; sourceTree = "<group>"; };
-		F505C78A27E2604A00BB4224 /* CoffeeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeV.swift; sourceTree = "<group>"; };
+		F505C78A27E2604A00BB4224 /* UrbanCoffeeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrbanCoffeeV.swift; sourceTree = "<group>"; };
 		F505C78C27E31EFE00BB4224 /* AdminTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBar.swift; sourceTree = "<group>"; };
 		F505C78E27E31F1B00BB4224 /* ImpairedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar.swift; sourceTree = "<group>"; };
 		F505C79027E31F5500BB4224 /* VolunteerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTabBar.swift; sourceTree = "<group>"; };
@@ -242,6 +249,13 @@
 		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/Model/SignUpM.swift; sourceTree = SOURCE_ROOT; };
 		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		F52A0CCD27DD2B16004F3740 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		F5399E2127E48D9500CECCE4 /* IvCoffeeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvCoffeeV.swift; sourceTree = "<group>"; };
+		F5399E2327E4F1C100CECCE4 /* SaudHosV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaudHosV.swift; sourceTree = "<group>"; };
+		F5399E2527E4F1D900CECCE4 /* HabibHosV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabibHosV.swift; sourceTree = "<group>"; };
+		F5399E2727E4F1EA00CECCE4 /* FahadHosV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FahadHosV.swift; sourceTree = "<group>"; };
+		F5399E2927E4F20600CECCE4 /* SaudUniV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaudUniV.swift; sourceTree = "<group>"; };
+		F5399E2B27E4F21900CECCE4 /* ImamUniV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImamUniV.swift; sourceTree = "<group>"; };
+		F5399E2D27E4F23000CECCE4 /* SultanUniV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SultanUniV.swift; sourceTree = "<group>"; };
 		F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInScreen.swift; sourceTree = "<group>"; };
 		F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionM.swift; sourceTree = "<group>"; };
 		F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARowAnswersVM.swift; sourceTree = "<group>"; };
@@ -512,7 +526,14 @@
 		F5B74C9627DCB48E003D4327 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				F505C78A27E2604A00BB4224 /* CoffeeV.swift */,
+				F505C78A27E2604A00BB4224 /* UrbanCoffeeV.swift */,
+				F5399E2127E48D9500CECCE4 /* IvCoffeeV.swift */,
+				F5399E2327E4F1C100CECCE4 /* SaudHosV.swift */,
+				F5399E2527E4F1D900CECCE4 /* HabibHosV.swift */,
+				F5399E2727E4F1EA00CECCE4 /* FahadHosV.swift */,
+				F5399E2927E4F20600CECCE4 /* SaudUniV.swift */,
+				F5399E2B27E4F21900CECCE4 /* ImamUniV.swift */,
+				F5399E2D27E4F23000CECCE4 /* SultanUniV.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -850,6 +871,7 @@
 				F505C78727E0B27B00BB4224 /* UserName.swift in Sources */,
 				F505C76227DF1B0B00BB4224 /* Home.swift in Sources */,
 				F505C78127DFBFA100BB4224 /* Hospital.swift in Sources */,
+				F5399E2227E48D9500CECCE4 /* IvCoffeeV.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
 				F505C78927E25AF500BB4224 /* CoffeeVM.swift in Sources */,
 				F505C79327E3463500BB4224 /* SignOutV.swift in Sources */,
@@ -860,14 +882,20 @@
 				F542D1CC27C2487800A1E9ED /* OnboardingScreens.swift in Sources */,
 				F505C79127E31F5500BB4224 /* VolunteerTabBar.swift in Sources */,
 				F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */,
+				F5399E2C27E4F21900CECCE4 /* ImamUniV.swift in Sources */,
 				F542D1AD27C1A54000A1E9ED /* SignInVM.swift in Sources */,
 				F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */,
 				F573F81927C9D9E00086B8C9 /* Constants.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
+				F5399E2627E4F1D900CECCE4 /* HabibHosV.swift in Sources */,
 				F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */,
 				F5B74C9327DC6292003D4327 /* SentencesDBVM.swift in Sources */,
-				F505C78B27E2604A00BB4224 /* CoffeeV.swift in Sources */,
+				F5399E2E27E4F23000CECCE4 /* SultanUniV.swift in Sources */,
+				F505C78B27E2604A00BB4224 /* UrbanCoffeeV.swift in Sources */,
 				F5B74C9527DC7462003D4327 /* SentencesM.swift in Sources */,
+				F5399E2427E4F1C100CECCE4 /* SaudHosV.swift in Sources */,
+				F5399E2A27E4F20600CECCE4 /* SaudUniV.swift in Sources */,
+				F5399E2827E4F1EA00CECCE4 /* FahadHosV.swift in Sources */,
 				F573F81A27C9D9E00086B8C9 /* Extension.swift in Sources */,
 				F594CE0C27C52D01004B9476 /* NavBar.swift in Sources */,
 				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,

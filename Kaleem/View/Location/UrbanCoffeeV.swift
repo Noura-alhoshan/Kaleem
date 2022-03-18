@@ -92,12 +92,12 @@ struct ListviewSentencesV: View {
             }
             
            Spacer(minLength: 30)
-            Text("أهلاً بك في الريان")
+            Text("أهلاً بك في مقهى Urban ")
                 .bold()
                 .font(Font.custom("Almarai-Regular", size: 30))
                 .foregroundColor(Color("Color"))
             
-            Text("الجمل الأكثر استخداما في مستشفى الريان")
+            Text("الجمل الأكثر استخداما في مقهى Urban")
                 .font(Font.custom("Almarai-Regular", size: 20))
              
                 
@@ -161,12 +161,14 @@ struct ListviewSentencesV: View {
                             self.sentDBVM.fetchData()
                             
                         }
+                        .navigationBarTitle("")
+                                        .navigationBarHidden(true)
             //end of GeometryReader
                        
                  
                     
                     
-                }
+                }.navigationBarBackButtonHidden(true)
         //.listStyle(InsetGroupedListStyle())
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
         
