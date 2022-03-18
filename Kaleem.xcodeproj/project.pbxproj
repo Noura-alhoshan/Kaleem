@@ -12,43 +12,36 @@
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		5609AAF227DD3B9500D18840 /* VolunteerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAF127DD3B9500D18840 /* VolunteerM.swift */; };
-		5609AAF727DD3BA400D18840 /* AddAccQuizVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAF427DD3BA400D18840 /* AddAccQuizVM.swift */; };
-		5609AAF827DD3BA400D18840 /* SignUpVM2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAF527DD3BA400D18840 /* SignUpVM2.swift */; };
 		5609AAFD27DD3BB300D18840 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAF927DD3BB300D18840 /* Constants.swift */; };
 		5609AAFE27DD3BB300D18840 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAFA27DD3BB300D18840 /* Extension.swift */; };
 		5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAFB27DD3BB300D18840 /* CustomAlert.swift */; };
 		5609AB0027DD3BB300D18840 /* CustomAlertQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AAFC27DD3BB300D18840 /* CustomAlertQuiz.swift */; };
 		5609AB0827DD3BC000D18840 /* EditAccQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0127DD3BC000D18840 /* EditAccQuiz.swift */; };
 		5609AB0927DD3BC000D18840 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0227DD3BC000D18840 /* ImagePicker.swift */; };
-		5609AB0A27DD3BC000D18840 /* SignUpV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0327DD3BC000D18840 /* SignUpV2.swift */; };
 		5609AB0B27DD3BC000D18840 /* AddQuizFormV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0427DD3BC000D18840 /* AddQuizFormV.swift */; };
 		5609AB0C27DD3BC000D18840 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0527DD3BC000D18840 /* ForgotPassword.swift */; };
 		5609AB0D27DD3BC000D18840 /* QuestionDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0627DD3BC000D18840 /* QuestionDetails.swift */; };
 		5609AB0E27DD3BC000D18840 /* BrowseAccQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0727DD3BC000D18840 /* BrowseAccQuizV.swift */; };
 		561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */; };
+		561DF4DE27E50A2D007A1791 /* SignInUpOut in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4D927E50A2D007A1791 /* SignInUpOut */; };
+		561DF4DF27E50A2D007A1791 /* FavoriteList in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4DA27E50A2D007A1791 /* FavoriteList */; };
+		561DF4E027E50A2D007A1791 /* AcceptanceQuiz in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4DB27E50A2D007A1791 /* AcceptanceQuiz */; };
+		561DF4F127E50D92007A1791 /* Onboarding  in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4F027E50D92007A1791 /* Onboarding  */; };
+		561DF50127E51266007A1791 /* Location in Resources */ = {isa = PBXBuildFile; fileRef = 561DF50027E51266007A1791 /* Location */; };
+		56A75C7427E515A200659215 /* ViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 56A75C7327E515A200659215 /* ViewModel */; };
 		56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0227E4FBA7002DBCDB /* test1.swift */; };
-		56F96F0527E50065002DBCDB /* TextToSpeechVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0427E50065002DBCDB /* TextToSpeechVM.swift */; };
 		56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */; };
 		56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0727E5007E002DBCDB /* VideoCallV.swift */; };
 		56F96F0B27E5008A002DBCDB /* TextToSpeechM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0A27E5008A002DBCDB /* TextToSpeechM.swift */; };
+		56FE3CF627E5061C0090FCEE /* TabBar in Resources */ = {isa = PBXBuildFile; fileRef = 56FE3CF527E5061C0090FCEE /* TabBar */; };
+		56FE3CFA27E508DA0090FCEE /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FE3CF927E508DA0090FCEE /* Converter.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
 		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
 		F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */; };
-		F542D1AA27C1A54000A1E9ED /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */; };
-		F542D1AB27C1A54000A1E9ED /* AProgressBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A427C1A53F00A1E9ED /* AProgressBarVM.swift */; };
-		F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A527C1A54000A1E9ED /* Wrapper.swift */; };
-		F542D1AD27C1A54000A1E9ED /* SignInVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A627C1A54000A1E9ED /* SignInVM.swift */; };
-		F542D1AE27C1A54000A1E9ED /* APrimaryButtonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A727C1A54000A1E9ED /* APrimaryButtonVM.swift */; };
-		F542D1AF27C1A54000A1E9ED /* AQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A827C1A54000A1E9ED /* AQuizManagerVM.swift */; };
-		F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B127C1A54B00A1E9ED /* VolunteerHome.swift */; };
-		F542D1BA27C1A54B00A1E9ED /* ImpairedHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B227C1A54B00A1E9ED /* ImpairedHome.swift */; };
-		F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B427C1A54B00A1E9ED /* SignInV.swift */; };
 		F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */; };
 		F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B627C1A54B00A1E9ED /* AQuizV.swift */; };
-		F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B727C1A54B00A1E9ED /* AdminHome.swift */; };
 		F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */; };
-		F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,47 +52,40 @@
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		5609AAF127DD3B9500D18840 /* VolunteerM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerM.swift; sourceTree = "<group>"; };
-		5609AAF427DD3BA400D18840 /* AddAccQuizVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccQuizVM.swift; sourceTree = "<group>"; };
-		5609AAF527DD3BA400D18840 /* SignUpVM2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVM2.swift; sourceTree = "<group>"; };
 		5609AAF927DD3BB300D18840 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5609AAFA27DD3BB300D18840 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		5609AAFB27DD3BB300D18840 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		5609AAFC27DD3BB300D18840 /* CustomAlertQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertQuiz.swift; sourceTree = "<group>"; };
 		5609AB0127DD3BC000D18840 /* EditAccQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAccQuiz.swift; sourceTree = "<group>"; };
 		5609AB0227DD3BC000D18840 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		5609AB0327DD3BC000D18840 /* SignUpV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpV2.swift; sourceTree = "<group>"; };
 		5609AB0427DD3BC000D18840 /* AddQuizFormV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddQuizFormV.swift; sourceTree = "<group>"; };
 		5609AB0527DD3BC000D18840 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		5609AB0627DD3BC000D18840 /* QuestionDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDetails.swift; sourceTree = "<group>"; };
 		5609AB0727DD3BC000D18840 /* BrowseAccQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseAccQuizV.swift; sourceTree = "<group>"; };
 		561AC49A27DE004E008F21D5 /* Kaleem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kaleem.entitlements; sourceTree = "<group>"; };
 		561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		561DF4D927E50A2D007A1791 /* SignInUpOut */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SignInUpOut; sourceTree = "<group>"; };
+		561DF4DA27E50A2D007A1791 /* FavoriteList */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FavoriteList; sourceTree = "<group>"; };
+		561DF4DB27E50A2D007A1791 /* AcceptanceQuiz */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AcceptanceQuiz; sourceTree = "<group>"; };
+		561DF4F027E50D92007A1791 /* Onboarding  */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Onboarding "; sourceTree = "<group>"; };
+		561DF50027E51266007A1791 /* Location */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Location; sourceTree = "<group>"; };
+		56A75C7327E515A200659215 /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
 		56F96F0227E4FBA7002DBCDB /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
-		56F96F0427E50065002DBCDB /* TextToSpeechVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechVM.swift; sourceTree = "<group>"; };
 		56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
 		56F96F0727E5007E002DBCDB /* VideoCallV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallV.swift; sourceTree = "<group>"; };
 		56F96F0A27E5008A002DBCDB /* TextToSpeechM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechM.swift; sourceTree = "<group>"; };
+		56FE3CF527E5061C0090FCEE /* TabBar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TabBar; path = "../../../../Downloads/Kaleem-Raneem/Kaleem/View/TabBar"; sourceTree = "<group>"; };
+		56FE3CF927E508DA0090FCEE /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/Model/SignUpM.swift; sourceTree = SOURCE_ROOT; };
 		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInScreen.swift; sourceTree = "<group>"; };
 		F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionM.swift; sourceTree = "<group>"; };
-		F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARowAnswersVM.swift; sourceTree = "<group>"; };
-		F542D1A427C1A53F00A1E9ED /* AProgressBarVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AProgressBarVM.swift; sourceTree = "<group>"; };
-		F542D1A527C1A54000A1E9ED /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
-		F542D1A627C1A54000A1E9ED /* SignInVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVM.swift; sourceTree = "<group>"; };
-		F542D1A727C1A54000A1E9ED /* APrimaryButtonVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APrimaryButtonVM.swift; sourceTree = "<group>"; };
-		F542D1A827C1A54000A1E9ED /* AQuizManagerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuizManagerVM.swift; sourceTree = "<group>"; };
-		F542D1B127C1A54B00A1E9ED /* VolunteerHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerHome.swift; sourceTree = "<group>"; };
-		F542D1B227C1A54B00A1E9ED /* ImpairedHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImpairedHome.swift; sourceTree = "<group>"; };
-		F542D1B427C1A54B00A1E9ED /* SignInV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInV.swift; sourceTree = "<group>"; };
 		F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuizContentV.swift; sourceTree = "<group>"; };
 		F542D1B627C1A54B00A1E9ED /* AQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
-		F542D1B727C1A54B00A1E9ED /* AdminHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminHome.swift; sourceTree = "<group>"; };
 		F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
 		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +123,8 @@
 			children = (
 				561AC49A27DE004E008F21D5 /* Kaleem.entitlements */,
 				F50D1A3E27B2F2BB00B3EE94 /* Model */,
-				F50D1A3D27B2F23900B3EE94 /* ViewModel */,
 				F50D1A3C27B2F22C00B3EE94 /* Components */,
+				56A75C7327E515A200659215 /* ViewModel */,
 				F572FADC27A3B7FB001C7143 /* View */,
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
@@ -183,24 +169,9 @@
 				F572FADA27A3B669001C7143 /* Info.plist */,
 				561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */,
 				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
+				56FE3CF927E508DA0090FCEE /* Converter.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		F50D1A3D27B2F23900B3EE94 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				56F96F0427E50065002DBCDB /* TextToSpeechVM.swift */,
-				5609AAF427DD3BA400D18840 /* AddAccQuizVM.swift */,
-				5609AAF527DD3BA400D18840 /* SignUpVM2.swift */,
-				F542D1A727C1A54000A1E9ED /* APrimaryButtonVM.swift */,
-				F542D1A427C1A53F00A1E9ED /* AProgressBarVM.swift */,
-				F542D1A827C1A54000A1E9ED /* AQuizManagerVM.swift */,
-				F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */,
-				F542D1A627C1A54000A1E9ED /* SignInVM.swift */,
-				F542D1A527C1A54000A1E9ED /* Wrapper.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		F50D1A3E27B2F2BB00B3EE94 /* Model */ = {
@@ -217,6 +188,12 @@
 		F572FADC27A3B7FB001C7143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				561DF50027E51266007A1791 /* Location */,
+				561DF4F027E50D92007A1791 /* Onboarding  */,
+				561DF4DB27E50A2D007A1791 /* AcceptanceQuiz */,
+				561DF4DA27E50A2D007A1791 /* FavoriteList */,
+				561DF4D927E50A2D007A1791 /* SignInUpOut */,
+				56FE3CF527E5061C0090FCEE /* TabBar */,
 				56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */,
 				56F96F0727E5007E002DBCDB /* VideoCallV.swift */,
 				5609AB0427DD3BC000D18840 /* AddQuizFormV.swift */,
@@ -225,15 +202,9 @@
 				5609AB0527DD3BC000D18840 /* ForgotPassword.swift */,
 				5609AB0227DD3BC000D18840 /* ImagePicker.swift */,
 				5609AB0627DD3BC000D18840 /* QuestionDetails.swift */,
-				5609AB0327DD3BC000D18840 /* SignUpV2.swift */,
-				F542D1B727C1A54B00A1E9ED /* AdminHome.swift */,
 				F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */,
 				F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */,
 				F542D1B627C1A54B00A1E9ED /* AQuizV.swift */,
-				F542D1B227C1A54B00A1E9ED /* ImpairedHome.swift */,
-				F542D1B427C1A54B00A1E9ED /* SignInV.swift */,
-				F542D1B127C1A54B00A1E9ED /* VolunteerHome.swift */,
-				F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */,
 				F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */,
 				56F96F0227E4FBA7002DBCDB /* test1.swift */,
 			);
@@ -300,9 +271,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561DF4DE27E50A2D007A1791 /* SignInUpOut in Resources */,
+				56FE3CF627E5061C0090FCEE /* TabBar in Resources */,
+				561DF4DF27E50A2D007A1791 /* FavoriteList in Resources */,
 				14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */,
-				F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
+				56A75C7427E515A200659215 /* ViewModel in Resources */,
+				561DF50127E51266007A1791 /* Location in Resources */,
+				561DF4E027E50A2D007A1791 /* AcceptanceQuiz in Resources */,
+				561DF4F127E50D92007A1791 /* Onboarding  in Resources */,
 				561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,17 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F542D1AA27C1A54000A1E9ED /* ARowAnswersVM.swift in Sources */,
+				56FE3CFA27E508DA0090FCEE /* Converter.swift in Sources */,
 				5609AB0B27DD3BC000D18840 /* AddQuizFormV.swift in Sources */,
 				56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */,
 				F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */,
-				F542D1AE27C1A54000A1E9ED /* APrimaryButtonVM.swift in Sources */,
-				F542D1BA27C1A54B00A1E9ED /* ImpairedHome.swift in Sources */,
-				56F96F0527E50065002DBCDB /* TextToSpeechVM.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
-				F542D1AB27C1A54000A1E9ED /* AProgressBarVM.swift in Sources */,
 				5609AAFD27DD3BB300D18840 /* Constants.swift in Sources */,
-				F542D1AF27C1A54000A1E9ED /* AQuizManagerVM.swift in Sources */,
 				F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */,
 				5609AB0E27DD3BC000D18840 /* BrowseAccQuizV.swift in Sources */,
 				5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */,
@@ -375,22 +347,14 @@
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 				56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */,
 				5609AB0D27DD3BC000D18840 /* QuestionDetails.swift in Sources */,
-				5609AAF727DD3BA400D18840 /* AddAccQuizVM.swift in Sources */,
-				F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */,
 				56F96F0B27E5008A002DBCDB /* TextToSpeechM.swift in Sources */,
-				5609AAF827DD3BA400D18840 /* SignUpVM2.swift in Sources */,
 				5609AAFE27DD3BB300D18840 /* Extension.swift in Sources */,
 				5609AB0927DD3BC000D18840 /* ImagePicker.swift in Sources */,
 				56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */,
-				F542D1AD27C1A54000A1E9ED /* SignInVM.swift in Sources */,
 				5609AB0C27DD3BC000D18840 /* ForgotPassword.swift in Sources */,
 				5609AB0827DD3BC000D18840 /* EditAccQuiz.swift in Sources */,
 				5609AB0027DD3BB300D18840 /* CustomAlertQuiz.swift in Sources */,
-				5609AB0A27DD3BC000D18840 /* SignUpV2.swift in Sources */,
-				F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
-				F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */,
-				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
 				5609AAF227DD3B9500D18840 /* VolunteerM.swift in Sources */,
 			);
