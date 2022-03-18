@@ -62,6 +62,7 @@ struct SignIn : View {
             VStack(alignment: .center){
                // TopBar()
                 
+             
                 //TO NAVIGATE TO FORGOT PASSWORD PAGE
                NavigationLink(destination: ForgotPassword(), isActive: $showResetPassword, label: {EmptyView()} )
               
@@ -72,7 +73,7 @@ struct SignIn : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, -30)
+                     .padding(.top, -10)
                 }
                Text("مرحبا بك مجددًا")
                     .foregroundColor(.black)
@@ -81,10 +82,6 @@ struct SignIn : View {
                  //   .fontWeight(.bold)
                     .padding(.bottom, 30)
                 //    .padding(.top, 70)
-                
-              
-
-
                 
                 VStack{
                     HStack{
@@ -135,7 +132,8 @@ struct SignIn : View {
                         self.showResetPassword = true
                     }){
                         Text("هل نسيت كلمة المرور؟")
-                            .foregroundColor(Color.black)
+                            .foregroundColor(Color("Kcolor"))
+                        
                             .underline()
                             
                     }
@@ -145,14 +143,15 @@ struct SignIn : View {
                     
                     
             
-                } // the big one
+                }// the big one
    
                 
                 /*CONTAINER*/
                 .padding()
                 .padding(.bottom, 5)
                 /*WITHIT OR WITHOUT IT?*/
-                .background(Color.gray.opacity(0.1))
+              //  .background(Color.gray.opacity(0.1))
+                .background(Color("KGray"))
                 .cornerRadius(15)
                 .padding(.horizontal,20)
                 
@@ -192,7 +191,7 @@ struct SignIn : View {
                     }
                 
                 .padding(.horizontal)
-                .padding(.top,130)
+                .padding(.top,60)
                 
             }
             
@@ -203,8 +202,6 @@ struct SignIn : View {
 
       //  .padding(.top,10)
         .background(Color(.white).edgesIgnoringSafeArea(.all))
-        .navigationBarTitle("")
-       .navigationBarHidden(true)
         }
 }
 
@@ -265,7 +262,7 @@ struct SecureInputView: View {
                 isSecured.toggle()
             }) {
                 Image(systemName: self.isSecured ? "eye.slash" : "eye")
-                    .foregroundColor(Color("Kcolor")) 
+                    .foregroundColor(Color("Kcolor"))
             }
         }
             Divider().background(Color("Kcolor").opacity(0.5))
@@ -274,4 +271,3 @@ struct SecureInputView: View {
                     .padding(.top,30)
 }
 }
-

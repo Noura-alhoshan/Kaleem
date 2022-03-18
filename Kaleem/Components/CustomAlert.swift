@@ -23,9 +23,13 @@ struct CustomAlert: View {
     var btn1: String
     var btn2: String
 
-        
-        var body: some View {
-           
+//     for navigation to SignIn
+    @Binding var showNextPage2 : Bool
+
+
+    var body: some View {
+       NavigationLink(destination: SignIn(), isActive: $showNextPage2, label: {EmptyView()} )
+
             ZStack{
             VStack {
                
@@ -36,27 +40,35 @@ struct CustomAlert: View {
                 Spacer()
                // Divider()
                 HStack {
-                    //dialog btn 1
+                    //dialog btn 2 > cancel
+                  
                     Button(btn1) {
                         closureA = .cancel
                         shown.toggle()
+                        print("BOOLEAN#######: \(showNextPage2)")
+
+                        showNextPage2 = true
                     }.frame(width: UIScreen.main.bounds.width/2-60, height: 40) // this btn width is consistent with the dialog box width
                         .foregroundColor(.white)
                         .background(Color("Kcolor"))
                         .clipShape(Capsule())
 .padding(10)
+                
+                    // dialog btn 1 > ok
                     if (!oneBtn)
                     {
-                    // dialog btn 2
                     Button(btn2) {
                         closureA = .ok
+                        print("BOOLEAN SHown 62#######: \(shown)")
+
                         shown.toggle()
+
                     }.frame(width: UIScreen.main.bounds.width/2-60, height: 40) // this btn width is consistent with the dialog box width
                         .foregroundColor(.white)
                         .background(Color("Kcolor"))
                         .clipShape(Capsule())
                         .padding(10)
-                    }
+                }
                 }
                 
             }

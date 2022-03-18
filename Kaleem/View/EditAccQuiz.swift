@@ -383,10 +383,10 @@ struct EditAccQuizForm: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         
-        if showAlert {
-            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء").padding(.top, 50).padding(.vertical)
-
-        }
+//        if showAlert {
+//            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء").padding(.top, 50).padding(.vertical)
+//
+//        }
      
         
     }//view body

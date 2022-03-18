@@ -46,7 +46,7 @@ class SignUpVM : ObservableObject {
 
          if (userType == "Speech-impaired"){
          db.collection(userType).document(uid).setData(["uid":uid,
-                                                        "name":username, "phoneNo":phone, "email":email, "type": userType
+                                                        "name":username, "phoneNo":phone, "email":email, "type": "Impaired"
           ])         { error in
             
             // Check for errors

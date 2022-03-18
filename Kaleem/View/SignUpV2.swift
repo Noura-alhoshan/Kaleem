@@ -7,9 +7,28 @@ struct SignUpTaps : View {
     
     @State var index = 1
     @State var showAlert = false
-    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+
     var body: some View{
-        
+       
+        HStack{
+            Spacer()
+            Button(action: {
+                self.mode.wrappedValue.dismiss()
+                                withAnimation(.easeInOut){
+                                  
+                                }
+                            }, label: {
+                                Image(systemName: "chevron.right")
+                                     .foregroundColor(.white)
+                                     .padding(.vertical,10)
+                                     .padding(.horizontal)
+                                    // .background(Color.black.opacity(0.4))
+                                     .background(Color("Kcolor"))
+                                     .cornerRadius(10)
+                            }).padding(.horizontal,25)
+
+        }
         GeometryReader{_ in
             VStack{
                 
@@ -40,7 +59,9 @@ struct SignUpTaps : View {
             .padding(.vertical)
    
         }
+    
         .background(Color.white.edgesIgnoringSafeArea(.all)) //Whole page
+  
     }
 }
 
@@ -288,6 +309,8 @@ struct S_SignUp : View {
     @State var showAlert = false
     @State var alertAction: AlertAction?
     @State var showSignIn: Bool = false
+    @State var showNextPage = false
+
     // end alert vars
     
     @State var VM = SignUpVM()
@@ -315,7 +338,7 @@ struct S_SignUp : View {
         ZStack(alignment: .bottom) {
             
             //TO NAVIGATE TO SIGN IN PAGE after Sign UP
-          //  NavigationLink(destination: SignIn(), isActive: $showSignIn, label: {EmptyView()} )
+//            NavigationLink(destination: SignIn(), isActive: $showSignIn, label: {EmptyView()} )
             
             VStack{
                 
@@ -486,13 +509,12 @@ struct S_SignUp : View {
                 }
              //   else{
                     allEmptyErr2 = ""
+                self.showNextPage = true
                     showAlert.toggle()
-                if alertAction == .ok {
                     S_SignUp() // Submit as Speech-impaired
                     //TO NAVIGATE TO SIGN IN PAGE after sign up
-                    self.showSignIn = true
                     
-                }
+                
           //  }
                 
             }) {
@@ -514,6 +536,8 @@ struct S_SignUp : View {
                     .shadow(color: Color.gray.opacity(0.1), radius: 5, x: 0, y: 5)
             }
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
             // moving view down..
             .offset(y: 25)
             // hiding view when its in background...
@@ -525,7 +549,7 @@ struct S_SignUp : View {
         
 // TO SHOW ALERT ####################
         if showAlert {
-            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: false,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء")
+            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "حسنا", btn2: "", showNextPage2: $showNextPage)
             
         }
     }
