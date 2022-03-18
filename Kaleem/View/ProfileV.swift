@@ -14,6 +14,8 @@ struct ProfileView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject private var PViewModel = ProfileVM()
     @State var showEditForm = false
+    @EnvironmentObject var session: SessionStore
+  //  @State var emailFromPV = ""
     // let gradient = Gradient(colors: [.blue, .purple])
     
     
@@ -122,13 +124,18 @@ struct ProfileView: View {
                     } // the big one
                     /*CONTAINER*/
                     .padding()
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 40)
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(15)
                     .padding(.horizontal,20)
                     // .padding(.vertical,20)
-                    .onAppear(perform: { PViewModel.fetchUser()} )
+                    .onAppear(perform: { PViewModel.fetchUser();
+                       // emailFromPV =  PViewModel.KaleemUser.email;
+                       // print (PViewModel.KaleemUser.email)
+                        
+                    } )
                     
+              
                     
                     Button(action: {
                         showEditForm = true
@@ -140,12 +147,36 @@ struct ProfileView: View {
                             .shadow(color: .gray, radius: 0.2, x: 1, y: 1)
                     }
                     .padding()
-                }
+                    .padding(.leading,20)
+                    .padding(.top, 20)
+                }//zstack??
+                
+                
+                
+                Button(action: {
+                    session.signOut()
+                }, label: {
+                    Text("تسجيل الخروج")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .padding(.horizontal,50)
+                        .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+                        .clipShape(Capsule())
+                        .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                })
+                    .padding(.top, 28)
+                
                 
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
+
+            
+       
+            
             
         }
+        
         
     }
 }

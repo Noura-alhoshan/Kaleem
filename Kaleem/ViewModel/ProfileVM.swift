@@ -16,7 +16,7 @@ import Firebase
 
 class ProfileVM: ObservableObject {
     
-    @Published var KaleemUser: UserInfo = UserInfo(name: "-", phoneNo: "-", email: "-", type: "-")
+    @Published var KaleemUser: UserInfo = UserInfo(name: ".", phoneNo: ".", email: ".", type: ".")
     let authh = Auth.auth()
     
     private var db = Firestore.firestore()

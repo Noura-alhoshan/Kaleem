@@ -25,6 +25,7 @@ struct EditProfileV: View {
     @State var phoneNoErr = ""
     @State var isError = false
     @State var showAlert = false
+    @State var showCheckForm = false
     
     
     func updataInfo(){
@@ -35,6 +36,7 @@ struct EditProfileV: View {
         }
         else {
             isError = false
+            showCheckForm = true
             
 //            let user = Auth.auth().currentUser
 //            var credential: AuthCredential
@@ -47,17 +49,17 @@ struct EditProfileV: View {
 //              }
 //            }
             
-            Auth.auth().currentUser?.updateEmail(to: email) { error in
-              print(error)
-            }
-            
-            
-            Firestore.firestore().collection(self.type)
-            .document(Auth.auth().currentUser!.uid).setData(
-                ["name":self.username,
-                  "phoneNo": phoneNo,
-                    "email": email], merge: true)
-            showAlert = true
+//            Auth.auth().currentUser?.updateEmail(to: email) { error in
+//              print(error)
+//            }
+//            
+//            
+//            Firestore.firestore().collection(self.type)
+//            .document(Auth.auth().currentUser!.uid).setData(
+//                ["name":self.username,
+//                  "phoneNo": phoneNo,
+//                    "email": email], merge: true)
+//            showAlert = true
         }
     }
     
@@ -220,7 +222,7 @@ struct EditProfileV: View {
                             Text(" ").foregroundColor(.red).padding(.top,13)
                         }
                         
-                        
+                        if (!showCheckForm ){//عشان ما يطلع شكل الازرار مكرر في الصفحة وفي البوب اب
                         Button(action: {
                           
                             updataInfo()
@@ -235,7 +237,7 @@ struct EditProfileV: View {
                                 .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                         })
                             .padding(.top, 18)
-                        
+                        }
                         //Spacer()
                     } // the big one
                     /*CONTAINER*/
@@ -255,6 +257,7 @@ struct EditProfileV: View {
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
             
+             PopUpWindow(userEmail: $email, userPhone: $phoneNo, userName: $username, userType: $type, show: $showCheckForm )
         }
         
     }
