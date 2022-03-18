@@ -61,7 +61,6 @@
 		F5B2939D27DD2139005D07D2 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2939C27DD2139005D07D2 /* CustomAlert.swift */; };
 		F5B2939F27DD214C005D07D2 /* SignUpV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B2939E27DD214C005D07D2 /* SignUpV2.swift */; };
 		F5B293A227DD221E005D07D2 /* SignUpVM2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B293A027DD221E005D07D2 /* SignUpVM2.swift */; };
-		F5B293A327DD221E005D07D2 /* VideoCallVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B293A127DD221E005D07D2 /* VideoCallVM.swift */; };
 		F5B293A627DD223A005D07D2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B293A427DD223A005D07D2 /* ForgotPassword.swift */; };
 		F5B293A727DD223A005D07D2 /* VolunteerM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B293A527DD223A005D07D2 /* VolunteerM.swift */; };
 		F5B293A927DD27B4005D07D2 /* VolunteerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B293A827DD27B4005D07D2 /* VolunteerProfile.swift */; };
@@ -288,7 +287,6 @@
 		F5B2939C27DD2139005D07D2 /* CustomAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		F5B2939E27DD214C005D07D2 /* SignUpV2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpV2.swift; sourceTree = "<group>"; };
 		F5B293A027DD221E005D07D2 /* SignUpVM2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVM2.swift; sourceTree = "<group>"; };
-		F5B293A127DD221E005D07D2 /* VideoCallVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallVM.swift; sourceTree = "<group>"; };
 		F5B293A427DD223A005D07D2 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		F5B293A527DD223A005D07D2 /* VolunteerM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerM.swift; sourceTree = "<group>"; };
 		F5B293A827DD27B4005D07D2 /* VolunteerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerProfile.swift; sourceTree = "<group>"; };
@@ -384,7 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				F5B293A027DD221E005D07D2 /* SignUpVM2.swift */,
-				F5B293A127DD221E005D07D2 /* VideoCallVM.swift */,
 				F573F82127CA89F50086B8C9 /* Location */,
 				F542D1A727C1A54000A1E9ED /* APrimaryButtonVM.swift */,
 				F542D1A427C1A53F00A1E9ED /* AProgressBarVM.swift */,
@@ -859,7 +856,6 @@
 				F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */,
 				F542D1AE27C1A54000A1E9ED /* APrimaryButtonVM.swift in Sources */,
 				F542D1BA27C1A54B00A1E9ED /* ImpairedHome.swift in Sources */,
-				F5B293A327DD221E005D07D2 /* VideoCallVM.swift in Sources */,
 				F542D1AB27C1A54000A1E9ED /* AProgressBarVM.swift in Sources */,
 				F5B293A227DD221E005D07D2 /* SignUpVM2.swift in Sources */,
 				F5B293A727DD223A005D07D2 /* VolunteerM.swift in Sources */,
