@@ -11,5 +11,6 @@ target 'Kaleem' do
   pod 'Firebase/Storage'
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
-
+  #pod 'AgoraRtcEngine_iOS'
+  #pod 'AgoraUIKit_iOS'
 end
