@@ -13,6 +13,16 @@
 		23D3ADD0E0267A460732626F /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD36246C3C633BC3AC9BA8F /* Pods_Kaleem.framework */; };
 		F505C76027DF1A6300BB4224 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		F505C76227DF1B0B00BB4224 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C76127DF1B0B00BB4224 /* Home.swift */; };
+		F505C76627DFBC1C00BB4224 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C76527DFBC1C00BB4224 /* Location.swift */; };
+		F505C78127DFBFA100BB4224 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78027DFBFA100BB4224 /* Hospital.swift */; };
+		F505C78327DFBFD000BB4224 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78227DFBFD000BB4224 /* University.swift */; };
+		F505C78727E0B27B00BB4224 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78627E0B27B00BB4224 /* UserName.swift */; };
+		F505C78927E25AF500BB4224 /* CoffeeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78827E25AF500BB4224 /* CoffeeVM.swift */; };
+		F505C78B27E2604A00BB4224 /* CoffeeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78A27E2604A00BB4224 /* CoffeeV.swift */; };
+		F505C78D27E31EFF00BB4224 /* AdminTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78C27E31EFE00BB4224 /* AdminTabBar.swift */; };
+		F505C78F27E31F1B00BB4224 /* ImpairedTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C78E27E31F1B00BB4224 /* ImpairedTabBar.swift */; };
+		F505C79127E31F5500BB4224 /* VolunteerTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C79027E31F5500BB4224 /* VolunteerTabBar.swift */; };
+		F505C79327E3463500BB4224 /* SignOutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505C79227E3463500BB4224 /* SignOutV.swift */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
 		F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */; };
 		F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */; };
@@ -36,9 +46,7 @@
 		F573F81927C9D9E00086B8C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81727C9D9E00086B8C9 /* Constants.swift */; };
 		F573F81A27C9D9E00086B8C9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81827C9D9E00086B8C9 /* Extension.swift */; };
 		F573F81F27CA84650086B8C9 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F81E27CA84650086B8C9 /* List.swift */; };
-		F573F82527CA8A520086B8C9 /* SentencesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F573F82427CA8A520086B8C9 /* SentencesVM.swift */; };
 		F594CE0C27C52D01004B9476 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE0B27C52D01004B9476 /* NavBar.swift */; };
-		F594CE0E27C67ACD004B9476 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE0D27C67ACD004B9476 /* TabBar.swift */; };
 		F594CE1427C6D8D6004B9476 /* TabCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE1327C6D8D6004B9476 /* TabCurve.swift */; };
 		F594CE1F27C6E527004B9476 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE1E27C6E527004B9476 /* ContentView.swift */; };
 		F594CE2A27C71928004B9476 /* ImpairedProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F594CE2927C71928004B9476 /* ImpairedProfile.swift */; };
@@ -55,13 +63,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F505C75D27DE312C00BB4224 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F52A0CCD27DD2B16004F3740 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2A4102D03918F83CA868A1FF74296F87;
-			remoteInfo = AgoraUIKit_iOS;
-		};
 		F52A0CED27DD2D20004F3740 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F52A0CCD27DD2B16004F3740 /* Pods.xcodeproj */;
@@ -228,6 +229,16 @@
 		DDF4D00DB1578B79BF7BF89C /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		EBD36246C3C633BC3AC9BA8F /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F505C76127DF1B0B00BB4224 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F505C76527DFBC1C00BB4224 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F505C78027DFBFA100BB4224 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		F505C78227DFBFD000BB4224 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		F505C78627E0B27B00BB4224 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
+		F505C78827E25AF500BB4224 /* CoffeeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeVM.swift; sourceTree = "<group>"; };
+		F505C78A27E2604A00BB4224 /* CoffeeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeV.swift; sourceTree = "<group>"; };
+		F505C78C27E31EFE00BB4224 /* AdminTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBar.swift; sourceTree = "<group>"; };
+		F505C78E27E31F1B00BB4224 /* ImpairedTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar.swift; sourceTree = "<group>"; };
+		F505C79027E31F5500BB4224 /* VolunteerTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTabBar.swift; sourceTree = "<group>"; };
+		F505C79227E3463500BB4224 /* SignOutV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutV.swift; sourceTree = "<group>"; };
 		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/Model/SignUpM.swift; sourceTree = SOURCE_ROOT; };
 		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		F52A0CCD27DD2B16004F3740 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
@@ -255,9 +266,7 @@
 		F573F81827C9D9E00086B8C9 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		F573F81B27C9E1060086B8C9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F573F81E27CA84650086B8C9 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
-		F573F82427CA8A520086B8C9 /* SentencesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentencesVM.swift; sourceTree = "<group>"; };
 		F594CE0B27C52D01004B9476 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
-		F594CE0D27C67ACD004B9476 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		F594CE1327C6D8D6004B9476 /* TabCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurve.swift; sourceTree = "<group>"; };
 		F594CE1E27C6E527004B9476 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = Kaleem/View/ContentView.swift; sourceTree = SOURCE_ROOT; };
 		F594CE2927C71928004B9476 /* ImpairedProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedProfile.swift; sourceTree = "<group>"; };
@@ -370,6 +379,7 @@
 				F542D1A327C1A53F00A1E9ED /* ARowAnswersVM.swift */,
 				F542D1A627C1A54000A1E9ED /* SignInVM.swift */,
 				F542D1A527C1A54000A1E9ED /* Wrapper.swift */,
+				F505C78627E0B27B00BB4224 /* UserName.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -389,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				F52A0CEE27DD2D20004F3740 /* abseil */,
-				F505C75E27DE312C00BB4224 /* AgoraUIKit_iOS */,
 				F52A0CF027DD2D20004F3740 /* BoringSSL-GRPC */,
 				F52A0CF227DD2D20004F3740 /* FirebaseAuth */,
 				F52A0CF427DD2D20004F3740 /* FirebaseCore */,
@@ -422,7 +431,7 @@
 				F573F81D27CA841A0086B8C9 /* FavoriteList */,
 				F594CE1627C6D9D2004B9476 /* Onboarding  */,
 				F594CE1827C6DA24004B9476 /* AcceptanceQuiz */,
-				F594CE1D27C6DA85004B9476 /* SignInUp */,
+				F594CE1D27C6DA85004B9476 /* SignInUpOut */,
 				F594CE1527C6D90E004B9476 /* TabBar */,
 			);
 			path = View;
@@ -439,8 +448,11 @@
 		F573F82127CA89F50086B8C9 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				F573F82427CA8A520086B8C9 /* SentencesVM.swift */,
+				F505C78827E25AF500BB4224 /* CoffeeVM.swift */,
 				F5B74C9227DC6292003D4327 /* SentencesDBVM.swift */,
+				F505C76527DFBC1C00BB4224 /* Location.swift */,
+				F505C78027DFBFA100BB4224 /* Hospital.swift */,
+				F505C78227DFBFD000BB4224 /* University.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -455,10 +467,12 @@
 				F573F81227C9BA0A0086B8C9 /* ImpairedServices.swift */,
 				F542D1B127C1A54B00A1E9ED /* VolunteerHome.swift */,
 				F594CE0B27C52D01004B9476 /* NavBar.swift */,
-				F594CE0D27C67ACD004B9476 /* TabBar.swift */,
 				F573F81B27C9E1060086B8C9 /* Launch Screen.storyboard */,
 				F5B293A827DD27B4005D07D2 /* VolunteerProfile.swift */,
 				F505C76127DF1B0B00BB4224 /* Home.swift */,
+				F505C78C27E31EFE00BB4224 /* AdminTabBar.swift */,
+				F505C78E27E31F1B00BB4224 /* ImpairedTabBar.swift */,
+				F505C79027E31F5500BB4224 /* VolunteerTabBar.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -485,18 +499,20 @@
 			path = AcceptanceQuiz;
 			sourceTree = "<group>";
 		};
-		F594CE1D27C6DA85004B9476 /* SignInUp */ = {
+		F594CE1D27C6DA85004B9476 /* SignInUpOut */ = {
 			isa = PBXGroup;
 			children = (
+				F505C79227E3463500BB4224 /* SignOutV.swift */,
 				F5B2939E27DD214C005D07D2 /* SignUpV2.swift */,
 				F542D1B427C1A54B00A1E9ED /* SignInV.swift */,
 			);
-			path = SignInUp;
+			path = SignInUpOut;
 			sourceTree = "<group>";
 		};
 		F5B74C9627DCB48E003D4327 /* Location */ = {
 			isa = PBXGroup;
 			children = (
+				F505C78A27E2604A00BB4224 /* CoffeeV.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -571,14 +587,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		F505C75E27DE312C00BB4224 /* AgoraUIKit_iOS */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			name = AgoraUIKit_iOS;
-			path = AgoraUIKit_iOS.framework;
-			remoteRef = F505C75D27DE312C00BB4224 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		F52A0CEE27DD2D20004F3740 /* abseil */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -820,11 +828,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F573F81327C9BA0A0086B8C9 /* ImpairedServices.swift in Sources */,
-				F573F82527CA8A520086B8C9 /* SentencesVM.swift in Sources */,
-				F594CE0E27C67ACD004B9476 /* TabBar.swift in Sources */,
+				F505C76627DFBC1C00BB4224 /* Location.swift in Sources */,
 				F5B2939F27DD214C005D07D2 /* SignUpV2.swift in Sources */,
 				F5B2939D27DD2139005D07D2 /* CustomAlert.swift in Sources */,
+				F505C78F27E31F1B00BB4224 /* ImpairedTabBar.swift in Sources */,
 				F594CE1427C6D8D6004B9476 /* TabCurve.swift in Sources */,
+				F505C78D27E31EFF00BB4224 /* AdminTabBar.swift in Sources */,
 				F542D1AA27C1A54000A1E9ED /* ARowAnswersVM.swift in Sources */,
 				F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */,
 				F542D1AE27C1A54000A1E9ED /* APrimaryButtonVM.swift in Sources */,
@@ -838,13 +847,18 @@
 				F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */,
 				F5B293A927DD27B4005D07D2 /* VolunteerProfile.swift in Sources */,
 				F53ABFBB27B2959A00DC25C6 /* SignUpInScreen.swift in Sources */,
+				F505C78727E0B27B00BB4224 /* UserName.swift in Sources */,
 				F505C76227DF1B0B00BB4224 /* Home.swift in Sources */,
+				F505C78127DFBFA100BB4224 /* Hospital.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
+				F505C78927E25AF500BB4224 /* CoffeeVM.swift in Sources */,
+				F505C79327E3463500BB4224 /* SignOutV.swift in Sources */,
 				F5B293A627DD223A005D07D2 /* ForgotPassword.swift in Sources */,
 				F594CE2A27C71928004B9476 /* ImpairedProfile.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 				F573F81F27CA84650086B8C9 /* List.swift in Sources */,
 				F542D1CC27C2487800A1E9ED /* OnboardingScreens.swift in Sources */,
+				F505C79127E31F5500BB4224 /* VolunteerTabBar.swift in Sources */,
 				F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */,
 				F542D1AD27C1A54000A1E9ED /* SignInVM.swift in Sources */,
 				F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */,
@@ -852,12 +866,14 @@
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
 				F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */,
 				F5B74C9327DC6292003D4327 /* SentencesDBVM.swift in Sources */,
+				F505C78B27E2604A00BB4224 /* CoffeeV.swift in Sources */,
 				F5B74C9527DC7462003D4327 /* SentencesM.swift in Sources */,
 				F573F81A27C9D9E00086B8C9 /* Extension.swift in Sources */,
 				F594CE0C27C52D01004B9476 /* NavBar.swift in Sources */,
 				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
 				F594CE1F27C6E527004B9476 /* ContentView.swift in Sources */,
+				F505C78327DFBFD000BB4224 /* University.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import Firebase
 
 struct Wrraper: View{
     @EnvironmentObject var session: SessionStore
-    
+    @State var selectedTab = "house"
     var body: some View {
         
         NavigationView{
@@ -25,7 +25,8 @@ struct Wrraper: View{
                     VolunteerHome()
                     
                 case "Impaired":
-                    ImpairedHome()
+                 //   ImpairedTabBar(selectedTab: $selectedTab)
+                    HomeAll()
                     
                 case "Admin":
                     AdminHome()

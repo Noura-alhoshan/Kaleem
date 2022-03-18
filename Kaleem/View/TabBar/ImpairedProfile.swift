@@ -5,57 +5,68 @@
 //  Created by Sarah S on 24/06/1443 AH.
 //
 
+
+//This file contains the VC and needs to rearrange it
 import SwiftUI
 import FirebaseAuth
 import Firebase
 
 struct ImpairedHome: View {
-    @EnvironmentObject var session: SessionStore
+
     @Environment(\.openURL) private var openURL
     @State var showVideCall: Bool = false
     @State var VM = VideoCallVM()
-
+    @State var selectedTab = "house"
+   
+    
    
     var body: some View {
-        
-        NavigationView{
-        VStack{
-            Text("Hello Impaired!")
-            NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} ).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
+ 
 
-            /*Calling function*/
-            Button( action: {
-                VM.updateVolunteerCallStatus()
-                self.showVideCall = true
-             /*   if let yourURL = URL(string: "facetime://0550804411") {
-                    UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)
-                }*/
-                /// change status of all volunteers to ringing 
-
-            } , label: {
-                Text("اتصل")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 60)
-                    .background(Color.black)
-                    .cornerRadius(35.0)
-            })
             
-        Button(action: {
-            session.signOut()
-        }, label: {
-            Text("تسجيل الخروج")
-                .font(.headline)
-                .foregroundColor(.white)
-                .padding()
-                .frame(width: 220, height: 60)
-                .background(Color.black)
-                .cornerRadius(35.0)
-        })
-        } //Text("looooong time").bold() /VStack end
-        
-    }
+            
+         
+            
+        VStack {
+            ImpairedTabBar(selectedTab: $selectedTab)
+        }
+          
+                    
+    //                /*Calling function*/
+    //                Button( action: {
+    //                    VM.updateVolunteerCallStatus()
+    //                    self.showVideCall = true
+    //                 /*   if let yourURL = URL(string: "facetime://0550804411") {
+    //                        UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)
+    //                    }*/
+    //                    /// change status of all volunteers to ringing
+    //
+    //                } , label: {
+    //                    Text("اتصل")
+    //                        .font(.headline)
+    //                        .foregroundColor(.white)
+    //                        .padding()
+    //                        .frame(width: 220, height: 60)
+    //                        .background(Color.black)
+    //                        .cornerRadius(35.0)
+    //                })
+                    
+
+
+            
+//        VStack{
+//
+////            NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} ).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
+//
+//
+//
+//
+//
+//
+//        } //Text("looooong time").bold() /VStack end
+//
+    
+      
     }// end body
 } //end view
 
