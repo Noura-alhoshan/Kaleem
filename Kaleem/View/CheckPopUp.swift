@@ -50,6 +50,11 @@ struct PopUpWindow: View {
                       print(error)
                     }
                     
+                    if (userType == "Impaired") {
+                        userType = "Speech-impaired"
+                    }
+                    
+                    
                     Firestore.firestore().collection(userType)
                     .document(Auth.auth().currentUser!.uid).setData(
                         ["name":self.userName,
