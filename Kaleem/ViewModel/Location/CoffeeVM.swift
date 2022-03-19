@@ -1,6 +1,6 @@
 import Foundation
 import FirebaseFirestore
-import FirebaseFirestoreSwift
+//import FirebaseFirestoreSwift
 class CoffeeVM: ObservableObject {
     
     //An array of the whole docs in LocationSentences collection

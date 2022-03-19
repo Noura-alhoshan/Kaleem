@@ -41,7 +41,7 @@ struct SignIn : View {
                 case "Volunteer":
                     VolunteerHome()
                 case "Impaired":
-                    ImpairedHome()
+                    HomeAll()
                     
                 case "":
                     AdminHome()

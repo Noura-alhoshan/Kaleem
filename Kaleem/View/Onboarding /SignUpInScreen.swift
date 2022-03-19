@@ -65,7 +65,7 @@ struct SignUpInScreen: View {
                     Text("بالمتابعة، فإنك توافق على شروط كليـم\nوتقر بأنك قرأت سياسة  الخصوصية")
                         .font(Font.custom("Almarai-Regular", size: 20))
                         .font(.title3)
-                        .foregroundColor(Color("Gray"))
+                        .foregroundColor(.gray.opacity(0.5))
                         .kerning (1.2)
                         .multilineTextAlignment(.center)
                     //  .fontWeight(.bold)
@@ -79,7 +79,7 @@ struct SignUpInScreen: View {
                         Text(" بالمتابعة ، فإنك توافق على ")
                             .font(Font.custom("Almarai-Regular", size: 20))
                             .font(.title3)
-                            .foregroundColor(Color("Gray"))
+                            .foregroundColor(.gray.opacity(0.5))
                             .kerning (1.2)
                             .multilineTextAlignment(.center)
                         HStack(spacing: 0) {
@@ -98,7 +98,7 @@ struct SignUpInScreen: View {
                             Text("كليـم وتقر بأنك قرأت سياسة ")
                                 .font(Font.custom("Almarai-Regular", size: 20))
                                 .font(.title3)
-                                .foregroundColor(Color("Gray"))
+                                .foregroundColor(.gray.opacity(0.5))
                                 .kerning (1.2)
                                 .multilineTextAlignment(.center)
                             

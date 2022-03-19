@@ -102,7 +102,7 @@ class SessionStore : ObservableObject {
     func getUserType(userid: String) {
         let docRef = db.collection("Volunteer").document(userid)
         
-        docRef.getDocument { (document, error) in 
+        docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
                 self.UserType = document["type"] as! String

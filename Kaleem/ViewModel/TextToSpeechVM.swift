@@ -1,6 +1,6 @@
 import Foundation
 import AVFoundation
-import SwiftUI 
+import SwiftUI
 
 internal class Speaker: NSObject, ObservableObject {
     internal var errorDescription: String? = nil

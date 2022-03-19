@@ -1,6 +1,6 @@
 //
 //
-//  
+//
 //  Created by Sarah S on 19/06/1443 AH.
 //
 
@@ -25,7 +25,9 @@ struct Wrraper: View{
                     VolunteerHome()
                     
                 case "Impaired":
-                    ImpairedHome()
+                  /// ImpairedHome()
+                 //   HomeAll()
+                    SignOut()
                     
                 case "Admin":
                     AdminHome()

@@ -23,7 +23,7 @@ class ContactViewModel: ObservableObject {
     
     
     private var db = Firestore.firestore()
-    var docID = ""//CAN NOT BE PRIVATE 
+    var docID = ""//CAN NOT BE PRIVATE
     
     func fetchData() {
         db.collection("AcceptanceQuiz").addSnapshotListener { (querySnapshot, error) in
