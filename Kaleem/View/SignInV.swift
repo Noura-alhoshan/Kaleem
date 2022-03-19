@@ -42,7 +42,7 @@ struct SignIn : View {
                     VolunteerHome()
                 case "Impaired":
                     HomeAll()
-                    
+            
                 case "":
                     AdminHome()
                 default:
@@ -73,7 +73,7 @@ struct SignIn : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, -10)
+                     .padding(.top, 60)
                 }
                Text("مرحبا بك مجددًا")
                     .foregroundColor(.black)

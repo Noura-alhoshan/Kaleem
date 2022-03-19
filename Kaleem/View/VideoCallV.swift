@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         let agoraView = AgoraVideoViewer(
             connectionData: AgoraConnectionData(
                 appId: "6ffe12dc3de04c8ea0eccb375f538705",
-                appToken: "0066ffe12dc3de04c8ea0eccb375f538705IABXJpHW5FUD+kCRHrigv+tsIawjylvzJTDYtUBtc55XE4bGamQAAAAAEADjTvSOSnM2YgEAAQBKczZi"
+                rtcToken: "0066ffe12dc3de04c8ea0eccb375f538705IABXJpHW5FUD+kCRHrigv+tsIawjylvzJTDYtUBtc55XE4bGamQAAAAAEADjTvSOSnM2YgEAAQBKczZi"
             ),
             style: .grid,
             agoraSettings: agSettings
@@ -52,11 +52,15 @@ class ViewController: UIViewController {
         self.agoraView = agoraView
         self.agoraView?.style =  AgoraVideoViewer.Style.grid
 
+      
+
 
 //        self.showSegmentedView()
     }
     override func viewDidAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: false)
+     //   var isMovingFromParent: Bool = false
+
+        navigationController?.setNavigationBarHidden(false, animated: false)
         super.viewDidAppear(animated)
     }
 
@@ -81,7 +85,7 @@ class ViewController: UIViewController {
         ][segc.selectedSegmentIndex]
         self.agoraView?.style = segmentedStyle
   }
-
+   
 
 }
 

@@ -23,7 +23,6 @@ struct AdminHome: View{
     
     var body: some View{
         
-        
         NavigationView{
             
             
@@ -263,7 +262,7 @@ struct AdminHome: View{
             
         }
         .navigationBarTitle("")
-         .navigationBarHidden(true)
+        .navigationBarHidden(true)
         
         
     }
@@ -281,9 +280,6 @@ struct AdminCorners: Shape{
         return Path (path.cgPath)
     }
 }
-
-
-
 
 
 struct AdminHome_Previews: PreviewProvider {

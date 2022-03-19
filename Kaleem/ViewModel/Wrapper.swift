@@ -22,12 +22,12 @@ struct Wrraper: View{
                 switch session.UserType
                 {
                 case "Volunteer":
-                    VolunteerHome()
-                    
-                case "Impaired":
-                  /// ImpairedHome()
-                 //   HomeAll()
+                  //  VolunteerHome()
                     SignOut()
+                case "Impaired":
+                    ImpairedTabBar2()
+                    //   HomeAll()
+                   //SignOut()
                     
                 case "Admin":
                     AdminHome()

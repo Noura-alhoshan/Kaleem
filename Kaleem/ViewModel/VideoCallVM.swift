@@ -13,7 +13,7 @@ import Firebase
 
 class VideoCallVM: ObservableObject {
     private var db = Firestore.firestore()
-    @State var currentV =  Volunteer()
+   // @State var currentV =  Volunteer()
  
  //   @Published var volunteers = [Volunteer]()
     
@@ -54,19 +54,19 @@ class VideoCallVM: ObservableObject {
         }
         }
     
-    func updateVolunteerCallStatus2(){
-        db.collection("Volunteer").document(currentV.id).getDocument {
-            (snapshot, err) in
-            if let err = err {
-                print("ERROR IN S_HOME updateVolunteerCallStatus() Method")
-            }
-            else{
-                print("Wll don1!!!!!:\(self.currentV.id)")
-
-}
-          
-        }
-    }
+//    func updateVolunteerCallStatus2(){
+//        db.collection("Volunteer").document(currentV.id).getDocument {
+//            (snapshot, err) in
+//            if let err = err {
+//                print("ERROR IN S_HOME updateVolunteerCallStatus() Method")
+//            }
+//            else{
+//                print("Wll don1!!!!!:\(self.currentV.id)")
+//
+//}
+//          
+//        }
+//    }
 }
    
 

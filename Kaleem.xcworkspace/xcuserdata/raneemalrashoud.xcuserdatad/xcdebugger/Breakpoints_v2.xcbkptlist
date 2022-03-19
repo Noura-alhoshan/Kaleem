@@ -78,11 +78,14 @@
             symbolName = "*0x102e0ae80">
             <Locations>
                <Location
+                  uuid = "D085F9FA-F256-4F3F-88A5-A331DDBE6FEC - 587090885d8e7a3b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
+                  symbolName = "__51-[APMPArrayValue lastIndexOfValue:fromIndex:error:]_block_invoke"
+                  moduleName = "Kaleem"
                   usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
+                  offsetFromSymbolStart = "8">
                </Location>
             </Locations>
          </BreakpointContent>

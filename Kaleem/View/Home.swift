@@ -15,8 +15,11 @@ import CoreLocationUI
 struct HomeAll: View{
    
     @State var showVideCall: Bool = false
+    
     @State var VM = VideoCallVM()
     @State var index = 0
+    @ObservedObject private var PViewModel = ProfileVM()
+   // @State var  Name : String = PViewModel.KaleemUser.name
     @StateObject var locationManager = LocationManager()
     @State var showhos: Bool = false
     //@State var showuni: Bool = false
@@ -78,16 +81,21 @@ struct HomeAll: View{
                         }
                         
                         HStack(){
-                            VStack(alignment: .leading, spacing: 15){
+                            VStack(alignment: .trailing, spacing: 15){
                                 
-                               Text("أهلاً بك رنيم في كليــم !")
+                                Text("أهلاً بك")
                                     .font(Font.custom("Almarai-Bold", size: 35))
                                     .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                                 
-//
-                               Text("حيثما لوّحت يداك وتُرجم صوتك")
+                                Text(PViewModel.KaleemUser.name
+                                )
                                     .fontWeight(.bold)
                                     .font(Font.custom("Almarai-Bold", size: 25))
+                                    .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+                                //
+                                Text("حيثما لوّحت يداك وتُرجم صوتك")
+                                    .fontWeight(.bold)
+                                    .font(Font.custom("Almarai-Bold", size: 20))
                                     .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                                 
                                 
@@ -156,49 +164,60 @@ struct HomeAll: View{
                             HStack{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
-                                    Text("الاستعانة بصديق")
-                                        .font(Font.custom("Almarai-Bold", size: 20))
-                                        .foregroundColor(.gray.opacity(1.5))
+                                    Text( "مكالمة")
+                                        .kerning(1.6)
+                                        
+                                        .font(Font.custom("Almarai-Bold", size: 25))
+//                                        .foregroundColor(.gray.opacity(1.5))
+//                                        .padding(.leading, 60)
+//                                        .padding(.bottom,-10)
+//
                                     
                                     
-                                    
-                                    Text("من خلال مكالمة مرئية")
-                                        .font(Font.custom("Almarai-Bold", size: 20))
-                                        .foregroundColor(.gray.opacity(0.9))
-                                      //  .foregroundColor(Color("DarkGray").opacity(0.5) )
-                                        .padding(.top, -7)
+//                                    Text("من خلال مكالمة مرئية")
+//                                        .font(Font.custom("Almarai-Bold", size: 20))
+//                                        .foregroundColor(.gray.opacity(0.9))
+//                                      //  .foregroundColor(Color("DarkGray").opacity(0.5) )
+//                                        .padding(.top, -7)
                                     
                                     
                                 }//VStack#1
                                 
-                                Spacer()
+                         
                                 
                                 
-                            }
+                            }  .padding()
                             
                             
                             
-                            HStack{
+                         //   NavigationView{
+                                HStack{
                                 
                                 Spacer()
                                 //consider to change it sutibale icons
-                                
+                                NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} )
+                                        //.navigationBarTitle("", displayMode: .inline)
+                                    //    .navigationBarHidden(true)
+                                    
                                 Button(action: {
                                     
-                                    VM.updateVolunteerCallStatus()
+                            
                                     self.showVideCall = true
+                                    VM.updateVolunteerCallStatus()
                                 }) {
                                     
                                     Image(systemName: "video.circle.fill")
                                         .foregroundColor(Color("Color"))
-                                        .font(.system(size: 75))
+                                        .font(.system(size: 65))
                                         
                                 }
                                 
                             }
                             .padding(.trailing,130)
-                            .padding(.bottom,25)
+                            .padding(.bottom,50)
+                            .padding(.top, -10)
                             //.padding(.top,10)
+                            
                             
                             
                         }
@@ -209,7 +228,7 @@ struct HomeAll: View{
                         .padding(.top, 60)
                         
                    // .frame(width: UIScreen.main.bounds.width / 2)
-                        .frame(width: 200, height: 200 )
+                        .frame(width: 180, height: 160 )
                         .background(self.index == 0 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                         .cornerRadius(35)
                         .onTapGesture {
@@ -227,16 +246,16 @@ struct HomeAll: View{
                                     
                                     VStack(alignment: .trailing, spacing: 15){
                                         Text("جمل مساعدة")
-                                            .font(Font.custom("Almarai-Bold", size: 20))
-                                            .foregroundColor(.gray.opacity(1.5))
+                                            .font(Font.custom("Almarai-Bold", size: 25))
+                                           // .foregroundColor(.gray.opacity(1.5))
                                             .padding(.top, -30)
                                         
                                         
-                                        Text("بناءً على موقعك الحالي")
-                                            .font(Font.custom("Almarai-Bold", size: 20))
-                                            .foregroundColor(.gray.opacity(0.9))
-                                            .padding(.leading, -30)
-                                            .padding(.top, -15)
+//                                        Text("بناءً على موقعك الحالي")
+//                                            .font(Font.custom("Almarai-Bold", size: 20))
+//                                            .foregroundColor(.gray.opacity(0.9))
+//                                            .padding(.leading, -30)
+//                                            .padding(.top, -15)
                                        
                                         
                                         
@@ -300,13 +319,14 @@ struct HomeAll: View{
                                               .foregroundColor(.white)
                                               .cornerRadius(150)
                                               .labelStyle(.iconOnly)
-                                              .font(.largeTitle)
+                                              //.font(.largeTitle)
+                                              .font(.title)
 
                                    .tint(Color("Color"))} )
                                 }
                                 .padding(.trailing,130)
-                                    .padding(.bottom,20)
-                                    .padding(.top,160) //HHEEERRREE
+                                    //.padding(.bottom,30)
+                                    .padding(.top,120) //HHEEERRREE
                             } .padding(.top, -80)
                             
                             
@@ -320,7 +340,7 @@ struct HomeAll: View{
                         .padding(.top, 40)
                   //.frame(width: UIScreen.main.bounds.width / 2)
 
-                    .frame(width: 200, height: 200 )
+                        .frame(width: 180, height: 160 )
                         .background(self.index == 1 ? Color("Color").opacity(0.2)  : .gray.opacity(0.1))
                         .cornerRadius(35)
                         .onTapGesture {
@@ -337,6 +357,7 @@ struct HomeAll: View{
                     .padding(.trailing, 50)
                     .padding(.top, 25)
                     .padding(.bottom, 15)
+               
                     
                     
                     //Favorite card
@@ -348,24 +369,27 @@ struct HomeAll: View{
                             HStack{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
-                               Text("الترجمة لنص مسموع")
-                                        .font(Font.custom("Almarai-Bold", size: 20))
-                                             .foregroundColor(.gray.opacity(1.5))
+                          Text("نص مسموع")
+                                        .font(Font.custom("Almarai-Bold", size: 25))
+                                          //   .foregroundColor(.gray.opacity(1.5))
+//                                             .padding(.leading, -30)
+//                                             .padding(.top, -25)
                                     
                                     
-                                    
-                                 Text("ترجم كتابتك لنص مسموع")
-                                        .font(Font.custom("Almarai-Bold", size: 20))
-                                        .foregroundColor(.gray.opacity(0.9))
-                                        .padding(.top, -7)
+//
+//                                 Text("ترجم كتابتك لنص مسموع")
+//                                        .font(Font.custom("Almarai-Bold", size: 20))
+//                                        .foregroundColor(.gray.opacity(0.9))
+//                                        .padding(.top, -7)
                                     
                                     
                                 }//VStack#1
+                        
                                 
-                                Spacer()
+                       //         Spacer()
                                 
                                 
-                            }
+                            }        .padding()
                             
                             
                             
@@ -374,31 +398,20 @@ struct HomeAll: View{
                                 Spacer()
                                 //consider to change it sutibale icons
                                 
-//                                Button(action: {
-//                                    
-//                                    TextToSpeechV()
-//                                }) {
-//                                    
-//                                    Image(systemName: "newspaper.circle.fill")
-//                                        .foregroundColor(Color("Color"))
-//                                        .font(.system(size: 75))
-//                                        
-//                                }
-                                
-                                
-                                
                                 NavigationLink(
                                     destination:     TextToSpeechV().navigationBarHidden(true),
                                     label: {
                                         Image(systemName: "newspaper.circle.fill")
                                             .foregroundColor(Color("Color"))
-                                            .font(.system(size: 75))
+                                            .font(.system(size: 65))
                                     }
                                 )
                                 
                             }
+                            
                             .padding(.trailing,130)
-                            .padding(.bottom,25)
+                            .padding(.bottom,50)
+                            .padding(.top, -10)
                             //.padding(.top,10)
                             
                             
@@ -410,8 +423,7 @@ struct HomeAll: View{
                         .padding(.top, 60)
                         
                    // .frame(width: UIScreen.main.bounds.width / 2)
-                        .frame(width: 200, height: 200 )
-                        .background(self.index == 2 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
+                        .frame(width: 180, height: 160 )                        .background(self.index == 2 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                         .cornerRadius(35)
                         .onTapGesture {
                             self.index = 2
@@ -427,15 +439,15 @@ struct HomeAll: View{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
                               Text("احصائيات")
-                                        .font(Font.custom("Almarai-Bold", size: 20))
-                                        .foregroundColor(.gray.opacity(1.5))
+                                        .font(Font.custom("Almarai-Bold", size: 25))
+                                    //    .foregroundColor(.gray.opacity(1.5))
                                     
                                     
-                                    
-                                 Text("استخدامك لكليــم")
-                                        .font(Font.custom("Almarai-Bold", size: 20))
-                                        .foregroundColor(.gray.opacity(0.9))
-                                        .padding(.top, -7)
+//
+//                                 Text("استخدامك لكليــم")
+//                                        .font(Font.custom("Almarai-Bold", size: 20))
+//                                        .foregroundColor(.gray.opacity(0.9))
+//                                        .padding(.top, -7)
                                     
                                     
                                 }//VStack#1
@@ -456,7 +468,7 @@ struct HomeAll: View{
                                     
                                     Image(systemName: "chart.line.uptrend.xyaxis.circle.fill")
                                         .foregroundColor(Color("Color"))
-                                        .font(.system(size: 75))
+                                        .font(.system(size: 65))
                                         
                                 }
                                 
@@ -474,29 +486,34 @@ struct HomeAll: View{
                         .padding(.top, 60)
                         
                    // .frame(width: UIScreen.main.bounds.width / 2)
-                        .frame(width: 200, height: 200 )
-                        .background(self.index == 3 ?  Color("Color").opacity(0.2) :.gray.opacity(0.1))
+                        .frame(width: 180, height: 160 )                        .background(self.index == 3 ?  Color("Color").opacity(0.2) :.gray.opacity(0.1))
                         .cornerRadius(35)
                         .onTapGesture {
                             self.index = 3
                         }
                         
                     }
+                   
                     
      
                     
                 }
+       
            
                 Spacer()
                 
             }
-            .navigationBarTitle("")
-                            .navigationBarHidden(true)
+     
             
             //moving view up
             //giving only space 10 b/w
-            .padding(.top, -70)
+            .onAppear(perform: { PViewModel.fetchUser();
+           
+            } )
+            .padding(.top, 20)
             
+            .navigationBarTitle("")
+                            .navigationBarHidden(true)
             //        .edgesIgnoringSafeArea(.all)
             //        .statusBar(hidden: true)
             
@@ -774,3 +791,8 @@ struct HomeAll_Previews: PreviewProvider {
 
 
 
+extension View{
+    func getRect2()->CGRect{
+        return UIScreen.main.bounds
+    }
+}

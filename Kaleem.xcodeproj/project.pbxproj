@@ -44,7 +44,7 @@
 		F5399E4D27E52E2A00CECCE4 /* SignUpVM2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E4C27E52E2A00CECCE4 /* SignUpVM2.swift */; };
 		F5399E4F27E52E4200CECCE4 /* TextToSpeechVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E4E27E52E4200CECCE4 /* TextToSpeechVM.swift */; };
 		F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5027E52E5C00CECCE4 /* Wrapper.swift */; };
-		F5399E5327E52E9600CECCE4 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5227E52E9600CECCE4 /* UserName.swift */; };
+		F5399E5327E52E9600CECCE4 /* NameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5227E52E9600CECCE4 /* NameVM.swift */; };
 		F5399E5927E52EE200CECCE4 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5427E52EE100CECCE4 /* Hospital.swift */; };
 		F5399E5A27E52EE200CECCE4 /* CoffeeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5527E52EE100CECCE4 /* CoffeeVM.swift */; };
 		F5399E5B27E52EE200CECCE4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5627E52EE100CECCE4 /* Location.swift */; };
@@ -79,6 +79,16 @@
 		F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */; };
 		F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B627C1A54B00A1E9ED /* AQuizV.swift */; };
 		F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */; };
+		F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */; };
+		F5F1504A27E5E0F000A989F2 /* VolunteerTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504927E5E0F000A989F2 /* VolunteerTabBar2.swift */; };
+		F5F1504C27E61CF200A989F2 /* UserInfoM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504B27E61CF200A989F2 /* UserInfoM.swift */; };
+		F5F1504E27E61D9A00A989F2 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504D27E61D9A00A989F2 /* ProfileVM.swift */; };
+		F5F1505027E61DDB00A989F2 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504F27E61DDB00A989F2 /* PopUp.swift */; };
+		F5F1505227E61E0C00A989F2 /* ProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505127E61E0C00A989F2 /* ProfileV.swift */; };
+		F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505327E61E5600A989F2 /* EditProfileV.swift */; };
+		F5F1505627E6209800A989F2 /* Default user.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505527E6209800A989F2 /* Default user.imageset */; };
+		F5F1505827E62DA900A989F2 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505727E62DA900A989F2 /* Favorite.swift */; };
+		F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,7 +134,7 @@
 		F5399E4C27E52E2A00CECCE4 /* SignUpVM2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVM2.swift; sourceTree = "<group>"; };
 		F5399E4E27E52E4200CECCE4 /* TextToSpeechVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechVM.swift; sourceTree = "<group>"; };
 		F5399E5027E52E5C00CECCE4 /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
-		F5399E5227E52E9600CECCE4 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
+		F5399E5227E52E9600CECCE4 /* NameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVM.swift; sourceTree = "<group>"; };
 		F5399E5427E52EE100CECCE4 /* Hospital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		F5399E5527E52EE100CECCE4 /* CoffeeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeVM.swift; sourceTree = "<group>"; };
 		F5399E5627E52EE100CECCE4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -161,6 +171,16 @@
 		F542D1B627C1A54B00A1E9ED /* AQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
 		F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
 		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar2.swift; sourceTree = "<group>"; };
+		F5F1504927E5E0F000A989F2 /* VolunteerTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerTabBar2.swift; sourceTree = "<group>"; };
+		F5F1504B27E61CF200A989F2 /* UserInfoM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoM.swift; sourceTree = "<group>"; };
+		F5F1504D27E61D9A00A989F2 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		F5F1504F27E61DDB00A989F2 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		F5F1505127E61E0C00A989F2 /* ProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileV.swift; sourceTree = "<group>"; };
+		F5F1505327E61E5600A989F2 /* EditProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileV.swift; sourceTree = "<group>"; };
+		F5F1505527E6209800A989F2 /* Default user.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Default user.imageset"; sourceTree = "<group>"; };
+		F5F1505727E62DA900A989F2 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +224,7 @@
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
+				F5F1505527E6209800A989F2 /* Default user.imageset */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
 			);
 			path = Kaleem;
@@ -257,6 +278,7 @@
 				5609AAF127DD3B9500D18840 /* VolunteerM.swift */,
 				F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */,
 				F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */,
+				F5F1504B27E61CF200A989F2 /* UserInfoM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,8 +304,9 @@
 				F5399E4527E52DA300CECCE4 /* AProgressBarVM.swift */,
 				F5399E4727E52DB600CECCE4 /* ARowAnswersVM.swift */,
 				F5399E5027E52E5C00CECCE4 /* Wrapper.swift */,
-				F5399E5227E52E9600CECCE4 /* UserName.swift */,
+				F5399E5227E52E9600CECCE4 /* NameVM.swift */,
 				F5399E9127E55CA900CECCE4 /* VideoCallVM.swift */,
+				F5F1504D27E61D9A00A989F2 /* ProfileVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -303,6 +326,7 @@
 		F572FADC27A3B7FB001C7143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */,
 				F5399E7F27E5318E00CECCE4 /* FahadHosV.swift */,
 				F5399E8627E5318F00CECCE4 /* HabibHosV.swift */,
 				F5399E8127E5318E00CECCE4 /* ImamUniV.swift */,
@@ -344,6 +368,12 @@
 				F542D1B627C1A54B00A1E9ED /* AQuizV.swift */,
 				56F96F0227E4FBA7002DBCDB /* test1.swift */,
 				F5399E8F27E53B1C00CECCE4 /* NoLocation.swift */,
+				F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */,
+				F5F1504927E5E0F000A989F2 /* VolunteerTabBar2.swift */,
+				F5F1504F27E61DDB00A989F2 /* PopUp.swift */,
+				F5F1505127E61E0C00A989F2 /* ProfileV.swift */,
+				F5F1505327E61E5600A989F2 /* EditProfileV.swift */,
+				F5F1505727E62DA900A989F2 /* Favorite.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,12 +438,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */,
 				561DF4DE27E50A2D007A1791 /* SignInUpOut in Resources */,
 				14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */,
 				F5399E3827E52A9900CECCE4 /* TabBar in Resources */,
 				14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */,
 				561DF50127E51266007A1791 /* Location in Resources */,
 				561DF4F127E50D92007A1791 /* Onboarding  in Resources */,
+				F5F1505627E6209800A989F2 /* Default user.imageset in Resources */,
 				561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,12 +500,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5399E4627E52DA300CECCE4 /* AProgressBarVM.swift in Sources */,
+				F5F1505027E61DDB00A989F2 /* PopUp.swift in Sources */,
 				F5399E8A27E5318F00CECCE4 /* SaudHosV.swift in Sources */,
 				56FE3CFA27E508DA0090FCEE /* Converter.swift in Sources */,
 				5609AB0B27DD3BC000D18840 /* AddQuizFormV.swift in Sources */,
 				F5399E8C27E5318F00CECCE4 /* IvCoffeeV.swift in Sources */,
 				56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */,
 				F5399E7627E5308800CECCE4 /* VolunteerProfile.swift in Sources */,
+				F5F1504A27E5E0F000A989F2 /* VolunteerTabBar2.swift in Sources */,
 				F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */,
 				F5399E5927E52EE200CECCE4 /* Hospital.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
@@ -498,6 +532,8 @@
 				F5399E7927E5308800CECCE4 /* Home.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 				56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */,
+				F5F1505827E62DA900A989F2 /* Favorite.swift in Sources */,
+				F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */,
 				5609AB0D27DD3BC000D18840 /* QuestionDetails.swift in Sources */,
 				F5399E5A27E52EE200CECCE4 /* CoffeeVM.swift in Sources */,
 				56F96F0B27E5008A002DBCDB /* TextToSpeechM.swift in Sources */,
@@ -509,12 +545,15 @@
 				F5399E8D27E5318F00CECCE4 /* UrbanCoffeeV.swift in Sources */,
 				F5399E4227E52D7100CECCE4 /* AddAccQuizVM.swift in Sources */,
 				F5399E8827E5318F00CECCE4 /* ImamUniV.swift in Sources */,
+				F5F1505227E61E0C00A989F2 /* ProfileV.swift in Sources */,
 				5609AB0927DD3BC000D18840 /* ImagePicker.swift in Sources */,
 				F5399E4D27E52E2A00CECCE4 /* SignUpVM2.swift in Sources */,
+				F5F1504C27E61CF200A989F2 /* UserInfoM.swift in Sources */,
 				F5399E8B27E5318F00CECCE4 /* SaudUniV.swift in Sources */,
 				F5399E7B27E5308800CECCE4 /* ImpairedTabBar.swift in Sources */,
 				56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */,
 				F5399E8E27E5318F00CECCE4 /* HabibHosV.swift in Sources */,
+				F5F1504E27E61D9A00A989F2 /* ProfileVM.swift in Sources */,
 				5609AB0C27DD3BC000D18840 /* ForgotPassword.swift in Sources */,
 				5609AB0827DD3BC000D18840 /* EditAccQuiz.swift in Sources */,
 				F5399E4B27E52E1A00CECCE4 /* SignInVM.swift in Sources */,
@@ -527,9 +566,10 @@
 				F5399E7E27E5308800CECCE4 /* VolunteerTabBar.swift in Sources */,
 				F5399E4F27E52E4200CECCE4 /* TextToSpeechVM.swift in Sources */,
 				F5399E4027E52CE500CECCE4 /* AQuizManagerVM.swift in Sources */,
+				F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */,
 				F5399E4827E52DB600CECCE4 /* ARowAnswersVM.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
-				F5399E5327E52E9600CECCE4 /* UserName.swift in Sources */,
+				F5399E5327E52E9600CECCE4 /* NameVM.swift in Sources */,
 				5609AAF227DD3B9500D18840 /* VolunteerM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +710,8 @@
 				INFOPLIST_FILE = Kaleem/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "to see you";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "to hear you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -706,6 +748,8 @@
 				INFOPLIST_FILE = Kaleem/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "كليم";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "to see you";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "to hear you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

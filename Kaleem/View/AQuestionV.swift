@@ -14,7 +14,6 @@ struct AQuestionV: View {
         VStack(spacing: 25) {
            // HStack {
                 
-            
                // Spacer()
 
                 Text("اختبار القبول")

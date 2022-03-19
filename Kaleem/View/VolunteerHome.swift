@@ -12,6 +12,7 @@ import Firebase
 struct VolunteerHome: View {
     @EnvironmentObject var session: SessionStore
     @State var selectedTab = "house"
+    @State var image = "house"
    
     var body: some View {
         
@@ -34,7 +35,7 @@ struct VolunteerHome: View {
             Color.white
                 .ignoresSafeArea()
            // Custom Tab Bar....
-            VolunteerTabBar(selectedTab: $selectedTab)
+       //     VolunteerTabBar2()
         })
         
       

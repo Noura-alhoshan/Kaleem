@@ -11,28 +11,7 @@
 
 import SwiftUI
 
-struct SentencesVM: View {
-    @ObservedObject private var sentDBVM  = CoffeeVM()
-    
-  //  @EnvironmentObject var sentDBVM: CoffeeVM
-  
-    var body: some View {
-        
 
-        
-        ZStack(alignment: .bottom, content: {
-            Color.white
-                .ignoresSafeArea()
-            
-            
-           // Custom Tab Bar....
-        ListviewSentencesV()
-                .environmentObject(sentDBVM)
-        })
-        
-   
-    }
-}
 
 
 
@@ -48,7 +27,7 @@ struct SentencesVM: View {
 
 
 
-struct ListviewSentencesV: View {
+struct Favorite: View {
     @EnvironmentObject var sentDBVM: CoffeeVM
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View{
@@ -65,44 +44,13 @@ struct ListviewSentencesV: View {
  
         
         VStack{
-            
-            HStack{
-                Spacer()
-                
-                Button(action: {
-                    
-                    withAnimation(.easeInOut){
-                        
-                        self.mode.wrappedValue.dismiss()
-                      
-                    }
-                }, label: {
-                    Image(systemName: "chevron.right")
-                         .foregroundColor(.white)
-                         .padding(.vertical,10)
-                         .padding(.horizontal)
-                        // .background(Color.black.opacity(0.4))
-                         .background(Color("Color"))
-                         .cornerRadius(10)
-                 
-                }).padding(.horizontal,25)
            
-                  
-                
-            }
-            
            Spacer(minLength: 30)
-            Text("أهلاً بك في مقهى Urban ")
+            Text("المفضلة")
                 .bold()
                 .font(Font.custom("Almarai-Regular", size: 30))
                 .foregroundColor(Color("Color"))
-            
-            Text("الجمل الأكثر استخداما في مقهى Urban")
-                .font(Font.custom("Almarai-Regular", size: 20))
-             
-                
-                .foregroundColor(.black.opacity(0.5))
-            
+     
         
            // List(self.coffee.sentencesArray, id: \.self) { Qmodel in
             
@@ -239,97 +187,3 @@ struct ListviewSentencesV: View {
     
 
 
-func dimensionValue(firstFrame: CGFloat, minY: CGFloat) -> CGFloat {
-    withAnimation(.easeOut (duration: 1)){
-        let dimension = (minY - 15) / firstFrame
-        if dimension > 1 {
-             return 1
-          } else {
-             return dimension
-    }
-    }
-    
-}
-      
-struct AlbumView: View {
-    var album: String
-    var body: some View{
-        
-        HStack{
-       
-         Image(systemName:"heart").font(.system (size: 25, weight: .semibold))
-                .foregroundColor(Color("Color"))
-            
-            
-            Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
-                .foregroundColor(Color("Color"))
-                Spacer(minLength: 15)
-                
-     
-       
-            
-            Text  (album)  .foregroundColor(.black.opacity(0.6)) .font(Font.custom("Almarai-Regular", size: 20))
-                //.kerning (1.9)
-                .multilineTextAlignment(.center)
-                
-                .padding(.all)
-            
-            
-           // Image ("HH").resizable().scaledToFit().frame (width: 60, height: 60).padding(10)
-            
-        }//HStack
-                        .navigationBarHidden(true)
-        .foregroundColor(Color.black)
-        //.shadow(color: .black, radius:20, x: 30, y: 20)
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .trailing)
-        .background (Color.gray.opacity(0.1).shadow(color: .white.opacity(0.65), radius: 5, x: 0, y:2)).cornerRadius (20)
-       // .frame(width: 60, height: 60)
-        //.shadow(color: .gray, radius:20, x: 30, y: 2)
-       // .zIndex(0)
-    
-        
-    }
-    
-}
-                
-struct SentencesV_Previews: PreviewProvider {
-    static var previews: some View {
-        SentencesVM()
-            .environmentObject(CoffeeVM())
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-//            HStack{
-//             Spacer(minLength: 20)
-//                Image(systemName:"heart").font(.system (size: 30, weight: .semibold))
-//                    .foregroundColor(Color("Color"))
-//                    //.padding(.all,15)
-//
-//                Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
-//                    .foregroundColor(Color("Color"))
-//                 Spacer()
-//
-//                Text ("أريد حجز موعد").foregroundColor(.white) .font(Font.custom("Almarai-Regular", size: 20)) .kerning (1.9)
-//
-//
-//                Image ("HH").resizable().scaledToFit().frame (width: 60, height: 60).padding(10)
-//
-//            }//HStack
-//            .foregroundColor(Color.black)
-//            .background (Color.gray.shadow(color: .white.opacity(0.65), radius: 5, x: 0, y:2)).cornerRadius (20)
-//             .zIndex(0)
-//             .padding( )
-// Spacer(minLength: 200)

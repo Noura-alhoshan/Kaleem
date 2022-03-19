@@ -36,14 +36,14 @@ struct SignUpTaps : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, -55)
+                     .padding(.top, 10)
                 
               Text("انشاء حساب")
                      .foregroundColor(.black)
                      .font(.title)
                      .font(.system(size: 30))
                      //.fontWeight(.bold)
-                    .padding(.bottom, -30)
+                    .padding(.bottom, -60)
                 
                 ZStack{
                     
@@ -365,7 +365,7 @@ struct S_SignUp : View {
                     HStack(spacing: 15){
                         
                         
-                        TextField("اسم المستخدم", text: self.$username2)
+                        TextField("الأسم الكامل", text: self.$username2)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             .onChange(of: self.username2, perform: {newValue in self.usernameErr2 = VM.validateUserName(username: self.username2)})
                         Image(systemName: "person.fill")
