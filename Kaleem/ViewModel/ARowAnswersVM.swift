@@ -24,7 +24,7 @@ struct ARowAnswersVM: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .trailing)
         .foregroundColor(quizManager1.answerSelected ? (isSelected ? Color("Kaleem") : .gray) : Color("Kaleem"))
-        .background(Color .gray.opacity(0.1))
+        .background(Color .gray.opacity(0.1)) // change the color
         .cornerRadius(10)
         .shadow(color: isSelected ? answer.isCorrect ? .orange : .orange : .gray, radius: 5, x: 0.5, y: 0.5)
         .onTapGesture {
