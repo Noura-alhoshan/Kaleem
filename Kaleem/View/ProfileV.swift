@@ -35,7 +35,6 @@ struct ProfileView: View {
                     .foregroundColor(.white)
                     .padding(.vertical,10)
                     .padding(.horizontal)
-                // .background(Color.black.opacity(0.4))
                     .background(Color("Color"))
                     .cornerRadius(10)
                 
@@ -170,14 +169,9 @@ struct ProfileView: View {
                 
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
-
-            
        
-            
-            
         }
-        
-        
+      
     }
 }
 

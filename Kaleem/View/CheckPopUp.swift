@@ -50,6 +50,11 @@ struct PopUpWindow: View {
                       print(error)
                     }
                     
+                    if (userType == "Impaired") {
+                        userType = "Speech-impaired"
+                    }
+                    
+                    
                     Firestore.firestore().collection(userType)
                     .document(Auth.auth().currentUser!.uid).setData(
                         ["name":self.userName,
@@ -71,9 +76,7 @@ struct PopUpWindow: View {
     
     
     var body: some View {
-        
-        //NavigationLink(destination: EditProfileV(username: userName, phoneNo: userPhone, email: userEmail, type: userType) , isActive: $showEditForm, label: {EmptyView()} )
-          
+     
         ZStack {
             if show {
               

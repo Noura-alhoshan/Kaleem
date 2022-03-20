@@ -34,7 +34,7 @@
 		265D7C4027E0291700E3420F /* SignUpV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265D7C3F27E0291700E3420F /* SignUpV.swift */; };
 		26C8847827E13C8B001E7E51 /* EditProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8847727E13C8B001E7E51 /* EditProfileV.swift */; };
 		26C8847A27E16D1C001E7E51 /* UserInfoM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8847927E16D1C001E7E51 /* UserInfoM.swift */; };
-		26DB009627E4DF63005B0DBC /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DB009527E4DF63005B0DBC /* PopUp.swift */; };
+		26DB009627E4DF63005B0DBC /* CheckPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26DB009527E4DF63005B0DBC /* CheckPopUp.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
 		F50D1A3B27B2D24100B3EE94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */; };
@@ -85,7 +85,7 @@
 		265D7C3F27E0291700E3420F /* SignUpV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpV.swift; sourceTree = "<group>"; };
 		26C8847727E13C8B001E7E51 /* EditProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileV.swift; sourceTree = "<group>"; };
 		26C8847927E16D1C001E7E51 /* UserInfoM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoM.swift; sourceTree = "<group>"; };
-		26DB009527E4DF63005B0DBC /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
+		26DB009527E4DF63005B0DBC /* CheckPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPopUp.swift; sourceTree = "<group>"; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 			children = (
 				2645C58F27E02F930017EEF2 /* AddQuizFormV.swift */,
 				2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */,
-				26DB009527E4DF63005B0DBC /* PopUp.swift */,
+				26DB009527E4DF63005B0DBC /* CheckPopUp.swift */,
 				2645C59127E02F930017EEF2 /* EditAccQuiz.swift */,
 				2645C58E27E02F930017EEF2 /* ForgotPassword.swift */,
 				2645C59227E02F930017EEF2 /* ImagePicker.swift */,
@@ -389,7 +389,7 @@
 				26C8847A27E16D1C001E7E51 /* UserInfoM.swift in Sources */,
 				2645C5AE27E0374F0017EEF2 /* ProfileVM.swift in Sources */,
 				2645C59527E02F930017EEF2 /* ForgotPassword.swift in Sources */,
-				26DB009627E4DF63005B0DBC /* PopUp.swift in Sources */,
+				26DB009627E4DF63005B0DBC /* CheckPopUp.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 				2645C59A27E02F930017EEF2 /* TextToSpeechV.swift in Sources */,
 				2645C5A027E02FB30017EEF2 /* TextToSpeechVM.swift in Sources */,
