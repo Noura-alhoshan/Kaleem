@@ -25,7 +25,8 @@ struct Wrraper: View{
                     VolunteerHome()
                     
                 case "Impaired":
-                    ImpairedHome()
+                  //  ImpairedHome()
+                    ImpairedTabBar2()
                     
                 case "Admin":
                     AdminHome()

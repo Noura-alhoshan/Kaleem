@@ -54,6 +54,8 @@
 		F542D1BF27C1A54B00A1E9ED /* AdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B727C1A54B00A1E9ED /* AdminHome.swift */; };
 		F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */; };
 		F597450627AAC6C5007B8BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */; };
+		F5D8274527E78AB40030CB1C /*    ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274427E78AB40030CB1C /*    ImpairedTabBar2.swift */; };
+		F5D8274727E78B100030CB1C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274627E78B100030CB1C /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
 		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5D8274427E78AB40030CB1C /*    ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "   ImpairedTabBar2.swift"; sourceTree = "<group>"; };
+		F5D8274627E78B100030CB1C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,8 @@
 				F542D1B127C1A54B00A1E9ED /* VolunteerHome.swift */,
 				F597450527AAC6C5007B8BB8 /* LaunchScreen.storyboard */,
 				F53ABFBA27B2959A00DC25C6 /* SignUpInScreen.swift */,
+				F5D8274427E78AB40030CB1C /*    ImpairedTabBar2.swift */,
+				F5D8274627E78B100030CB1C /* Home.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -407,7 +413,9 @@
 				2645C59727E02F930017EEF2 /* QuestionDetails.swift in Sources */,
 				F542D1AC27C1A54000A1E9ED /* Wrapper.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
+				F5D8274727E78B100030CB1C /* Home.swift in Sources */,
 				2645C5A927E0309B0017EEF2 /* CustomAlertQuiz.swift in Sources */,
+				F5D8274527E78AB40030CB1C /*    ImpairedTabBar2.swift in Sources */,
 				265D7C3A27E0256300E3420F /* ProfileV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
