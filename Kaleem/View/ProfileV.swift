@@ -21,9 +21,13 @@ struct ProfileView: View {
     
     var body: some View {
         
-        NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type) , isActive: $showEditForm, label: {EmptyView()} )
+    
         
-        
+        GeometryReader{_ in
+            
+            
+                NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type) , isActive: $showEditForm, label: {EmptyView()} )
+            
         HStack{
             Spacer()
             Button(action: {
@@ -39,9 +43,10 @@ struct ProfileView: View {
                     .cornerRadius(10)
                 
             }).padding(.horizontal,25)
-        } .padding(.bottom, 80)
+        } .padding(.bottom, 50)
+            
+           // Spacer(minLength: 30)
         
-        GeometryReader{_ in
             VStack{
                 HStack {
                     Spacer()
@@ -58,6 +63,7 @@ struct ProfileView: View {
                     }
                     Spacer()
                 }.cornerRadius(20)
+                    .padding(.top,70)
                 
                 
                 

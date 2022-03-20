@@ -61,7 +61,7 @@ struct PopUpWindow: View {
                           "phoneNo": userPhone,
                             "email": userEmail ], merge: true)
                    // showAlert = true
-                    
+                   show = false
                 }
             
         }
