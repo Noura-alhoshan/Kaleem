@@ -19,7 +19,8 @@ struct ImpairedTabBar2: View {
             
 
             
-            SentencesVM()
+            Translation()
+           // NoLocation()
                         .tabItem {
                      Image (systemName: "hand.raised")
                      Text("الترجمة")

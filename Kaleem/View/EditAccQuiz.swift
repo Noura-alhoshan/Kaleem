@@ -336,7 +336,7 @@ struct EditAccQuizForm: View {
                 else
                 if (isError) {
                     
-                    Text("الرجاء التحقق من تعبئة جميع الحقول")
+                    Text("جميع الحقول مطلوبة")
                     //.offset(y: -10)
                         .foregroundColor(.red).padding(.top,13)
                 }
@@ -357,16 +357,16 @@ struct EditAccQuizForm: View {
                         .clipShape(Capsule())
                         .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                 })
-//                    .alert(isPresented: $showAlert) {
-//
-//                    Alert(
-//                        title: Text("تمت العملية بنجاح"),
-//                        message: Text("تم تعديل معلومات السؤال"),
-//                        dismissButton: .default(
-//                                        Text("إغلاق"),
-//                                        action: { self.mode.wrappedValue.dismiss() })
-//                    )
-//                    } .padding(.bottom, 10)
+                    .alert(isPresented: $showAlert) {
+
+                    Alert(
+                        title: Text("تمت العملية بنجاح"),
+                        message: Text("تم تعديل معلومات السؤال"),
+                        dismissButton: .default(
+                                        Text("إغلاق"),
+                                        action: { self.mode.wrappedValue.dismiss() })
+                    )
+                    } .padding(.bottom, 10)
                 
                 // TO SHOW ALERT ####################
                         
@@ -387,6 +387,9 @@ struct EditAccQuizForm: View {
 //            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء").padding(.top, 50).padding(.vertical)
 //
 //        }
+        
+        
+        
      
         
     }//view body

@@ -54,7 +54,7 @@ struct ListviewSentencesV: View {
     var body: some View{
       
         
-        var SentenceDBArray = [
+        let SentenceDBArray = [
             sentDBVM.oneSentence.S1,
             sentDBVM.oneSentence.S2,
             sentDBVM.oneSentence.S3,

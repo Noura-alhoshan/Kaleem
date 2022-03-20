@@ -15,40 +15,44 @@ struct ProfileView: View {
     @ObservedObject private var PViewModel = ProfileVM()
     @State var showEditForm = false
     @EnvironmentObject var session: SessionStore
+    @State var showingAlert = false
   //  @State var emailFromPV = ""
     // let gradient = Gradient(colors: [.blue, .purple])
     
     
     var body: some View {
         
-        NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type) , isActive: $showEditForm, label: {EmptyView()} )
-        
-        
-        HStack{
-            Spacer()
-            Button(action: {
-                withAnimation(.easeInOut){
-                    self.mode.wrappedValue.dismiss()
-                }
-            }, label: {
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.white)
-                    .padding(.vertical,10)
-                    .padding(.horizontal)
-                // .background(Color.black.opacity(0.4))
-                    .background(Color("Color"))
-                    .cornerRadius(10)
-                
-            }).padding(.horizontal,25)
-        } .padding(.bottom, 80)
+    
         
         GeometryReader{_ in
+            
+            
+                NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type) , isActive: $showEditForm, label: {EmptyView()} )
+            
+//        HStack{
+//            Spacer()
+//            Button(action: {
+//                withAnimation(.easeInOut){
+//                    self.mode.wrappedValue.dismiss()
+//                }
+//            }, label: {
+//                Image(systemName: "chevron.right")
+//                    .foregroundColor(.white)
+//                    .padding(.vertical,10)
+//                    .padding(.horizontal)
+//                    .background(Color("Color"))
+//                    .cornerRadius(10)
+//                
+//            }).padding(.horizontal,25)
+//        } .padding(.bottom, 50)
+            
+           // Spacer(minLength: 30)
+        
             VStack{
                 HStack {
                     Spacer()
                     
                     VStack {
-              
                         Image("Default user")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
@@ -57,9 +61,10 @@ struct ProfileView: View {
                             .clipped()
                             .overlay(Circle().stroke(Color.white, lineWidth: 0))
                         
-                    }          .padding(.top, 40)
+                    }
                     Spacer()
                 }.cornerRadius(20)
+                    .padding(.top,70)
                 
                 
                 
@@ -147,7 +152,7 @@ struct ProfileView: View {
                             .foregroundColor(Color("Kaleem"))
                             .shadow(color: .gray, radius: 0.2, x: 1, y: 1)
                     }
-                   .padding()
+                    .padding()
                     .padding(.leading,20)
                     .padding(.top, 20)
                 }//zstack??
@@ -168,17 +173,18 @@ struct ProfileView: View {
                 })
                     .padding(.top, 28)
                 
+                    .alert("هل أنت متأكد من تسجيل الخروج؟", isPresented: $showingAlert, actions: {
+                        Button("نعم", action: {session.signOut()})
+                        Button("لا", role: .cancel, action: {})
+                    })
+                
+                
                 
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
-
-            
        
-            
-            
         }
-        
-        
+      
     }
 }
 
@@ -188,4 +194,3 @@ extension View{
         return UIScreen.main.bounds
     }
 }
-

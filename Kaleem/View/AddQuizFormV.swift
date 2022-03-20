@@ -270,7 +270,8 @@ struct AddQuizForm: View {
                     
                     //.shadow(color: .gray, radius: 5, x: 0.5, y: 0.5)
                     
-                }  /*CONTAINER*/
+                }
+//                /CONTAINER/
                 .padding()
                 .padding(.bottom, 5)
                 .background(Color.gray.opacity(0.1))
@@ -280,8 +281,7 @@ struct AddQuizForm: View {
 
                 
                 if (isError) {
-                    
-                    Text("الرجاء التحقق من تعبئة جميع الحقول")
+                    Text("جميع الحقول مطلوبة")
                     //.offset(y: -10)
                         .foregroundColor(.red).padding(.top,13)
                 }

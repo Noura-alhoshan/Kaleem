@@ -30,7 +30,7 @@ struct Wrraper: View{
                    //SignOut()
                     
                 case "Admin":
-                    AdminHome()
+                    Admin2Home()
                     
                 default:
                    ProgressView()

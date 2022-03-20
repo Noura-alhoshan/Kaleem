@@ -80,8 +80,8 @@ struct HomeAll: View{
                             Spacer()
                         }
                         
-                        HStack(){
-                            VStack(alignment: .trailing, spacing: 15){
+                        HStack{
+                            VStack(alignment: .leading, spacing: 15){
                                 
                                 Text("أهلاً بك")
                                     .font(Font.custom("Almarai-Bold", size: 35))

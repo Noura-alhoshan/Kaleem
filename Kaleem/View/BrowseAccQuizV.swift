@@ -26,7 +26,7 @@ struct BrowseAccQuizV: View {
         
         NavigationLink(destination: AddQuizForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
         NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
-        NavigationLink(destination:AdminHome(), isActive: $goBack, label: {EmptyView()} )
+        NavigationLink(destination:Admin2Home(), isActive: $goBack, label: {EmptyView()} )
         
    
       

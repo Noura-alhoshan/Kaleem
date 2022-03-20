@@ -61,17 +61,17 @@ struct SignUpInScreen: View {
                     
                     
                     
-                    
-                    Text("بالمتابعة، فإنك توافق على شروط كليـم\nوتقر بأنك قرأت سياسة  الخصوصية")
-                        .font(Font.custom("Almarai-Regular", size: 20))
-                        .font(.title3)
-                        .foregroundColor(.gray.opacity(0.5))
-                        .kerning (1.2)
-                        .multilineTextAlignment(.center)
-                    //  .fontWeight(.bold)
-                    
-                        .padding()
-                        .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
+//                    
+//                    Text("بالمتابعة، فإنك توافق على شروط كليـم\nوتقر بأنك قرأت سياسة  الخصوصية")
+//                        .font(Font.custom("Almarai-Regular", size: 20))
+//                        .font(.title3)
+//                        .foregroundColor(.gray.opacity(0.5))
+//                        .kerning (1.2)
+//                        .multilineTextAlignment(.center)
+//                    //  .fontWeight(.bold)
+//                    
+//                        .padding()
+//                        .shadow(color: Color.black.opacity(0.08), radius: 60, x: 0.0, y: 16)
                     //  Text("[Privacy Policy](signIn())")
                     
                     

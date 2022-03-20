@@ -31,6 +31,8 @@ struct SignOut: View {
                                  
                                        .font(.system(size: 45))
                                        .foregroundColor(Color("Color"))
+                                       .padding(.leading, 0)
+                                       .padding(.top, 0)
                             
                         })
             

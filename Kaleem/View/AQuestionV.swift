@@ -17,8 +17,10 @@ struct AQuestionV: View {
                // Spacer()
 
                 Text("اختبار القبول")
-                   .foregroundColor(Color("Kaleem"))
-                   .fontWeight(.heavy).font(Font.system(size: 22))
+                .foregroundColor(.black)
+                   .font(Font.system(size: 22))
+                   .padding(.top, 20)
+                  
             
             VStack(alignment: .trailing) {
 
@@ -31,6 +33,7 @@ struct AQuestionV: View {
             
                 
          //   }
+            
             
             AProgressBarVM(progress: quizManager1.progress)
             

@@ -44,7 +44,7 @@ struct SignIn : View {
                     HomeAll()
             
                 case "":
-                    AdminHome()
+                    Admin2Home()
                 default:
                     ForgotPassword()
                 }
@@ -196,8 +196,10 @@ struct SignIn : View {
             }
             
             
+            
                 
-            }
+            } .navigationBarTitle("")
+            .navigationBarHidden(true)
 
 
       //  .padding(.top,10)

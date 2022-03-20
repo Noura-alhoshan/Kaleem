@@ -11,7 +11,7 @@
 
 import SwiftUI
 
-struct IvCoffeeV: View {
+struct UniV: View {
     @ObservedObject private var sentDBVM  = CoffeeVM()
     
   //  @EnvironmentObject var sentDBVM: CoffeeVM
@@ -26,7 +26,7 @@ struct IvCoffeeV: View {
             
             
            // Custom Tab Bar....
-            ListviewIvCoffeeV()
+            UniviewSentencesV()
                 .environmentObject(sentDBVM)
         })
         
@@ -48,13 +48,13 @@ struct IvCoffeeV: View {
 
 
 
-struct ListviewIvCoffeeV: View {
+struct UniviewSentencesV: View {
     @EnvironmentObject var sentDBVM: CoffeeVM
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View{
       
         
-        var SentenceDBArray = [
+        let SentenceDBArray = [
             sentDBVM.oneSentence.S1,
             sentDBVM.oneSentence.S2,
             sentDBVM.oneSentence.S3,
@@ -86,27 +86,18 @@ struct ListviewIvCoffeeV: View {
                          .cornerRadius(10)
                  
                 }).padding(.horizontal,25)
-                    
            
                   
                 
-            }.padding(.bottom,30)
-                .padding(.top,-20)
+            }
             
            Spacer(minLength: 30)
-            Text("أهلاً بك في مقهى Iv Speciality")
-                .bold()
-                .font(Font.custom("Almarai-Regular", size: 30))
-                .foregroundColor(Color("Color"))
-            
-            Text("الجمل الأكثر استخداما في مقهى Iv ")
+
+            Text("الجمل الأكثر استخداماً في الجامعة")
                 .font(Font.custom("Almarai-Regular", size: 20))
              
                 
-    .foregroundColor(Color("DarkGray"))
-            
- 
-            
+                .foregroundColor(.black.opacity(0.5))
             
             
                         GeometryReader{ firtFrame in
@@ -126,33 +117,27 @@ struct ListviewIvCoffeeV: View {
                             self.sentDBVM.fetchData()
                             
                         }
+                        .navigationBarTitle("")
+                                        .navigationBarHidden(true)
             //end of GeometryReader
                        
                  
                     
                     
                 }.navigationBarBackButtonHidden(true)
-
-    
+        //.listStyle(InsetGroupedListStyle())
+                //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
         
             
 
-        } //end of GeometryReader
-        
-            
-            
-            
-            
-            
 
-//
         
         
     }  //end of VStack
     
 
 
-func IvDimensionValue(firstFrame: CGFloat, minY: CGFloat) -> CGFloat {
+func UniDimensionValue(firstFrame: CGFloat, minY: CGFloat) -> CGFloat {
     withAnimation(.easeOut (duration: 1)){
         let dimension = (minY - 15) / firstFrame
         if dimension > 1 {
@@ -164,47 +149,58 @@ func IvDimensionValue(firstFrame: CGFloat, minY: CGFloat) -> CGFloat {
     
 }
       
-struct IvAlbumView: View {
+struct UniAlbumView: View {
     var album: String
     var body: some View{
         
         HStack{
-            Spacer(minLength: 20)
-            Image(systemName:"heart").font(.system (size: 25, weight: .semibold))
+       
+         Image(systemName:"heart").font(.system (size: 25, weight: .semibold))
                 .foregroundColor(Color("Color"))
             
             
             Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
                 .foregroundColor(Color("Color"))
-            Spacer()
+                Spacer(minLength: 15)
+                
+     
+       
+            
+            Text  (album)  .foregroundColor(.black.opacity(0.6)) .font(Font.custom("Almarai-Regular", size: 20))
+                //.kerning (1.9)
+                .multilineTextAlignment(.center)
+                
+                .padding(.all)
             
             
-            
-            Text  (album).foregroundColor(.white) .font(Font.custom("Almarai-Regular", size: 20)).kerning (1.9).multilineTextAlignment(.trailing)
-            
-            
-            Image ("HH").resizable().scaledToFit().frame (width: 60, height: 60).padding(10)
+           // Image ("HH").resizable().scaledToFit().frame (width: 60, height: 60).padding(10)
             
         }//HStack
-        
+                        .navigationBarHidden(true)
         .foregroundColor(Color.black)
-        .shadow(color: .black, radius:20, x: 30, y: 20)
-        .background (Color.gray.shadow(color: .white.opacity(0.65), radius: 5, x: 0, y:2)).cornerRadius (20)
+        //.shadow(color: .black, radius:20, x: 30, y: 20)
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .trailing)
+        .background (Color.gray.opacity(0.1).shadow(color: .white.opacity(0.65), radius: 5, x: 0, y:2)).cornerRadius (20)
+       // .frame(width: 60, height: 60)
         //.shadow(color: .gray, radius:20, x: 30, y: 2)
-        .zIndex(0)
-        .padding( )
+       // .zIndex(0)
+    
         
     }
     
 }
                 
-struct IvCoffeeV_Previews: PreviewProvider {
-    static var previews: some View {
-        IvCoffeeV()
-            .environmentObject(CoffeeVM())
-    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-
-

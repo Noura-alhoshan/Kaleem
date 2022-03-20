@@ -122,7 +122,7 @@ struct V_SignUp : View {
                     HStack(spacing: 15){
                         
                         
-                        TextField("اسم المستخدم", text: self.$username)
+                        TextField("الاسم الكامل", text: self.$username)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             .onChange(of: self.username, perform: {newValue in self.usernameErr = VM.validateUserName(username: self.username)})
                         Image(systemName: "person.fill")
@@ -264,7 +264,7 @@ struct V_SignUp : View {
             Button(action: {
                 
                 if username == "" || phoneNo == "" || email == "" || pass == "" || repass == "" {
-                    allEmptyErr = "*جميع الحقول مطلوبة"
+                    allEmptyErr = "جميع الحقول مطلوبة"
                 }
                 else{
                 allEmptyErr = ""
@@ -280,7 +280,7 @@ struct V_SignUp : View {
                 if self.allEmptyErr != "" {
                     Text(self.allEmptyErr)
                         .foregroundColor(.red)
-                        .font(.system(size: 10))
+                        .font(.system(size: 13))
 
                 }
                     Text("انتقال")
@@ -365,7 +365,7 @@ struct S_SignUp : View {
                     HStack(spacing: 15){
                         
                         
-                        TextField("الأسم الكامل", text: self.$username2)
+                        TextField("الاسم الكامل", text: self.$username2)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             .onChange(of: self.username2, perform: {newValue in self.usernameErr2 = VM.validateUserName(username: self.username2)})
                         Image(systemName: "person.fill")
@@ -505,7 +505,7 @@ struct S_SignUp : View {
             
             Button(action: {
                 if username2 == "" || phoneNo2 == "" || email2 == "" || pass2 == "" || repass2 == "" {
-                    allEmptyErr2 = "*جميع الحقول مطلوبة"
+                    allEmptyErr2 = "جميع الحقول مطلوبة"
                 }
              //   else{
                     allEmptyErr2 = ""
@@ -522,7 +522,7 @@ struct S_SignUp : View {
                 if self.allEmptyErr2 != "" {
                     Text(self.allEmptyErr2)
                         .foregroundColor(.red)
-                        .font(.system(size: 10))
+                        .font(.system(size: 13))
 
                 }
                 Text("تسجيل")

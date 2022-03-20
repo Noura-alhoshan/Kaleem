@@ -72,7 +72,7 @@ var h = 0
                         self.score = 0
                         self.progress = 0.00
                         self.reachedEnd = false
-                        self.length = self.myQuiz1.count
+                        self.length = 7
                         self.setQuestion()
                     }
                 }
@@ -88,7 +88,7 @@ var h = 0
                         self.score = 0
                         self.progress = 0.00
                         self.reachedEnd = false
-                        self.length = self.myQuiz1.count
+                        self.length = 7
                         self.setQuestion()
                     }
                 
