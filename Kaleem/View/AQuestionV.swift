@@ -16,9 +16,9 @@ struct AQuestionV: View {
                 
                // Spacer()
 
-                Text("اختبار القبول")
-                   .foregroundColor(Color("Kaleem"))
-                   .fontWeight(.heavy).font(Font.system(size: 22))
+              Text("اختبار القبول")
+                .foregroundColor(Color.black)
+                   .font(Font.system(size: 22))
             
             VStack(alignment: .trailing) {
 
