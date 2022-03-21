@@ -55,11 +55,17 @@ struct UniviewSentencesV: View {
       
         
         let SentenceDBArray = [
-            sentDBVM.oneSentence.S1,
-            sentDBVM.oneSentence.S2,
-            sentDBVM.oneSentence.S3,
-            sentDBVM.oneSentence.S4,
-            sentDBVM.oneSentence.S5
+            sentDBVM.UniOneSentence.S1,
+            sentDBVM.UniOneSentence.S2,
+            sentDBVM.UniOneSentence.S3,
+            sentDBVM.UniOneSentence.S4,
+            sentDBVM.UniOneSentence.S5,
+            sentDBVM.UniOneSentence.S6,
+            sentDBVM.UniOneSentence.S7,
+            sentDBVM.UniOneSentence.S8,
+            sentDBVM.UniOneSentence.S9,
+            sentDBVM.UniOneSentence.S10,
+          
 
         ]
  
@@ -114,7 +120,7 @@ struct UniviewSentencesV: View {
                             }.zIndex (1.0)
             
                         }  .onAppear(){
-                            self.sentDBVM.fetchData()
+                            self.sentDBVM.UniFetchData()
                             
                         }
                         .navigationBarTitle("")
