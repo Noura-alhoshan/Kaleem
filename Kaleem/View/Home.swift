@@ -149,6 +149,8 @@ struct HomeAll: View{
                 
                 
                 // ScrollView( [.horizontal,.vertical], showsIndicators: false){
+                
+                
                 ScrollView( .vertical, showsIndicators: false){
 
                     HStack(spacing: 10){

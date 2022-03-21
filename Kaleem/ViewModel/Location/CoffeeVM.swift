@@ -7,9 +7,13 @@ class CoffeeVM: ObservableObject {
    // @Published var cafeSentences = [DocSentencesM] ()
     @Published var LocalSentences = [String]()
     @Published var coffee = [DocSentencesM]()
+    @Published var uni = [uniSentenceM]()
+    
     private var db = Firestore.firestore()
     
     @Published var oneSentence: DocSentencesM = DocSentencesM(S1: "Defualt", S2: "Defualt", S3: "Defualt", S4: "Defualt", S5: "Defualt", category: "DefualtCategory")
+    
+    @Published var UniOneSentence: uniSentenceM = uniSentenceM(S1: "Defualt", S2: "Defualt", S3: "Defualt", S4: "Defualt", S5: "Defualt",S6: "Defualt",S7: "Defualt",S8: "Defualt",S9: "Defualt",S10: "Defualt", category: "DefualtCategory")
     
  
     
@@ -27,6 +31,30 @@ class CoffeeVM: ObservableObject {
                        self.oneSentence.S3 = document["S3"] as? String ?? ""
                        self.oneSentence.S4 = document["S4"] as? String ?? ""
                        self.oneSentence.S5 = document["S5"] as? String ?? ""
+
+                   } else {
+                       print("Document does not exist")
+
+                        }
+               }
+           }
+    
+    
+    func UniFetchData( ) {
+               db.collection("LocationSentences").document("uni").getDocument { (document, error) in
+                   if let document = document, document.exists {
+
+                       
+                       self.UniOneSentence.S1 = document["S1"] as? String ?? ""
+                       self.UniOneSentence.S2 = document["S2"] as? String ?? ""
+                       self.UniOneSentence.S3 = document["S3"] as? String ?? ""
+                       self.UniOneSentence.S4 = document["S4"] as? String ?? ""
+                       self.UniOneSentence.S5 = document["S5"] as? String ?? ""
+                       self.UniOneSentence.S6 = document["S6"] as? String ?? ""
+                       self.UniOneSentence.S7 = document["S7"] as? String ?? ""
+                       self.UniOneSentence.S8 = document["S8"] as? String ?? ""
+                       self.UniOneSentence.S9 = document["S9"] as? String ?? ""
+                       self.UniOneSentence.S10 = document["S10"] as? String ?? ""
 
                    } else {
                        print("Document does not exist")
