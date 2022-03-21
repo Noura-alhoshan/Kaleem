@@ -113,11 +113,13 @@ class SignUpVM : ObservableObject {
     func validateUserName (username: String) -> String {
         var err = ""
         if username == "" {
-            err = "*اسم المستخدم مطلوب"
+            err = "*الاسم الكامل مطلوب"
         }else if !username.containsOnlyLetters { // .containsOnlyLetters
             err = "*يجب أن يكون الاسم أحرف فقط"
         } else if username.count < 3 {
             err = "*يجب أن يكون ٣ أحرف على الأقل"
+        }else if username.count > 20 {
+            err = "*يجب أن يكون ٢٠ حرفا على الأكثر"
         }
         return err
     }
@@ -169,7 +171,7 @@ class SignUpVM : ObservableObject {
                 
             }
             if (isFound2 == false){
-            db.collection("Deaf").getDocuments { (snapshot, error) in
+            db.collection("Speech-impaired").getDocuments { (snapshot, error) in
                if let error = error  {
                    handler(false, error.localizedDescription)
                } else {
@@ -194,9 +196,16 @@ class SignUpVM : ObservableObject {
         var err = ""
         if pass == "" {
             err = "*كلمة المرور مطلوبة"
-        }else if !pass.containsUppercase || !pass.containsNumbers || !pass.containsSpecialCharacters || pass.count < 7 {
-            err = "*كلمة المرور يجب أن تحتوي على حرف كبير، حرف صغير، رقم، رمز، و ٨ خانات على الأقل"
+        }else if !pass.containsUppercase || !pass.containsNumbers || !pass.containsSpecialCharacters {
+            err = "*كلمة المرور يجب أن تحتوي على حرف كبير، حرف صغير، رقم، و رمز"
         }
+        else if pass.count < 7  {
+            err =
+"كلمة المرور يجب أن تتكون من ٨ خانات على الأقل"
+//            "كلمة المرور يجب أن تحتوي على حرف كبير"
+//            "كلمة المرور يجب أن تحتوي على رقم"
+//            "كلمة المرور يجب أن تحتوي على رمز"
+       }
         
         return err
     }

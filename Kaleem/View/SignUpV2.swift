@@ -40,6 +40,7 @@ struct SignUpTaps : View {
                 
               Text("انشاء حساب")
                      .foregroundColor(.black)
+                     .opacity(0.7)
                      .font(.title)
                      .font(.system(size: 30))
                      //.fontWeight(.bold)
@@ -104,7 +105,7 @@ struct V_SignUp : View {
                         
                         Text("متطوع")
                             .foregroundColor(self.index == 0 ?  .black : .gray)
-                            .font(.title2)
+                            .opacity(0.7).font(.title2)
                             //.fontWeight(.bold)
                         
                         Capsule()
@@ -123,6 +124,7 @@ struct V_SignUp : View {
                         
                         
                         TextField("الاسم الكامل", text: self.$username)
+                            .disableAutocorrection(true)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             .onChange(of: self.username, perform: {newValue in self.usernameErr = VM.validateUserName(username: self.username)})
                         Image(systemName: "person.fill")
@@ -150,6 +152,7 @@ struct V_SignUp : View {
                         
                         
                         TextField("رقم الجوال", text: self.$phoneNo)
+                            .disableAutocorrection(true)
                            .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                           // .keyboardType(.numberPad)
                            .onChange(of: self.phoneNo, perform: {newValue in self.phoneNoErr = VM.validatePhoneNo(phone: self.phoneNo)})
@@ -176,7 +179,7 @@ struct V_SignUp : View {
                     HStack(spacing: 15){
                         
                         
-                        TextField("البريد الإلكتروني", text: self.$email)
+                        TextField("البريد الإلكتروني", text: self.$email).disableAutocorrection(true)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             .keyboardType(.emailAddress)
                             .onChange(of: self.email, perform: { newValue in
@@ -218,6 +221,7 @@ struct V_SignUp : View {
                         Text(self.passErr)
                             .foregroundColor(.red)
                             .font(.system(size: 10))
+                            
                     }
                 
                 }
@@ -350,7 +354,7 @@ struct S_SignUp : View {
                         
                         Text("أصم")
                             .foregroundColor(self.index == 1 ? .black : .gray)
-                            .font(.title2)
+                            .opacity(0.7) .font(.title2)
                         
                         Capsule()
                             .fill(self.index == 1 ? Color("Kcolor") : Color.clear)
@@ -366,6 +370,7 @@ struct S_SignUp : View {
                         
                         
                         TextField("الاسم الكامل", text: self.$username2)
+                            .disableAutocorrection(true)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             .onChange(of: self.username2, perform: {newValue in self.usernameErr2 = VM.validateUserName(username: self.username2)})
                         Image(systemName: "person.fill")
@@ -394,6 +399,7 @@ struct S_SignUp : View {
                         
                     
                         TextField("رقم الجوال", text: self.$phoneNo2)
+                            .disableAutocorrection(true)
                             .autocapitalization(.none)
                            // .keyboardType(.numberPad)
                             .multilineTextAlignment(TextAlignment.trailing)
@@ -420,6 +426,7 @@ struct S_SignUp : View {
                         
                         
                         TextField("البريد الإلكتروني", text: self.$email2)
+                            .disableAutocorrection(true)
                             .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
                             
                             .keyboardType(.emailAddress)

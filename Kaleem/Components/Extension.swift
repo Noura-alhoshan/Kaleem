@@ -74,10 +74,10 @@ extension String {
     func index(from: Int) -> Index {
         return self.index(startIndex, offsetBy: from)
     }
-
+//0750–077F
     var containsOnlyLetters: Bool {
         for chr in self {
-          if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z")) && chr != " " {
+          if (!(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z") && !(chr >= "ء"  && chr <= "ي")) && chr != " " {
              return false
           }
        }
