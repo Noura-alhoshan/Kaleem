@@ -13,4 +13,13 @@ target 'Kaleem' do
   pod 'Firebase/Messaging'
   #pod 'AgoraRtcEngine_iOS'
   #pod 'AgoraUIKit_iOS'
+  pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+  #pod 'OneSignal', '>= 2.6.2', '< 3.0'
+end
+
+target 'OneSignalNotificationServiceExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+  #pod 'OneSignal', '>= 2.6.2', '< 3.0'
 end

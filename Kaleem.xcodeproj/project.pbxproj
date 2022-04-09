@@ -24,12 +24,17 @@
 		5609AB0E27DD3BC000D18840 /* BrowseAccQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0727DD3BC000D18840 /* BrowseAccQuizV.swift */; };
 		561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */; };
 		561DF4F127E50D92007A1791 /* Onboarding  in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4F027E50D92007A1791 /* Onboarding  */; };
+		562F72DC2802187E009A15FA /* tryNoti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F72DB2802187E009A15FA /* tryNoti.swift */; };
+		5670A11827F6F6A400EEB432 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5670A11727F6F6A400EEB432 /* NotificationService.swift */; };
+		5670A11C27F6F6A400EEB432 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5670A11527F6F6A400EEB432 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		568DCC342801F30100D7CDA0 /* oldKaleemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568DCC332801F30100D7CDA0 /* oldKaleemApp.swift */; };
 		56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0227E4FBA7002DBCDB /* test1.swift */; };
 		56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */; };
 		56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0727E5007E002DBCDB /* VideoCallV.swift */; };
 		56F96F0B27E5008A002DBCDB /* TextToSpeechM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0A27E5008A002DBCDB /* TextToSpeechM.swift */; };
 		56FE3CFA27E508DA0090FCEE /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FE3CF927E508DA0090FCEE /* Converter.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
+		BE8A557A53128899117D180A /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC065CE9E2421429AAD3FA /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
 		F5399E3827E52A9900CECCE4 /* TabBar in Resources */ = {isa = PBXBuildFile; fileRef = F5399E3727E52A9900CECCE4 /* TabBar */; };
 		F5399E3D27E52B2800CECCE4 /* SentencesM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E3C27E52B2800CECCE4 /* SentencesM.swift */; };
@@ -86,12 +91,38 @@
 		F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5670A11A27F6F6A400EEB432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14FD4F27279F2D1200E4947D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5670A11427F6F6A400EEB432;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5670A11D27F6F6A400EEB432 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5670A11C27F6F6A400EEB432 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		14C1934C9838E6D58DF53FA7 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
 		14FD4F34279F2D1200E4947D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27CC065CE9E2421429AAD3FA /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.release.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.release.xcconfig"; sourceTree = "<group>"; };
 		5609AAF127DD3B9500D18840 /* VolunteerM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerM.swift; sourceTree = "<group>"; };
 		5609AAF927DD3BB300D18840 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -107,12 +138,19 @@
 		561AC49A27DE004E008F21D5 /* Kaleem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kaleem.entitlements; sourceTree = "<group>"; };
 		561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		561DF4F027E50D92007A1791 /* Onboarding  */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Onboarding "; sourceTree = "<group>"; };
+		562F72DB2802187E009A15FA /* tryNoti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tryNoti.swift; sourceTree = "<group>"; };
+		5670A11527F6F6A400EEB432 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5670A11727F6F6A400EEB432 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		5670A11927F6F6A400EEB432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		568DCC332801F30100D7CDA0 /* oldKaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oldKaleemApp.swift; sourceTree = "<group>"; };
+		56F3F46D27F7079E003358E9 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		56F96F0227E4FBA7002DBCDB /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
 		56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
 		56F96F0727E5007E002DBCDB /* VideoCallV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallV.swift; sourceTree = "<group>"; };
 		56F96F0A27E5008A002DBCDB /* TextToSpeechM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechM.swift; sourceTree = "<group>"; };
 		56FE3CF927E508DA0090FCEE /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9700D4FC54EDC483711F4F69 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/Model/SignUpM.swift; sourceTree = SOURCE_ROOT; };
 		F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Kaleem/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -182,6 +220,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5670A11227F6F6A400EEB432 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE8A557A53128899117D180A /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -189,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F31279F2D1200E4947D /* Kaleem */,
+				5670A11627F6F6A400EEB432 /* OneSignalNotificationServiceExtension */,
 				14FD4F30279F2D1200E4947D /* Products */,
 				DC4E6917AD79762840AC5AD9 /* Pods */,
 				CB39F81B522694707316D239 /* Frameworks */,
@@ -199,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F2F279F2D1200E4947D /* Kaleem.app */,
+				5670A11527F6F6A400EEB432 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,13 +254,14 @@
 		14FD4F31279F2D1200E4947D /* Kaleem */ = {
 			isa = PBXGroup;
 			children = (
-				F5399E3E27E52CD200CECCE4 /* ViewModel */,
 				561AC49A27DE004E008F21D5 /* Kaleem.entitlements */,
+				F5399E3E27E52CD200CECCE4 /* ViewModel */,
 				F50D1A3E27B2F2BB00B3EE94 /* Model */,
 				F50D1A3C27B2F22C00B3EE94 /* Components */,
 				F572FADC27A3B7FB001C7143 /* View */,
 				14FD4F34279F2D1200E4947D /* ContentView.swift */,
 				14FD4F32279F2D1200E4947D /* KaleemApp.swift */,
+				568DCC332801F30100D7CDA0 /* oldKaleemApp.swift */,
 				14FD4F36279F2D1400E4947D /* Assets.xcassets */,
 				F5F1505527E6209800A989F2 /* Default user.imageset */,
 				14FD4F38279F2D1400E4947D /* Preview Content */,
@@ -228,10 +277,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5670A11627F6F6A400EEB432 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				56F3F46D27F7079E003358E9 /* OneSignalNotificationServiceExtension.entitlements */,
+				5670A11727F6F6A400EEB432 /* NotificationService.swift */,
+				5670A11927F6F6A400EEB432 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		CB39F81B522694707316D239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */,
+				27CC065CE9E2421429AAD3FA /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,6 +301,8 @@
 			children = (
 				DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */,
 				325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */,
+				14C1934C9838E6D58DF53FA7 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				9700D4FC54EDC483711F4F69 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -322,6 +384,7 @@
 				F5399E8327E5318E00CECCE4 /* UniV.swift */,
 				F5399E7327E5308700CECCE4 /* AdminTabBar.swift */,
 				F5399E6F27E5308700CECCE4 /* Home.swift */,
+				562F72DB2802187E009A15FA /* tryNoti.swift */,
 				F5399E7027E5308700CECCE4 /* ImpairedHome.swift */,
 				F5399E6A27E5308600CECCE4 /* ImpairedServices.swift */,
 				F5399E7227E5308700CECCE4 /* ImpairedTabBar.swift */,
@@ -375,15 +438,35 @@
 				14FD4F2C279F2D1200E4947D /* Frameworks */,
 				14FD4F2D279F2D1200E4947D /* Resources */,
 				3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */,
+				5670A11D27F6F6A400EEB432 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5670A11B27F6F6A400EEB432 /* PBXTargetDependency */,
 			);
 			name = Kaleem;
 			productName = Kaleem;
 			productReference = 14FD4F2F279F2D1200E4947D /* Kaleem.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5670A11427F6F6A400EEB432 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5670A12027F6F6A400EEB432 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				1D5A626AA5713AFB73B2A53A /* [CP] Check Pods Manifest.lock */,
+				5670A11127F6F6A400EEB432 /* Sources */,
+				5670A11227F6F6A400EEB432 /* Frameworks */,
+				5670A11327F6F6A400EEB432 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 5670A11527F6F6A400EEB432 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -396,6 +479,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					14FD4F2E279F2D1200E4947D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					5670A11427F6F6A400EEB432 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -414,6 +500,7 @@
 			projectRoot = "";
 			targets = (
 				14FD4F2E279F2D1200E4947D /* Kaleem */,
+				5670A11427F6F6A400EEB432 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -433,9 +520,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5670A11327F6F6A400EEB432 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D5A626AA5713AFB73B2A53A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,6 +614,7 @@
 				F5399E6527E52FB800CECCE4 /* SignUpV2.swift in Sources */,
 				5609AAFD27DD3BB300D18840 /* Constants.swift in Sources */,
 				F5399E6327E52FB800CECCE4 /* SignInV.swift in Sources */,
+				568DCC342801F30100D7CDA0 /* oldKaleemApp.swift in Sources */,
 				F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */,
 				F5399E6227E52FB800CECCE4 /* SignOutV.swift in Sources */,
 				F5399E6727E5304D00CECCE4 /* AdminHome.swift in Sources */,
@@ -505,6 +622,7 @@
 				5609AB0E27DD3BC000D18840 /* BrowseAccQuizV.swift in Sources */,
 				F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */,
 				F5399E8927E5318F00CECCE4 /* HosV.swift in Sources */,
+				562F72DC2802187E009A15FA /* tryNoti.swift in Sources */,
 				5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */,
 				F5399E7827E5308800CECCE4 /* ImpairedServices.swift in Sources */,
 				F5399E8727E5318F00CECCE4 /* UniV.swift in Sources */,
@@ -554,7 +672,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5670A11127F6F6A400EEB432 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5670A11827F6F6A400EEB432 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5670A11B27F6F6A400EEB432 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5670A11427F6F6A400EEB432 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 5670A11A27F6F6A400EEB432 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		14FD4F3B279F2D1400E4947D /* Debug */ = {
@@ -677,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kaleem/Kaleem.entitlements;
@@ -684,7 +819,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R32MLPWCK;
+				DEVELOPMENT_TEAM = TF8Y7Z668U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -703,7 +838,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -715,6 +850,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kaleem/Kaleem.entitlements;
@@ -722,7 +858,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R32MLPWCK;
+				DEVELOPMENT_TEAM = TF8Y7Z668U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -741,8 +877,64 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5670A11E27F6F6A400EEB432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C1934C9838E6D58DF53FA7 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TF8Y7Z668U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.test.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5670A11F27F6F6A400EEB432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9700D4FC54EDC483711F4F69 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TF8Y7Z668U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.test.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -766,6 +958,15 @@
 			buildConfigurations = (
 				14FD4F3E279F2D1400E4947D /* Debug */,
 				14FD4F3F279F2D1400E4947D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5670A12027F6F6A400EEB432 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5670A11E27F6F6A400EEB432 /* Debug */,
+				5670A11F27F6F6A400EEB432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

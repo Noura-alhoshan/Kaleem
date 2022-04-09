@@ -74,7 +74,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OneSignalXCFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Kaleem.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-OneSignalNotificationServiceExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

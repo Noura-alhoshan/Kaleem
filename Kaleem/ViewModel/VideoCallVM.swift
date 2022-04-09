@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 import FirebaseAuth
 import Firebase
-
+import OneSignal
 class VideoCallVM: ObservableObject {
     private var db = Firestore.firestore()
    // @State var currentV =  Volunteer()
@@ -35,6 +35,28 @@ class VideoCallVM: ObservableObject {
     }*/
     
     
+    func notifyVols() {
+        var playerIDs = [String]()
+
+        Firestore
+          .firestore()
+          .collection("Volunteer")
+          .getDocuments { (snapshot, error) in
+             guard let snapshot = snapshot, error == nil else {
+              //handle error
+              return
+            }
+            print("Number of documents: \(snapshot.documents.count ?? -1)")
+            snapshot.documents.forEach({ (documentSnapshot) in
+              let documentData = documentSnapshot.data()
+                playerIDs.append( documentData["playerID"] as! String)
+
+            })
+              
+          }
+//        sendNoti
+        OneSignal.postNotification(["contents": ["en": "Test Message"], "include_player_ids": playerIDs])
+        }
     func updateVolunteerCallStatus() {
        
        // Add a document to a collection

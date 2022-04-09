@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 import CoreLocationUI
-
+import OneSignal
 
 
 struct HomeAll: View{
@@ -203,9 +203,12 @@ struct HomeAll: View{
                                     
                                 Button(action: {
                                     
-                            
+                                  
+
+                                  
                                     self.showVideCall = true
                                     VM.updateVolunteerCallStatus()
+                                    VM.notifyVols()
                                 }) {
                                     
                                     Image(systemName: "video.circle.fill")

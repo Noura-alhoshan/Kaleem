@@ -2,8 +2,7 @@ import Foundation
 import SwiftUI
 import Firebase
 import Combine
-
-
+import OneSignal
 
 class SignUpVM : ObservableObject {
     var email: String
@@ -21,7 +20,7 @@ class SignUpVM : ObservableObject {
     
     // create user in Firebase Auth.
     func createNewAccount(email: String, password: String, userType: String, username: String, phone: String, accStatus: String) { // I change it because it was display an error (var > String) ########
-        
+
         auth.createUser(withEmail: email, password: password){ result, err in
             if let err = err {
                 print ("PASSWORD IN VM: \(password)")
@@ -59,10 +58,18 @@ class SignUpVM : ObservableObject {
         }
      }
          else{
+             var playerID = ""
+             if let deviceState = OneSignal.getDeviceState() {
+                 playerID = deviceState.userId ?? "noID##"
+//                 let pushToken = deviceState.pushToken
+//                 let subscribed = deviceState.isSubscribed
+              }
+
              print("AccountStatus#### \(accStatus)")
              db.collection(userType).document(uid).setData(["uid":uid,
                                                             "name":username, "phoneNo":phone, "email":email, "type": userType,
-                                                            "accStatus" : accStatus
+                                                            "accStatus" : accStatus,
+                                                            "playerID": playerID
               ])         { error in
                 
                 // Check for errors
