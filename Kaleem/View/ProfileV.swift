@@ -15,6 +15,7 @@ struct ProfileView: View {
     @ObservedObject private var PViewModel = ProfileVM()
     @State var showEditForm = false
     @EnvironmentObject var session: SessionStore
+    @State var showingAlert = false
   //  @State var emailFromPV = ""
     // let gradient = Gradient(colors: [.blue, .purple])
     
@@ -159,7 +160,7 @@ struct ProfileView: View {
                 
                 
                 Button(action: {
-                    session.signOut()
+                    showingAlert = true
                 }, label: {
                     Text("تسجيل الخروج")
                         .foregroundColor(Color.white)
@@ -171,7 +172,21 @@ struct ProfileView: View {
                         .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                 })
                     .padding(.top, 28)
-                
+//                    .alert(isPresented:$showingAlert) {
+//                             Alert(
+//                                 title: Text("هام"),
+//                                 message: Text("هل أنت متأكد من تسجيل الخروج؟"),
+//                                 primaryButton: .destructive(Text("نعم")) {
+//                                     session.signOut()
+//                                 },
+//                                 secondaryButton: .cancel()
+//                             )
+//                         }
+//
+                    .alert("هل أنت متأكد من تسجيل الخروج؟", isPresented: $showingAlert, actions: {
+                          Button("نعم", action: {session.signOut()})
+                          Button("لا", role: .cancel, action: {})
+                        })
                 
             }.navigationBarTitle("")
                 .navigationBarHidden(true)

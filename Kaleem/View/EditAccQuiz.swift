@@ -336,7 +336,7 @@ struct EditAccQuizForm: View {
                 else
                 if (isError) {
                     
-                    Text("الرجاء التحقق من تعبئة جميع الحقول")
+                    Text("جميع الحقول مطلوبة")
                     //.offset(y: -10)
                         .foregroundColor(.red).padding(.top,13)
                 }

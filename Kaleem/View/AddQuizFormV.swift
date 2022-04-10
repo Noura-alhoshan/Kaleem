@@ -281,7 +281,7 @@ struct AddQuizForm: View {
                 
                 if (isError) {
                     
-                    Text("الرجاء التحقق من تعبئة جميع الحقول")
+                    Text("جميع الحقول مطلوبة")
                     //.offset(y: -10)
                         .foregroundColor(.red).padding(.top,13)
                 }
@@ -332,10 +332,3 @@ struct AddQuizForm: View {
     
     
 }//struct
-
-
-struct AddQuizForm_Previews: PreviewProvider {
-    static var previews: some View {
-        AddQuizForm()
-    }
-}

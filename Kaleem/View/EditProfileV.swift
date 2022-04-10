@@ -96,7 +96,7 @@ struct EditProfileV: View {
                         VStack(alignment: .trailing ){
                             HStack(spacing: 15)  {
                                 
-                                TextField("اسم المستخدم", text: self.$username)
+                                TextField("الاسم الكامل", text: self.$username)
                                     .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing).disableAutocorrection(true)
                                     .onChange(of: self.username, perform: {newValue in self.usernameErr = VM.validateUserName(username: self.username)})
                                 
