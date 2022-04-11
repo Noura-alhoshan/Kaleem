@@ -36,19 +36,7 @@ struct SignIn : View {
                 //u can put it in line 29 and remove the comment in SessionStore class
                 session.listen()
                // print(session.UserType)
-            NavigationView{
-                switch session.UserType {
-                case "Volunteer":
-                    VolunteerHome()
-                case "Impaired":
-                    ImpairedHome()
-                    
-                case "":
-                    AdminHome()
-                default:
-                    ForgotPassword()
-                }
-                }
+       
             }
         }
     }

@@ -17,7 +17,10 @@ struct EditAccQuizForm: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var showingImagePicker = false
-    @State private var showAlert = false
+    @State private var showEditAlert = false
+    @State private var showDeleteAlert = false
+    @State private var showSuccesfulDeleteAlert = false
+    @State private var goToListAfterDelete = false
     @State private var goBack = false
     @State private var isError = false
     @State private var isDifferent = false
@@ -25,7 +28,7 @@ struct EditAccQuizForm: View {
     @State private var inputImage: UIImage?
     @State var selection: String = ""
     
-    @State var QID: String//the id to use in the database 
+    @State var QID: String//the id to use in the database
     @State var Question: String
     @State var ImageQuestion: String
     @State var CorrectAnswer: String
@@ -78,6 +81,21 @@ struct EditAccQuizForm: View {
     
     
     
+    //this is to delete a question
+    func deleteQuestion(){
+        Firestore.firestore().collection("AcceptanceQuiz").document(self.QID).delete(){ err in
+            if let err = err {//cloud deletion error
+                print("Error removing document: \(err)")
+            }
+            else {
+                print("Document successfully removed!")
+                showSuccesfulDeleteAlert = true
+                
+            }
+            
+        }
+    }
+    
     //validate all fields the call another func to send the quiz info
     func UpdateQuestion(){
         
@@ -115,7 +133,7 @@ struct EditAccQuizForm: View {
                                                                                   "answer4": answer4,
                                                                                   "correctAnswer": CorrectAnswer,
                                                                                   "questionText": Question])
-            showAlert = true
+            showEditAlert = true
         }
         
         else{
@@ -140,7 +158,7 @@ struct EditAccQuizForm: View {
                                                                                               "questionText": Question])
                     })
                     print("image uploaded successfully")
-                    showAlert = true
+                    showEditAlert = true
                 }
                 
             }
@@ -152,17 +170,13 @@ struct EditAccQuizForm: View {
         
     }//end of method
     
+
     
     
     var body: some View {
-       // NavigationView{
-        
-       // NavigationLink(destination: AlertBody() , isActive: $showAlert, label: {EmptyView()}) .navigationBarBackButtonHidden(true)
-        
-        
-        
+      
         ScrollView{
-            
+
             HStack{
                 Spacer()
                 Button(action: {
@@ -343,7 +357,38 @@ struct EditAccQuizForm: View {
                 else {
                     Text(" ").foregroundColor(.red).padding(.top,13)
                 }
+                HStack{
                 
+                    Button(action: {
+                        showDeleteAlert = true
+                    }, label: {
+                        Text("حذف")
+                            .foregroundColor(Color.white)
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .padding(.horizontal,50)
+                            .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+                            .clipShape(Capsule())
+                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                    })
+                        .alert("هل أنت متأكد من حذف السؤال؟", isPresented: $showDeleteAlert, actions: {
+                              Button("نعم", action: {
+                                  deleteQuestion()
+                              })
+                              Button("لا", role: .cancel, action: {})
+                            })
+                        .alert(isPresented: $showSuccesfulDeleteAlert) {
+
+                        Alert(
+                            title: Text("تمت العملية بنجاح"),
+                            message: Text("تم حذف السؤال من اختبار القبول"),
+                            dismissButton: .default(
+                                            Text("إغلاق"),
+                                            action: { goToListAfterDelete = true })
+                        )
+                        }
+                    
+                    
                 Button(action: {
                     UpdateQuestion()
                     print (CorrectAnswer)
@@ -357,17 +402,20 @@ struct EditAccQuizForm: View {
                         .clipShape(Capsule())
                         .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                 })
-//                    .alert(isPresented: $showAlert) {
-//
-//                    Alert(
-//                        title: Text("تمت العملية بنجاح"),
-//                        message: Text("تم تعديل معلومات السؤال"),
-//                        dismissButton: .default(
-//                                        Text("إغلاق"),
-//                                        action: { self.mode.wrappedValue.dismiss() })
-//                    )
-//                    } .padding(.bottom, 10)
-                
+                    .alert(isPresented: $showEditAlert) {
+
+                    Alert(
+                        title: Text("تمت العملية بنجاح"),
+                        message: Text("تم تعديل معلومات السؤال"),
+                        dismissButton: .default(
+                                        Text("إغلاق"),
+                                        action: { self.mode.wrappedValue.dismiss() })
+                    )
+                    }
+                    //.padding(.bottom, 10)
+      
+                    
+                }
                 // TO SHOW ALERT ####################
                         
             }//big vstack
@@ -378,17 +426,14 @@ struct EditAccQuizForm: View {
             
             .onChange(of: inputImage) { _ in loadImage() }
             
+            
+            
           
         }//scroller
+           
         .navigationBarTitle("")
         .navigationBarHidden(true)
-        
-        if showAlert {
-            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "تأكيد", btn2: "إلغاء").padding(.top, 50).padding(.vertical)
-
-        }
-     
-        
+       
     }//view body
     
     

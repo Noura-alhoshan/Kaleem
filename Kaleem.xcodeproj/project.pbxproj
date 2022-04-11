@@ -12,6 +12,7 @@
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
+		260B057E2803A828005C402B /* DeleteProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B057D2803A828005C402B /* DeleteProfileV.swift */; };
 		2645C59427E02F930017EEF2 /* BrowseAccQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */; };
 		2645C59527E02F930017EEF2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C58E27E02F930017EEF2 /* ForgotPassword.swift */; };
 		2645C59627E02F930017EEF2 /* AddQuizFormV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C58F27E02F930017EEF2 /* AddQuizFormV.swift */; };
@@ -65,6 +66,7 @@
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		260B057D2803A828005C402B /* DeleteProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProfileV.swift; sourceTree = "<group>"; };
 		2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseAccQuizV.swift; sourceTree = "<group>"; };
 		2645C58E27E02F930017EEF2 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		2645C58F27E02F930017EEF2 /* AddQuizFormV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddQuizFormV.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */,
 				26DB009527E4DF63005B0DBC /* CheckPopUp.swift */,
 				2645C59127E02F930017EEF2 /* EditAccQuiz.swift */,
+				260B057D2803A828005C402B /* DeleteProfileV.swift */,
 				2645C58E27E02F930017EEF2 /* ForgotPassword.swift */,
 				2645C59227E02F930017EEF2 /* ImagePicker.swift */,
 				2645C59027E02F930017EEF2 /* QuestionDetails.swift */,
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2645C59F27E02FB30017EEF2 /* VideoCallVM.swift in Sources */,
+				260B057E2803A828005C402B /* DeleteProfileV.swift in Sources */,
 				2645C5AC27E0309B0017EEF2 /* Constants.swift in Sources */,
 				2645C59427E02F930017EEF2 /* BrowseAccQuizV.swift in Sources */,
 				2645C59627E02F930017EEF2 /* AddQuizFormV.swift in Sources */,

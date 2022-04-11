@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 import Firebase
 
-struct AdminHome: View {
+struct Admin2Home: View {
     @EnvironmentObject var session: SessionStore
     @State var showAccQuiz: Bool = false
    
@@ -52,6 +52,6 @@ struct AdminHome: View {
 
 struct AdminHome_Previews: PreviewProvider {
     static var previews: some View {
-        AdminHome()
+        Admin2Home()
     }
 }

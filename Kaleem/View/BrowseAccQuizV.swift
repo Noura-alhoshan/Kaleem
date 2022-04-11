@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct BrowseAccQuizV: View {
-   // @Environment(\.presentationMode) var mode: Binding<PresentationMode> //this one caused error 
+   // @Environment(\.presentationMode) var mode: Binding<PresentationMode> //this one caused error
 
     @ObservedObject private var viewModel = ContactViewModel()
     @State var showDetails: Bool = false
@@ -26,11 +26,17 @@ struct BrowseAccQuizV: View {
         
         NavigationLink(destination: AddQuizForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
         NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
-        NavigationLink(destination:AdminHome(), isActive: $goBack, label: {EmptyView()} )
+        NavigationLink(destination:Admin2Home(), isActive: $goBack, label: {EmptyView()} )
         
    
       
         HStack{
+            Text("أسئلة اختبار القبول")
+                .foregroundColor(.black.opacity(0.7))
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.horizontal,22)
+                .padding(.top,12)
             Spacer()
             Button(action: {
                                 
@@ -49,10 +55,11 @@ struct BrowseAccQuizV: View {
                             }).padding(.horizontal,25)
         }
         
+    
         
         ZStack(alignment: .bottomLeading) {//to hold the floating + button
             
-   
+     
             
             List(viewModel.questions) { Qmodel in
                 ZStack(alignment: .trailing) {
@@ -87,9 +94,14 @@ struct BrowseAccQuizV: View {
                         }
                         .padding(.horizontal, 5)
                     }
+                    
                     .padding(30)
-                    
-                    
+                    .overlay(
+                               RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.gray.opacity(0.4), lineWidth: 0.5)
+                                .shadow(color: .gray.opacity(1), radius: 3, x: -2, y: 2)
+                              
+                           )
                 }
                 .onTapGesture {
                     SelectedQuestion = QuestionModel(Qid: Qmodel.Qid, question: Qmodel.question, correctAnswer: Qmodel.correctAnswer, questionText: Qmodel.questionText, answers:Qmodel.answers)
@@ -97,7 +109,7 @@ struct BrowseAccQuizV: View {
                     showDetails = true;
                     
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 15))//.listStyle(InsetGroupedListStyle())
+                //.clipShape(RoundedRectangle(cornerRadius: 15))//.listStyle(InsetGroupedListStyle())
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
             }
             
@@ -119,4 +131,3 @@ struct BrowseAccQuizV: View {
         
     }
 }
-

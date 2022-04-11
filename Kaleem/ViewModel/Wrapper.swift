@@ -29,11 +29,11 @@ struct Wrraper: View{
                     ImpairedTabBar2()
                     
                 case "Admin":
-                    AdminHome()
+                    Admin2Home()
                     
                 default:
                    ProgressView()
-                   // AdminHome()
+                   //AdminHome()
                 }
                 
             }
