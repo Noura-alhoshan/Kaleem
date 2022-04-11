@@ -84,13 +84,13 @@ struct PopUpWindow: View {
                 Color.black.opacity(show ? 0.1 : 0).edgesIgnoringSafeArea(.all)
 
                 // PopUp Window
-                VStack(alignment: .center, spacing: 5) {
+                VStack(alignment: .center, spacing: 10) {
                    
                     Text("تعديل البيانات الشخصية يتطلب التحقق من الهوية")
                         .frame(maxWidth: .infinity)
                         .frame(height: 45, alignment: .center)
                         .font(Font.system(size: 19, weight: . light))
-                    
+                        .padding(.top, 20)
                     VStack(alignment: .trailing ){
                         HStack(spacing: 15)  {
                             
