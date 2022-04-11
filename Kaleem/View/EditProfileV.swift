@@ -20,13 +20,14 @@ struct EditProfileV: View {
     @State var phoneNo: String
     @State var email: String
     @State var type: String
+    @State var userID: String//useless for now!!
     @State var usernameErr = ""
     @State var emailErr = ""
     @State var phoneNoErr = ""
     @State var isError = false
-    @State var showAlert = false
+    //@State var showAlert = false
     @State var showCheckForm = false
-    
+    @State var showDeleteForm = false
     
     func updataInfo(){
         
@@ -251,15 +252,36 @@ struct EditProfileV: View {
                         PViewModel.fetchUser()
                        
                     } )
-                    
                 }
                 
+                if (!showDeleteForm){
+                Button(action: {
+                    showDeleteForm = true
+                }, label: {
+                    Text("حذف الحساب")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .padding(.horizontal,50)
+                        .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+                        .clipShape(Capsule())
+                        .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                })
+                    .padding(.top, 28)
+            
+                }
+            
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
-            
+        
+            //edit info pop up
              PopUpWindow(userEmail: $email, userPhone: $phoneNo, userName: $username, userType: $type, show: $showCheckForm )
+          
+            //delete account pop up
+            DeleteProfileV(userEmail: $email, userPhone: $phoneNo, userName: $username, userType: $type, userID: $userID, show: $showDeleteForm )
+
+            
         }
         
     }
 }
-
