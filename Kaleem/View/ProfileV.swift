@@ -27,24 +27,24 @@ struct ProfileView: View {
         GeometryReader{_ in
             
             
-                NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type) , isActive: $showEditForm, label: {EmptyView()} )
+            NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type,userID: PViewModel.KaleemUser.id) , isActive: $showEditForm, label: {EmptyView()} )
             
-//        HStack{
-//            Spacer()
-//            Button(action: {
-//                withAnimation(.easeInOut){
-//                    self.mode.wrappedValue.dismiss()
-//                }
-//            }, label: {
-//                Image(systemName: "chevron.right")
-//                    .foregroundColor(.white)
-//                    .padding(.vertical,10)
-//                    .padding(.horizontal)
-//                    .background(Color("Color"))
-//                    .cornerRadius(10)
-//                
-//            }).padding(.horizontal,25)
-//        } .padding(.bottom, 50)
+        HStack{
+            Spacer()
+            Button(action: {
+                withAnimation(.easeInOut){
+                    self.mode.wrappedValue.dismiss()
+                }
+            }, label: {
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.white)
+                    .padding(.vertical,10)
+                    .padding(.horizontal)
+                    .background(Color("Color"))
+                    .cornerRadius(10)
+                
+            }).padding(.horizontal,25)
+        } .padding(.bottom, 50)
             
            // Spacer(minLength: 30)
         
@@ -160,25 +160,22 @@ struct ProfileView: View {
                 
                 
                 Button(action: {
-                    session.signOut()
+                    showingAlert = true
                 }, label: {
                     Text("تسجيل الخروج")
                         .foregroundColor(Color.white)
                         .fontWeight(.bold)
                         .padding(.vertical)
                         .padding(.horizontal,50)
-                        .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+                        .background(Color(.gray).opacity(0.9))
                         .clipShape(Capsule())
                         .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                 })
                     .padding(.top, 28)
-                
                     .alert("هل أنت متأكد من تسجيل الخروج؟", isPresented: $showingAlert, actions: {
-                        Button("نعم", action: {session.signOut()})
-                        Button("لا", role: .cancel, action: {})
-                    })
-                
-                
+                          Button("نعم", action: {session.signOut()})
+                          Button("لا", role: .cancel, action: {})
+                        })
                 
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
