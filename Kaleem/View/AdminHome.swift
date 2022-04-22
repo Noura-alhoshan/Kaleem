@@ -131,9 +131,11 @@ struct AdminHome: View{
                                 
                        
                                 
-                                
+                            //🛑🛑🛑use one of the bellow strings to call the page BrowseQuizV
+                            // "EducationalQuiz" -> اختبار المعرفة
+                            // "AcceptanceQuiz" -> اختبار القبول
                                 NavigationLink(
-                                    destination:     BrowseAccQuizV().navigationBarHidden(true),
+                                    destination:     BrowseQuizV(quizColl: "AcceptanceQuiz").navigationBarHidden(true),
                                     label: {
                                         Image(systemName: "newspaper.circle.fill")
                                             .foregroundColor(Color("Color"))
@@ -171,7 +173,7 @@ struct AdminHome: View{
                             HStack{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
-                   Text("الاختبار الشهري")
+                   Text("اختبار المعرفة")
                                         .font(Font.custom("Almarai-Bold", size: 25))
                                           //   .foregroundColor(.gray.opacity(1.5))
 //                                             .padding(.leading, -30)
@@ -200,8 +202,12 @@ struct AdminHome: View{
                                 Spacer()
                                 //consider to change it sutibale icons
                                 
-                                NavigationLink(
-                                    destination:     TextToSpeechV().navigationBarHidden(true),
+                                
+            //🛑🛑🛑 use one of the bellow strings to call the page BrowseQuizV
+                // "EducationalQuiz" -> اختبار المعرفة
+                // "AcceptanceQuiz" -> اختبار القبول
+                    NavigationLink(
+                destination: BrowseQuizV(quizColl: "EducationalQuiz").navigationBarHidden(true),
                                     label: {
                                         Image(systemName: "newspaper.circle.fill")
                                             .foregroundColor(Color("Color"))

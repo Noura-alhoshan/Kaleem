@@ -103,7 +103,7 @@ struct QuestionDetails: View {
                         
                         Alert(
                             title: Text("تمت العملية بنجاح"),
-                            message: Text("تم حذف السؤال من اختبار القبول"),
+                            message: Text("تم حذف السؤال من الاختبار "),
                             dismissButton: .default(
                                 Text("إغلاق"),
                                 action: { self.mode.wrappedValue.dismiss() })
