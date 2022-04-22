@@ -12,6 +12,7 @@
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
 		14FD4F3A279F2D1400E4947D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */; };
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
+		2601732828124EE10091DBA7 /* BrowseQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2601732728124EE10091DBA7 /* BrowseQuizV.swift */; };
 		260B057E2803A828005C402B /* DeleteProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260B057D2803A828005C402B /* DeleteProfileV.swift */; };
 		2645C59427E02F930017EEF2 /* BrowseAccQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */; };
 		2645C59527E02F930017EEF2 /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2645C58E27E02F930017EEF2 /* ForgotPassword.swift */; };
@@ -66,6 +67,7 @@
 		14FD4F36279F2D1400E4947D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14FD4F39279F2D1400E4947D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2601732728124EE10091DBA7 /* BrowseQuizV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseQuizV.swift; sourceTree = "<group>"; };
 		260B057D2803A828005C402B /* DeleteProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProfileV.swift; sourceTree = "<group>"; };
 		2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseAccQuizV.swift; sourceTree = "<group>"; };
 		2645C58E27E02F930017EEF2 /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				2645C58D27E02F930017EEF2 /* BrowseAccQuizV.swift */,
 				26DB009527E4DF63005B0DBC /* CheckPopUp.swift */,
 				2645C59127E02F930017EEF2 /* EditAccQuiz.swift */,
+				2601732728124EE10091DBA7 /* BrowseQuizV.swift */,
 				260B057D2803A828005C402B /* DeleteProfileV.swift */,
 				2645C58E27E02F930017EEF2 /* ForgotPassword.swift */,
 				2645C59227E02F930017EEF2 /* ImagePicker.swift */,
@@ -410,6 +413,7 @@
 				265D7C3C27E028B800E3420F /* SignUpVM.swift in Sources */,
 				2645C59827E02F930017EEF2 /* EditAccQuiz.swift in Sources */,
 				F542D1B927C1A54B00A1E9ED /* VolunteerHome.swift in Sources */,
+				2601732828124EE10091DBA7 /* BrowseQuizV.swift in Sources */,
 				2645C5AA27E0309B0017EEF2 /* Extension.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
 				F542D1BC27C1A54B00A1E9ED /* SignInV.swift in Sources */,

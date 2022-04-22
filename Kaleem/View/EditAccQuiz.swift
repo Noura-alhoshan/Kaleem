@@ -18,8 +18,6 @@ struct EditAccQuizForm: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @State private var showingImagePicker = false
     @State private var showEditAlert = false
-    @State private var showDeleteAlert = false
-    @State private var showSuccesfulDeleteAlert = false
     @State private var goToListAfterDelete = false
     @State private var goBack = false
     @State private var isError = false
@@ -27,6 +25,8 @@ struct EditAccQuizForm: View {
     @State private var image: Image?
     @State private var inputImage: UIImage?
     @State var selection: String = ""
+    
+    @State var quizColl: String
     
     @State var QID: String//the id to use in the database
     @State var Question: String
@@ -81,20 +81,7 @@ struct EditAccQuizForm: View {
     
     
     
-    //this is to delete a question
-    func deleteQuestion(){
-        Firestore.firestore().collection("AcceptanceQuiz").document(self.QID).delete(){ err in
-            if let err = err {//cloud deletion error
-                print("Error removing document: \(err)")
-            }
-            else {
-                print("Document successfully removed!")
-                showSuccesfulDeleteAlert = true
-                
-            }
-            
-        }
-    }
+    
     
     //validate all fields the call another func to send the quiz info
     func UpdateQuestion(){
@@ -126,7 +113,7 @@ struct EditAccQuizForm: View {
     //add question to database
     func sendQuestion(){
         if (inputImage == nil ){
-            Firestore.firestore().collection("AcceptanceQuiz").document(self.QID).setData(["question":self.ImageQuestion,
+            Firestore.firestore().collection(quizColl).document(self.QID).setData(["question":self.ImageQuestion,
                                                                                   "answer1": answer1,
                                                                                   "answer2":answer2,
                                                                                   "answer3": answer3,
@@ -149,7 +136,7 @@ struct EditAccQuizForm: View {
                 } else {
                     storageRef.downloadURL(completion: { (url, error) in
                         print("Image URL: \((url?.absoluteString)!)")
-                        Firestore.firestore().collection("AcceptanceQuiz").document(self.QID).setData(["question":(url?.absoluteString)!,
+                        Firestore.firestore().collection(quizColl).document(self.QID).setData(["question":(url?.absoluteString)!,
                                                                                               "answer1": answer1,
                                                                                               "answer2":answer2,
                                                                                               "answer3": answer3,
@@ -359,34 +346,34 @@ struct EditAccQuizForm: View {
                 }
                 HStack{
                 
-                    Button(action: {
-                        showDeleteAlert = true
-                    }, label: {
-                        Text("حذف")
-                            .foregroundColor(Color.white)
-                            .fontWeight(.bold)
-                            .padding(.vertical)
-                            .padding(.horizontal,50)
-                            .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
-                            .clipShape(Capsule())
-                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
-                    })
-                        .alert("هل أنت متأكد من حذف السؤال؟", isPresented: $showDeleteAlert, actions: {
-                              Button("نعم", action: {
-                                  deleteQuestion()
-                              })
-                              Button("لا", role: .cancel, action: {})
-                            })
-                        .alert(isPresented: $showSuccesfulDeleteAlert) {
-
-                        Alert(
-                            title: Text("تمت العملية بنجاح"),
-                            message: Text("تم حذف السؤال من اختبار القبول"),
-                            dismissButton: .default(
-                                            Text("إغلاق"),
-                                            action: { goToListAfterDelete = true })
-                        )
-                        }
+//                    Button(action: {
+//                        showDeleteAlert = true
+//                    }, label: {
+//                        Text("حذف")
+//                            .foregroundColor(Color.white)
+//                            .fontWeight(.bold)
+//                            .padding(.vertical)
+//                            .padding(.horizontal,50)
+//                            .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+//                            .clipShape(Capsule())
+//                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+//                    })
+//                        .alert("هل أنت متأكد من حذف السؤال؟", isPresented: $showDeleteAlert, actions: {
+//                              Button("نعم", action: {
+//                                  deleteQuestion()
+//                              })
+//                              Button("لا", role: .cancel, action: {})
+//                            })
+//                        .alert(isPresented: $showSuccesfulDeleteAlert) {
+//
+//                        Alert(
+//                            title: Text("تمت العملية بنجاح"),
+//                            message: Text("تم حذف السؤال من اختبار القبول"),
+//                            dismissButton: .default(
+//                                            Text("إغلاق"),
+//                                            action: { goToListAfterDelete = true })
+//                        )
+//                        }
                     
                     
                 Button(action: {

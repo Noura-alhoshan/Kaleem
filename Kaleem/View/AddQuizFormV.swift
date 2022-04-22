@@ -12,7 +12,8 @@ import Firebase
 
 struct AddQuizForm: View {
     
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>//"AcceptanceQuiz"
+    @State var quizCollection: String
     @State private var showingImagePicker = false
     @State private var showAlert = false
     @State private var isError = false
@@ -98,7 +99,7 @@ struct AddQuizForm: View {
                 } else {
                     storageRef.downloadURL(completion: { (url, error) in
                         print("Image URL: \((url?.absoluteString)!)")
-                        Firestore.firestore().collection("AcceptanceQuiz").addDocument(data: ["question":(url?.absoluteString)!,
+                        Firestore.firestore().collection(quizCollection).addDocument(data: ["question":(url?.absoluteString)!,
                                                                                               "answer1": answer1,
                                                                                               "answer2":answer2,
                                                                                               "answer3": answer3,
@@ -305,7 +306,7 @@ struct AddQuizForm: View {
                     
                     Alert(
                         title: Text("تمت العملية بنجاح"),
-                        message: Text("تم إضافة السؤال إلى اختبار القبول"),
+                        message: Text("تم إضافة السؤال إلى الاختبار "),
                         dismissButton: .default(
                                         Text("إغلاق"),
                                         action: { self.mode.wrappedValue.dismiss() })

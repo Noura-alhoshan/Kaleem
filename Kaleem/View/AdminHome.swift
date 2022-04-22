@@ -12,12 +12,17 @@ import Firebase
 struct Admin2Home: View {
     @EnvironmentObject var session: SessionStore
     @State var showAccQuiz: Bool = false
-   
+    @State var showEduQuiz: Bool = false
     var body: some View {
         
         VStack{
             
             NavigationLink(destination: BrowseAccQuizV(), isActive: $showAccQuiz, label: {EmptyView()} )
+            
+            //use one of the bellow strings to call the page
+            // "EducationalQuiz" -> اختبار المعرفة
+            // "AcceptanceQuiz" -> اختبار القبول
+            NavigationLink(destination: BrowseQuizV(quizColl: "EducationalQuiz"), isActive: $showEduQuiz, label: {EmptyView()} )
 
             Text("Hello Admin!")
        
@@ -34,6 +39,18 @@ struct Admin2Home: View {
                     .cornerRadius(35.0)
             })
             
+            Button(action: {
+                //AddAccQuizV()
+                showEduQuiz = true
+            }, label: {
+                Text("اختبار المعرفة")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(width: 220, height: 60)
+                    .background(Color.black)
+                    .cornerRadius(35.0)
+            })
             
         Button(action: {
             session.signOut()

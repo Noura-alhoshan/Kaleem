@@ -1,18 +1,18 @@
 //
-//  BrowseAccQuizV.swift
+//  BrowseEduQuizV.swift
 //  Kaleem
 //
-//  Created by Sarah S on 19/07/1443 AH.
+//  Created by Sarah S on 02/04/2022.
 //
 
+
 import SwiftUI
-//import UIKit
 
-
-struct BrowseAccQuizV: View {
+struct BrowseQuizV: View {
    // @Environment(\.presentationMode) var mode: Binding<PresentationMode> //this one caused error
 
     @ObservedObject private var viewModel = ContactViewModel()
+    @State var quizColl: String
     @State var showDetails: Bool = false
     @State var showAddQestion: Bool = false
     @State var goBack: Bool = false
@@ -24,19 +24,29 @@ struct BrowseAccQuizV: View {
     
     var body: some View {
         
-        //NavigationLink(destination: AddQuizForm().environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
-       // NavigationLink(destination: QuestionDetails(SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
+        NavigationLink(destination: AddQuizForm(quizCollection: quizColl).environmentObject(AQuizManagerVM()), isActive: $showAddQestion, label: {EmptyView()} )
+        NavigationLink(destination: QuestionDetails(quizCollec: quizColl, SelectedQuestion: SelectedQuestion, QuestionID: QuestionID).environmentObject(AQuizManagerVM()), isActive: $showDetails, label: {EmptyView()} )
         NavigationLink(destination:Admin2Home(), isActive: $goBack, label: {EmptyView()} )
         
    
       
         HStack{
-            Text("أسئلة اختبار القبول")
+            if (quizColl == "EducationalQuiz"){
+            Text("أسئلة اختبار المعرفة")
                 .foregroundColor(.black.opacity(0.7))
                 .font(.title)
                 .fontWeight(.bold)
                 .padding(.horizontal,22)
                 .padding(.top,12)
+            }
+            else {
+                Text("أسئلة اختبار القبول")
+                    .foregroundColor(.black.opacity(0.7))
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.horizontal,22)
+                    .padding(.top,12)
+            }
             Spacer()
             Button(action: {
                                 
@@ -113,7 +123,12 @@ struct BrowseAccQuizV: View {
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
             }
             
-            .onAppear() { self.viewModel.fetchData(quizCollection: "String")}/////////////////////////hbjhvjyvjy
+            .onAppear() { self.viewModel.fetchData(quizCollection: quizColl)}
+            .overlay(Group {
+                           if viewModel.questions.isEmpty {
+                               Text("لا يوجد أسئلة..").foregroundColor(.black.opacity(0.6))
+                           }
+                       })
             
             Button(action: {
                 showAddQestion = true
