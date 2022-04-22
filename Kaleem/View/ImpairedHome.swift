@@ -21,7 +21,7 @@ struct ImpairedHome: View {
         NavigationView{
         VStack{
             Text("Hello Impaired!")
-            NavigationLink(destination: ProfileView(), isActive: $showProfile, label: {EmptyView()} ).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
+            NavigationLink(destination: TextToSpeechV(), isActive: $showProfile, label: {EmptyView()} ).navigationBarTitle("", displayMode: .inline).navigationBarHidden(true)
 
             /*Calling function*/
             Button( action: {
@@ -45,7 +45,7 @@ struct ImpairedHome: View {
             Button(action: {
                showProfile = true
             }, label: {
-                Text("profile ")
+                Text("translate ")
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()

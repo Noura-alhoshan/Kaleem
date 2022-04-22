@@ -213,15 +213,7 @@ struct EditProfileV: View {
                         .padding(.horizontal)
                         .padding(.top,20)
                     
-                        if (isError) {
-                            
-                            Text("الرجاء التحقق من صحة جميع البيانات")
-                            //.offset(y: -10)
-                                .foregroundColor(.red).padding(.top,13)
-                        }
-                        else {
-                            Text(" ").foregroundColor(.red).padding(.top,13)
-                        }
+
                         
                         if (!showCheckForm ){//عشان ما يطلع شكل الازرار مكرر في الصفحة وفي البوب اب
                         Button(action: {
@@ -237,13 +229,13 @@ struct EditProfileV: View {
                                 .clipShape(Capsule())
                                 .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                         })
-                            .padding(.top, 18)
+                            .padding(.top, 26)
                         }
                         //Spacer()
                     } // the big one
                     /*CONTAINER*/
                     .padding()
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(15)
                     .padding(.horizontal,20)

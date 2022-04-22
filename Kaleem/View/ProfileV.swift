@@ -16,9 +16,7 @@ struct ProfileView: View {
     @State var showEditForm = false
     @EnvironmentObject var session: SessionStore
     @State var showingAlert = false
-  //  @State var emailFromPV = ""
-    // let gradient = Gradient(colors: [.blue, .purple])
-    
+
     
     var body: some View {
         
@@ -69,8 +67,7 @@ struct ProfileView: View {
                 
                 
                 
-                ZStack(alignment: .bottomLeading) {//to hold the floating + button
-                    
+       
                     VStack{
                         HStack{
                             Text("المعلومات الشخصية")
@@ -82,7 +79,7 @@ struct ProfileView: View {
                         
                         VStack(alignment: .trailing ){
                             HStack(spacing: 15)  {
-                                Text(PViewModel.KaleemUser.name)
+                                Text(PViewModel.KaleemUser.name).foregroundColor(.black.opacity(0.7))
                                 //  Text("الاسم:" )
                                 
                                 Image(systemName: "person.fill")
@@ -97,7 +94,7 @@ struct ProfileView: View {
                         
                         VStack(alignment: .trailing ){
                             HStack( spacing: 15)  {
-                                Text(PViewModel.KaleemUser.phoneNo)
+                                Text(PViewModel.KaleemUser.phoneNo).foregroundColor(.black.opacity(0.7))
                                 // Text("رقم الجوال:" )
                                 
                                 Image(systemName: "phone.fill")
@@ -113,24 +110,38 @@ struct ProfileView: View {
                         
                         VStack(alignment: .trailing ){
                             HStack(spacing: 15)  {
-                                Text(PViewModel.KaleemUser.email)
+                                Text(PViewModel.KaleemUser.email).foregroundColor(.black.opacity(0.7))
                                 // Text("البريد الإلكتروني:" )
                                 
                                 Image(systemName: "envelope.fill")
                                     .foregroundColor(Color("Kcolor"))
                                 
                             }
-                            Divider().background(Color(.gray).opacity(0.1))
+                            Divider().background(Color(.gray).opacity(0.0))
                         }
                         
                         .padding(.horizontal)
                         .padding(.top,20)
-                        
+                    
+                    Button(action: {
+                            showEditForm = true
+                        }) {
+                        Text("تعديل")
+                            .foregroundColor(Color.white)
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .padding(.horizontal,50)
+                            .background(Color("Kcolor"))
+                            .clipShape(Capsule())
+                            .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                    }
+                       .padding(.top, 26)
+                    
                         //Spacer()
-                    } // the big one
+                    }
                     /*CONTAINER*/
                     .padding()
-                    .padding(.bottom, 40)
+                    .padding(.bottom, 10)
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(15)
                     .padding(.horizontal,20)
@@ -141,21 +152,6 @@ struct ProfileView: View {
                         
                     } )
                     
-              
-                    
-                    Button(action: {
-                        showEditForm = true
-                    }) {
-                        Image(systemName: "pencil.circle.fill")
-                            .resizable()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Color("Kaleem"))
-                            .shadow(color: .gray, radius: 0.2, x: 1, y: 1)
-                    }
-                    .padding()
-                    .padding(.leading,20)
-                    .padding(.top, 20)
-                }//zstack??
                 
                 
                 

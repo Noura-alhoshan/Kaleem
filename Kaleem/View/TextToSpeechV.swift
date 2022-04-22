@@ -64,12 +64,22 @@ struct TextToSpeechV: View {
             }
             
         //    }
-        .padding(.bottom, 150)/////////////////here to change the space between arrow and gray box
+        .padding(.bottom, 70)/////////////////here to change the space between arrow and gray box
         
      // Spacer(minLength: 160)/////////////////here to change the
    GeometryReader{_ in
-        VStack{
-                  
+   
+       VStack{
+            VStack(alignment: .trailing){
+            Text("تعليمات الإدخال:")
+                .font(.title2)
+                .foregroundColor(Color("Kaleem"))
+                .padding(.bottom, 5)
+            Text("أدخل نص ينتمي إلى لغة واحدة:").foregroundColor(.black.opacity(0.7))
+            Text("✔️ أريد حجز تذكرة").foregroundColor(.black.opacity(0.6))
+            Text("❌ أريد حجز ticket").foregroundColor(.black.opacity(0.6))
+                Divider()
+            }
                 HStack(spacing: 15)  {
                     
                     ZStack(alignment: .topTrailing) {
