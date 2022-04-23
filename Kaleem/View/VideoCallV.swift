@@ -1,131 +1,83 @@
-//
-//
-//
-//import SwiftUI
-import UIKit
-import AgoraRtcKit
-import AgoraUIKit_iOS
-//
-//
-//struct BasicUIViewControllerRepresentable:
-//    UIViewControllerRepresentable {
-//
-//    func makeUIViewController(context: Context) -> some
-//        UIViewController {
-//
-//            return ViewController()
-//
-//    }
-//    func updateUIViewController(_ uiViewController:
-//        UIViewControllerType, context: Context) {
-//    }
-//}
-//
 
-class ViewController: UIViewController {
+/* This is the file where we will display list*/
+import Foundation
+import SwiftUI
 
+struct VideoCallV: View {
+    @ObservedObject private var viewModel = VideoCallVM()
+    @State var backToHome: Bool = false
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    var body: some View {
+        VStack{
+        HStack{
+            Spacer()
+            Button(action: {
+                self.mode.wrappedValue.dismiss()
+                                withAnimation(.easeInOut){
+                                  
+                                }
+                            }, label: {
+                                Image(systemName: "chevron.right")
+                                     .foregroundColor(.white)
+                                     .padding(.vertical,10)
+                                     .padding(.horizontal)
+                                    // .background(Color.black.opacity(0.4))
+                                     .background(Color("Kcolor"))
+                                     .cornerRadius(10)
+                            }).padding(.horizontal,25)
+            NavigationLink(destination: HomeAll(), isActive: $backToHome , label: {EmptyView()} )
 
-    var agoraView: AgoraVideoViewer?
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        }
+        
+        List (viewModel.list) { v in
+            let gender : String = v.name
+            let number1 : String = "facetime://"
+            let number2 : String = v.phoneNo
+            let number3 : String = number1+number2
+            
+            VStack(alignment: .trailing) {
+                HStack(alignment: .center){
+                    Text(v.name).padding(.trailing, 4).font(.title3)
 
-        var agSettings = AgoraSettings()
-        agSettings.enabledButtons = [.cameraButton, .micButton, .flipButton, .beautifyButton, ]
-        let agoraView = AgoraVideoViewer(
-            connectionData: AgoraConnectionData(
-                appId: "6ffe12dc3de04c8ea0eccb375f538705",
-                rtcToken: "0066ffe12dc3de04c8ea0eccb375f538705IAC8a+T3TbxtDT+r1guTccYwYE2JZtPWDgywzJi+H9NdOYbGamQAAAAAEADnfDPKkZ05YgEAAQCRnTli"
-            ),
-            style: .grid,
-            agoraSettings: agSettings
+                   Image(systemName: "person.fill")
+                       .foregroundColor(Color("Kcolor")).padding(.trailing, 2).font(.system(size: 20))
 
-           // delegate: self
-        )
-
-      self.view.backgroundColor = .tertiarySystemBackground
-
-
-        agoraView.fills(view: self.view)
-
-        agoraView.join(channel: "Kaleem", as: .broadcaster) // id for volunteer
-
-        self.agoraView = agoraView
-        self.agoraView?.style =  AgoraVideoViewer.Style.grid
-
-      
-
-
-//        self.showSegmentedView()
+                } .padding(.top , 5)
+                
+                HStack {
+              //  Spacer()
+//                    Text(v.phoneNo)
+//                        .foregroundColor( .black.opacity(0.5))
+//                        .padding(.trailing, 6)
+//                        .multilineTextAlignment(TextAlignment.trailing)
+                 
+                    
+                    Button( action: {
+                        
+                        if let yourURL = URL(string: number3) {
+                            UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)
+                        }
+                        
+                    } , label: {
+                        Image(systemName: "phone.circle")
+                            .foregroundColor(Color("Kcolor")).padding(.trailing, 290).font(.system(size: 25))
+                        
+                    })
+                } .padding(.top, -40)
+               
+          
+            }
+            
+            
+            
+        }
+            
+    }.navigationBarTitle("المتطوعين")
+        .navigationBarHidden(true)
+          
+        }
+    init(){
+        viewModel.getData()
     }
-    override func viewDidAppear(_ animated: Bool) {
-     //   var isMovingFromParent: Bool = false
-
-        navigationController?.setNavigationBarHidden(false, animated: false)
-        super.viewDidAppear(animated)
-    }
-
-    func showSegmentedView() {
-        let segControl = UISegmentedControl(items: ["floating", "grid"])
-        segControl.selectedSegmentIndex = 1
-        segControl.addTarget(self, action: #selector(segmentedControlHit), for: .valueChanged)
-        self.view.addSubview(segControl)
-        segControl.translatesAutoresizingMaskIntoConstraints = false
-        [
-            segControl.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            segControl.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -10)
-        ].forEach { $0.isActive = true }
-        self.view.bringSubviewToFront(segControl)
-    }
-
-    @objc func segmentedControlHit(segc: UISegmentedControl) {
-        print(segc)
-        let segmentedStyle = [
-            AgoraVideoViewer.Style.floating,
-            AgoraVideoViewer.Style.grid
-        ][segc.selectedSegmentIndex]
-        self.agoraView?.style = segmentedStyle
-  }
-   
-
 }
-
-
-
-
-
-
-
-////  VideoCallVM.swift
-////  Kaleem
-////
-////  Created by Afnan Al-Zuayr on 24/07/1443 AH.
-////
-///* PLAN B*/
-///*
-///* This is the file where we will retrive volunteers list to make video call*/
-//import Foundation
-//import FirebaseFirestore
-//
-//class VideoCallVM: ObservableObject {
-//
-//    @Published var volunteers = [Volunteer]()
-//
-//    private var db = Firestore.firestore()
-//
-//    func fetchData() {
-//        db.collection("Volunteer").addSnapshotListener { (querySnapshot, error) in
-//            guard let documents = querySnapshot?.documents else {
-//                print("No documents")
-//                return
-//            }
-//
-//            self.volunteers = documents.map { (queryDocumentSnapshot) -> Volunteer in
-//                let data = queryDocumentSnapshot.data()
-//                let username = data ["username"] as? String ?? "" /*WE NEED TO CHANGE IT TO NAME!*/
-//                let phoneNo = data["phoneNo"] as? String ?? ""
-//                return Volunteer(username: username, phoneNo: phoneNo)
-//            }
-//        }
-//    }
-//}
-//*/

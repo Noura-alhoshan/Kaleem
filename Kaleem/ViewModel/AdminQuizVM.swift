@@ -6,7 +6,7 @@
 //
 
 
-//************************* This is to browse and fetch all question in acceptance quiz ****************************
+//************************* This is to browse and fetch all question in acceptance & educational quiz ****************************
 
 
 import Foundation
@@ -15,7 +15,7 @@ import FirebaseFirestore
 class ContactViewModel: ObservableObject {
     
     @Published var questions = [QuestionModel]()
-    @Published var oneQuestion: QuestionModel = QuestionModel(Qid: "-", question: "-", correctAnswer: "-", questionText: "-", answers: [QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  true),
+    @Published var oneQuestion: QuestionModel = QuestionModel(Qid: "-", question: "-", correctAnswer: ".", questionText: "-", answers: [QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  false),
                                           QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  false),
                                           QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  false),
                                           QuestionModel.Answer (id: UUID() , text: "-", isCorrect:  false)])//this is just temp
@@ -23,10 +23,10 @@ class ContactViewModel: ObservableObject {
     
     
     private var db = Firestore.firestore()
-    var docID = ""//CAN NOT BE PRIVATE
+    var docID = ""//CAN NOT BE PRIVATE 
     
-    func fetchData() {
-        db.collection("AcceptanceQuiz").addSnapshotListener { (querySnapshot, error) in
+    func fetchData(quizCollection: String) {//"AcceptanceQuiz"
+        db.collection(quizCollection).addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 
@@ -55,8 +55,8 @@ class ContactViewModel: ObservableObject {
     }
     
     //fetch one question by id
-    func fetchQuestion(Qid: String ) {
-            db.collection("AcceptanceQuiz").document(Qid).getDocument { (document, error) in
+    func fetchQuestion(Qid: String, quizCollection: String ) {
+            db.collection(quizCollection).document(Qid).getDocument { (document, error) in
                 if let document = document, document.exists {
                     self.oneQuestion.question = document["question"] as? String ?? ""
                     self.oneQuestion.questionText = document["questionText"] as? String ?? ""

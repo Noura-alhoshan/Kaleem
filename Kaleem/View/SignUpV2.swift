@@ -335,7 +335,7 @@ struct S_SignUp : View {
     // call from SignUpVM : View Model (firebase)
      func S_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email2, password: pass2, userType: "Speech-impaired", username: username2, phone: phoneNo2, accStatus: "none")
+         VM.createNewAccount(email: email2, password: pass2, userType: "Impaired", username: username2, phone: phoneNo2, accStatus: "none")
     }
     var body: some View{
         
@@ -556,7 +556,7 @@ struct S_SignUp : View {
         
 // TO SHOW ALERT ####################
         if showAlert {
-            CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "حسنا", btn2: "", showNextPage2: $showNextPage)
+           // CustomAlert(shown: $showAlert, closureA: $alertAction, oneBtn: true,imgName: "check",title: "تهانينا!", message: "تم تسجيلك بنجاح", btn1: "حسنا", btn2: "", showNextPage2: $showNextPage)
             
         }
     }

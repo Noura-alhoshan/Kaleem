@@ -1,8 +1,8 @@
 //
-//  PopUp.swift
+//  DeleteProfileV.swift
 //  Kaleem
 //
-//  Created by Sarah S on 18/03/2022.
+//  Created by Sarah S on 09/04/2022.
 //
 
 import SwiftUI
@@ -12,7 +12,7 @@ import Combine
 import Foundation
 
 
-struct PopUpWindow: View {
+struct DeleteProfileV: View {
 
     @EnvironmentObject var session: SessionStore
     @ObservedObject private var PViewModel = ProfileVM()
@@ -20,7 +20,7 @@ struct PopUpWindow: View {
     @Binding var userPhone: String
     @Binding var userName: String
     @Binding var userType: String
-    
+    @Binding var userID: String//useless for now!!
     @State var email: String = ""
     @State var pass: String = ""
     
@@ -29,49 +29,52 @@ struct PopUpWindow: View {
     @Binding var show: Bool
     @State var loading = false
     @State var error = false
-    @State var showEditForm = false
     
     func checkUser () {
-        
         if (email == PViewModel.KaleemUser.email ){
             self.error = false
             
             session.signIn(email: email, password: pass) { (result, error) in
                 self.loading = false
-                   
-                if error != nil {
+                
+                if error != nil {//sign in error
                     self.error = true
                 }
                 else {
-                    session.signInStraem(email: email, password: pass)
-                    self.error = false
-                
-                    Auth.auth().currentUser?.updateEmail(to: userEmail) { error in
-                      print(error)
+                    let user = Auth.auth().currentUser
+                    let uid = result?.user.uid
+                    user?.delete { error in
+                        if let error = error {//auth deletion error
+                            print("An error happened in deletion: \(error)")
+                        } else {
+                            
+                            
+                            if (userType == "Impaired") {
+                                userType = "Speech-impaired"
+                            }
+                            
+                            Firestore.firestore().collection(userType).document(uid!).delete(){ err in
+                                if let err = err {//cloud deletion error
+                                    print("Error removing document: \(err)")
+                                }
+                                else {
+                                    print("Document successfully removed!")
+                                    session.signOut()
+                                }
+                                
+                            }
+                        }
+                        
                     }
-                    
-                    if (userType == "Impaired") {
-                        userType = "Speech-impaired"
-                    }
-                    
-                    
-                    Firestore.firestore().collection(userType)
-                    .document(Auth.auth().currentUser!.uid).setData(
-                        ["name":self.userName,
-                          "phoneNo": userPhone,
-                            "email": userEmail ], merge: true)
-                   // showAlert = true
-                   show = false
                 }
-            
+            }
+            }//if
+            else {
+                self.error = true
+                print (userEmail)
+            }
         }
-        }//if
-        else {
-            self.error = true
-            print (userEmail)
-        }
-    }
-    
+        
     
     
     
@@ -86,7 +89,7 @@ struct PopUpWindow: View {
                 // PopUp Window
                 VStack(alignment: .center, spacing: 10) {
                    
-                    Text("تعديل البيانات الشخصية يتطلب التحقق من الهوية")
+                    Text("حذف الحساب يتطلب التحقق من الهوية")
                         .frame(maxWidth: .infinity)
                         .frame(height: 45, alignment: .center)
                         .font(Font.system(size: 19, weight: . light))
@@ -139,12 +142,12 @@ struct PopUpWindow: View {
 //                            show = false
 //                        }
                     }, label: {
-                        Text("حفظ")
+                        Text("حذف")
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)
                             .padding(.vertical)
                             .padding(.horizontal,50)
-                            .background(Color("Kcolor"))
+                            .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
                             .clipShape(Capsule())
                             .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                     })

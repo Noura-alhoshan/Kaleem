@@ -18,7 +18,11 @@ struct Admin2Home: View {
         
         VStack{
             
-            NavigationLink(destination: BrowseAccQuizV(), isActive: $showAccQuiz, label: {EmptyView()} )
+            
+        //🛑🛑🛑use one of the bellow strings to call the page BrowseQuizV
+        // "EducationalQuiz" -> اختبار المعرفة
+        // "AcceptanceQuiz" -> ااختبار القبول
+            NavigationLink(destination: BrowseQuizV(quizColl: "AcceptanceQuiz"), isActive: $showAccQuiz, label: {EmptyView()} )
             HStack{
 
                             Button(action: {
@@ -170,7 +174,7 @@ struct Admin2Home: View {
                         HStack{
                             
                             VStack(alignment: .trailing, spacing: 15){
-            Text("اختبار الشهر")
+            Text("اختبار المعرفة")
                                     .font(Font.custom("Almarai-Bold", size: 25))
 
                                 
@@ -190,8 +194,12 @@ struct Admin2Home: View {
                             Spacer()
                             //consider to change it sutibale icons
                             
-                            NavigationLink(
-                                destination:     TextToSpeechV().navigationBarHidden(true),
+                            
+                            /*🛑🛑🛑use one of the bellow strings to call the page BrowseQuizV
+                            // "EducationalQuiz" -> اختبار المعرفة
+                            // "AcceptanceQuiz" -> اختبار القبول*/
+                                NavigationLink(
+                                    destination:     BrowseQuizV(quizColl: "EducationalQuiz").navigationBarHidden(true),
                                 label: {
                                     Image(systemName: "newspaper.circle.fill")
                                         .foregroundColor(Color("Color"))

@@ -20,13 +20,14 @@ struct EditProfileV: View {
     @State var phoneNo: String
     @State var email: String
     @State var type: String
+    @State var userID: String//useless for now!!
     @State var usernameErr = ""
     @State var emailErr = ""
     @State var phoneNoErr = ""
     @State var isError = false
-    @State var showAlert = false
+    //@State var showAlert = false
     @State var showCheckForm = false
-    
+    @State var showDeleteForm = false
     
     func updataInfo(){
         
@@ -212,15 +213,7 @@ struct EditProfileV: View {
                         .padding(.horizontal)
                         .padding(.top,20)
                     
-                        if (isError) {
-                            
-                            Text("الرجاء التحقق من صحة جميع البيانات")
-                            //.offset(y: -10)
-                                .foregroundColor(.red).padding(.top,13)
-                        }
-                        else {
-                            Text(" ").foregroundColor(.red).padding(.top,13)
-                        }
+
                         
                         if (!showCheckForm ){//عشان ما يطلع شكل الازرار مكرر في الصفحة وفي البوب اب
                         Button(action: {
@@ -236,13 +229,13 @@ struct EditProfileV: View {
                                 .clipShape(Capsule())
                                 .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
                         })
-                            .padding(.top, 18)
+                            .padding(.top, 26)
                         }
                         //Spacer()
                     } // the big one
                     /*CONTAINER*/
                     .padding()
-                    .padding(.bottom, 20)
+                    .padding(.bottom, 10)
                     .background(Color.gray.opacity(0.1))
                     .cornerRadius(15)
                     .padding(.horizontal,20)
@@ -251,15 +244,36 @@ struct EditProfileV: View {
                         PViewModel.fetchUser()
                        
                     } )
-                    
                 }
                 
+                if (!showDeleteForm){
+                Button(action: {
+                    showDeleteForm = true
+                }, label: {
+                    Text("حذف الحساب")
+                        .foregroundColor(Color.white)
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .padding(.horizontal,50)
+                        .background(Color(#colorLiteral(red: 0.737254902, green: 0.1294117647, blue: 0.2941176471, alpha: 1)))
+                        .clipShape(Capsule())
+                        .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                })
+                    .padding(.top, 28)
+            
+                }
+            
             }.navigationBarTitle("")
                 .navigationBarHidden(true)
-            
+        
+            //edit info pop up
              PopUpWindow(userEmail: $email, userPhone: $phoneNo, userName: $username, userType: $type, show: $showCheckForm )
+          
+            //delete account pop up
+            DeleteProfileV(userEmail: $email, userPhone: $phoneNo, userName: $username, userType: $type, userID: $userID, show: $showDeleteForm )
+
+            
         }
         
     }
 }
-
