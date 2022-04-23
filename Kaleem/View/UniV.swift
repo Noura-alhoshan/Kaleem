@@ -55,16 +55,23 @@ struct UniviewSentencesV: View {
       
         
         let SentenceDBArray = [
-            sentDBVM.UniOneSentence.S1,
-            sentDBVM.UniOneSentence.S2,
-            sentDBVM.UniOneSentence.S3,
-            sentDBVM.UniOneSentence.S4,
-            sentDBVM.UniOneSentence.S5,
-            sentDBVM.UniOneSentence.S6,
-            sentDBVM.UniOneSentence.S7,
-            sentDBVM.UniOneSentence.S8,
-            sentDBVM.UniOneSentence.S9,
-            sentDBVM.UniOneSentence.S10,
+//            sentDBVM.UniOneSentence.S1,
+//            sentDBVM.UniOneSentence.S2,
+//            sentDBVM.UniOneSentence.S3,
+//            sentDBVM.UniOneSentence.S4,
+//            sentDBVM.UniOneSentence.S5,
+//            sentDBVM.UniOneSentence.S6,
+//            sentDBVM.UniOneSentence.S7,
+//            sentDBVM.UniOneSentence.S8,
+//            sentDBVM.UniOneSentence.S9,
+//            sentDBVM.UniOneSentence.S10,
+          "أين دورة المياة؟",
+     "رقم الصفحة؟",
+          "أين قاعة الاختبار؟",
+          "متى الاختبار؟",
+          "هل بإمكاني الخروج؟",
+          "هل بإمكاني استعارته قليلاً؟",
+          "هل أستطيع استخدام قلمك؟",
           
 
         ]

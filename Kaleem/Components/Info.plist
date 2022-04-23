@@ -4,5 +4,11 @@
 <dict>
 	<key>CFBundleIdentifier</key>
 	<string>test.Kaleem</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>PNU-Light.ttf</string>
+		<string>Jazeera-Bold.ttf</string>
+		<string>font.ttf</string>
+	</array>
 </dict>
 </plist>

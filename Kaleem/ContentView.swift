@@ -96,6 +96,8 @@ struct WalkthroughScreen: View {
           
         ,alignment: .bottom
      )
+     .navigationBarTitle("")
+            .navigationBarHidden(true)
         
     }}
 
@@ -121,17 +123,19 @@ struct ScreenView: View {
                     }
                 }, label: {
                     Text("تخطي")
+                        .font(Font.custom("PNU-Light", size: 20))
                         .fontWeight(.semibold)
                         .kerning (1.4)
                  
                 })
                 
-                Spacer(minLength: 200)
+                Spacer(minLength: 180)
                 
              
                 
                 if currentPage == 1{
                     Text ("أهلاً بك")
+                        .font(Font.custom("Jazeera-Bold", size: 30))
                     
                     
                         . font(.title)
@@ -156,7 +160,7 @@ struct ScreenView: View {
                             .foregroundColor(.white)
                             .padding(.vertical,10)
                             .padding(.horizontal)
-                            .background(Color.black.opacity(0.4))
+                            .background(Color("Color"))
                             .cornerRadius(10)
                      
                     })
@@ -172,21 +176,24 @@ struct ScreenView: View {
             .foregroundColor(.black)
             .padding()
             Text(title)
-                .font(.title)
                 .fontWeight(.bold)
+                .font(Font.custom("Jazeera-Bold", size: 40))
+               
                 .foregroundColor(.black)
-                .padding(.top,70)
+                .padding(.top,50)
            // Spacer(minLength: 0)
             Image(image).resizable().aspectRatio( contentMode: .fit)
             
           
             
             Text(detail)
-                .fontWeight(.semibold)
+                .font(Font.custom("Jazeera-Bold", size: 20))
             
                 .kerning(1.3)
                 .multilineTextAlignment(.center)
                 .padding(.bottom,20)
+                .padding(.leading,30)
+                .padding(.trailing,30)
             //Minimum spacing when Phone is reducing
             Spacer(minLength: 120)
             

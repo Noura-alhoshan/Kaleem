@@ -27,7 +27,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock" translatesAutoresizingMaskIntoConstraints="NO" id="VZc-PQ-8BM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="locatio" translatesAutoresizingMaskIntoConstraints="NO" id="VZc-PQ-8BM">
                                 <rect key="frame" x="125" y="405" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -55,6 +55,6 @@
     </scenes>
     <resources>
         <image name="chart.line.uptrend.xyaxis.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="lock" width="128" height="128"/>
+        <image name="locatio" width="128" height="128"/>
     </resources>
 </document>

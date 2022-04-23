@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         let agoraView = AgoraVideoViewer(
             connectionData: AgoraConnectionData(
                 appId: "6ffe12dc3de04c8ea0eccb375f538705",
-                rtcToken: "0066ffe12dc3de04c8ea0eccb375f538705IABXJpHW5FUD+kCRHrigv+tsIawjylvzJTDYtUBtc55XE4bGamQAAAAAEADjTvSOSnM2YgEAAQBKczZi"
+                rtcToken: "0066ffe12dc3de04c8ea0eccb375f538705IAC8a+T3TbxtDT+r1guTccYwYE2JZtPWDgywzJi+H9NdOYbGamQAAAAAEADnfDPKkZ05YgEAAQCRnTli"
             ),
             style: .grid,
             agoraSettings: agSettings

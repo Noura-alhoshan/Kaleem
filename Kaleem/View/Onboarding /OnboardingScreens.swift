@@ -162,6 +162,8 @@ struct Onboarding: View {
                     .opacity(isDragging ? 0 : 1)
                     .animation(.linear, value: isDragging)
                  ,alignment: .topTrailing)
+        .navigationBarTitle("")
+            .navigationBarHidden(true)
         
         .onAppear{
             
@@ -222,12 +224,6 @@ struct Onboarding: View {
     )
         
 
-//            .foregroundColor(.blue)
-//
-//            .padding(.leading, 20)
-//            .padding([.trailing, .top])
-        
-     //   .ignoresSafeArea()
         
     }
 }

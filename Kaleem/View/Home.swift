@@ -271,41 +271,47 @@ struct HomeAll: View{
                                 }
                                 .padding(.leading, 25)
                                
-                                
+
                                 HStack{
 
                                     NavigationLink(destination:
 
+                                                  //  UniV().navigationBarHidden(true)
 
-                                                    
-                                                    
-                                                    
+
+
+
+
                                                     locationManager.CalculateHospitalDistance() != 1.0 ?
                                                    //Hospital page
-                                                   AnyView(SentencesVM())
-                                                   
-                                                   
-                                                   
+                                                   AnyView(UniV())
+
+
+
                                                    : locationManager.CalculateCoffeDistance() != 1.0 ?
                                                    // Coffe page
-                                                   
-                                                   AnyView(SentencesVM())
-                                                   
+
+                                                   AnyView(UniV())
+
                                                    :      locationManager.CalculateUniDistance() != 1.0 ?
                                                    // uni page
-                                                   AnyView(NoLocation() )
-                                                   
-                                                   : AnyView(NoLocation() )
+                                                   AnyView(UniV() )
+                                                   : AnyView(UniV() )
                                                     //no result page
 
 
 
 
-                                              , isActive: $showhos, label: {                              LocationButton {
+                                              , isActive: $showhos
+
+                                                   , label: {
+
+                                        LocationButton {
 
                                    locationManager.requestLocation()
 
-                               action: do {
+                               action:
+                                            do {
 
                                    self.showhos = true
                                    locationManager.requestLocation()
@@ -329,6 +335,29 @@ struct HomeAll: View{
                                 .padding(.trailing,130)
                                     //.padding(.bottom,30)
                                     .padding(.top,120) //HHEEERRREE
+                                
+                                
+//                                HStack{
+//
+//                                    Spacer()
+//                                    //consider to change it sutibale icons
+//
+//                                    NavigationLink(
+//                                        destination:     UniV().navigationBarHidden(true),
+//                                        label: {
+//                                            Image(systemName: "location.fill")
+//                                                .foregroundColor(Color("Color"))
+//                                                .font(.system(size: 65))
+//                                        }
+//                                    )
+//
+//                                }
+//
+//                                .padding(.trailing,130)
+//                                .padding(.bottom,50)
+//                                .padding(.top, -10) ///DEMO
+                                
+                                
                             } .padding(.top, -80)
                             
                             

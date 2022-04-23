@@ -27,7 +27,8 @@ struct Translation: View {
 
                     
 
-        }
+        }.navigationBarTitle("")
+            .navigationBarHidden(true)
         
         
             
