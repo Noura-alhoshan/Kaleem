@@ -1,73 +1,29 @@
 
-//
-//  VideoCallVM.swift
-//  Kaleem
-//
-//  Created by Afnan Al-Zuayr on 15/08/1443 AH.
-//
-
+/* This is the file where we will retrive volunteers list to make video call*/
 import Foundation
-import SwiftUI
-import FirebaseAuth
-import Firebase
+import FirebaseFirestore
 
 class VideoCallVM: ObservableObject {
+
+    @Published var list = [Volunteer]()
+
     private var db = Firestore.firestore()
-   // @State var currentV =  Volunteer()
- 
- //   @Published var volunteers = [Volunteer]()
-    
-    
-  /*
-    func fetchData() {
+
+    func getData() {
         db.collection("Volunteer").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
             }
-            
-            self.volunteers = documents.map { (queryDocumentSnapshot) -> Volunteer in
-                queryDocumentSnapshot.
-//                data.
-                return Volunteer(username: username, phoneNo: phoneNo)
-            }
-        }
-    }*/
-    
-    
-    func updateVolunteerCallStatus() {
-       
-       // Add a document to a collection
-      //  db.collection(/*userType*/"Volunteer").addDocument(data: ["uid":uid/*, "username":username, "phoneNo":phone, "email":email*/])
-        // Add a document to a collection
-        db.collection("Volunteer").getDocuments(){
-            (snapshot, err) in
-            if let err = err {
-                print("ERROR IN S_HOME updateVolunteerCallStatus() Method")
-            }
-            else {
-                for doc in snapshot!.documents {
-                    self.db.collection("Volunteer").document(doc.documentID).updateData(["status":"ringing"])
-                    print(doc.documentID)
-                }
-            }
-        }
-        }
-    
-//    func updateVolunteerCallStatus2(){
-//        db.collection("Volunteer").document(currentV.id).getDocument {
-//            (snapshot, err) in
-//            if let err = err {
-//                print("ERROR IN S_HOME updateVolunteerCallStatus() Method")
-//            }
-//            else{
-//                print("Wll don1!!!!!:\(self.currentV.id)")
-//
-//}
-//          
-//        }
-//    }
-}
-   
 
-//
+            self.list = documents.map { (queryDocumentSnapshot) -> Volunteer in
+                let data = queryDocumentSnapshot.data()
+                let name = data ["name"] as? String ?? "" 
+                let phoneNo = data["phoneNo"] as? String ?? ""
+                return Volunteer(name: name, phoneNo: phoneNo)
+            }
+        }
+    }
+}
+
+
