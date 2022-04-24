@@ -20,7 +20,8 @@ class VideoCallVM: ObservableObject {
                 let data = queryDocumentSnapshot.data()
                 let name = data ["name"] as? String ?? "" 
                 let phoneNo = data["phoneNo"] as? String ?? ""
-                return Volunteer(name: name, phoneNo: phoneNo)
+                let gender = data["gender"] as? String ?? ""
+                return Volunteer(name: name, phoneNo: phoneNo, gender: gender)
             }
         }
     }

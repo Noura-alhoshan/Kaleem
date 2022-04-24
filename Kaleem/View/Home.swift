@@ -197,7 +197,7 @@ struct HomeAll: View{
                                 
                                 Spacer()
                                 //consider to change it sutibale icons
-                                NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} )
+                                NavigationLink(destination: VideoCallV(), isActive: $showVideCall, label: {EmptyView()} )
                                         //.navigationBarTitle("", displayMode: .inline)
                                     //    .navigationBarHidden(true)
                                     
@@ -205,7 +205,7 @@ struct HomeAll: View{
                                     
                             
                                     self.showVideCall = true
-                                    VM.updateVolunteerCallStatus()
+                                 //   VM.updateVolunteerCallStatus()
                                 }) {
                                     
                                     Image(systemName: "video.circle.fill")
