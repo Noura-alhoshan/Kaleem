@@ -1,7 +1,7 @@
 
 import SwiftUI
 import Combine
-
+import RadioGroup
 
 struct SignUpTaps : View {
     
@@ -68,17 +68,22 @@ struct SignUpTaps : View {
 
 // Volunteer Sign Up Tap
 struct V_SignUp : View {
-    
+
+
     @State var VM = SignUpVM()
     @State var username = ""
     @State var phoneNo = "" // change to phone
     @State var email = ""
+    @State var gender = ""
+    //    gender btn value
+    @State private var lastSelectedIndex: Int?
     @State var pass = ""
     @State var repass = ""
     @Binding var index : Int
     // Error Msgs for validation
     @State var usernameErr = ""
     @State var emailErr = ""
+    @State var genderErr = ""
     @State var phoneNoErr = ""
     @State var passErr = ""
     @State var repassErr = ""
@@ -87,7 +92,7 @@ struct V_SignUp : View {
     // call from SignUpVM : View Model (firebase)
      func V_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email, password: pass, userType: "Volunteer", username: username, phone: phoneNo, accStatus: "rejected")
+         VM.createNewAccount(email: email, password: pass, userType: "Volunteer", username: username, phone: phoneNo, accStatus: "rejected", gender: lastSelectedIndex!)
  
     }
     var body: some View{
@@ -212,6 +217,52 @@ struct V_SignUp : View {
                 .padding(.horizontal)
                 .padding(.top, 30)
                 
+                // 4- GENDER feild
+                //                        NEWLY ADDED
+                VStack{
+                    
+                    HStack(spacing: 15){
+                        
+                        
+//                        TextField("الجنس", text: self.$gender).multilineTextAlignment(TextAlignment.trailing)
+                            
+//                        RadioGroupPicker(selectedIndex: $selectedIndex, titles: ["ذكر", "أنثى"])
+//                            .isVertical(false).selectedColor(.kaleem)
+//                            .isButtonAfterTitle(true)
+////                         the "kaleem" color is newly created in the extension file
+//                            .fixedSize()
+                            
+//                        VStack {
+//                            Picker(selection: $selectedIndex,label: Text("الجنس")) {
+//                                ForEach(0..<genders.count) {
+//                                                    Text(self.genders[$0])
+//                                                }
+////                                     ForEach(genders, id: \.self) {
+////                                         Text($0)
+////
+////                                     }
+//                                 }
+//                                 .pickerStyle(.menu)
+////                            Text(selectedIndex)
+//                             }
+                      
+                        CustomPicker(data: ["ذكر","أنثى"], placeholder: "الجنس", lastSelectedIndex: self.$lastSelectedIndex)
+                        
+                        Image("gender3")
+                            .foregroundColor(Color("Kcolor"))
+
+                    }
+
+                    Divider().background(Color("Kcolor").opacity(0.5))
+//                    if self.lastSelectedIndex == nil {
+//                        Text("self.genderErr")
+//                            .foregroundColor(.red)
+//                            .font(.system(size: 10))
+//                    }
+
+                }
+                .padding(.horizontal)
+                .padding(.top, 25)
                 /* 4- PASS FIELD*/
                 VStack{
                     // call the details from another struct for toggling the password
@@ -267,7 +318,7 @@ struct V_SignUp : View {
             
             Button(action: {
                 
-                if username == "" || phoneNo == "" || email == "" || pass == "" || repass == "" {
+                if username == "" || phoneNo == "" || email == "" || lastSelectedIndex == nil || pass == "" || repass == ""  {
                     allEmptyErr = "جميع الحقول مطلوبة"
                 }
                 else{
@@ -335,7 +386,7 @@ struct S_SignUp : View {
     // call from SignUpVM : View Model (firebase)
      func S_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email2, password: pass2, userType: "Impaired", username: username2, phone: phoneNo2, accStatus: "none")
+         VM.createNewAccount(email: email2, password: pass2, userType: "Impaired", username: username2, phone: phoneNo2, accStatus: "none", gender: -1)
     }
     var body: some View{
         
@@ -490,7 +541,14 @@ struct S_SignUp : View {
                 // bottom padding...
                 .padding(.horizontal)
                  .padding(.top,30)
-            
+                /* empty Space to be equal to the first form hieght*/
+                VStack{
+              
+                
+                }
+         .padding(.horizontal)
+         .padding(.top,50)
+                
             }
             .padding()
             .padding(.bottom, 65)

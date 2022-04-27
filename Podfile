@@ -13,4 +13,5 @@ target 'Kaleem' do
   pod 'Firebase/Messaging'
   #pod 'AgoraRtcEngine_iOS'
   #pod 'AgoraUIKit_iOS'
+  pod 'RadioGroup', '1.4.4'
 end

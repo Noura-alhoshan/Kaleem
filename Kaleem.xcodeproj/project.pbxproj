@@ -26,6 +26,9 @@
 		5609AB0D27DD3BC000D18840 /* QuestionDetailsV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0627DD3BC000D18840 /* QuestionDetailsV.swift */; };
 		561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */; };
 		561DF4F127E50D92007A1791 /* Onboarding  in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4F027E50D92007A1791 /* Onboarding  */; };
+		565A47A82818E67600AFDAD2 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A47A72818E67600AFDAD2 /* Picker.swift */; };
+		565A47AA2818F6AD00AFDAD2 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A47A92818F6AD00AFDAD2 /* CustomPicker.swift */; };
+		566657592815FAF200555E50 /* KaleemUnitTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566657582815FAF200555E50 /* KaleemUnitTests2.swift */; };
 		56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0227E4FBA7002DBCDB /* test1.swift */; };
 		56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */; };
 		56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0727E5007E002DBCDB /* VideoCallV.swift */; };
@@ -86,6 +89,29 @@
 		F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5666575A2815FAF200555E50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14FD4F27279F2D1200E4947D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14FD4F2E279F2D1200E4947D;
+			remoteInfo = Kaleem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		566657512815F7FB00555E50 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
@@ -109,6 +135,11 @@
 		561AC49A27DE004E008F21D5 /* Kaleem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kaleem.entitlements; sourceTree = "<group>"; };
 		561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		561DF4F027E50D92007A1791 /* Onboarding  */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Onboarding "; sourceTree = "<group>"; };
+		565A47A72818E67600AFDAD2 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		565A47A92818F6AD00AFDAD2 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
+		566657422815F7FB00555E50 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		566657562815FAF200555E50 /* KaleemUnitTests2.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaleemUnitTests2.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		566657582815FAF200555E50 /* KaleemUnitTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemUnitTests2.swift; sourceTree = "<group>"; };
 		56F96F0227E4FBA7002DBCDB /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
 		56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
 		56F96F0727E5007E002DBCDB /* VideoCallV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallV.swift; sourceTree = "<group>"; };
@@ -182,6 +213,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		566657532815FAF200555E50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -189,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F31279F2D1200E4947D /* Kaleem */,
+				566657572815FAF200555E50 /* KaleemUnitTests2 */,
 				14FD4F30279F2D1200E4947D /* Products */,
 				DC4E6917AD79762840AC5AD9 /* Pods */,
 				CB39F81B522694707316D239 /* Frameworks */,
@@ -199,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F2F279F2D1200E4947D /* Kaleem.app */,
+				566657562815FAF200555E50 /* KaleemUnitTests2.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,10 +268,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		566657572815FAF200555E50 /* KaleemUnitTests2 */ = {
+			isa = PBXGroup;
+			children = (
+				566657582815FAF200555E50 /* KaleemUnitTests2.swift */,
+			);
+			path = KaleemUnitTests2;
+			sourceTree = "<group>";
+		};
 		CB39F81B522694707316D239 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */,
+				566657422815F7FB00555E50 /* AuthenticationServices.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,6 +305,8 @@
 				561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */,
 				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
 				56FE3CF927E508DA0090FCEE /* Converter.swift */,
+				565A47A72818E67600AFDAD2 /* Picker.swift */,
+				565A47A92818F6AD00AFDAD2 /* CustomPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -375,6 +426,7 @@
 				14FD4F2C279F2D1200E4947D /* Frameworks */,
 				14FD4F2D279F2D1200E4947D /* Resources */,
 				3B6DC65EED2D9DB0FBF99B73 /* [CP] Embed Pods Frameworks */,
+				566657512815F7FB00555E50 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -384,6 +436,24 @@
 			productName = Kaleem;
 			productReference = 14FD4F2F279F2D1200E4947D /* Kaleem.app */;
 			productType = "com.apple.product-type.application";
+		};
+		566657552815FAF200555E50 /* KaleemUnitTests2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5666575C2815FAF200555E50 /* Build configuration list for PBXNativeTarget "KaleemUnitTests2" */;
+			buildPhases = (
+				566657522815FAF200555E50 /* Sources */,
+				566657532815FAF200555E50 /* Frameworks */,
+				566657542815FAF200555E50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5666575B2815FAF200555E50 /* PBXTargetDependency */,
+			);
+			name = KaleemUnitTests2;
+			productName = KaleemUnitTests2;
+			productReference = 566657562815FAF200555E50 /* KaleemUnitTests2.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -397,6 +467,10 @@
 				TargetAttributes = {
 					14FD4F2E279F2D1200E4947D = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					566657552815FAF200555E50 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 14FD4F2E279F2D1200E4947D;
 					};
 				};
 			};
@@ -414,6 +488,7 @@
 			projectRoot = "";
 			targets = (
 				14FD4F2E279F2D1200E4947D /* Kaleem */,
+				566657552815FAF200555E50 /* KaleemUnitTests2 */,
 			);
 		};
 /* End PBXProject section */
@@ -429,6 +504,13 @@
 				561DF4F127E50D92007A1791 /* Onboarding  in Resources */,
 				F5F1505627E6209800A989F2 /* Default user.imageset in Resources */,
 				561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		566657542815FAF200555E50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +587,7 @@
 				F5399E9227E55CA900CECCE4 /* VideoCallVM.swift in Sources */,
 				F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */,
 				F5399E8927E5318F00CECCE4 /* HosV.swift in Sources */,
+				565A47AA2818F6AD00AFDAD2 /* CustomPicker.swift in Sources */,
 				5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */,
 				F5399E7827E5308800CECCE4 /* ImpairedServices.swift in Sources */,
 				F5399E8727E5318F00CECCE4 /* UniV.swift in Sources */,
@@ -535,6 +618,7 @@
 				F5F1504E27E61D9A00A989F2 /* ProfileVM.swift in Sources */,
 				5609AB0C27DD3BC000D18840 /* ForgotPassword.swift in Sources */,
 				F5399E4B27E52E1A00CECCE4 /* SignInVM.swift in Sources */,
+				565A47A82818E67600AFDAD2 /* Picker.swift in Sources */,
 				F5399E7A27E5308800CECCE4 /* AdminTabBar.swift in Sources */,
 				5609AB0027DD3BB300D18840 /* CustomAlertQuiz.swift in Sources */,
 				F5399E5D27E52EE200CECCE4 /* SentencesDBVM.swift in Sources */,
@@ -554,7 +638,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		566657522815FAF200555E50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				566657592815FAF200555E50 /* KaleemUnitTests2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5666575B2815FAF200555E50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14FD4F2E279F2D1200E4947D /* Kaleem */;
+			targetProxy = 5666575A2815FAF200555E50 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		14FD4F3B279F2D1400E4947D /* Debug */ = {
@@ -677,6 +777,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kaleem/Kaleem.entitlements;
@@ -715,6 +816,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 325898B58B0C5180FFC072C8 /* Pods-Kaleem.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Kaleem/Kaleem.entitlements;
@@ -749,6 +851,44 @@
 			};
 			name = Release;
 		};
+		5666575D2815FAF200555E50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TF8Y7Z668U;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/Firebase/CoreOnly/Sources";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.KaleemUnitTests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaleem.app/Kaleem";
+			};
+			name = Debug;
+		};
+		5666575E2815FAF200555E50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TF8Y7Z668U;
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Pods/Firebase/CoreOnly/Sources";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.KaleemUnitTests2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kaleem.app/Kaleem";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -766,6 +906,15 @@
 			buildConfigurations = (
 				14FD4F3E279F2D1400E4947D /* Debug */,
 				14FD4F3F279F2D1400E4947D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5666575C2815FAF200555E50 /* Build configuration list for PBXNativeTarget "KaleemUnitTests2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5666575D2815FAF200555E50 /* Debug */,
+				5666575E2815FAF200555E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

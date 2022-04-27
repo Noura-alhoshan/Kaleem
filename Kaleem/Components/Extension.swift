@@ -4,8 +4,11 @@ import Foundation
 
 
 
-extension Color {
+extension UIColor {
+
+    static let kaleem = UIColor(red:0.335, green:0.614 ,blue:0.726 , alpha:1.00)
     
+
 }
 
 extension String {
@@ -119,4 +122,6 @@ extension String {
         let result = phoneTest.evaluate(with: self)
         return result
             }
+   
 }
+

@@ -1,0 +1,6 @@
+framework module RadioGroup {
+  umbrella header "RadioGroup-umbrella.h"
+
+  export *
+  module * { export * }
+}

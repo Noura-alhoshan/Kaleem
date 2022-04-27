@@ -20,21 +20,28 @@ class SignUpVM : ObservableObject {
     
     
     // create user in Firebase Auth.
-    func createNewAccount(email: String, password: String, userType: String, username: String, phone: String, accStatus: String) { // I change it because it was display an error (var > String) ########
-        
+    func createNewAccount(email: String, password: String, userType: String, username: String, phone: String, accStatus: String, gender: Int) -> String { // I change it because it was display an error (var > String) ########
+        var msg = ""
         auth.createUser(withEmail: email, password: password){ result, err in
             if let err = err {
                 print ("PASSWORD IN VM: \(password)")
                 print("Failed to create user:", err)
-                return
+                msg = "error!!"
             }
 
             print("Successfully created user: \(result?.user.uid ?? "")")
 
-            self.addDataToCollection(userType: userType, username: username, phone: phone, email: email, accStatus: accStatus)        }
+                   }
+        if msg == "" {
+            self.addDataToCollection(userType: userType, username: username, phone: phone, email: email, accStatus: accStatus, gender: gender)
+            
+        }
+        return msg
     } // END crrate user
     
-     func addDataToCollection(userType: String, username: String, phone: String, email: String, accStatus: String) {
+    
+    
+     func addDataToCollection(userType: String, username: String, phone: String, email: String, accStatus: String, gender: Int) {
         
          guard let uid = Auth.auth().currentUser?.uid else {
              print ("Get FAILED!!!!!!!!!!!!!!!!!!!!!!111")
@@ -52,9 +59,11 @@ class SignUpVM : ObservableObject {
             // Check for errors
             if error == nil {
                 // No errors
+                
             }
             else {
                 // Handle the error
+            
             }
         }
      }
@@ -74,7 +83,8 @@ class SignUpVM : ObservableObject {
                 }
             }
              
-         }
+         }// else
+         
     }
    /*
     // create user in Firebase Auth.
