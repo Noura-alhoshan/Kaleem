@@ -9,75 +9,81 @@ struct VideoCallV: View {
     
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View {
-        VStack{
         HStack{
+            Text(" المتطوعيـن")
+                .foregroundColor(.black.opacity(0.7))
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.horizontal,22)
+                .padding(.top,12)
+
             Spacer()
             Button(action: {
-                self.mode.wrappedValue.dismiss()
                                 withAnimation(.easeInOut){
-                                  
+                                    self.mode.wrappedValue.dismiss()
                                 }
                             }, label: {
                                 Image(systemName: "chevron.right")
                                      .foregroundColor(.white)
                                      .padding(.vertical,10)
                                      .padding(.horizontal)
-                                    // .background(Color.black.opacity(0.4))
                                      .background(Color("Kcolor"))
                                      .cornerRadius(10)
+                             
                             }).padding(.horizontal,25)
-            NavigationLink(destination: HomeAll(), isActive: $backToHome , label: {EmptyView()} )
-
+            
         }
         
+
         List (viewModel.list) { v in
-            let gender : String = v.name
-            let number1 : String = "facetime://"
-            let number2 : String = v.phoneNo
-            let number3 : String = number1+number2
             
             VStack(alignment: .trailing) {
                 HStack(alignment: .center){
                     Text(v.name).padding(.trailing, 4).font(.title3)
 
-                   Image(systemName: "person.fill")
-                       .foregroundColor(Color("Kcolor")).padding(.trailing, 2).font(.system(size: 20))
+                    Image(v.gender)
+                        .resizable()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                        .clipped()
+                    .padding(.trailing, 1)
+                }
+                  
 
-                } .padding(.top , 5)
+            
                 
                 HStack {
-              //  Spacer()
-//                    Text(v.phoneNo)
-//                        .foregroundColor( .black.opacity(0.5))
-//                        .padding(.trailing, 6)
-//                        .multilineTextAlignment(TextAlignment.trailing)
-                 
-                    
+  
                     Button( action: {
                         
-                        if let yourURL = URL(string: number3) {
+                        if let yourURL = URL(string: "facetime://"+v.phoneNo) {
                             UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)
                         }
                         
                     } , label: {
                         Image(systemName: "phone.circle")
                             .foregroundColor(Color("Kcolor")).padding(.trailing, 290).font(.system(size: 25))
-                        
+               
                     })
                 } .padding(.top, -40)
-               
-          
-            }
+     
+        }.navigationBarTitle("")
+                .navigationBarHidden(true)
+      
             
-            
-            
-        }
-            
-    }.navigationBarTitle("المتطوعين")
+        }.navigationBarTitle("")
         .navigationBarHidden(true)
-          
-        }
+      
+
+    }
+
     init(){
         viewModel.getData()
+    }
+}
+
+struct videocall: PreviewProvider{
+    static var previews: some View{
+        VideoCallV()
     }
 }

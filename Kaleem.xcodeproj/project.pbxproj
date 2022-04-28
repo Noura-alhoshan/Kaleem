@@ -30,7 +30,6 @@
 		56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */; };
 		56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0727E5007E002DBCDB /* VideoCallV.swift */; };
 		56F96F0B27E5008A002DBCDB /* TextToSpeechM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0A27E5008A002DBCDB /* TextToSpeechM.swift */; };
-		56FE3CFA27E508DA0090FCEE /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FE3CF927E508DA0090FCEE /* Converter.swift */; };
 		ADC7C415182E396B5A38967B /* Pods_Kaleem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */; };
 		F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */; };
 		F5399E3D27E52B2800CECCE4 /* SentencesM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E3C27E52B2800CECCE4 /* SentencesM.swift */; };
@@ -113,7 +112,6 @@
 		56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
 		56F96F0727E5007E002DBCDB /* VideoCallV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallV.swift; sourceTree = "<group>"; };
 		56F96F0A27E5008A002DBCDB /* TextToSpeechM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechM.swift; sourceTree = "<group>"; };
-		56FE3CF927E508DA0090FCEE /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		8C0D1C7E2EC083E1131E9CAF /* Pods_Kaleem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kaleem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9AF63691052ADF804DD8DF /* Pods-Kaleem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kaleem.debug.xcconfig"; path = "Target Support Files/Pods-Kaleem/Pods-Kaleem.debug.xcconfig"; sourceTree = "<group>"; };
 		F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpM.swift; path = Kaleem/Model/SignUpM.swift; sourceTree = SOURCE_ROOT; };
@@ -255,7 +253,6 @@
 				F572FADA27A3B669001C7143 /* Info.plist */,
 				561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */,
 				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
-				56FE3CF927E508DA0090FCEE /* Converter.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 			files = (
 				F5399E4627E52DA300CECCE4 /* AProgressBarVM.swift in Sources */,
 				F5F1505027E61DDB00A989F2 /* CheckPopUp.swift in Sources */,
-				56FE3CFA27E508DA0090FCEE /* Converter.swift in Sources */,
 				5609AB0B27DD3BC000D18840 /* AddQuizFormV.swift in Sources */,
 				56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */,
 				F5399E7627E5308800CECCE4 /* VolunteerProfile.swift in Sources */,
@@ -684,7 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R32MLPWCK;
+				DEVELOPMENT_TEAM = 67QWJ57MU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -703,7 +699,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -722,7 +718,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R32MLPWCK;
+				DEVELOPMENT_TEAM = 67QWJ57MU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -741,7 +737,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
