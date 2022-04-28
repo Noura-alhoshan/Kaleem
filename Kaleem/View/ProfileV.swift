@@ -27,22 +27,22 @@ struct ProfileView: View {
             
             NavigationLink(destination: EditProfileV(username: PViewModel.KaleemUser.name, phoneNo: PViewModel.KaleemUser.phoneNo, email: PViewModel.KaleemUser.email, type: PViewModel.KaleemUser.type,userID: PViewModel.KaleemUser.id) , isActive: $showEditForm, label: {EmptyView()} )
             
-        HStack{
-            Spacer()
-            Button(action: {
-                withAnimation(.easeInOut){
-                    self.mode.wrappedValue.dismiss()
-                }
-            }, label: {
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.white)
-                    .padding(.vertical,10)
-                    .padding(.horizontal)
-                    .background(Color("Color"))
-                    .cornerRadius(10)
-                
-            }).padding(.horizontal,25)
-        } .padding(.bottom, 50)
+//        HStack{
+//            Spacer()
+//            Button(action: {
+//                withAnimation(.easeInOut){
+//                    self.mode.wrappedValue.dismiss()
+//                }
+//            }, label: {
+//                Image(systemName: "chevron.right")
+//                    .foregroundColor(.white)
+//                    .padding(.vertical,10)
+//                    .padding(.horizontal)
+//                    .background(Color("Color"))
+//                    .cornerRadius(10)
+//                
+//            }).padding(.horizontal,25)
+//        } .padding(.bottom, 50)
             
            // Spacer(minLength: 30)
         

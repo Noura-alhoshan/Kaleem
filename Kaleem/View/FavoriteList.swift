@@ -36,14 +36,6 @@ struct Favorite: View {
 
 
 
-//struct SentenceDB {
-//   var sentence: String
-//  }
-//
-////Temp Array, later we will fetch directly
-//
-//
-
 
 
 
@@ -55,12 +47,13 @@ struct ListviewFavorite: View {
       
         
         let SentenceDBArray = [
-           "",
-            "",
-            "",
-          "",
-           "",
-           ""
+            
+       "رقم الصفحة؟",
+            "أين قاعة الاختبار؟",
+            "متى الاختبار؟",
+            "هل بإمكاني الخروج؟",
+            "هل بإمكاني استعارته قليلاً؟",
+            "هل أستطيع استخدام قلمك؟",
 
         ]
  
@@ -72,7 +65,7 @@ struct ListviewFavorite: View {
            Spacer(minLength: 30)
        Text("المفضلة")
                 .bold()
-                .font(Font.custom("Almarai-Regular", size: 30))
+                .font(Font.custom("Almarai-Regular", size: 40))
                 .foregroundColor(Color("Color"))
      
             

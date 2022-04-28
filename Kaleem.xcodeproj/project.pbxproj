@@ -72,6 +72,7 @@
 		F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */; };
 		F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B627C1A54B00A1E9ED /* AQuizV.swift */; };
 		F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */; };
+		F5811F9828153B35003CBA3A /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5811F9728153B35003CBA3A /* FavoriteList.swift */; };
 		F5D8274927E7B6D70030CB1C /* testAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274827E7B6D70030CB1C /* testAdminHome.swift */; };
 		F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274A27E7DF780030CB1C /* TranslationV.swift */; };
 		F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */; };
@@ -82,7 +83,6 @@
 		F5F1505227E61E0C00A989F2 /* ProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505127E61E0C00A989F2 /* ProfileV.swift */; };
 		F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505327E61E5600A989F2 /* EditProfileV.swift */; };
 		F5F1505627E6209800A989F2 /* Default user.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505527E6209800A989F2 /* Default user.imageset */; };
-		F5F1505827E62DA900A989F2 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505727E62DA900A989F2 /* Favorite.swift */; };
 		F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +159,7 @@
 		F542D1B627C1A54B00A1E9ED /* AQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
 		F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
 		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5811F9728153B35003CBA3A /* FavoriteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
 		F5D8274827E7B6D70030CB1C /* testAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAdminHome.swift; sourceTree = "<group>"; };
 		F5D8274A27E7DF780030CB1C /* TranslationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationV.swift; sourceTree = "<group>"; };
 		F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar2.swift; sourceTree = "<group>"; };
@@ -169,7 +170,6 @@
 		F5F1505127E61E0C00A989F2 /* ProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileV.swift; sourceTree = "<group>"; };
 		F5F1505327E61E5600A989F2 /* EditProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileV.swift; sourceTree = "<group>"; };
 		F5F1505527E6209800A989F2 /* Default user.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Default user.imageset"; sourceTree = "<group>"; };
-		F5F1505727E62DA900A989F2 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -356,9 +356,9 @@
 				F5F1504F27E61DDB00A989F2 /* CheckPopUp.swift */,
 				F5F1505127E61E0C00A989F2 /* ProfileV.swift */,
 				F5F1505327E61E5600A989F2 /* EditProfileV.swift */,
-				F5F1505727E62DA900A989F2 /* Favorite.swift */,
 				F5D8274827E7B6D70030CB1C /* testAdminHome.swift */,
 				F5D8274A27E7DF780030CB1C /* TranslationV.swift */,
+				F5811F9728153B35003CBA3A /* FavoriteList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -506,6 +506,7 @@
 				F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */,
 				F5399E8927E5318F00CECCE4 /* HosV.swift in Sources */,
 				5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */,
+				F5811F9828153B35003CBA3A /* FavoriteList.swift in Sources */,
 				F5399E7827E5308800CECCE4 /* ImpairedServices.swift in Sources */,
 				F5399E8727E5318F00CECCE4 /* UniV.swift in Sources */,
 				F5399E3D27E52B2800CECCE4 /* SentencesM.swift in Sources */,
@@ -514,7 +515,6 @@
 				F5399E7927E5308800CECCE4 /* Home.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 				56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */,
-				F5F1505827E62DA900A989F2 /* Favorite.swift in Sources */,
 				F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */,
 				5609AB0D27DD3BC000D18840 /* QuestionDetailsV.swift in Sources */,
 				F5399E5A27E52EE200CECCE4 /* CoffeeVM.swift in Sources */,

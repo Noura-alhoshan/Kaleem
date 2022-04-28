@@ -11,16 +11,16 @@ import AgoraRtcKit
 import AgoraUIKit_iOS
 
 
-struct BasicUIViewControllerRepresentable:
-    UIViewControllerRepresentable {
-
-    func makeUIViewController(context: Context) -> some
-        UIViewController {
-    
-            return ViewController()
-            
-    }
-    func updateUIViewController(_ uiViewController:
-        UIViewControllerType, context: Context) {
-    }
-}
+//struct BasicUIViewControllerRepresentable:
+//    UIViewControllerRepresentable {
+//
+//    func makeUIViewController(context: Context) -> some
+//        UIViewController {
+//    
+//            return ViewController()
+//            
+//    }
+//    func updateUIViewController(_ uiViewController:
+//        UIViewControllerType, context: Context) {
+//    }
+//}

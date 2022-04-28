@@ -55,6 +55,7 @@ struct UniviewSentencesV: View {
       
         
         let SentenceDBArray = [
+            //they should be 5 sen
 //            sentDBVM.UniOneSentence.S1,
 //            sentDBVM.UniOneSentence.S2,
 //            sentDBVM.UniOneSentence.S3,
@@ -66,12 +67,10 @@ struct UniviewSentencesV: View {
 //            sentDBVM.UniOneSentence.S9,
 //            sentDBVM.UniOneSentence.S10,
           "أين دورة المياة؟",
-     "رقم الصفحة؟",
           "أين قاعة الاختبار؟",
           "متى الاختبار؟",
           "هل بإمكاني الخروج؟",
-          "هل بإمكاني استعارته قليلاً؟",
-          "هل أستطيع استخدام قلمك؟",
+          "هل بإمكاني استعارة قلمك قليلاً؟",
           
 
         ]
@@ -107,7 +106,7 @@ struct UniviewSentencesV: View {
            Spacer(minLength: 30)
 
             Text("الجمل الأكثر استخداماً في الجامعة")
-                .font(Font.custom("Almarai-Regular", size: 20))
+                .font(Font.custom("Almarai-Regular", size: 25))
              
                 
                 .foregroundColor(.black.opacity(0.5))

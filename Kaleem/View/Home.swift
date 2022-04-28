@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import UIKit
+
 import CoreLocationUI
 
 
@@ -197,15 +197,15 @@ struct HomeAll: View{
                                 
                                 Spacer()
                                 //consider to change it sutibale icons
-                                NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} )
+//                                NavigationLink(destination: BasicUIViewControllerRepresentable(), isActive: $showVideCall, label: {EmptyView()} )
                                         //.navigationBarTitle("", displayMode: .inline)
                                     //    .navigationBarHidden(true)
                                     
                                 Button(action: {
                                     
                             
-                                    self.showVideCall = true
-                                    VM.updateVolunteerCallStatus()
+//                                    self.showVideCall = true
+//                                    VM.updateVolunteerCallStatus()
                                 }) {
                                     
                                     Image(systemName: "video.circle.fill")
@@ -296,7 +296,7 @@ struct HomeAll: View{
                                                    :      locationManager.CalculateUniDistance() != 1.0 ?
                                                    // uni page
                                                    AnyView(UniV() )
-                                                   : AnyView(UniV() )
+                                                   : AnyView(SentencesVM() )
                                                     //no result page
 
 
