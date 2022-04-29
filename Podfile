@@ -12,4 +12,5 @@ target 'Kaleem' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
   pod 'NavigationBarColor'
+  pod 'Alamofire','5.0.0'
 end

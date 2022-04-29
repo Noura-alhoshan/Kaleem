@@ -20,8 +20,8 @@ struct VolunteerTabBar2: View {
             
 
             
-            Translation()
-           // NoLocation()
+          //  VideoCapApp()
+            NoLocation()
                         .tabItem {
                      Image (systemName: "hand.raised")
                      Text("الترجمة")

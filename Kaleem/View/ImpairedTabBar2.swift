@@ -19,8 +19,8 @@ struct ImpairedTabBar2: View {
             
 
             
-            Translation()
-           // NoLocation()
+           // Translation()
+          NoLocation()
                         .tabItem {
                      Image (systemName: "hand.raised")
                      Text("الترجمة")
