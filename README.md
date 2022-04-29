@@ -25,10 +25,16 @@ from written text into a spoken words and phrases. “Kaleem” will allow peopl
 communication disabilities to express their desires without any need for their voice
 whether by tracking the user’s hand movements towards the camera using words,
 phrases, or sentences that are ready to be used in “Kaleem” application
- <img width="163" alt="image" src="https://user-images.githubusercontent.com/59771760/165962908-eeb736f9-7eee-44c7-bb37-573b8b1197d6.png">
+   </p>
+<p align="center">
+<img width="149" alt="image" src="https://user-images.githubusercontent.com/59771760/165963577-fa8136e5-f422-4964-ad2a-5f0cf9a36e90.png">
 
-  
-  </p>
+ <img width="149" alt="image" src="https://user-images.githubusercontent.com/59771760/165963312-3afe2509-d712-4d0b-b7d9-88f85ccd0ec2.png">
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/59771760/165963338-dc2d6be4-bd23-4085-b59c-6ed470a5db20.png">
+<img width="152" alt="image" src="https://user-images.githubusercontent.com/59771760/165963375-6b958b15-51c3-4cb4-992c-ea15eb91248a.png">
+
+</p>
+
   <br> <br>
   
   <h1> <li> "Kaleem" objective 💡 </li> </h1>
