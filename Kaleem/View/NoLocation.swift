@@ -15,7 +15,7 @@ struct NoLocation: View {
       
             
           
-            VStack {
+            ZStack {
                 HStack {
                     Spacer()
                     Button(action: {
@@ -33,17 +33,23 @@ struct NoLocation: View {
                                              .cornerRadius(10)
                                 }).padding(.horizontal,25)
                 }
+                .padding(.top,-370)
                 Color("AppIcon").edgesIgnoringSafeArea(.all) // THIS
               Image("World").resizable().aspectRatio( contentMode: .fit)
+                    .padding(.top, -100)
           
-                Text("الموقع الحالي ليس بقائمة المواقع المسجلة لدينا")
-                      .font(Font.custom("Almarai-Bold", size: 20))
-               
-               
+                HStack{
                     
-                      .foregroundColor(Color.black.opacity(0.6))
+                    Text("الموقع الحالي ليس بقائمة المواقع المسجلة لدينا")
+                          .font(Font.custom("Almarai-Bold", size: 20))
+                   
+                   
+                        
+                          .foregroundColor(Color.black.opacity(0.6))
+                          .padding(.top,350)
+                }
                  
-                      .padding(.bottom, 250)
+                     
                       
               
               
