@@ -126,6 +126,7 @@ func FavDimensionValue(firstFrame: CGFloat, minY: CGFloat) -> CGFloat {
 }
       
 struct FavAlbumView: View {
+    @StateObject var speaker: Speaker = Speaker()
     var album: String
     var body: some View{
         
@@ -134,9 +135,17 @@ struct FavAlbumView: View {
          Image(systemName:"heart.fill").font(.system (size: 25, weight: .semibold))
                 .foregroundColor(Color("Color"))
             
-            
-            Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
+            if (speaker.isSpeaking) {
+                Image(systemName:"speaker.fill").font(.system (size: 30, weight: .semibold))
                 .foregroundColor(Color("Color"))
+            }
+            else{
+                Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
+                .foregroundColor(Color("Color"))
+                .onTapGesture {
+                speaker.speak(album)//speaking action
+            }
+            }
                 Spacer(minLength: 15)
                 
      
