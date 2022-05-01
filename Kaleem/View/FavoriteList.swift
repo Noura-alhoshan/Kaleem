@@ -13,9 +13,16 @@ import SwiftUI
 
 struct Favorite: View {
     @ObservedObject private var sentDBVM  = CoffeeVM()
+    /*AFNAN*/
+    @AppStorage("currentPage1") var currentPage1 = 1
+
     
   //  @EnvironmentObject var sentDBVM: CoffeeVM
-  
+    init(){
+        currentPage1 = 1
+
+    }
+    
     var body: some View {
         
 

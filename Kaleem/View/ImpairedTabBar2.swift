@@ -7,7 +7,12 @@
 import SwiftUI
 struct ImpairedTabBar2: View {
     @State private var selected = 3
+  
+ 
+    
     var body: some View {
+        
+     
         
         TabView(selection: $selected) {
             
@@ -19,9 +24,8 @@ struct ImpairedTabBar2: View {
                 }
             
             
-            
-            VideoCapApp()
-       
+
+            SignToTextV()
                 .tag(1)
                 .tabItem {
                     Image (systemName: "hand.raised")
@@ -47,10 +51,12 @@ struct ImpairedTabBar2: View {
             
         }
         .accentColor((Color("Color")))
+
      
         
         
         
         
     }
+    
 }

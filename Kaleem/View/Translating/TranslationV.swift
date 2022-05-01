@@ -14,22 +14,9 @@ struct VideoCapApp: View {
  
     var body: some View {
  
-    
-         
-                    
-           
-                   
-      
                 root()
 
-        
-       
-       
-            
-
-
     
-      
     }// end body
 } //end view
 
