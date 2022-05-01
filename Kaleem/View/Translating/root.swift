@@ -29,24 +29,10 @@ struct root: View {
                 Text(message ?? "")
             }
             if self.isBeforeTranslate{
-                Spacer(minLength: 10)
-                Text("تعليمات ما قبل الترجمة")
-                    .bold()
-                    .font(.system(size: 25))
-                Spacer(minLength: 10)
-                VStack{
-                    Text("١. الرجاء التمّهل عند القيام بالإيماء")
-                        .multilineTextAlignment(.trailing)
-                    Spacer(minLength: 10)
-                    Text("٢. يجب أن يكون الرأس واليدين كاملتين بالمرفق ضمن إيطار الالتقاط")
-                        .multilineTextAlignment(.trailing)
-                    Spacer(minLength: 10)
-                    Text("٣. يجب أخذ موضع تصوير ثابت")
-                    Spacer(minLength: 10)
-                    Text("٤. بالضغط على أيقونة*ابدأ بالالتقاط* ستنفتح الكاميرا الأمامية مباشرة")
-                        .lineLimit(3)
-                        .multilineTextAlignment(.trailing)
-                }
+       
+     
+   instructions()
+       
                 .frame(width: UIScreen.screenWidth * 0.8, height: UIScreen.screenHeight * 0.3, alignment: .trailing)
             }
             Spacer(minLength: 200)
@@ -75,6 +61,7 @@ struct root: View {
                 uploadToServer(videoUrl: url)
             }
         }
+      
         
     }
     func showModal() {
@@ -243,7 +230,7 @@ struct LoadingView<Content>: View where Content: View {
                     .blur(radius: self.isShowing ? 3 : 0)
 
                 VStack {
-                    Text("Uploading...")
+                   Text("جاري الترجمة ...")
                     ActivityIndicator(isAnimating: .constant(true), style: .large)
                 }
                 .frame(width: geometry.size.width / 2,

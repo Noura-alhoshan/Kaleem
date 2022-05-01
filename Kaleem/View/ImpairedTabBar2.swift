@@ -6,47 +6,51 @@
 //
 import SwiftUI
 struct ImpairedTabBar2: View {
-    
+    @State private var selected = 3
     var body: some View {
         
-        TabView {
+        TabView(selection: $selected) {
             
             ProfileView()
-                         .tabItem {
-                      Image (systemName: "person")
-                      Text("حسابك")
-                         }
-            
-
-            
-           // Translation()
-          NoLocation()
-                        .tabItem {
-                     Image (systemName: "hand.raised")
-                     Text("الترجمة")
+                .tag(0)
+                .tabItem {
+                    Image (systemName: "person")
+                    Text("حسابك")
                 }
-                     
+            
+            
+            
+            VideoCapApp()
+       
+                .tag(1)
+                .tabItem {
+                    Image (systemName: "hand.raised")
+                    Text("الترجمة")
+                }
+            
             Favorite()
-                                 .tabItem {
-                              Image (systemName: "heart")
-                              Text("المفضلة")
-                         }
-                     
-               
+                .tag(2)
+                .tabItem {
+                    Image (systemName: "heart")
+                    Text("المفضلة")
+                }
+            
+            
             
             HomeAll()
-                    .tabItem {
-                         Image(systemName: "house")
-                        Text("الرئيسية")
-                        
-                    }
-    
-}
+                .tag(3)
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("الرئيسية")
+                    
+                }
+            
+        }
         .accentColor((Color("Color")))
+     
         
         
         
         
-    
     }
 }

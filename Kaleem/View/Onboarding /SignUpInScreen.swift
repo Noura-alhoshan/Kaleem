@@ -103,7 +103,7 @@ struct SignUpInScreen: View {
                                 .multilineTextAlignment(.center)
                             
                             NavigationLink(
-                                destination: SignIn().navigationBarHidden(true),
+                                destination: Conditions().navigationBarHidden(true),
                                 label: {
                                     Text(" شروط ")
                                     

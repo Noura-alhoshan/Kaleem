@@ -75,6 +75,9 @@
 		F59A14FD281B376A006B9C56 /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A14FC281B376A006B9C56 /* VideoRecorder.swift */; };
 		F59A14FF281B378A006B9C56 /* root.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A14FE281B378A006B9C56 /* root.swift */; };
 		F59A1501281B3827006B9C56 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1500281B3827006B9C56 /* Countdown.swift */; };
+		F59A1503281D86C6006B9C56 /* instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1502281D86C6006B9C56 /* instructions.swift */; };
+		F59A1507281DA37F006B9C56 /* ConditionsV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1506281DA37F006B9C56 /* ConditionsV.swift */; };
+		F59A1509281DA5AB006B9C56 /* PrivacyV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1508281DA5AB006B9C56 /* PrivacyV.swift */; };
 		F5D8274927E7B6D70030CB1C /* testAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274827E7B6D70030CB1C /* testAdminHome.swift */; };
 		F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274A27E7DF780030CB1C /* TranslationV.swift */; };
 		F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */; };
@@ -164,6 +167,9 @@
 		F59A14FC281B376A006B9C56 /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
 		F59A14FE281B378A006B9C56 /* root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = root.swift; sourceTree = "<group>"; };
 		F59A1500281B3827006B9C56 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		F59A1502281D86C6006B9C56 /* instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instructions.swift; sourceTree = "<group>"; };
+		F59A1506281DA37F006B9C56 /* ConditionsV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsV.swift; sourceTree = "<group>"; };
+		F59A1508281DA5AB006B9C56 /* PrivacyV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyV.swift; sourceTree = "<group>"; };
 		F5D8274827E7B6D70030CB1C /* testAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAdminHome.swift; sourceTree = "<group>"; };
 		F5D8274A27E7DF780030CB1C /* TranslationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationV.swift; sourceTree = "<group>"; };
 		F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar2.swift; sourceTree = "<group>"; };
@@ -346,6 +352,8 @@
 				561DF4F027E50D92007A1791 /* Onboarding  */,
 				56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */,
 				56F96F0727E5007E002DBCDB /* VideoCallV.swift */,
+				F59A1506281DA37F006B9C56 /* ConditionsV.swift */,
+				F59A1508281DA5AB006B9C56 /* PrivacyV.swift */,
 				5609AB0427DD3BC000D18840 /* AddQuizFormV.swift */,
 				5609AB0527DD3BC000D18840 /* ForgotPassword.swift */,
 				5609AB0227DD3BC000D18840 /* ImagePicker.swift */,
@@ -373,6 +381,7 @@
 				F59A14FC281B376A006B9C56 /* VideoRecorder.swift */,
 				F59A14FE281B378A006B9C56 /* root.swift */,
 				F59A1500281B3827006B9C56 /* Countdown.swift */,
+				F59A1502281D86C6006B9C56 /* instructions.swift */,
 			);
 			path = Translating;
 			sourceTree = "<group>";
@@ -505,6 +514,7 @@
 				F5399E5927E52EE200CECCE4 /* Hospital.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
 				F5399E7C27E5308800CECCE4 /* TabCurve.swift in Sources */,
+				F59A1503281D86C6006B9C56 /* instructions.swift in Sources */,
 				2601732D28125EE70091DBA7 /* DeleteProfileV.swift in Sources */,
 				F5399E7527E5308800CECCE4 /* ImpairedHome.swift in Sources */,
 				F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */,
@@ -555,6 +565,7 @@
 				2601732E28125EE70091DBA7 /* EditQuizV.swift in Sources */,
 				F5399E6427E52FB800CECCE4 /* SignUpInScreen.swift in Sources */,
 				F59A1501281B3827006B9C56 /* Countdown.swift in Sources */,
+				F59A1507281DA37F006B9C56 /* ConditionsV.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
 				F5399E5C27E52EE200CECCE4 /* University.swift in Sources */,
 				F5399E7E27E5308800CECCE4 /* VolunteerTabBar.swift in Sources */,
@@ -564,6 +575,7 @@
 				F5399E4827E52DB600CECCE4 /* ARowAnswersVM.swift in Sources */,
 				F59A14FF281B378A006B9C56 /* root.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
+				F59A1509281DA5AB006B9C56 /* PrivacyV.swift in Sources */,
 				2601733028125EF80091DBA7 /* BrowseQuizV.swift in Sources */,
 				F5399E5327E52E9600CECCE4 /* NameVM.swift in Sources */,
 				5609AAF227DD3B9500D18840 /* VolunteerM.swift in Sources */,

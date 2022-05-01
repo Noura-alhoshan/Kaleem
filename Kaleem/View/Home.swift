@@ -81,7 +81,7 @@ struct HomeAll: View{
                         }
                         
                         HStack{
-                            VStack(alignment: .leading, spacing: 15){
+                            VStack(alignment: .trailing, spacing: 15){
                                 
                                 Text("أهلاً بك")
                                     .font(Font.custom("Almarai-Bold", size: 35))
@@ -122,14 +122,7 @@ struct HomeAll: View{
                 } .padding(.trailing,80)
                 
                 HStack{
-                    
-//
-//                    Button(action: {}) {
-//
-//                        Image(systemName: "ellipsis")
-//                            .font(.title)
-//                    }
-            
+
                    
                     
                     // Customization
@@ -146,9 +139,7 @@ struct HomeAll: View{
                 .padding(.leading, 25)
                 .padding(.top, 25)
                 .padding(.trailing)
-                
-                
-                // ScrollView( [.horizontal,.vertical], showsIndicators: false){
+
                 
                 
                 ScrollView( .vertical, showsIndicators: false){
@@ -296,7 +287,7 @@ struct HomeAll: View{
                                                    :      locationManager.CalculateUniDistance() != 1.0 ?
                                                    // uni page
                                                    AnyView(UniV() )
-                                                   : AnyView(UniV() )
+                                                   : AnyView(NoLocation() )
                                                     //no result page
 
 

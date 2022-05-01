@@ -9,35 +9,25 @@ import SwiftUI
 import FirebaseAuth
 import Firebase
 
-struct VideoCapApp: App {
+struct VideoCapApp: View {
    
  
-    var body: some Scene {
+    var body: some View {
  
     
          
                     
            
                    
-         
-            WindowGroup {
+      
                 root()
-        
-            
-         
-           
 
-                    
-
-        }
-            
-//            .navigationBarTitle("")
-//            .navigationBarHidden(true)
         
-        
+       
+       
             
 
-//
+
     
       
     }// end body

@@ -33,7 +33,7 @@ struct NoLocation: View {
                                              .cornerRadius(10)
                                 }).padding(.horizontal,25)
                 }
-                .padding(.top,-370)
+                .padding(.top,-375)
                 Color("AppIcon").edgesIgnoringSafeArea(.all) // THIS
               Image("World").resizable().aspectRatio( contentMode: .fit)
                     .padding(.top, -100)
