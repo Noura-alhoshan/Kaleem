@@ -51,7 +51,7 @@ struct Instrouctions: View {
          }
          
          if currentPage1 == 2{
-             ScreenView2(image: "border", title: "ضـمن الايـطار", detail:  "يجب أن يكون الرأس واليدين كاملتين بالمرفق ضمن إيطار الالتقاط")
+             ScreenView2(image: "border", title: "ضـمن الاطـار", detail:  "يجب أن يكون الرأس واليدين كاملتين بالمرفق ضمن إطـار الالتقاط")
                  .transition(.scale)
          }
          if currentPage1 == 3{
@@ -60,7 +60,7 @@ struct Instrouctions: View {
          }
          
          if currentPage1 == 4{
-             ScreenView2(image: "start", title: "ابدأ", detail : "أنت الان مستعد للبدء")
+             ScreenView2(image: "start", title: "ابـدأ", detail : "أنت الان مستـعد للبدء")
                  .transition(.scale)
          }
 
@@ -124,7 +124,7 @@ struct ScreenView2: View {
     var detail: String
 
     
-    @AppStorage("currentPage") var currentPage1 = 1
+    @AppStorage("currentPage1") var currentPage1 = 1
     var body: some View {
 
         Image("Test").resizable().aspectRatio( contentMode: .fit)
@@ -215,7 +215,8 @@ struct ScreenView2: View {
             //Minimum spacing when Phone is reducing
             Spacer(minLength: 120)
             
-        }
+        }    .navigationBarTitle("")
+            .navigationBarHidden(true)
     }
 }
 var totalPagess = 4
