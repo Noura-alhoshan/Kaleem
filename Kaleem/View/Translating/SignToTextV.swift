@@ -60,7 +60,7 @@ struct Instrouctions: View {
          }
          
          if currentPage1 == 4{
-             ScreenView2(image: "start", title: "ابـدأ", detail : "أنت الان مستـعد للبدء")
+             ScreenView2(image: "frontC", title: "الكامـيرا الأمـاميـة", detail : "عنـد النقـر على ابدأ الالتـقاط ستُـفتح الكامـيرا الامـامية")
                  .transition(.scale)
          }
 
