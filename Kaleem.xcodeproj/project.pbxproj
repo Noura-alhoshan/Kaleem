@@ -89,6 +89,7 @@
 		F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505327E61E5600A989F2 /* EditProfileV.swift */; };
 		F5F1505627E6209800A989F2 /* Default user.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505527E6209800A989F2 /* Default user.imageset */; };
 		F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */; };
+		F8CC63CA281EC85D00E97DA4 /* SignToTextV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC63C9281EC85D00E97DA4 /* SignToTextV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +182,7 @@
 		F5F1505327E61E5600A989F2 /* EditProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileV.swift; sourceTree = "<group>"; };
 		F5F1505527E6209800A989F2 /* Default user.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Default user.imageset"; sourceTree = "<group>"; };
 		F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8CC63C9281EC85D00E97DA4 /* SignToTextV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignToTextV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +384,7 @@
 				F59A14FE281B378A006B9C56 /* root.swift */,
 				F59A1500281B3827006B9C56 /* Countdown.swift */,
 				F59A1502281D86C6006B9C56 /* instructions.swift */,
+				F8CC63C9281EC85D00E97DA4 /* SignToTextV.swift */,
 			);
 			path = Translating;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				F59A14FD281B376A006B9C56 /* VideoRecorder.swift in Sources */,
 				F5F1504C27E61CF200A989F2 /* UserInfoM.swift in Sources */,
 				F5399E7B27E5308800CECCE4 /* ImpairedTabBar.swift in Sources */,
+				F8CC63CA281EC85D00E97DA4 /* SignToTextV.swift in Sources */,
 				56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */,
 				F5F1504E27E61D9A00A989F2 /* ProfileVM.swift in Sources */,
 				5609AB0C27DD3BC000D18840 /* ForgotPassword.swift in Sources */,
@@ -712,7 +716,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R32MLPWCK;
+				DEVELOPMENT_TEAM = 67QWJ57MU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -731,7 +735,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KaleemD;
+				PRODUCT_BUNDLE_IDENTIFIER = KaleemFinal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

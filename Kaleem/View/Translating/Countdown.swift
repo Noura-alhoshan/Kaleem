@@ -18,6 +18,7 @@ struct ContentV: View {
     @State var completed = false
     @State var started = false
     @State var recordingMessage = ""
+    @AppStorage("currentPage1") var currentPage1 = 1
     @State var timer:Timer = Timer()
     var body: some View {
         VStack{
@@ -33,6 +34,7 @@ struct ContentV: View {
                             }
                         }else{
                             Text(recordingMessage)
+
                         }
                     }
                 }
@@ -110,3 +112,5 @@ extension UIScreen{
    static let screenWidth = UIScreen.main.bounds.size.width
    static let screenHeight = UIScreen.main.bounds.size.height
 }
+
+
