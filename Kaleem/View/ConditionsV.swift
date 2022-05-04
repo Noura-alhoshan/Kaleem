@@ -48,20 +48,20 @@ struct PopupView: View {
                                   
                                 }
                             }, label: {
-                                Image(systemName: "chevron.right")
-                                     .foregroundColor(.white)
-                                     .padding(.vertical,10)
+                                Image(systemName: "chevron.forward")
+                                    .font(.system(size: 25, weight: .semibold))
+                                    .foregroundColor(.black.opacity(0.6))
+                                     .padding(.vertical)
                                      .padding(.horizontal)
-                                    // .background(Color.black.opacity(0.4))
-                                     .background(Color("Kcolor"))
-                                     .cornerRadius(10)
+                                 
+                     
                         }).padding(.horizontal,25)
-        }  .padding(.top,-380)
+        }  .padding(.top,-390)
         ZStack(alignment: .topLeading) {
   
          
             Color.white.opacity(0.2)
-                .frame(width: 300, height: 650)
+                .frame(width: 300, height: 680)
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 10)
                 .blur(radius: 1)
@@ -104,7 +104,7 @@ struct PopupView: View {
                 }
             }   .font(Font.custom("Almarai-Bold", size: 10))
             .padding()
-            .frame(width: 300, height: 650)
+            .frame(width: 300, height: 680)
             .foregroundColor(Color.black.opacity(0.8))
             
         }

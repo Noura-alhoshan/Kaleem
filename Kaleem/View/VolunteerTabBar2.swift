@@ -17,21 +17,7 @@ struct VolunteerTabBar2: View {
                       Image (systemName: "person")
                       Text("حسابك")
                          }
-            
 
-            
-          //  VideoCapApp()
-            NoLocation()
-                        .tabItem {
-                     Image (systemName: "hand.raised")
-                     Text("الترجمة")
-                }
-                     
-            Favorite()
-                                 .tabItem {
-                              Image (systemName: "heart")
-                              Text("المفضلة")
-                         }
                      
                
             //change it to voulnteer home
