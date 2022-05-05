@@ -85,8 +85,7 @@ adds translation from Arabic sign language to speech and real time help via crow
  <h1> <li> Platfoorm and tools 🛠⚙️ </li> </h1>
  
  <h2> <li> Database Schema </li> </h2>
- <p> The database used for “Kaleem” System is Cloud Firestore provided by Firebase. Cloud Firestore is a document-oriented database that runs on NoSQL[2]. There are no tables or rows in this database, unlike a SQL database. Instead, we saved information as documents that are then grouped into collections, which made the learning process and the storing process easier.Cloud NoSQL database will be used for the following reasons:
-</p>
+ <p></p>
   <h3> <li> </li> </h3>
  <p> </p>
  
