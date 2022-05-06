@@ -71,9 +71,16 @@ struct ContentV: View {
                                 
                             })
                             .foregroundColor(Color.white)
-                            .frame(width: 120, height: 40, alignment: .center)
-                            .background(Color.blue)
-                            .cornerRadius(16)
+                                                        .frame(width: 95, height: 25, alignment: .center)
+                                                        .padding(.vertical)
+                                                        .padding(.horizontal,90)
+                                                        .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)
+                                                         .background(Color("Color"))
+                                                         .clipShape(Capsule())
+//                            .foregroundColor(Color.white)
+//                            .frame(width: 120, height: 40, alignment: .center)
+//                            .background(Color.blue)
+//                            .cornerRadius(16)
                         }
                        // Text(recordingMessage)
                     }
