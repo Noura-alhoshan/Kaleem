@@ -11,7 +11,7 @@ import Firebase //
 struct AQuizContentV: View {
     
 
-   @StateObject var quizManager1 = AQuizManagerVM()
+   @StateObject var quizManager1 = EQuizManagerVM()
 
    var body: some View {
 

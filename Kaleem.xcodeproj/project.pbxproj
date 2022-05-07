@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14305FB028216F560081322A /* ERowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14305FAF28216F560081322A /* ERowAnswersVM.swift */; };
+		14305FB228216F8D0081322A /* EQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14305FB128216F8D0081322A /* EQuizManagerVM.swift */; };
+		14305FB4282178260081322A /* EQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14305FB3282178260081322A /* EQuestionV.swift */; };
 		14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F32279F2D1200E4947D /* KaleemApp.swift */; };
 		14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F34279F2D1200E4947D /* ContentView.swift */; };
 		14FD4F37279F2D1400E4947D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F36279F2D1400E4947D /* Assets.xcassets */; };
@@ -14,7 +17,7 @@
 		14FD4F41279F319000E4947D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14FD4F40279F319000E4947D /* GoogleService-Info.plist */; };
 		14FD4F6527A58E9400E4947D /* AQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */; };
 		14FD4F6E27A58F1500E4947D /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6D27A58F1500E4947D /* AQuestionV.swift */; };
-		14FD4F7027A58F2E00E4947D /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6F27A58F2E00E4947D /* AQuizV.swift */; };
+		14FD4F7027A58F2E00E4947D /* EQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F6F27A58F2E00E4947D /* EQuizV.swift */; };
 		14FD4F7327A58F6A00E4947D /* ARowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */; };
 		14FD4F7527A58F8700E4947D /* AProgressBarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */; };
 		14FD4F7727A58F9E00E4947D /* APrimaryButtonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14305FAF28216F560081322A /* ERowAnswersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERowAnswersVM.swift; sourceTree = "<group>"; };
+		14305FB128216F8D0081322A /* EQuizManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQuizManagerVM.swift; sourceTree = "<group>"; };
+		14305FB3282178260081322A /* EQuestionV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQuestionV.swift; sourceTree = "<group>"; };
 		14FD4F2F279F2D1200E4947D /* Kaleem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kaleem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FD4F32279F2D1200E4947D /* KaleemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleemApp.swift; sourceTree = "<group>"; };
 		14FD4F34279F2D1200E4947D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,7 +38,7 @@
 		14FD4F40279F319000E4947D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizManagerVM.swift; sourceTree = "<group>"; };
 		14FD4F6D27A58F1500E4947D /* AQuestionV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
-		14FD4F6F27A58F2E00E4947D /* AQuizV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
+		14FD4F6F27A58F2E00E4947D /* EQuizV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EQuizV.swift; sourceTree = "<group>"; };
 		14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARowAnswersVM.swift; sourceTree = "<group>"; };
 		14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AProgressBarVM.swift; sourceTree = "<group>"; };
 		14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APrimaryButtonVM.swift; sourceTree = "<group>"; };
@@ -108,7 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F6D27A58F1500E4947D /* AQuestionV.swift */,
-				14FD4F6F27A58F2E00E4947D /* AQuizV.swift */,
+				14305FB3282178260081322A /* EQuestionV.swift */,
+				14FD4F6F27A58F2E00E4947D /* EQuizV.swift */,
 				14FD4F7D27A59B6100E4947D /* AQuizContentV.swift */,
 			);
 			path = View;
@@ -118,9 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				14FD4F7227A58F6A00E4947D /* ARowAnswersVM.swift */,
+				14305FAF28216F560081322A /* ERowAnswersVM.swift */,
 				14FD4F7427A58F8700E4947D /* AProgressBarVM.swift */,
 				14FD4F7627A58F9E00E4947D /* APrimaryButtonVM.swift */,
 				14FD4F6427A58E9400E4947D /* AQuizManagerVM.swift */,
+				14305FB128216F8D0081322A /* EQuizManagerVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -266,15 +275,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				14FD4F7727A58F9E00E4947D /* APrimaryButtonVM.swift in Sources */,
+				14305FB028216F560081322A /* ERowAnswersVM.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
+				14305FB4282178260081322A /* EQuestionV.swift in Sources */,
 				14FD4F7C27A590BA00E4947D /* AQuestionM.swift in Sources */,
 				14FD4F7E27A59B6100E4947D /* AQuizContentV.swift in Sources */,
 				14FD4F6E27A58F1500E4947D /* AQuestionV.swift in Sources */,
 				14FD4F6527A58E9400E4947D /* AQuizManagerVM.swift in Sources */,
-				14FD4F7027A58F2E00E4947D /* AQuizV.swift in Sources */,
+				14FD4F7027A58F2E00E4947D /* EQuizV.swift in Sources */,
 				14FD4F7327A58F6A00E4947D /* ARowAnswersVM.swift in Sources */,
 				14FD4F7527A58F8700E4947D /* AProgressBarVM.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
+				14305FB228216F8D0081322A /* EQuizManagerVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
