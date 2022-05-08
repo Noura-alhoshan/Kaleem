@@ -43,10 +43,8 @@
 		F5399E4F27E52E4200CECCE4 /* TextToSpeechVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E4E27E52E4200CECCE4 /* TextToSpeechVM.swift */; };
 		F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5027E52E5C00CECCE4 /* Wrapper.swift */; };
 		F5399E5327E52E9600CECCE4 /* NameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5227E52E9600CECCE4 /* NameVM.swift */; };
-		F5399E5927E52EE200CECCE4 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5427E52EE100CECCE4 /* Hospital.swift */; };
-		F5399E5A27E52EE200CECCE4 /* CoffeeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5527E52EE100CECCE4 /* CoffeeVM.swift */; };
+		F5399E5A27E52EE200CECCE4 /* SentencesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5527E52EE100CECCE4 /* SentencesVM.swift */; };
 		F5399E5B27E52EE200CECCE4 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5627E52EE100CECCE4 /* Location.swift */; };
-		F5399E5C27E52EE200CECCE4 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5727E52EE100CECCE4 /* University.swift */; };
 		F5399E5D27E52EE200CECCE4 /* SentencesDBVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5827E52EE200CECCE4 /* SentencesDBVM.swift */; };
 		F5399E6227E52FB800CECCE4 /* SignOutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E6127E52FB800CECCE4 /* SignOutV.swift */; };
 		F5399E6327E52FB800CECCE4 /* SignInV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5399E5F27E52FB800CECCE4 /* SignInV.swift */; };
@@ -72,6 +70,20 @@
 		F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B527C1A54B00A1E9ED /* AQuizContentV.swift */; };
 		F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B627C1A54B00A1E9ED /* AQuizV.swift */; };
 		F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */; };
+		F5811F9828153B35003CBA3A /* FavoriteListV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5811F9728153B35003CBA3A /* FavoriteListV2.swift */; };
+		F59A14FD281B376A006B9C56 /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A14FC281B376A006B9C56 /* VideoRecorder.swift */; };
+		F59A14FF281B378A006B9C56 /* root.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A14FE281B378A006B9C56 /* root.swift */; };
+		F59A1501281B3827006B9C56 /* Countdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1500281B3827006B9C56 /* Countdown.swift */; };
+		F59A1503281D86C6006B9C56 /* instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1502281D86C6006B9C56 /* instructions.swift */; };
+		F59A1507281DA37F006B9C56 /* ConditionsV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1506281DA37F006B9C56 /* ConditionsV.swift */; };
+		F59A1509281DA5AB006B9C56 /* PrivacyV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1508281DA5AB006B9C56 /* PrivacyV.swift */; };
+		F5BAF368282633BC0080A198 /* FavSentenceM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF367282633BC0080A198 /* FavSentenceM.swift */; };
+		F5BAF36A2826369C0080A198 /* FavoriteListV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF3692826369C0080A198 /* FavoriteListV.swift */; };
+		F5BAF36D28279A410080A198 /* EQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36B28279A400080A198 /* EQuestionV.swift */; };
+		F5BAF36E28279A410080A198 /* EQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36C28279A400080A198 /* EQuizV.swift */; };
+		F5BAF37128279A650080A198 /* EQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */; };
+		F5BAF37228279A650080A198 /* ERowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF37028279A650080A198 /* ERowAnswersVM.swift */; };
+		F5BAF3742827C8000080A198 /* AboutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF3732827C8000080A198 /* AboutV.swift */; };
 		F5D8274927E7B6D70030CB1C /* testAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274827E7B6D70030CB1C /* testAdminHome.swift */; };
 		F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274A27E7DF780030CB1C /* TranslationV.swift */; };
 		F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */; };
@@ -82,8 +94,8 @@
 		F5F1505227E61E0C00A989F2 /* ProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505127E61E0C00A989F2 /* ProfileV.swift */; };
 		F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505327E61E5600A989F2 /* EditProfileV.swift */; };
 		F5F1505627E6209800A989F2 /* Default user.imageset in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505527E6209800A989F2 /* Default user.imageset */; };
-		F5F1505827E62DA900A989F2 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1505727E62DA900A989F2 /* Favorite.swift */; };
 		F5F1505A27E6554B00A989F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */; };
+		F8CC63CA281EC85D00E97DA4 /* SignToTextV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CC63C9281EC85D00E97DA4 /* SignToTextV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,10 +140,8 @@
 		F5399E4E27E52E4200CECCE4 /* TextToSpeechVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechVM.swift; sourceTree = "<group>"; };
 		F5399E5027E52E5C00CECCE4 /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 		F5399E5227E52E9600CECCE4 /* NameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameVM.swift; sourceTree = "<group>"; };
-		F5399E5427E52EE100CECCE4 /* Hospital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
-		F5399E5527E52EE100CECCE4 /* CoffeeVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeVM.swift; sourceTree = "<group>"; };
+		F5399E5527E52EE100CECCE4 /* SentencesVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentencesVM.swift; sourceTree = "<group>"; };
 		F5399E5627E52EE100CECCE4 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		F5399E5727E52EE100CECCE4 /* University.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		F5399E5827E52EE200CECCE4 /* SentencesDBVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentencesDBVM.swift; sourceTree = "<group>"; };
 		F5399E5E27E52FB800CECCE4 /* SignUpInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpInScreen.swift; path = "Onboarding /SignUpInScreen.swift"; sourceTree = "<group>"; };
 		F5399E5F27E52FB800CECCE4 /* SignInV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInV.swift; sourceTree = "<group>"; };
@@ -159,6 +169,20 @@
 		F542D1B627C1A54B00A1E9ED /* AQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuizV.swift; sourceTree = "<group>"; };
 		F542D1B827C1A54B00A1E9ED /* AQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AQuestionV.swift; sourceTree = "<group>"; };
 		F572FADA27A3B669001C7143 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5811F9728153B35003CBA3A /* FavoriteListV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListV2.swift; sourceTree = "<group>"; };
+		F59A14FC281B376A006B9C56 /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
+		F59A14FE281B378A006B9C56 /* root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = root.swift; sourceTree = "<group>"; };
+		F59A1500281B3827006B9C56 /* Countdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countdown.swift; sourceTree = "<group>"; };
+		F59A1502281D86C6006B9C56 /* instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instructions.swift; sourceTree = "<group>"; };
+		F59A1506281DA37F006B9C56 /* ConditionsV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsV.swift; sourceTree = "<group>"; };
+		F59A1508281DA5AB006B9C56 /* PrivacyV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyV.swift; sourceTree = "<group>"; };
+		F5BAF367282633BC0080A198 /* FavSentenceM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavSentenceM.swift; sourceTree = "<group>"; };
+		F5BAF3692826369C0080A198 /* FavoriteListV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListV.swift; sourceTree = "<group>"; };
+		F5BAF36B28279A400080A198 /* EQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuestionV.swift; sourceTree = "<group>"; };
+		F5BAF36C28279A400080A198 /* EQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuizV.swift; sourceTree = "<group>"; };
+		F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuizManagerVM.swift; sourceTree = "<group>"; };
+		F5BAF37028279A650080A198 /* ERowAnswersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERowAnswersVM.swift; sourceTree = "<group>"; };
+		F5BAF3732827C8000080A198 /* AboutV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutV.swift; sourceTree = "<group>"; };
 		F5D8274827E7B6D70030CB1C /* testAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAdminHome.swift; sourceTree = "<group>"; };
 		F5D8274A27E7DF780030CB1C /* TranslationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationV.swift; sourceTree = "<group>"; };
 		F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar2.swift; sourceTree = "<group>"; };
@@ -169,8 +193,8 @@
 		F5F1505127E61E0C00A989F2 /* ProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileV.swift; sourceTree = "<group>"; };
 		F5F1505327E61E5600A989F2 /* EditProfileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileV.swift; sourceTree = "<group>"; };
 		F5F1505527E6209800A989F2 /* Default user.imageset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Default user.imageset"; sourceTree = "<group>"; };
-		F5F1505727E62DA900A989F2 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		F5F1505927E6554B00A989F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8CC63C9281EC85D00E97DA4 /* SignToTextV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignToTextV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +293,7 @@
 				F542D1A127C1A4F200A1E9ED /* AQuestionM.swift */,
 				F50D1A1927B2BF5A00B3EE94 /* SignUpM.swift */,
 				F5F1504B27E61CF200A989F2 /* UserInfoM.swift */,
+				F5BAF367282633BC0080A198 /* FavSentenceM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +309,8 @@
 		F5399E3E27E52CD200CECCE4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */,
+				F5BAF37028279A650080A198 /* ERowAnswersVM.swift */,
 				F5399E4A27E52E1A00CECCE4 /* SignInVM.swift */,
 				F5399E4C27E52E2A00CECCE4 /* SignUpVM2.swift */,
 				F5399E4E27E52E4200CECCE4 /* TextToSpeechVM.swift */,
@@ -304,11 +331,9 @@
 		F5399E4927E52E0000CECCE4 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				F5399E5527E52EE100CECCE4 /* CoffeeVM.swift */,
-				F5399E5427E52EE100CECCE4 /* Hospital.swift */,
+				F5399E5527E52EE100CECCE4 /* SentencesVM.swift */,
 				F5399E5627E52EE100CECCE4 /* Location.swift */,
 				F5399E5827E52EE200CECCE4 /* SentencesDBVM.swift */,
-				F5399E5727E52EE100CECCE4 /* University.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -316,6 +341,9 @@
 		F572FADC27A3B7FB001C7143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F5BAF36B28279A400080A198 /* EQuestionV.swift */,
+				F5BAF36C28279A400080A198 /* EQuizV.swift */,
+				F59A14FB281B35FA006B9C56 /* Translating */,
 				2601732F28125EF80091DBA7 /* BrowseQuizV.swift */,
 				2601732B28125EE70091DBA7 /* DeleteProfileV.swift */,
 				2601732C28125EE70091DBA7 /* EditQuizV.swift */,
@@ -342,6 +370,8 @@
 				561DF4F027E50D92007A1791 /* Onboarding  */,
 				56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */,
 				56F96F0727E5007E002DBCDB /* VideoCallV.swift */,
+				F59A1506281DA37F006B9C56 /* ConditionsV.swift */,
+				F59A1508281DA5AB006B9C56 /* PrivacyV.swift */,
 				5609AB0427DD3BC000D18840 /* AddQuizFormV.swift */,
 				5609AB0527DD3BC000D18840 /* ForgotPassword.swift */,
 				5609AB0227DD3BC000D18840 /* ImagePicker.swift */,
@@ -356,11 +386,25 @@
 				F5F1504F27E61DDB00A989F2 /* CheckPopUp.swift */,
 				F5F1505127E61E0C00A989F2 /* ProfileV.swift */,
 				F5F1505327E61E5600A989F2 /* EditProfileV.swift */,
-				F5F1505727E62DA900A989F2 /* Favorite.swift */,
 				F5D8274827E7B6D70030CB1C /* testAdminHome.swift */,
-				F5D8274A27E7DF780030CB1C /* TranslationV.swift */,
+				F5811F9728153B35003CBA3A /* FavoriteListV2.swift */,
+				F5BAF3692826369C0080A198 /* FavoriteListV.swift */,
+				F5BAF3732827C8000080A198 /* AboutV.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F59A14FB281B35FA006B9C56 /* Translating */ = {
+			isa = PBXGroup;
+			children = (
+				F5D8274A27E7DF780030CB1C /* TranslationV.swift */,
+				F59A14FC281B376A006B9C56 /* VideoRecorder.swift */,
+				F59A14FE281B378A006B9C56 /* root.swift */,
+				F59A1500281B3827006B9C56 /* Countdown.swift */,
+				F59A1502281D86C6006B9C56 /* instructions.swift */,
+				F8CC63C9281EC85D00E97DA4 /* SignToTextV.swift */,
+			);
+			path = Translating;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,9 +532,9 @@
 				F5399E7627E5308800CECCE4 /* VolunteerProfile.swift in Sources */,
 				F5F1504A27E5E0F000A989F2 /* VolunteerTabBar2.swift in Sources */,
 				F542D1BE27C1A54B00A1E9ED /* AQuizV.swift in Sources */,
-				F5399E5927E52EE200CECCE4 /* Hospital.swift in Sources */,
 				14FD4F35279F2D1200E4947D /* ContentView.swift in Sources */,
 				F5399E7C27E5308800CECCE4 /* TabCurve.swift in Sources */,
+				F59A1503281D86C6006B9C56 /* instructions.swift in Sources */,
 				2601732D28125EE70091DBA7 /* DeleteProfileV.swift in Sources */,
 				F5399E7527E5308800CECCE4 /* ImpairedHome.swift in Sources */,
 				F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */,
@@ -498,13 +542,17 @@
 				5609AAFD27DD3BB300D18840 /* Constants.swift in Sources */,
 				2601732A28125EC40091DBA7 /* AdminQuizVM.swift in Sources */,
 				F5399E6327E52FB800CECCE4 /* SignInV.swift in Sources */,
+				F5BAF3742827C8000080A198 /* AboutV.swift in Sources */,
+				F5BAF37228279A650080A198 /* ERowAnswersVM.swift in Sources */,
 				F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */,
 				F5399E6227E52FB800CECCE4 /* SignOutV.swift in Sources */,
 				F5399E6727E5304D00CECCE4 /* AdminHome.swift in Sources */,
 				F5399E9227E55CA900CECCE4 /* VideoCallVM.swift in Sources */,
 				F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */,
 				F5399E8927E5318F00CECCE4 /* HosV.swift in Sources */,
+				F5BAF36E28279A410080A198 /* EQuizV.swift in Sources */,
 				5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */,
+				F5811F9828153B35003CBA3A /* FavoriteListV2.swift in Sources */,
 				F5399E7827E5308800CECCE4 /* ImpairedServices.swift in Sources */,
 				F5399E8727E5318F00CECCE4 /* UniV.swift in Sources */,
 				F5399E3D27E52B2800CECCE4 /* SentencesM.swift in Sources */,
@@ -513,10 +561,9 @@
 				F5399E7927E5308800CECCE4 /* Home.swift in Sources */,
 				F50D1A2327B2BF5A00B3EE94 /* SignUpM.swift in Sources */,
 				56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */,
-				F5F1505827E62DA900A989F2 /* Favorite.swift in Sources */,
 				F5F1505427E61E5600A989F2 /* EditProfileV.swift in Sources */,
 				5609AB0D27DD3BC000D18840 /* QuestionDetailsV.swift in Sources */,
-				F5399E5A27E52EE200CECCE4 /* CoffeeVM.swift in Sources */,
+				F5399E5A27E52EE200CECCE4 /* SentencesVM.swift in Sources */,
 				56F96F0B27E5008A002DBCDB /* TextToSpeechM.swift in Sources */,
 				F5D8274927E7B6D70030CB1C /* testAdminHome.swift in Sources */,
 				F5399E9027E53B1C00CECCE4 /* NoLocation.swift in Sources */,
@@ -526,10 +573,13 @@
 				F5399E4427E52D8C00CECCE4 /* APrimaryButtonVM.swift in Sources */,
 				F5399E8D27E5318F00CECCE4 /* CoffeeV.swift in Sources */,
 				F5F1505227E61E0C00A989F2 /* ProfileV.swift in Sources */,
+				F5BAF368282633BC0080A198 /* FavSentenceM.swift in Sources */,
 				5609AB0927DD3BC000D18840 /* ImagePicker.swift in Sources */,
 				F5399E4D27E52E2A00CECCE4 /* SignUpVM2.swift in Sources */,
+				F59A14FD281B376A006B9C56 /* VideoRecorder.swift in Sources */,
 				F5F1504C27E61CF200A989F2 /* UserInfoM.swift in Sources */,
 				F5399E7B27E5308800CECCE4 /* ImpairedTabBar.swift in Sources */,
+				F8CC63CA281EC85D00E97DA4 /* SignToTextV.swift in Sources */,
 				56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */,
 				565A47AC2819339F00AFDAD2 /* CustomPicker.swift in Sources */,
 				F5F1504E27E61D9A00A989F2 /* ProfileVM.swift in Sources */,
@@ -538,17 +588,23 @@
 				F5399E7A27E5308800CECCE4 /* AdminTabBar.swift in Sources */,
 				5609AB0027DD3BB300D18840 /* CustomAlertQuiz.swift in Sources */,
 				F5399E5D27E52EE200CECCE4 /* SentencesDBVM.swift in Sources */,
+				F5BAF37128279A650080A198 /* EQuizManagerVM.swift in Sources */,
 				2601732E28125EE70091DBA7 /* EditQuizV.swift in Sources */,
 				F5399E6427E52FB800CECCE4 /* SignUpInScreen.swift in Sources */,
+				F59A1501281B3827006B9C56 /* Countdown.swift in Sources */,
+				F59A1507281DA37F006B9C56 /* ConditionsV.swift in Sources */,
 				F542D1BD27C1A54B00A1E9ED /* AQuizContentV.swift in Sources */,
-				F5399E5C27E52EE200CECCE4 /* University.swift in Sources */,
+				F5BAF36A2826369C0080A198 /* FavoriteListV.swift in Sources */,
 				F5399E7E27E5308800CECCE4 /* VolunteerTabBar.swift in Sources */,
 				F5399E4F27E52E4200CECCE4 /* TextToSpeechVM.swift in Sources */,
 				F5399E4027E52CE500CECCE4 /* AQuizManagerVM.swift in Sources */,
 				F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */,
 				F5399E4827E52DB600CECCE4 /* ARowAnswersVM.swift in Sources */,
+				F59A14FF281B378A006B9C56 /* root.swift in Sources */,
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
+				F59A1509281DA5AB006B9C56 /* PrivacyV.swift in Sources */,
 				2601733028125EF80091DBA7 /* BrowseQuizV.swift in Sources */,
+				F5BAF36D28279A410080A198 /* EQuestionV.swift in Sources */,
 				F5399E5327E52E9600CECCE4 /* NameVM.swift in Sources */,
 				5609AAF227DD3B9500D18840 /* VolunteerM.swift in Sources */,
 			);
@@ -684,7 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 67QWJ57MU9;
+				DEVELOPMENT_TEAM = 4R32MLPWCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -703,7 +759,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Kaleem.Demo1;
+				PRODUCT_BUNDLE_IDENTIFIER = KaleemFin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -6,3 +6,5 @@
 //
 
 import Foundation
+
+//For speaking button: Copy & paste AlbumView struct from UniV

@@ -81,18 +81,13 @@ struct HomeAll: View{
                         }
                         
                         HStack{
-                            VStack(alignment: .leading, spacing: 15){
+                            VStack(alignment: .trailing, spacing: 15){
                                 
-                                Text("أهلاً بك")
+                                Text(" أهلاً بك .. " + PViewModel.KaleemUser.name)
                                     .font(Font.custom("Almarai-Bold", size: 35))
                                     .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+                                    .padding(.top,30)
                                 
-                                Text(PViewModel.KaleemUser.name
-                                )
-                                    .fontWeight(.bold)
-                                    .font(Font.custom("Almarai-Bold", size: 25))
-                                    .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                                //
                                 Text("حيثما لوّحت يداك وتُرجم صوتك")
                                     .fontWeight(.bold)
                                     .font(Font.custom("Almarai-Bold", size: 20))
@@ -122,14 +117,7 @@ struct HomeAll: View{
                 } .padding(.trailing,80)
                 
                 HStack{
-                    
-//
-//                    Button(action: {}) {
-//
-//                        Image(systemName: "ellipsis")
-//                            .font(.title)
-//                    }
-            
+
                    
                     
                     // Customization
@@ -142,13 +130,11 @@ struct HomeAll: View{
                     
                     
                 }
-                .foregroundColor(.black.opacity(0.9))
+                .foregroundColor(.black.opacity(0.6))
                 .padding(.leading, 25)
                 .padding(.top, 25)
                 .padding(.trailing)
-                
-                
-                // ScrollView( [.horizontal,.vertical], showsIndicators: false){
+
                 
                 
                 ScrollView( .vertical, showsIndicators: false){
@@ -469,7 +455,7 @@ struct HomeAll: View{
                             HStack{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
-                              Text("احصائيات")
+                              Text("من نحن")
                                         .font(Font.custom("Almarai-Bold", size: 25))
                                     //    .foregroundColor(.gray.opacity(1.5))
                                     
@@ -487,7 +473,7 @@ struct HomeAll: View{
                                 
                                 
                             }
-                            .padding(.leading,25)
+                            .padding(.leading,60)
                             
                             
                             HStack{
@@ -495,17 +481,18 @@ struct HomeAll: View{
                                 Spacer()
                                 //consider to change it sutibale icons
                                 
-                                Button(action: {}) {
-                                    
-                                    Image(systemName: "chart.line.uptrend.xyaxis.circle.fill")
-                                        .foregroundColor(Color("Color"))
-                                        .font(.system(size: 65))
-                                        
-                                }
+                                NavigationLink(
+                                    destination:    AboutV().navigationBarHidden(true),
+                                    label: {
+                                        Image(systemName: "person.2.circle.fill")
+                                            .foregroundColor(Color("Color"))
+                                            .font(.system(size: 65))
+                                    }
+                                )
                                 
                             }
                             .padding(.trailing,130)
-                            .padding(.bottom,25)
+                            .padding(.bottom,28)
                             //.padding(.top,10)
                             
                             
@@ -529,6 +516,7 @@ struct HomeAll: View{
      
                     
                 }
+                .foregroundColor(.black.opacity(0.6))
        
            
                 Spacer()
@@ -538,9 +526,7 @@ struct HomeAll: View{
             
             //moving view up
             //giving only space 10 b/w
-            .onAppear(perform: { PViewModel.fetchUser();
-           
-            } )
+            .onAppear(perform: { PViewModel.fetchUser();} )
             .padding(.top, 20)
             
             .navigationBarTitle("")

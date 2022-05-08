@@ -6,47 +6,57 @@
 //
 import SwiftUI
 struct ImpairedTabBar2: View {
+    @State private var selected = 3
+  
+ 
     
     var body: some View {
         
-        TabView {
+     
+        
+        TabView(selection: $selected) {
             
-            ProfileView()
-                         .tabItem {
-                      Image (systemName: "person")
-                      Text("حسابك")
-                         }
+            ProfileView().navigationBarHidden(true)
+                .tag(0)
+                .tabItem {
+                    Image (systemName: "person")
+                    Text("حسابك")
+                }
+            
             
 
-            
-            Translation()
-           // NoLocation()
-                        .tabItem {
-                     Image (systemName: "hand.raised")
-                     Text("الترجمة")
+            SignToTextV().navigationBarHidden(true)
+                .tag(1)
+                .tabItem {
+                    Image (systemName: "hand.raised")
+                    Text("الترجمة")
                 }
-                     
-            Favorite()
-                                 .tabItem {
-                              Image (systemName: "heart")
-                              Text("المفضلة")
-                         }
-                     
-               
             
-            HomeAll()
-                    .tabItem {
-                         Image(systemName: "house")
-                        Text("الرئيسية")
-                        
-                    }
-    
-}
+            FavoriteListV().navigationBarHidden(true)
+                .tag(2)
+                .tabItem {
+                    Image (systemName: "heart")
+                    Text("المفضلة")
+                }
+            
+            
+            
+            HomeAll().navigationBarHidden(true)
+                .tag(3)
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("الرئيسية")
+                    
+                }
+            
+        }
         .accentColor((Color("Color")))
+
+     
         
         
         
         
-    
     }
+    
 }

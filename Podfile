@@ -12,7 +12,6 @@ target 'Kaleem' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging'
   pod 'NavigationBarColor'
-  #pod 'AgoraRtcEngine_iOS'
-  #pod 'AgoraUIKit_iOS'
-  #pod 'RadioGroup', '1.4.4'
+  #pod 'FirebaseFirestoreSwift' , '8.10.0'
+  pod 'Alamofire','5.0.0'
 end

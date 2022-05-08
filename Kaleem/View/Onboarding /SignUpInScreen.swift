@@ -84,10 +84,9 @@ struct SignUpInScreen: View {
                             .multilineTextAlignment(.center)
                         HStack(spacing: 0) {
                             
-                            
-                            //    Button(" الخصوصية ") {
+          
                             NavigationLink(
-                                destination: SignIn().navigationBarHidden(true),
+                                destination: Privacy().navigationBarHidden(true),
                                 label: {
                                     Text(" الخصوصية ")
                                     
@@ -103,7 +102,7 @@ struct SignUpInScreen: View {
                                 .multilineTextAlignment(.center)
                             
                             NavigationLink(
-                                destination: SignIn().navigationBarHidden(true),
+                                destination: Conditions().navigationBarHidden(true),
                                 label: {
                                     Text(" شروط ")
                                     

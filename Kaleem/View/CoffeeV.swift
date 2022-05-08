@@ -11,8 +11,9 @@
 
 import SwiftUI
 
-struct SentencesVM: View {
-    @ObservedObject private var sentDBVM  = CoffeeVM()
+struct CoffeeV: View {
+//    @ObservedObject private var sentDBVM  = SentencesVM()
+    @ObservedObject private var ObjCoffee  = SentencesVM()
     
   //  @EnvironmentObject var sentDBVM: CoffeeVM
   
@@ -27,7 +28,7 @@ struct SentencesVM: View {
             
            // Custom Tab Bar....
         ListviewSentencesV()
-                .environmentObject(sentDBVM)
+                .environmentObject(ObjCoffee)
         })
         
    
@@ -36,30 +37,19 @@ struct SentencesVM: View {
 
 
 
-//struct SentenceDB {
-//   var sentence: String
-//  }
-//
-////Temp Array, later we will fetch directly
-//
-//
-
-
-
-
 
 struct ListviewSentencesV: View {
-    @EnvironmentObject var sentDBVM: CoffeeVM
+    @EnvironmentObject var EnvObjCoffee: SentencesVM
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     var body: some View{
       
         
-        let SentenceDBArray = [
-            sentDBVM.oneSentence.S1,
-            sentDBVM.oneSentence.S2,
-            sentDBVM.oneSentence.S3,
-            sentDBVM.oneSentence.S4,
-            sentDBVM.oneSentence.S5
+        let SentenceArray = [
+            EnvObjCoffee.CoffeeOneSentence.S1,
+            EnvObjCoffee.CoffeeOneSentence.S2,
+            EnvObjCoffee.CoffeeOneSentence.S3,
+            EnvObjCoffee.CoffeeOneSentence.S4,
+            EnvObjCoffee.CoffeeOneSentence.S5
 
         ]
  
@@ -147,9 +137,9 @@ struct ListviewSentencesV: View {
                         GeometryReader{ firtFrame in
                              ScrollView(. vertical, showsIndicators: false) {
                                 VStack{
-                                    ForEach(SentenceDBArray, id: \.self){ album in
+                                    ForEach(SentenceArray, id: \.self){ album in
                                         GeometryReader{ element in
-                                            AlbumView(album: album)
+                                            CoffeeAlbumView(album: album)
                                                  .scaleEffect(dimensionValue (firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame(in: .global).minY))
                                                  .opacity (Double(dimensionValue(firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame (in: .global).minY)))
                                         }.frame(height: 100)
@@ -158,7 +148,7 @@ struct ListviewSentencesV: View {
                             }.zIndex (1.0)
             
                         }  .onAppear(){
-                            self.sentDBVM.fetchData()
+                            self.EnvObjCoffee.CoffeeFetchData()
                             
                         }
                         .navigationBarTitle("")
@@ -172,66 +162,7 @@ struct ListviewSentencesV: View {
         //.listStyle(InsetGroupedListStyle())
                 //.background(.green.opacity(0.1) ) //:Color .gray.opacity(0.1))
         
-            
-/******************/
-//            //Text("placeholder")
-//            VStack{
-//                if let coffee = sentDBVM.coffee {
-//                    ForEach(coffee.sentencesArray, id: \.self){ sentence in
-//                        GeometryReader{ element in
-//                            Text(sentence)
-//                        }.frame(height: 100)
-//                    }
-//                } else {
-//                    Text("not laoded")
-//                }
-//
-//            }.padding(.horizontal).padding(.top)
-//                .onAppear(){
-//                    self.sentDBVM.fetchData()
-//
-//                }
-            
- /**************************/
-    
-        
-            
-//            GeometryReader{ firtFrame in
-//                 ScrollView(. vertical, showsIndicators: false) {
-//                    VStack{
-//                        ForEach(SentenceDBArray, id: \.sentence){ album in
-//                            GeometryReader{ element in
-//                                AlbumView(album: album)
-//                                     .scaleEffect(dimensionValue (firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame(in: .global).minY))
-//                                     .opacity (Double(dimensionValue(firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame (in: .global).minY)))
-//                            }.frame(height: 100)
-//                        }
-//                    }.padding(.horizontal).padding(.top)
-//                }.zIndex (1.0)
 
-        } //end of GeometryReader
-        
-            
-            
-            
-            
-            
-            
-//
-//            GeometryReader{ firtFrame in
-//                 ScrollView(. vertical, showsIndicators: false) {
-//                    VStack{
-//                        ForEach(SentenceDBArray, id: \.sentence){ album in
-//                            GeometryReader{ element in
-//                                AlbumView(album: album)
-//                                     .scaleEffect(dimensionValue (firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame(in: .global).minY))
-//                                     .opacity (Double(dimensionValue(firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame (in: .global).minY)))
-//                            }.frame(height: 100)
-//                        }
-//                    }.padding(.horizontal).padding(.top)
-//                }.zIndex (1.0)
-//
-//        } //end of GeometryReader
 //
         
         
@@ -251,7 +182,8 @@ func dimensionValue(firstFrame: CGFloat, minY: CGFloat) -> CGFloat {
     
 }
       
-struct AlbumView: View {
+struct CoffeeAlbumView: View {
+    @StateObject var speaker: Speaker = Speaker()
     var album: String
     var body: some View{
         
@@ -261,10 +193,20 @@ struct AlbumView: View {
                 .foregroundColor(Color("Color"))
             
             
-            Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
+            if (speaker.isSpeaking) {
+                Image(systemName:"speaker.fill").font(.system (size: 30, weight: .semibold))
                 .foregroundColor(Color("Color"))
+            }
+            else{
+                Image(systemName:"speaker").font(.system (size: 30, weight: .semibold))
+                .foregroundColor(Color("Color"))
+                .onTapGesture {
+                speaker.speak(album)//speaking action
+            }
+            }
                 Spacer(minLength: 15)
-                
+           
+     
      
        
             
@@ -295,8 +237,8 @@ struct AlbumView: View {
                 
 struct SentencesV_Previews: PreviewProvider {
     static var previews: some View {
-        SentencesVM()
-            .environmentObject(CoffeeVM())
+        CoffeeV()
+            .environmentObject( SentencesVM())
     }
 }
 
@@ -333,3 +275,70 @@ struct SentencesV_Previews: PreviewProvider {
 //             .zIndex(0)
 //             .padding( )
 // Spacer(minLength: 200)
+
+
+
+
+
+
+
+    
+/******************/
+//            //Text("placeholder")
+//            VStack{
+//                if let coffee = sentDBVM.coffee {
+//                    ForEach(coffee.sentencesArray, id: \.self){ sentence in
+//                        GeometryReader{ element in
+//                            Text(sentence)
+//                        }.frame(height: 100)
+//                    }
+//                } else {
+//                    Text("not laoded")
+//                }
+//
+//            }.padding(.horizontal).padding(.top)
+//                .onAppear(){
+//                    self.sentDBVM.fetchData()
+//
+//                }
+    
+/**************************/
+
+
+    
+//            GeometryReader{ firtFrame in
+//                 ScrollView(. vertical, showsIndicators: false) {
+//                    VStack{
+//                        ForEach(SentenceDBArray, id: \.sentence){ album in
+//                            GeometryReader{ element in
+//                                AlbumView(album: album)
+//                                     .scaleEffect(dimensionValue (firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame(in: .global).minY))
+//                                     .opacity (Double(dimensionValue(firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame (in: .global).minY)))
+//                            }.frame(height: 100)
+//                        }
+//                    }.padding(.horizontal).padding(.top)
+//                }.zIndex (1.0)
+
+} //end of GeometryReader
+
+    
+    
+    
+    
+    
+    
+//
+//            GeometryReader{ firtFrame in
+//                 ScrollView(. vertical, showsIndicators: false) {
+//                    VStack{
+//                        ForEach(SentenceDBArray, id: \.sentence){ album in
+//                            GeometryReader{ element in
+//                                AlbumView(album: album)
+//                                     .scaleEffect(dimensionValue (firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame(in: .global).minY))
+//                                     .opacity (Double(dimensionValue(firstFrame: firtFrame.frame (in: .global).minY, minY: element.frame (in: .global).minY)))
+//                            }.frame(height: 100)
+//                        }
+//                    }.padding(.horizontal).padding(.top)
+//                }.zIndex (1.0)
+//
+//        } //end of GeometryReader

@@ -15,9 +15,9 @@ import CoreLocationUI
 struct AdminHome: View{
    
     @State var showVideCall: Bool = false
-    @State var VM = VideoCallVM()
+  
     @State var index = 0
-    @StateObject var locationManager = LocationManager()
+  
     @State var showhos: Bool = false
     @EnvironmentObject var session: SessionStore
     //@State var showuni: Bool = false
@@ -102,17 +102,7 @@ struct AdminHome: View{
                                         .kerning(1.6)
                                         
                                         .font(Font.custom("Almarai-Bold", size: 25))
-//                                        .foregroundColor(.gray.opacity(1.5))
-//                                        .padding(.leading, 60)
-//                                        .padding(.bottom,-10)
-//
-                                    
-                                    
-//                                    Text("من خلال مكالمة مرئية")
-//                                        .font(Font.custom("Almarai-Bold", size: 20))
-//                                        .foregroundColor(.gray.opacity(0.9))
-//                                      //  .foregroundColor(Color("DarkGray").opacity(0.5) )
-//                                        .padding(.top, -7)
+
                                     
                                     
                                 }//VStack#1
@@ -276,12 +266,6 @@ struct AdminHome: View{
             }
      
             
-            //moving view up
-            //giving only space 10 b/w
-      //      .padding(.top, -70)
-            
-            //        .edgesIgnoringSafeArea(.all)
-            //        .statusBar(hidden: true)
             
 
             
