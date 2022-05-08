@@ -13,7 +13,7 @@ struct VolunteerHome: View {
     @EnvironmentObject var session: SessionStore
     @State var index = 0
     @ObservedObject private var PViewModel = ProfileVM()
-    @EnvironmentObject var quizManager1: EQuizManagerVM
+    @StateObject var quizManager1 = EQuizManagerVM()
     
     var body: some View {
         
@@ -113,14 +113,20 @@ struct VolunteerHome: View {
                                 
                                 Spacer()
                                 
-                                NavigationLink(
-                                    destination: EQuizV(quizManager1: _quizManager1).navigationBarHidden(true),
+                                NavigationLink {
+                                    EQuizV().environmentObject(quizManager1) }
+                                
                                     label: {
                                         Image(systemName: "newspaper.circle.fill")
                                             .foregroundColor(Color("Color"))
                                             .font(.system(size: 65))
                                     }
-                                )
+                                    .onTapGesture {
+                                        Task.init{
+                                            await quizManager1.fetchQuiz()
+                                        }
+                                    }
+                                
                                 
                             }
                             

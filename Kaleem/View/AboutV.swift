@@ -60,7 +60,7 @@ struct AboutPopupView: View {
                 .blur(radius: 1)
             
             VStack(alignment: .center, spacing: 16) {
-                Text("✔️ الشروط")
+                Text("من نحن ❕")
                     .font(Font.custom("Almarai-Bold", size: 30))
                     .foregroundColor(Color.black.opacity(0.7))
                     .padding(.top)
@@ -68,7 +68,7 @@ struct AboutPopupView: View {
                 
                 VStack(alignment: .trailing, spacing: 16) {
                     Spacer(minLength: 5)
-                    Text("١. البند الأول: هدف تطبيق (كليــم)")
+                    Text("١. ماهو كليم")
                         .font(Font.custom("Almarai-Bold", size: 20))
                         .multilineTextAlignment(.trailing)
                    Text("دعم فئة الصم وضعاف السمع من خلال تمثيل تطبيق كليــم كمساعد شخصي لاحتياجاتهم")
@@ -76,7 +76,7 @@ struct AboutPopupView: View {
                         .multilineTextAlignment(TextAlignment.trailing)
                     
                     Spacer(minLength: 10)
-                    Text("٢. البند الثاني: التزامات المستخدم")
+                    Text("٢. هدف تطبيق كليم")
                         .font(Font.custom("Almarai-Bold", size: 20))
                         .multilineTextAlignment(.trailing)
                     
@@ -123,7 +123,7 @@ struct About1: View {
 struct About2: View {
 
     var body: some View {
-        Text("٣. البند الثالث: سياسة كلمة المرور")
+        Text("٣. أبرز خدمات كليم")
             .font(Font.custom("Almarai-Bold", size: 20))
   
           

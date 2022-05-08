@@ -51,7 +51,7 @@ struct EQuizV: View {
                         }
                     
                     NavigationLink(
-                        destination: EQuizV().navigationBarHidden(true),
+                        destination: VolunteerHome().navigationBarHidden(true),
                         label: {
                             Text("الخروج")
                                 .font(Font.custom("Almarai-Regular", size: 20))
