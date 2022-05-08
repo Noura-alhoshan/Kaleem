@@ -77,7 +77,7 @@ struct BrowseQuizV: View {
                     HStack {
                         ZStack {
                             
-                            AsyncImage(url: URL(string: Qmodel.question) ,scale: 5.5).frame(width: 230, height: 150 )
+                            AsyncImage(url: URL(string: Qmodel.question) ,scale: 7).frame(width: 230, height: 150 )
                             
                         }
                         .frame(width: 70, height: 70, alignment: .center)
