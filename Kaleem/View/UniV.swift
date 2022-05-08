@@ -115,9 +115,13 @@ struct UniviewSentencesV: View {
                     }.padding(.horizontal).padding(.top)
                 }.zIndex (1.0)
                 
-            }  .onAppear(){
-                self.UniObj.UniFetchData()
-                
+            }
+            .onAppear() {
+      
+                    
+                     UniObj.UniFetchData()
+        
+          
             }
             //end of GeometryReader
             

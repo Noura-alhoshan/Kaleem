@@ -60,7 +60,7 @@ class SentencesVM: ObservableObject {
     
     
     
-    func FavFetchData( ) {
+    func FavFetchData( )  {
         db.collection("FavoriteList").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else {
                 print("No documents")

@@ -84,6 +84,7 @@
 		F5BAF37128279A650080A198 /* EQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */; };
 		F5BAF37228279A650080A198 /* ERowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF37028279A650080A198 /* ERowAnswersVM.swift */; };
 		F5BAF3742827C8000080A198 /* AboutV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF3732827C8000080A198 /* AboutV.swift */; };
+		F5BAF376282862050080A198 /* LoadUniV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF375282862050080A198 /* LoadUniV.swift */; };
 		F5D8274927E7B6D70030CB1C /* testAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274827E7B6D70030CB1C /* testAdminHome.swift */; };
 		F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274A27E7DF780030CB1C /* TranslationV.swift */; };
 		F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */; };
@@ -183,6 +184,7 @@
 		F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuizManagerVM.swift; sourceTree = "<group>"; };
 		F5BAF37028279A650080A198 /* ERowAnswersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERowAnswersVM.swift; sourceTree = "<group>"; };
 		F5BAF3732827C8000080A198 /* AboutV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutV.swift; sourceTree = "<group>"; };
+		F5BAF375282862050080A198 /* LoadUniV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUniV.swift; sourceTree = "<group>"; };
 		F5D8274827E7B6D70030CB1C /* testAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAdminHome.swift; sourceTree = "<group>"; };
 		F5D8274A27E7DF780030CB1C /* TranslationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationV.swift; sourceTree = "<group>"; };
 		F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar2.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				F5811F9728153B35003CBA3A /* FavoriteListV2.swift */,
 				F5BAF3692826369C0080A198 /* FavoriteListV.swift */,
 				F5BAF3732827C8000080A198 /* AboutV.swift */,
+				F5BAF375282862050080A198 /* LoadUniV.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				F5811F9828153B35003CBA3A /* FavoriteListV2.swift in Sources */,
 				F5399E7827E5308800CECCE4 /* ImpairedServices.swift in Sources */,
 				F5399E8727E5318F00CECCE4 /* UniV.swift in Sources */,
+				F5BAF376282862050080A198 /* LoadUniV.swift in Sources */,
 				F5399E3D27E52B2800CECCE4 /* SentencesM.swift in Sources */,
 				F5399E5B27E52EE200CECCE4 /* Location.swift in Sources */,
 				14FD4F33279F2D1200E4947D /* KaleemApp.swift in Sources */,
@@ -740,7 +744,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 67QWJ57MU9;
+				DEVELOPMENT_TEAM = 4R32MLPWCK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -759,7 +763,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KaleemFinl;
+				PRODUCT_BUNDLE_IDENTIFIER = KaleemFinla;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

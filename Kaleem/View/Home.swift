@@ -15,20 +15,24 @@ import CoreLocationUI
 struct HomeAll: View{
    
     @State var showVideCall: Bool = false
-    
+    @ObservedObject private var UniObj  = SentencesVM()
+    @ObservedObject private var FavObj  = SentencesVM()
+    @StateObject var locationManager = LocationManager()
+    @State var showhos: Bool = false
+    @State var showuni: Bool = false
+    @State var showcoffe: Bool = false
+    @State var showNoResult: Bool = false
     @State var VM = VideoCallVM()
     @State var index = 0
     @ObservedObject private var PViewModel = ProfileVM()
    // @State var  Name : String = PViewModel.KaleemUser.name
-    @StateObject var locationManager = LocationManager()
-    @State var showhos: Bool = false
+
     //@State var showuni: Bool = false
     
     var body: some View{
         
         
         NavigationView{
-            
             
             
             
@@ -259,64 +263,23 @@ struct HomeAll: View{
                                
 
                                 HStack{
+                                    
+                                    NavigationLink(destination: LoadUniV(), isActive: $showhos, label: {EmptyView()} )
+                                   
+                                   NavigationLink(destination: LoadUniV(), isActive: $showuni, label: {EmptyView()} )
+                                
 
-                                    NavigationLink(destination:
-
-                                                  //  UniV().navigationBarHidden(true)
-
-
-
-
-
-                                                    locationManager.CalculateHospitalDistance() != 1.0 ?
-                                                   //Hospital page
-                                                   AnyView(UniV())
-
+                                   NavigationLink(destination: LoadUniV(), isActive: $showcoffe, label: {EmptyView()} )
+                                    
+                                   
+                                   NavigationLink(destination: NoLocation(), isActive: $showNoResult, label: {EmptyView()} )
+                                 
 
 
-                                                   : locationManager.CalculateCoffeDistance() != 1.0 ?
-                                                   // Coffe page
-
-                                                   AnyView(UniV())
-
-                                                   :      locationManager.CalculateUniDistance() != 1.0 ?
-                                                   // uni page
-                                                   AnyView(UniV() )
-                                                   : AnyView(UniV() )
-                                                    //no result page
-
-
-
-
-                                              , isActive: $showhos
-
-                                                   , label: {
-
-                                        LocationButton {
-
-                                   locationManager.requestLocation()
-
-                               action:
-                                            do {
-
-                                   self.showhos = true
-                                   locationManager.requestLocation()
-                                   print(String(locationManager.CalculateHospitalDistance()))
-
-
-
-                               }
-
-
-                               }
-                                              .symbolVariant(.fill)
-                                              .foregroundColor(.white)
-                                              .cornerRadius(150)
-                                              .labelStyle(.iconOnly)
-                                              //.font(.largeTitle)
-                                              .font(.title)
-
-                                   .tint(Color("Color"))} )
+                                    
+                                    
+                             
+                   
                                 }
                                 .padding(.trailing,130)
                                     //.padding(.bottom,30)
@@ -375,7 +338,47 @@ struct HomeAll: View{
                     .padding(.top, 25)
                     .padding(.bottom, 15)
                
-                    
+                    LocationButton {
+                      locationManager.requestLocation()
+
+                    action: do {
+                        if(locationManager.CalculateHospitalDistance() != 1.0 ){
+                        self.showhos = true
+                        }
+                        else
+                            if(locationManager.CalculateUniDistance() != 1.0 ){
+                            self.showuni = true
+                        }
+                        else
+                            if(locationManager.CalculateCoffeDistance() != 1.0 ){
+                            self.showcoffe = true
+                        }
+                            else{
+                                self.showNoResult = true}
+
+
+                        locationManager.requestLocation()
+                        print(String(locationManager.CalculateHospitalDistance()))
+
+                        }
+                    }
+                   // .frame(  width: 900, height: 950)
+                    .symbolVariant(.fill)
+                    .foregroundColor(.white)
+                    .cornerRadius(50.0)
+                    .labelStyle(.iconOnly)
+                    .tint(.blue)
+                    .font(.largeTitle)
+                    .padding(.trailing)
+                    .tint(Color("Color"))
+                    .onAppear() {
+                      //  FavoriteListV()
+
+                    }
+    
+                      
+
+             
                     
                     //Favorite card
                     HStack(spacing: 10){
@@ -526,7 +529,9 @@ struct HomeAll: View{
             
             //moving view up
             //giving only space 10 b/w
-            .onAppear(perform: { PViewModel.fetchUser();} )
+            .onAppear(perform: { PViewModel.fetchUser()
+                ;} )
+         
             .padding(.top, 20)
             
             .navigationBarTitle("")
@@ -543,6 +548,13 @@ struct HomeAll: View{
     }
     
 }
+
+
+
+
+
+
+
 
 struct Corners: Shape{
     

@@ -46,6 +46,14 @@ struct root: View {
                     }
                 }
                 }
+            
+//            if !self.isLoading{
+//               Button("Capture video")
+//                {
+//                    showModal()
+//                }
+//                }
+            
     
             Button(action: {
                 isBeforeTranslate = false

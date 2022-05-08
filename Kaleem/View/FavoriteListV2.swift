@@ -93,8 +93,8 @@ struct ListviewFavorite: View {
                 }.zIndex (1.0)
                 
             }  .onAppear(){
-                self.FavObj.FavFetchData()
-                
+               FavObj.FavFetchData()
+               
                 
             }
             .navigationBarTitle("")
@@ -173,12 +173,15 @@ struct ListviewFavorite: View {
                     .multilineTextAlignment(.center)
                     .padding(.all)
                 
+
+                
                 
                 
                 
             }//HStack
             .navigationBarHidden(true)
             .foregroundColor(Color.black)
+         
             //.shadow(color: .black, radius:20, x: 30, y: 20)
             .padding()
             .frame(maxWidth: .infinity, alignment: .trailing)
