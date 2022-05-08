@@ -127,7 +127,7 @@ struct ScreenView2: View {
     @AppStorage("currentPage1") var currentPage1 = 1
     var body: some View {
 
-        Image("Test").resizable().aspectRatio( contentMode: .fit)
+    
 
         VStack(spacing: 20){
             HStack{
