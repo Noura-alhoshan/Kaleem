@@ -287,7 +287,7 @@ struct HomeAll: View{
                                                    :      locationManager.CalculateUniDistance() != 1.0 ?
                                                    // uni page
                                                    AnyView(UniV() )
-                                                   : AnyView(NoLocation() )
+                                                   : AnyView(UniV() )
                                                     //no result page
 
 

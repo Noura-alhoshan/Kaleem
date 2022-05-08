@@ -32,7 +32,7 @@ struct ImpairedTabBar2: View {
                     Text("الترجمة")
                 }
             
-            Favorite()
+            FavoriteListV()
                 .tag(2)
                 .tabItem {
                     Image (systemName: "heart")
