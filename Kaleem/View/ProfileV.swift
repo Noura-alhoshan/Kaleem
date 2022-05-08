@@ -47,6 +47,27 @@ struct ProfileView: View {
            // Spacer(minLength: 30)
         
             VStack{
+                
+                Button(action: {
+                    showingAlert = true
+                }, label: {
+                    Text("تسجيل الخروج")
+                        .foregroundColor(Color(.black).opacity(0.6))
+                        .font(Font.custom("Almarai-Bold", size: 20))
+                        .fontWeight(.bold)
+                      //  .padding(.vertical)
+                      //  .padding(.horizontal,50)
+                      //  .background(Color(.gray).opacity(0.9))
+                       // .clipShape(Capsule())
+                       // .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                })
+                    .padding(.top, 20)
+                    .padding(.leading,200)
+                    .alert("هل أنت متأكد من تسجيل الخروج؟", isPresented: $showingAlert, actions: {
+                          Button("نعم", action: {session.signOut()})
+                          Button("لا", role: .cancel, action: {})
+                        })
+                
                 HStack {
                     Spacer()
                     
@@ -62,7 +83,7 @@ struct ProfileView: View {
                     }
                     Spacer()
                 }.cornerRadius(20)
-                    .padding(.top,70)
+                    .padding(.top,30)
                 
                 
                 
@@ -71,7 +92,7 @@ struct ProfileView: View {
                     VStack{
                         HStack{
                             Text("المعلومات الشخصية")
-                                .foregroundColor(.black).opacity(0.7)
+                                .foregroundColor(.black).opacity(0.6)
                                 .font(.title2)
                             // .fontWeight(.bold)
                         }
@@ -79,7 +100,7 @@ struct ProfileView: View {
                         
                         VStack(alignment: .trailing ){
                             HStack(spacing: 15)  {
-                                Text(PViewModel.KaleemUser.name).foregroundColor(.black.opacity(0.7))
+                                Text(PViewModel.KaleemUser.name).foregroundColor(.black.opacity(0.6))
                                 //  Text("الاسم:" )
                                 
                                 Image(systemName: "person.fill")
@@ -94,7 +115,7 @@ struct ProfileView: View {
                         
                         VStack(alignment: .trailing ){
                             HStack( spacing: 15)  {
-                                Text(PViewModel.KaleemUser.phoneNo).foregroundColor(.black.opacity(0.7))
+                                Text(PViewModel.KaleemUser.phoneNo).foregroundColor(.black.opacity(0.6))
                                 // Text("رقم الجوال:" )
                                 
                                 Image(systemName: "phone.fill")
@@ -110,7 +131,7 @@ struct ProfileView: View {
                         
                         VStack(alignment: .trailing ){
                             HStack(spacing: 15)  {
-                                Text(PViewModel.KaleemUser.email).foregroundColor(.black.opacity(0.7))
+                                Text(PViewModel.KaleemUser.email).foregroundColor(.black.opacity(0.6))
                                 // Text("البريد الإلكتروني:" )
                                 
                                 Image(systemName: "envelope.fill")
@@ -140,6 +161,7 @@ struct ProfileView: View {
                         //Spacer()
                     }
                     /*CONTAINER*/
+                 
                     .padding()
                     .padding(.bottom, 10)
                     .background(Color.gray.opacity(0.1))
@@ -154,26 +176,10 @@ struct ProfileView: View {
                     
                 
                 
+
                 
-                Button(action: {
-                    showingAlert = true
-                }, label: {
-                    Text("تسجيل الخروج")
-                        .foregroundColor(Color.white)
-                        .fontWeight(.bold)
-                        .padding(.vertical)
-                        .padding(.horizontal,50)
-                        .background(Color(.gray).opacity(0.9))
-                        .clipShape(Capsule())
-                        .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
-                })
-                    .padding(.top, 28)
-                    .alert("هل أنت متأكد من تسجيل الخروج؟", isPresented: $showingAlert, actions: {
-                          Button("نعم", action: {session.signOut()})
-                          Button("لا", role: .cancel, action: {})
-                        })
-                
-            }.navigationBarTitle("")
+            }
+            .navigationBarTitle("")
                 .navigationBarHidden(true)
        
         }

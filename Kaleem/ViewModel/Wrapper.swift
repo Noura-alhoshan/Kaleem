@@ -23,7 +23,7 @@ struct Wrraper: View{
                 {
                 case "Volunteer":
                   //  VolunteerHome()
-                    SignOut()
+                    VolunteerTabBar2()
                 case "Impaired":
                     ImpairedTabBar2()
                     //   HomeAll()

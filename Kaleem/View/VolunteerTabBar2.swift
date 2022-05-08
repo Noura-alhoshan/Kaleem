@@ -7,12 +7,13 @@
 
 import SwiftUI
 struct VolunteerTabBar2: View {
-    
+    @State private var selected = 1
     var body: some View {
         
-        TabView {
+        TabView (selection: $selected){
             
             ProfileView()
+                .tag(0)
                          .tabItem {
                       Image (systemName: "person")
                       Text("حسابك")
@@ -21,7 +22,8 @@ struct VolunteerTabBar2: View {
                      
                
             //change it to voulnteer home
-            HomeAll()
+            VolunteerHome()
+                .tag(1)
                     .tabItem {
                          Image(systemName: "house")
                         Text("الرئيسية")

@@ -78,6 +78,10 @@
 		F59A1509281DA5AB006B9C56 /* PrivacyV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59A1508281DA5AB006B9C56 /* PrivacyV.swift */; };
 		F5BAF368282633BC0080A198 /* FavSentenceM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF367282633BC0080A198 /* FavSentenceM.swift */; };
 		F5BAF36A2826369C0080A198 /* FavoriteListV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF3692826369C0080A198 /* FavoriteListV.swift */; };
+		F5BAF36D28279A410080A198 /* EQuestionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36B28279A400080A198 /* EQuestionV.swift */; };
+		F5BAF36E28279A410080A198 /* EQuizV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36C28279A400080A198 /* EQuizV.swift */; };
+		F5BAF37128279A650080A198 /* EQuizManagerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */; };
+		F5BAF37228279A650080A198 /* ERowAnswersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BAF37028279A650080A198 /* ERowAnswersVM.swift */; };
 		F5D8274927E7B6D70030CB1C /* testAdminHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274827E7B6D70030CB1C /* testAdminHome.swift */; };
 		F5D8274B27E7DF780030CB1C /* TranslationV.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8274A27E7DF780030CB1C /* TranslationV.swift */; };
 		F5F1504827E5E0B500A989F2 /* ImpairedTabBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */; };
@@ -171,6 +175,10 @@
 		F59A1508281DA5AB006B9C56 /* PrivacyV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyV.swift; sourceTree = "<group>"; };
 		F5BAF367282633BC0080A198 /* FavSentenceM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavSentenceM.swift; sourceTree = "<group>"; };
 		F5BAF3692826369C0080A198 /* FavoriteListV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListV.swift; sourceTree = "<group>"; };
+		F5BAF36B28279A400080A198 /* EQuestionV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuestionV.swift; sourceTree = "<group>"; };
+		F5BAF36C28279A400080A198 /* EQuizV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuizV.swift; sourceTree = "<group>"; };
+		F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EQuizManagerVM.swift; sourceTree = "<group>"; };
+		F5BAF37028279A650080A198 /* ERowAnswersVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ERowAnswersVM.swift; sourceTree = "<group>"; };
 		F5D8274827E7B6D70030CB1C /* testAdminHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAdminHome.swift; sourceTree = "<group>"; };
 		F5D8274A27E7DF780030CB1C /* TranslationV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationV.swift; sourceTree = "<group>"; };
 		F5F1504727E5E0B500A989F2 /* ImpairedTabBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpairedTabBar2.swift; sourceTree = "<group>"; };
@@ -296,6 +304,8 @@
 		F5399E3E27E52CD200CECCE4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F5BAF36F28279A650080A198 /* EQuizManagerVM.swift */,
+				F5BAF37028279A650080A198 /* ERowAnswersVM.swift */,
 				F5399E4A27E52E1A00CECCE4 /* SignInVM.swift */,
 				F5399E4C27E52E2A00CECCE4 /* SignUpVM2.swift */,
 				F5399E4E27E52E4200CECCE4 /* TextToSpeechVM.swift */,
@@ -326,6 +336,8 @@
 		F572FADC27A3B7FB001C7143 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F5BAF36B28279A400080A198 /* EQuestionV.swift */,
+				F5BAF36C28279A400080A198 /* EQuizV.swift */,
 				F59A14FB281B35FA006B9C56 /* Translating */,
 				2601732F28125EF80091DBA7 /* BrowseQuizV.swift */,
 				2601732B28125EE70091DBA7 /* DeleteProfileV.swift */,
@@ -524,12 +536,14 @@
 				5609AAFD27DD3BB300D18840 /* Constants.swift in Sources */,
 				2601732A28125EC40091DBA7 /* AdminQuizVM.swift in Sources */,
 				F5399E6327E52FB800CECCE4 /* SignInV.swift in Sources */,
+				F5BAF37228279A650080A198 /* ERowAnswersVM.swift in Sources */,
 				F542D1C027C1A54B00A1E9ED /* AQuestionV.swift in Sources */,
 				F5399E6227E52FB800CECCE4 /* SignOutV.swift in Sources */,
 				F5399E6727E5304D00CECCE4 /* AdminHome.swift in Sources */,
 				F5399E9227E55CA900CECCE4 /* VideoCallVM.swift in Sources */,
 				F5399E5127E52E5C00CECCE4 /* Wrapper.swift in Sources */,
 				F5399E8927E5318F00CECCE4 /* HosV.swift in Sources */,
+				F5BAF36E28279A410080A198 /* EQuizV.swift in Sources */,
 				5609AAFF27DD3BB300D18840 /* CustomAlert.swift in Sources */,
 				F5811F9828153B35003CBA3A /* FavoriteListV2.swift in Sources */,
 				F5399E7827E5308800CECCE4 /* ImpairedServices.swift in Sources */,
@@ -566,6 +580,7 @@
 				F5399E7A27E5308800CECCE4 /* AdminTabBar.swift in Sources */,
 				5609AB0027DD3BB300D18840 /* CustomAlertQuiz.swift in Sources */,
 				F5399E5D27E52EE200CECCE4 /* SentencesDBVM.swift in Sources */,
+				F5BAF37128279A650080A198 /* EQuizManagerVM.swift in Sources */,
 				2601732E28125EE70091DBA7 /* EditQuizV.swift in Sources */,
 				F5399E6427E52FB800CECCE4 /* SignUpInScreen.swift in Sources */,
 				F59A1501281B3827006B9C56 /* Countdown.swift in Sources */,
@@ -581,6 +596,7 @@
 				F542D1A227C1A4F200A1E9ED /* AQuestionM.swift in Sources */,
 				F59A1509281DA5AB006B9C56 /* PrivacyV.swift in Sources */,
 				2601733028125EF80091DBA7 /* BrowseQuizV.swift in Sources */,
+				F5BAF36D28279A410080A198 /* EQuestionV.swift in Sources */,
 				F5399E5327E52E9600CECCE4 /* NameVM.swift in Sources */,
 				5609AAF227DD3B9500D18840 /* VolunteerM.swift in Sources */,
 			);

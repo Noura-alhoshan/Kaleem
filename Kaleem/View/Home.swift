@@ -83,16 +83,11 @@ struct HomeAll: View{
                         HStack{
                             VStack(alignment: .trailing, spacing: 15){
                                 
-                                Text("أهلاً بك")
+                                Text(" أهلاً بك .. " + PViewModel.KaleemUser.name)
                                     .font(Font.custom("Almarai-Bold", size: 35))
                                     .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
+                                    .padding(.top,30)
                                 
-                                Text(PViewModel.KaleemUser.name
-                                )
-                                    .fontWeight(.bold)
-                                    .font(Font.custom("Almarai-Bold", size: 25))
-                                    .autocapitalization(.none).multilineTextAlignment(TextAlignment.trailing)
-                                //
                                 Text("حيثما لوّحت يداك وتُرجم صوتك")
                                     .fontWeight(.bold)
                                     .font(Font.custom("Almarai-Bold", size: 20))
@@ -530,9 +525,7 @@ struct HomeAll: View{
             
             //moving view up
             //giving only space 10 b/w
-            .onAppear(perform: { PViewModel.fetchUser();
-           
-            } )
+            .onAppear(perform: { PViewModel.fetchUser();} )
             .padding(.top, 20)
             
             .navigationBarTitle("")
