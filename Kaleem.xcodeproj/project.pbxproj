@@ -26,6 +26,7 @@
 		5609AB0D27DD3BC000D18840 /* QuestionDetailsV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5609AB0627DD3BC000D18840 /* QuestionDetailsV.swift */; };
 		561AC49E27DF9DD7008F21D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */; };
 		561DF4F127E50D92007A1791 /* Onboarding  in Resources */ = {isa = PBXBuildFile; fileRef = 561DF4F027E50D92007A1791 /* Onboarding  */; };
+		565A47AC2819339F00AFDAD2 /* CustomPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565A47AB2819339F00AFDAD2 /* CustomPicker.swift */; };
 		56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0227E4FBA7002DBCDB /* test1.swift */; };
 		56F96F0827E5007F002DBCDB /* TextToSpeechV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */; };
 		56F96F0927E5007F002DBCDB /* VideoCallV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F96F0727E5007E002DBCDB /* VideoCallV.swift */; };
@@ -120,6 +121,7 @@
 		561AC49A27DE004E008F21D5 /* Kaleem.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Kaleem.entitlements; sourceTree = "<group>"; };
 		561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		561DF4F027E50D92007A1791 /* Onboarding  */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Onboarding "; sourceTree = "<group>"; };
+		565A47AB2819339F00AFDAD2 /* CustomPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPicker.swift; sourceTree = "<group>"; };
 		56F96F0227E4FBA7002DBCDB /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
 		56F96F0627E5007E002DBCDB /* TextToSpeechV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextToSpeechV.swift; sourceTree = "<group>"; };
 		56F96F0727E5007E002DBCDB /* VideoCallV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCallV.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				F572FADA27A3B669001C7143 /* Info.plist */,
 				561AC49D27DF9DD7008F21D5 /* GoogleService-Info.plist */,
 				F50D1A3A27B2D24100B3EE94 /* Assets.xcassets */,
+				565A47AB2819339F00AFDAD2 /* CustomPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				F5399E7B27E5308800CECCE4 /* ImpairedTabBar.swift in Sources */,
 				F8CC63CA281EC85D00E97DA4 /* SignToTextV.swift in Sources */,
 				56F96F0327E4FBA7002DBCDB /* test1.swift in Sources */,
+				565A47AC2819339F00AFDAD2 /* CustomPicker.swift in Sources */,
 				F5F1504E27E61D9A00A989F2 /* ProfileVM.swift in Sources */,
 				5609AB0C27DD3BC000D18840 /* ForgotPassword.swift in Sources */,
 				F5399E4B27E52E1A00CECCE4 /* SignInVM.swift in Sources */,
@@ -736,7 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Kaleem/Preview Content\"";
-				DEVELOPMENT_TEAM = 4R32MLPWCK;
+				DEVELOPMENT_TEAM = 67QWJ57MU9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Kaleem/Info.plist;
@@ -755,7 +759,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = KaleemFina;
+				PRODUCT_BUNDLE_IDENTIFIER = KaleemFinl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

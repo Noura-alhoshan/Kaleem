@@ -58,7 +58,7 @@ struct QuestionDetails: View {
                             .environmentObject(AQuizManagerVM()), isActive: $showEditForm, label: {EmptyView()} )
             
             
-            VStack( spacing: 19) {
+            VStack( spacing: 10) {
                 
                 AsyncImage(url: URL(string: viewModel.oneQuestion.question), scale: 4.0).frame(width: 330, height: 180 )}
             
@@ -125,7 +125,7 @@ struct QuestionDetails: View {
                 })
             }//hstack
             
-            Spacer(minLength: 39)///////////////////////////////here to change the space of the arrow and bottom of page
+            ///////////////////////////////here to change the space of the arrow and bottom of page
             
         }.onAppear(perform: {
             viewModel.fetchQuestion(Qid: SelectedQuestion.Qid, quizCollection: quizCollec)

@@ -79,9 +79,6 @@ struct ListviewFavorite: View {
             
             
             
-            
-            
-            
             GeometryReader{ firtFrame in
                 ScrollView(. vertical, showsIndicators: false) {
                     VStack{
@@ -98,10 +95,13 @@ struct ListviewFavorite: View {
             }  .onAppear(){
                 self.FavObj.FavFetchData()
                 
+                
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
             //end of GeometryReader
+            
+            
             
             
             
