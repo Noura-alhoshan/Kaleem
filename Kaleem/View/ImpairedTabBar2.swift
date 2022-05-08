@@ -16,7 +16,7 @@ struct ImpairedTabBar2: View {
         
         TabView(selection: $selected) {
             
-            ProfileView()
+            ProfileView().navigationBarHidden(true)
                 .tag(0)
                 .tabItem {
                     Image (systemName: "person")
@@ -25,14 +25,14 @@ struct ImpairedTabBar2: View {
             
             
 
-            SignToTextV()
+            SignToTextV().navigationBarHidden(true)
                 .tag(1)
                 .tabItem {
                     Image (systemName: "hand.raised")
                     Text("الترجمة")
                 }
             
-            FavoriteListV()
+            FavoriteListV().navigationBarHidden(true)
                 .tag(2)
                 .tabItem {
                     Image (systemName: "heart")
@@ -41,7 +41,7 @@ struct ImpairedTabBar2: View {
             
             
             
-            HomeAll()
+            HomeAll().navigationBarHidden(true)
                 .tag(3)
                 .tabItem {
                     Image(systemName: "house")

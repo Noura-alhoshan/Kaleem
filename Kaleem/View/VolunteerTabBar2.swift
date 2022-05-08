@@ -12,7 +12,7 @@ struct VolunteerTabBar2: View {
         
         TabView (selection: $selected){
             
-            ProfileView()
+            ProfileView().navigationBarHidden(true)
                 .tag(0)
                          .tabItem {
                       Image (systemName: "person")
@@ -22,7 +22,7 @@ struct VolunteerTabBar2: View {
                      
                
             //change it to voulnteer home
-            VolunteerHome()
+            VolunteerHome().navigationBarHidden(true)
                 .tag(1)
                     .tabItem {
                          Image(systemName: "house")

@@ -455,7 +455,7 @@ struct HomeAll: View{
                             HStack{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
-                              Text("احصائيات")
+                              Text("المفضلة")
                                         .font(Font.custom("Almarai-Bold", size: 25))
                                     //    .foregroundColor(.gray.opacity(1.5))
                                     
@@ -481,13 +481,14 @@ struct HomeAll: View{
                                 Spacer()
                                 //consider to change it sutibale icons
                                 
-                                Button(action: {}) {
-                                    
-                                    Image(systemName: "chart.line.uptrend.xyaxis.circle.fill")
-                                        .foregroundColor(Color("Color"))
-                                        .font(.system(size: 65))
-                                        
-                                }
+                                NavigationLink(
+                                    destination:     FavoriteListV().navigationBarHidden(true),
+                                    label: {
+                                        Image(systemName: "heart")
+                                            .foregroundColor(Color("Color"))
+                                            .font(.system(size: 65))
+                                    }
+                                )
                                 
                             }
                             .padding(.trailing,130)
