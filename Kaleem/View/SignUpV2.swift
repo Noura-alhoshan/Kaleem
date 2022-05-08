@@ -36,7 +36,7 @@ struct SignUpTaps : View {
                      .resizable()
                      .scaledToFit()
                      .frame(width: 150.0, height: 70.0)
-                     .padding(.top, 10)
+                     .padding(.top, -20) // it was 10, I changed it after the Gender field
                 
               Text("انشاء حساب")
                      .foregroundColor(.black)
@@ -68,7 +68,8 @@ struct SignUpTaps : View {
 
 // Volunteer Sign Up Tap
 struct V_SignUp : View {
-    
+    //    gender btn value
+        @State private var lastSelectedIndex: Int?
     @State var VM = SignUpVM()
     @State var username = ""
     @State var phoneNo = "" // change to phone
@@ -87,7 +88,7 @@ struct V_SignUp : View {
     // call from SignUpVM : View Model (firebase)
      func V_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email, password: pass, userType: "Volunteer", username: username, phone: phoneNo, accStatus: "rejected")
+         VM.createNewAccount(email: email, password: pass, userType: "Volunteer", username: username, phone: phoneNo, accStatus: "rejected", gender: lastSelectedIndex!)
  
     }
     var body: some View{
@@ -211,9 +212,30 @@ struct V_SignUp : View {
                 }
                 .padding(.horizontal)
                 .padding(.top, 30)
+                /*Gender*/
+                VStack{
+                    HStack (spacing: 15){
+                    CustomPicker(data: ["ذكر","أنثى"], placeholder: "الجنس", lastSelectedIndex: self.$lastSelectedIndex)
+                        
+                        Image("gender")
+                        
+                    }
+                    Divider().background(Color("Kcolor").opacity(0.5))
+                 
+//                    if self.passErr != "" {
+//                        Text(self.passErr)
+//                            .foregroundColor(.red)
+//                            .font(.system(size: 10))
+//
+//                    }
                 
+                }
+         .padding(.horizontal)
+         .padding(.top,25)
                 /* 4- PASS FIELD*/
                 VStack{
+               
+
                     // call the details from another struct for toggling the password
                 SecureInputView2("كلمة المرور", text: $pass).onChange(of: self.pass, perform: {newValue in self.passErr = VM.validatePass(pass: self.pass)})
                     
@@ -267,7 +289,7 @@ struct V_SignUp : View {
             
             Button(action: {
                 
-                if username == "" || phoneNo == "" || email == "" || pass == "" || repass == "" {
+                if username == "" || phoneNo == "" || email == "" || lastSelectedIndex == nil || pass == "" || repass == "" {
                     allEmptyErr = "جميع الحقول مطلوبة"
                 }
                 else{
@@ -316,7 +338,7 @@ struct S_SignUp : View {
     @State var showNextPage = false
 
     // end alert vars
-    
+  
     @State var VM = SignUpVM()
     @State var username2 = ""
     @State var phoneNo2 = ""
@@ -332,10 +354,11 @@ struct S_SignUp : View {
     @State var repassErr2 = ""
     @State var allEmptyErr2 = ""
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     // call from SignUpVM : View Model (firebase)
      func S_SignUp (){
          // for Auth.
-         VM.createNewAccount(email: email2, password: pass2, userType: "Impaired", username: username2, phone: phoneNo2, accStatus: "none")
+         VM.createNewAccount(email: email2, password: pass2, userType: "Impaired", username: username2, phone: phoneNo2, accStatus: "none", gender: -1)
     }
     var body: some View{
         
@@ -490,6 +513,29 @@ struct S_SignUp : View {
                 // bottom padding...
                 .padding(.horizontal)
                  .padding(.top,30)
+                
+//                EMPTY space
+                // 1-
+                VStack{
+                    
+                    HStack (spacing: 15){
+                        Text("")
+                        
+                        Image(systemName: "envelope.fill")
+                            .foregroundColor(.clear)
+                        
+                    }
+                 
+//                    if self.passErr != "" {
+//                        Text(self.passErr)
+//                            .foregroundColor(.red)
+//                            .font(.system(size: 10))
+//
+//                    }
+                    
+                }
+                .padding(.horizontal)
+                .padding(.top, 30)
             
             }
             .padding()
@@ -532,6 +578,7 @@ struct S_SignUp : View {
                         .font(.system(size: 13))
 
                 }
+                    
                 Text("تسجيل")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
@@ -550,6 +597,16 @@ struct S_SignUp : View {
             // hiding view when its in background...
             // only button...
             .opacity(self.index == 1 ? 1 : 0)
+            .alert(isPresented: $showAlert) {
+                
+                Alert(
+                    title: Text("تهانينا!"),
+                    message: Text("تم تسجيلك بنجاح"),
+                    dismissButton: .default(
+                                    Text("حسنا"),
+                                    action: { self.mode.wrappedValue.dismiss() })
+                )
+                }
        
            // Text(alertAction == .ok ? "ok Clikced" : alertAction == .cancel ? "Cancel Clicked" : "")
         } // end of firt ZStack

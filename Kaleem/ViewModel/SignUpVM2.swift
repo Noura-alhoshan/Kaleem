@@ -20,7 +20,7 @@ class SignUpVM : ObservableObject {
     
     
     // create user in Firebase Auth.
-    func createNewAccount(email: String, password: String, userType: String, username: String, phone: String, accStatus: String) { // I change it because it was display an error (var > String) ########
+    func createNewAccount(email: String, password: String, userType: String, username: String, phone: String, accStatus: String, gender: Int) { // I change it because it was display an error (var > String) ########
         
         auth.createUser(withEmail: email, password: password){ result, err in
             if let err = err {
@@ -31,11 +31,12 @@ class SignUpVM : ObservableObject {
 
             print("Successfully created user: \(result?.user.uid ?? "")")
 
-            self.addDataToCollection(userType: userType, username: username, phone: phone, email: email, accStatus: accStatus)        }
+            self.addDataToCollection(userType: userType, username: username, phone: phone, email: email, accStatus: accStatus, gender: gender)        }
     } // END crrate user
     
-     func addDataToCollection(userType: String, username: String, phone: String, email: String, accStatus: String) {
-        
+    func addDataToCollection(userType: String, username: String, phone: String, email: String, accStatus: String, gender: Int) {
+        var genderStr = "female"
+        if gender == 0 {genderStr = "male"}
          guard let uid = Auth.auth().currentUser?.uid else {
              print ("Get FAILED!!!!!!!!!!!!!!!!!!!!!!111")
              return }
@@ -62,7 +63,8 @@ class SignUpVM : ObservableObject {
              print("AccountStatus#### \(accStatus)")
              db.collection(userType).document(uid).setData(["uid":uid,
                                                             "name":username, "phoneNo":phone, "email":email, "type": userType,
-                                                            "accStatus" : accStatus
+                                                            "accStatus" : accStatus,
+                                                            "gender" : genderStr
               ])         { error in
                 
                 // Check for errors
