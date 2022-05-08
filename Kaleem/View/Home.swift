@@ -473,26 +473,26 @@ struct HomeAll: View{
                                 
                                 
                             }
-                            .padding(.leading,25)
+                            .padding(.leading,60)
                             
                             
                             HStack{
                                 
                                 Spacer()
                                 //consider to change it sutibale icons
-//                                
-//                                NavigationLink(
-//                                    destination:    .navigationBarHidden(true),
-//                                    label: {
-//                                        Image(systemName: "heart")
-//                                            .foregroundColor(Color("Color"))
-//                                            .font(.system(size: 65))
-//                                    }
-//                                )
+                                
+                                NavigationLink(
+                                    destination:    AboutV().navigationBarHidden(true),
+                                    label: {
+                                        Image(systemName: "person.2.circle.fill")
+                                            .foregroundColor(Color("Color"))
+                                            .font(.system(size: 65))
+                                    }
+                                )
                                 
                             }
                             .padding(.trailing,130)
-                            .padding(.bottom,25)
+                            .padding(.bottom,28)
                             //.padding(.top,10)
                             
                             
