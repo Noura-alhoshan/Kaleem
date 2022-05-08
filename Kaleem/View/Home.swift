@@ -135,7 +135,7 @@ struct HomeAll: View{
                     
                     
                 }
-                .foregroundColor(.black.opacity(0.9))
+                .foregroundColor(.black.opacity(0.6))
                 .padding(.leading, 25)
                 .padding(.top, 25)
                 .padding(.trailing)
@@ -520,6 +520,7 @@ struct HomeAll: View{
      
                     
                 }
+                .foregroundColor(.black.opacity(0.6))
        
            
                 Spacer()

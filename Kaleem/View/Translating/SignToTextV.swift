@@ -146,6 +146,7 @@ struct ScreenView2: View {
                         .kerning (1.4)
                  
                 })
+                .foregroundColor(.black.opacity(0.7))
                 
                 Spacer(minLength: 180)
                 
@@ -153,13 +154,14 @@ struct ScreenView2: View {
                 
                 if currentPage1 == 1{
                     Text ( "تعليـمات الترجمـة")
-                        .font(Font.custom("Jazeera-Bold", size: 30))
-                    
-                    
-                        . font(.title)
-                        .fontWeight(.semibold)
-                    // Letter Spacing...
-                        .kerning (1.2)
+                        .font(Font.custom("Almarai-Regular", size: 25))
+                        .foregroundColor(.black.opacity(0.7))
+//
+//
+//                        . font(.title)
+//                        .fontWeight(.semibold)
+//                    // Letter Spacing...
+//                        .kerning (1.2)
                     
                     
                 }
@@ -195,7 +197,8 @@ struct ScreenView2: View {
             .padding()
             Text(title)
                 .fontWeight(.bold)
-                .font(Font.custom("Jazeera-Bold", size: 40))
+                .font(Font.custom("Almarai-Regular", size: 40))
+                .foregroundColor(.black.opacity(0.7))
                
                 .foregroundColor(.black)
                 .padding(.top,50)
@@ -215,7 +218,9 @@ struct ScreenView2: View {
             //Minimum spacing when Phone is reducing
             Spacer(minLength: 120)
             
-        }    .navigationBarTitle("")
+        }
+        .foregroundColor(.black.opacity(0.7))
+        .navigationBarTitle("")
             .navigationBarHidden(true)
     }
 }
