@@ -9,7 +9,7 @@
 //  ContentView.swift
 //  Kaleem
 //
-//  Created by نوره سعد on 21/06/1443 AH.
+
 //
 
 import SwiftUI
@@ -60,13 +60,14 @@ struct Instrouctions: View {
          }
          
          if currentPage1 == 4{
-             ScreenView2(image: "frontC", title: "الكامـيرا الأمـاميـة", detail : "عنـد النقـر على ابدأ الالتـقاط ستُـفتح الكامـيرا الامـامية")
+             ScreenView2(image: "frontC", title: "استعد !", detail : "عنـد النقـر على ابدأ الالتـقاط من خلال الواجهة التالية ستُـفتح الكامـيرا الامـامية")
                  .transition(.scale)
          }
 
 
       // .background()
      }
+     .padding(.bottom,60)
      .overlay(
         //Button..
         Button(action: {
@@ -104,7 +105,7 @@ struct Instrouctions: View {
                         .rotationEffect(.init(degrees: -90))
                 }
                             .padding(-15)
-                )
+                )    .padding(.bottom,40)
         }
      
      )
@@ -201,8 +202,9 @@ struct ScreenView2: View {
                 .foregroundColor(.black.opacity(0.7))
                
                 .foregroundColor(.black)
-                .padding(.top,50)
-           // Spacer(minLength: 0)
+                .padding(.top,40)
+                .padding(.bottom,40)
+
             Image(image).resizable().aspectRatio( contentMode: .fit)
             
           
@@ -212,7 +214,8 @@ struct ScreenView2: View {
             
                 .kerning(1.3)
                 .multilineTextAlignment(.center)
-                .padding(.bottom,20)
+                .padding(.bottom,10)
+                .padding(.top,30)
                 .padding(.leading,30)
                 .padding(.trailing,30)
             //Minimum spacing when Phone is reducing

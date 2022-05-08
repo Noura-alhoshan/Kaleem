@@ -455,7 +455,7 @@ struct HomeAll: View{
                             HStack{
                                 
                                 VStack(alignment: .trailing, spacing: 15){
-                              Text("المفضلة")
+                              Text("من نحن")
                                         .font(Font.custom("Almarai-Bold", size: 25))
                                     //    .foregroundColor(.gray.opacity(1.5))
                                     
@@ -480,15 +480,15 @@ struct HomeAll: View{
                                 
                                 Spacer()
                                 //consider to change it sutibale icons
-                                
-                                NavigationLink(
-                                    destination:     FavoriteListV().navigationBarHidden(true),
-                                    label: {
-                                        Image(systemName: "heart")
-                                            .foregroundColor(Color("Color"))
-                                            .font(.system(size: 65))
-                                    }
-                                )
+//                                
+//                                NavigationLink(
+//                                    destination:    .navigationBarHidden(true),
+//                                    label: {
+//                                        Image(systemName: "heart")
+//                                            .foregroundColor(Color("Color"))
+//                                            .font(.system(size: 65))
+//                                    }
+//                                )
                                 
                             }
                             .padding(.trailing,130)
