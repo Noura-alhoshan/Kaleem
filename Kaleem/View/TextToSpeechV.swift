@@ -38,13 +38,14 @@ struct TextToSpeechV: View {
        //     VStack{
             HStack{
                 Text("الترجمة الصوتية")
-                    .foregroundColor(.black.opacity(0.7))
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding(.horizontal,22)
-                    .padding(.top,12)
+                    .font(Font.custom("Almarai-Regular", size: 30))
+                    .padding(.leading,100)
+                    .padding(.top)
+                
+                
+                    .foregroundColor(.black.opacity(0.6))
 
-                Spacer()
+                Spacer(minLength: 30)
                 Button(action: {
                                     
                                     withAnimation(.easeInOut){
@@ -60,6 +61,8 @@ struct TextToSpeechV: View {
                                          .cornerRadius(10)
                                  
                                 }).padding(.horizontal,25)
+                
+    .padding(.top)
                 
             }
             

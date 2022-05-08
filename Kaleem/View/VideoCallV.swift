@@ -11,13 +11,14 @@ struct VideoCallV: View {
     var body: some View {
         HStack{
             Text(" المتطوعيـن")
-                .foregroundColor(.black.opacity(0.7))
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.horizontal,22)
-                .padding(.top,12)
-
-            Spacer()
+            
+                .font(Font.custom("Almarai-Regular", size: 30))
+            
+                .foregroundColor(.black.opacity(0.6))
+                .padding(.leading,135)
+                .padding(.top)
+            Spacer(minLength: 30)
+            
             Button(action: {
                                 withAnimation(.easeInOut){
                                     self.mode.wrappedValue.dismiss()
@@ -31,6 +32,7 @@ struct VideoCallV: View {
                                      .cornerRadius(10)
                              
                             }).padding(.horizontal,25)
+                .padding(.top)
             
         }
         
@@ -39,7 +41,10 @@ struct VideoCallV: View {
             
             VStack(alignment: .trailing) {
                 HStack(alignment: .center){
-                    Text(v.name).padding(.trailing, 4).font(.title3)
+                    Text(v.name).padding(.trailing, 4)
+                        .font(Font.custom("Almarai-Regular", size: 20))
+                    
+                        .foregroundColor(.black.opacity(0.6))
 
                     Image(v.gender)
                         .resizable()
