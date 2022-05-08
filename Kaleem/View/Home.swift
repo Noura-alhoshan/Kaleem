@@ -418,7 +418,7 @@ struct HomeAll: View{
                                 NavigationLink(
                                     destination:     TextToSpeechV().navigationBarHidden(true),
                                     label: {
-                                        Image(systemName: "newspaper.circle.fill")
+                                        Image(systemName: "speaker.wave.2.circle.fill")
                                             .foregroundColor(Color("Color"))
                                             .font(.system(size: 65))
                                     }

@@ -13,6 +13,7 @@ struct Admin2Home: View {
     @EnvironmentObject var session: SessionStore
     @State var showAccQuiz: Bool = false
     @State var index = 0
+    @State var showingAlert = false
    
     var body: some View {
         
@@ -25,22 +26,25 @@ struct Admin2Home: View {
             NavigationLink(destination: BrowseQuizV(quizColl: "AcceptanceQuiz"), isActive: $showAccQuiz, label: {EmptyView()} )
             HStack{
 
-                            Button(action: {
-                                session.signOut()
-                            },
-                 
-                    label: {
-                      Text("تسجيل الخروج")
-                            .font(Font.custom("Almarai-Regular", size: 20))
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("Color"))
-                            .padding(.leading, 180)
-                            .background(.white)
-                   
-                    }
-                )
-                    .navigationBarHidden(true)
+                Button(action: {
+                    showingAlert = true
+                }, label: {
+                    Text("تسجيل الخروج")
+                        .foregroundColor(Color(.black).opacity(0.6))
+                        .font(Font.custom("Almarai-Bold", size: 20))
+                        .fontWeight(.bold)
+                      //  .padding(.vertical)
+                      //  .padding(.horizontal,50)
+                      //  .background(Color(.gray).opacity(0.9))
+                       // .clipShape(Capsule())
+                       // .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+                })
+                    .padding(.top, 20)
+                    .padding(.leading,200)
+                    .alert("هل أنت متأكد من تسجيل الخروج؟", isPresented: $showingAlert, actions: {
+                          Button("نعم", action: {session.signOut()})
+                          Button("لا", role: .cancel, action: {})
+                        })
             }
             HStack{
   
