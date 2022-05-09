@@ -29,10 +29,10 @@ struct Admin2Home: View {
                 Button(action: {
                     showingAlert = true
                 }, label: {
-                    Text("تسجيل الخروج")
-                        .foregroundColor(Color(.black).opacity(0.6))
-                        .font(Font.custom("Almarai-Bold", size: 20))
-                        .fontWeight(.bold)
+             
+                    Image("logout").resizable()
+                        .frame(width: 30, height: 30)
+                        .padding(.leading, 100)
                       //  .padding(.vertical)
                       //  .padding(.horizontal,50)
                       //  .background(Color(.gray).opacity(0.9))
@@ -205,7 +205,7 @@ struct Admin2Home: View {
                                 NavigationLink(
                                     destination:     BrowseQuizV(quizColl: "EducationalQuiz").navigationBarHidden(true),
                                 label: {
-                                    Image(systemName: "newspaper.circle.fill")
+                                    Image(systemName: "book.closed.circle.fill")
                                         .foregroundColor(Color("Color"))
                                         .font(.system(size: 65))
                                 }
@@ -245,24 +245,13 @@ struct Admin2Home: View {
                 .padding(.trailing, 50)
                 .padding(.top, 25)
                 .padding(.bottom, 15)
-            
-//            Button(action: {
-//                session.signOut()
-//            }, label: {
-//                Text("تسجيل الخروج")
-//                    .font(.headline)
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .frame(width: 220, height: 60)
-//                    .background(Color("Color").opacity(0.3))
-//                    .cornerRadius(35.0)
-//            })
-//                    .padding(.top,50)
+
         }
 
      
     }   .navigationBarTitle("")
             .navigationBarHidden(true)
+            .foregroundColor(Color.black.opacity(0.7))
        
 
             

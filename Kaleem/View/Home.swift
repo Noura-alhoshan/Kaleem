@@ -228,7 +228,7 @@ struct HomeAll: View{
                         }
                         
                         //location card
-                        VStack(spacing: 10){
+              //          VStack(spacing: 10){
                        
                             
                             
@@ -277,34 +277,52 @@ struct HomeAll: View{
 
 
                                     
+                                         LocationButton {
+                                           locationManager.requestLocation()
+
+                                         action: do {
+                                             if(locationManager.CalculateHospitalDistance() != 1.0 ){
+                                             self.showhos = true
+                                             }
+                                             else
+                                                 if(locationManager.CalculateUniDistance() != 1.0 ){
+                                                 self.showuni = true
+                                             }
+                                             else
+                                                 if(locationManager.CalculateCoffeDistance() != 1.0 ){
+                                                 self.showcoffe = true
+                                             }
+                                                 else{
+                                                     self.showNoResult = true}
+
+
+                                             locationManager.requestLocation()
+                                             print(String(locationManager.CalculateHospitalDistance()))
+
+                                             }
+                                         }
+                                        // .frame(  width: 900, height: 950)
+                                         .symbolVariant(.fill)
+                                         .foregroundColor(.white)
+                                         .cornerRadius(50.0)
+                                         .labelStyle(.iconOnly)
+                                         .font(.largeTitle)
+                                         .padding(.trailing)
+                                         .tint(Color("Color"))
+                                         .padding(.bottom,50)
+                                         .padding(.leading, 50)
+                                         .frame(width: 180, height: 160 )
+                                       //  .clipShape(.Capsule)
+                                         .background( Color("Color").opacity(0.2))
+                                    
                                     
                              
                    
                                 }
                                 .padding(.trailing,130)
                                     //.padding(.bottom,30)
-                                    .padding(.top,120) //HHEEERRREE
-                                
-                                
-//                                HStack{
-//
-//                                    Spacer()
-//                                    //consider to change it sutibale icons
-//
-//                                    NavigationLink(
-//                                        destination:     UniV().navigationBarHidden(true),
-//                                        label: {
-//                                            Image(systemName: "location.fill")
-//                                                .foregroundColor(Color("Color"))
-//                                                .font(.system(size: 65))
-//                                        }
-//                                    )
-//
-//                                }
-//
-//                                .padding(.trailing,130)
-//                                .padding(.bottom,50)
-//                                .padding(.top, -10) ///DEMO
+                                    .padding(.top,120)
+
                                 
                                 
                             } .padding(.top, -80)
@@ -312,21 +330,21 @@ struct HomeAll: View{
                             
                        
                             
-                        }
-                        
-                        //setting custom width...
-                     
-                        .padding(.leading, 50)
-                        .padding(.top, 40)
-                  //.frame(width: UIScreen.main.bounds.width / 2)
-
-                        .frame(width: 180, height: 160 )
-                        .background(self.index == 1 ? Color("Color").opacity(0.2)  : .gray.opacity(0.1))
-                        .cornerRadius(35)
-                        .onTapGesture {
-                            self.index = 1
-                        }
-                        
+//                        }
+//
+//                        //setting custom width...
+//
+//                        .padding(.leading, 50)
+//                        .padding(.top, 40)
+//
+//
+//                        .frame(width: 180, height: 160 )
+//                        .background(self.index == 1 ? Color("Color").opacity(0.2)  : .gray.opacity(0.1))
+//                        .cornerRadius(35)
+//                        .onTapGesture {
+//                            self.index = 1
+//                        }
+//
                         
                         
    
@@ -337,44 +355,7 @@ struct HomeAll: View{
                     .padding(.trailing, 50)
                     .padding(.top, 25)
                     .padding(.bottom, 15)
-               
-                    LocationButton {
-                      locationManager.requestLocation()
 
-                    action: do {
-                        if(locationManager.CalculateHospitalDistance() != 1.0 ){
-                        self.showhos = true
-                        }
-                        else
-                            if(locationManager.CalculateUniDistance() != 1.0 ){
-                            self.showuni = true
-                        }
-                        else
-                            if(locationManager.CalculateCoffeDistance() != 1.0 ){
-                            self.showcoffe = true
-                        }
-                            else{
-                                self.showNoResult = true}
-
-
-                        locationManager.requestLocation()
-                        print(String(locationManager.CalculateHospitalDistance()))
-
-                        }
-                    }
-                   // .frame(  width: 900, height: 950)
-                    .symbolVariant(.fill)
-                    .foregroundColor(.white)
-                    .cornerRadius(50.0)
-                    .labelStyle(.iconOnly)
-                    .tint(.blue)
-                    .font(.largeTitle)
-                    .padding(.trailing)
-                    .tint(Color("Color"))
-                    .onAppear() {
-                      //  FavoriteListV()
-
-                    }
     
                       
 
@@ -391,16 +372,7 @@ struct HomeAll: View{
                                 VStack(alignment: .trailing, spacing: 15){
                           Text("نص مسموع")
                                         .font(Font.custom("Almarai-Bold", size: 25))
-                                          //   .foregroundColor(.gray.opacity(1.5))
-//                                             .padding(.leading, -30)
-//                                             .padding(.top, -25)
-                                    
-                                    
-//
-//                                 Text("ترجم كتابتك لنص مسموع")
-//                                        .font(Font.custom("Almarai-Bold", size: 20))
-//                                        .foregroundColor(.gray.opacity(0.9))
-//                                        .padding(.top, -7)
+
                                     
                                     
                                 }//VStack#1
@@ -461,13 +433,7 @@ struct HomeAll: View{
                               Text("من نحن")
                                         .font(Font.custom("Almarai-Bold", size: 25))
                                     //    .foregroundColor(.gray.opacity(1.5))
-                                    
-                                    
-//
-//                                 Text("استخدامك لكليــم")
-//                                        .font(Font.custom("Almarai-Bold", size: 20))
-//                                        .foregroundColor(.gray.opacity(0.9))
-//                                        .padding(.top, -7)
+     
                                     
                                     
                                 }//VStack#1

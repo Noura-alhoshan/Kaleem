@@ -51,10 +51,14 @@ struct ProfileView: View {
                 Button(action: {
                     showingAlert = true
                 }, label: {
-                    Text("تسجيل الخروج")
-                        .foregroundColor(Color(.black).opacity(0.6))
-                        .font(Font.custom("Almarai-Bold", size: 20))
-                        .fontWeight(.bold)
+                    Image("logout").resizable()
+                        .frame(width: 30, height: 30)
+                        .padding(.leading, 100)
+                        
+//                    Text("تسجيل الخروج")
+//                        .foregroundColor(Color(.black).opacity(0.6))
+//                        .font(Font.custom("Almarai-Bold", size: 20))
+//                        .fontWeight(.bold)
                       //  .padding(.vertical)
                       //  .padding(.horizontal,50)
                       //  .background(Color(.gray).opacity(0.9))

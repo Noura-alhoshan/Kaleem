@@ -46,11 +46,9 @@
             symbolName = "*0x102e0ae80">
             <Locations>
                <Location
-                  uuid = "D085F9FA-F256-4F3F-88A5-A331DDBE6FEC - 19b188ac61a995"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  moduleName = "Kaleem"
                   usesParentBreakpointCondition = "Yes"
                   offsetFromSymbolStart = "0">
                </Location>
