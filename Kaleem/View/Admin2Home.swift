@@ -99,13 +99,13 @@ struct Admin2Home: View {
                 
     
  
-                HStack(spacing: 10){
+                VStack(spacing: 10){
                     
                     //Call cards view methods
                     //Cards()
                     
                     //VC card
-                    VStack(spacing: 10){
+                    ZStack{
                         
 
                         
@@ -116,6 +116,8 @@ struct Admin2Home: View {
                                
                                     
                                     .font(Font.custom("Almarai-Bold", size: 25))
+                                    .padding(.leading, 70)
+                                    .padding(.bottom, 80)
 
                                 
                                 
@@ -147,9 +149,8 @@ struct Admin2Home: View {
                             })
                             
                         }
-                        
-                        .padding(.trailing,130)
-                        .padding(.bottom,50)
+                        .padding(.trailing,250)
+                        .padding(.bottom,55)
                         .padding(.top, -10)
                         //.padding(.top,10)
                         
@@ -162,7 +163,8 @@ struct Admin2Home: View {
                     .padding(.top, 60)
                     
                // .frame(width: UIScreen.main.bounds.width / 2)
-                    .frame(width: 180, height: 160 )
+                  //  .frame(width: 180, height: 160 )
+                    .frame(width: 300, height: 200 )
                     .background(self.index == 0 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                     .cornerRadius(35)
                     .onTapGesture {
@@ -171,11 +173,11 @@ struct Admin2Home: View {
                     
                     //location card
                     
-                    VStack(spacing: 10){
+                    HStack(spacing: 10){
                         
 
                         
-                        HStack{
+                        ZStack{
                             
                             VStack(alignment: .trailing, spacing: 15){
             Text("اختبار المعرفة")
@@ -213,8 +215,8 @@ struct Admin2Home: View {
                             
                         }
                         
-                        .padding(.trailing,130)
-                        .padding(.bottom,50)
+                        .padding(.trailing,210)
+                        .padding(.bottom,55)
                         .padding(.top, -10)
                         //.padding(.top,10)
                         
@@ -227,7 +229,9 @@ struct Admin2Home: View {
                     .padding(.top, 60)
                     
                // .frame(width: UIScreen.main.bounds.width / 2)
-                    .frame(width: 180, height: 160 )                        .background(self.index == 1 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
+                  //  .frame(width: 180, height: 160 )
+                    .frame(width: 300, height: 200 )
+                    .background(self.index == 1 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                     .cornerRadius(35)
                     .onTapGesture {
                         self.index = 1

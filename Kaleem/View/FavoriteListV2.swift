@@ -73,13 +73,24 @@ struct ListviewFavorite: View {
             
             Spacer(minLength: 30)
             Text("المفضلة")
-                .bold()
                 .font(Font.custom("Almarai-Regular", size: 40))
                 .foregroundColor(Color("Color"))
+         
+         
+            Text("")
+           
+                .onAppear(){
+                    FavObj.FavFetchData()
+                }
             
+            if(FavObj.FavList.isEmpty){
+               Text("لايوجد جمل مفضلّة")
+                    .padding(.top,200)
+            }
+            GeometryReader{
             
-            
-            GeometryReader{ firtFrame in
+             
+                firtFrame in
                 ScrollView(. vertical, showsIndicators: false) {
                     VStack{
                         ForEach(FavObj.FavList){ album in
@@ -92,15 +103,17 @@ struct ListviewFavorite: View {
                     }.padding(.horizontal).padding(.top)
                 }.zIndex (1.0)
                 
+                
+         
+                
             }  .onAppear(){
                FavObj.FavFetchData()
-               
+                
                 
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
             //end of GeometryReader
-            
             
             
             

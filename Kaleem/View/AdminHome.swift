@@ -147,7 +147,8 @@ struct AdminHome: View{
                         .padding(.top, 60)
                         
                    // .frame(width: UIScreen.main.bounds.width / 2)
-                        .frame(width: 200, height: 200 )
+                       // .frame(width: 200, height: 200 )
+                        .frame(width: 300, height: 200 )
                         .background(self.index == 0 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                         .cornerRadius(35)
                         .onTapGesture {
@@ -221,7 +222,9 @@ struct AdminHome: View{
                         .padding(.top, 60)
                         
                    // .frame(width: UIScreen.main.bounds.width / 2)
-                        .frame(width: 180, height: 160 )                        .background(self.index == 1 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
+                        .frame(width: 180, height: 160 )
+                        .frame(width: 300, height: 200 )
+                        .background(self.index == 1 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                         .cornerRadius(35)
                         .onTapGesture {
                             self.index = 1

@@ -2,7 +2,7 @@
 //  root.swift
 //  VideoCap
 //
-//  Created by ali  on 18/03/2022.
+
 //
 
 import SwiftUI
@@ -55,7 +55,35 @@ struct root: View {
 //                }
             
     
-            Button(action: {
+//            Button(action: {
+//                isBeforeTranslate = false
+//                showModal()
+//                videoData = nil
+//                url = nil
+//                uploadAmount = 0.0
+//                showUploading = false
+//                message = nil
+//               isLoading = false
+//
+//            }) {
+//                Text(" ابدأ الالتـقاط")
+//                    .foregroundColor(Color.white)
+//                    .fontWeight(.bold)
+//                    .padding(.vertical)
+//                    .padding(.horizontal,50)
+//                    .background(Color("Kcolor"))
+//                    .clipShape(Capsule())
+//                    .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)            }
+//
+//            Spacer(minLength: 10)
+//        }.onAppear {
+//            if let url = self.url{
+//                uploadToServer(videoUrl: url)
+//            }
+//        }
+      
+        if !self.isLoading {
+            Button("ابدأ بالالتقاط") {
                 isBeforeTranslate = false
                 showModal()
                 videoData = nil
@@ -64,26 +92,17 @@ struct root: View {
                 showUploading = false
                 message = nil
                isLoading = false
-
-            }) {
-                Text(" ابدأ الالتـقاط")
-                    .foregroundColor(Color.white)
-                    .fontWeight(.bold)
-                    .padding(.vertical)
-                    .padding(.horizontal,50)
-                    .background(Color("Kcolor"))
-                    .clipShape(Capsule())
-                    .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)            }
-        
-            Spacer(minLength: 10)
-        }.onAppear {
-            if let url = self.url{
-                uploadToServer(videoUrl: url)
             }
         }
-      
-
+        Spacer(minLength: 10)
+    }.onAppear {
+        if let url = self.url{
+            uploadToServer(videoUrl: url)
+        }
     }
+    
+}
+    
     func showModal() {
             let window = UIApplication.shared.windows.first
         let vc = UIHostingController(rootView: ContentV(rootView: self))

@@ -117,7 +117,7 @@ struct VolunteerHome: View {
                                     EQuizV().environmentObject(quizManager1) }
                                 
                                     label: {
-                                        Image(systemName: "newspaper.circle.fill")
+                                        Image(systemName: "book.closed.circle.fill")
                                             .foregroundColor(Color("Color"))
                                             .font(.system(size: 65))
                                     }
