@@ -33,11 +33,7 @@ struct Admin2Home: View {
                     Image("logout").resizable()
                         .frame(width: 30, height: 30)
                         .padding(.leading, 100)
-                      //  .padding(.vertical)
-                      //  .padding(.horizontal,50)
-                      //  .background(Color(.gray).opacity(0.9))
-                       // .clipShape(Capsule())
-                       // .shadow(color: Color.gray.opacity(0.1), radius:5 , x: 0, y: 5)//// change it
+           
                 })
                     .padding(.top, 20)
                     .padding(.leading,200)
@@ -115,8 +111,8 @@ struct Admin2Home: View {
                            Text("اختبار القبول")
                                
                                     
-                                    .font(Font.custom("Almarai-Bold", size: 25))
-                                    .padding(.leading, 70)
+                                    .font(Font.custom("Almarai-Bold", size: 30))
+                                    .padding(.leading, 60)
                                     .padding(.bottom, 80)
 
                                 
@@ -149,7 +145,7 @@ struct Admin2Home: View {
                             })
                             
                         }
-                        .padding(.trailing,250)
+                        .padding(.trailing,200)
                         .padding(.bottom,55)
                         .padding(.top, -10)
                         //.padding(.top,10)
@@ -161,9 +157,6 @@ struct Admin2Home: View {
                     
                     .padding(.leading, 30)
                     .padding(.top, 60)
-                    
-               // .frame(width: UIScreen.main.bounds.width / 2)
-                  //  .frame(width: 180, height: 160 )
                     .frame(width: 300, height: 200 )
                     .background(self.index == 0 ?  Color("Color").opacity(0.2) : .gray.opacity(0.1))
                     .cornerRadius(35)
@@ -173,24 +166,22 @@ struct Admin2Home: View {
                     
                     //location card
                     
-                    HStack(spacing: 10){
+                    ZStack{
                         
 
                         
-                        ZStack{
+                        HStack{
                             
                             VStack(alignment: .trailing, spacing: 15){
             Text("اختبار المعرفة")
-                                    .font(Font.custom("Almarai-Bold", size: 25))
+                                    .font(Font.custom("Almarai-Bold", size: 30))
+                                    .padding(.leading, 60)
+                                    .padding(.bottom, 80)
 
                                 
                                 
                             }//VStack#1
-                    
-                            
-                   //         Spacer()
-                            
-                            
+
                         }        .padding()
                         
                         
@@ -272,13 +263,3 @@ struct Admin2Home_Previews: PreviewProvider {
     }
 }
 
-
-//Button(action: {
-//    //AddAccQuizV()
-//    showAccQuiz = true
-//}, label: {
-//
-//    Image(systemName: "newspaper.circle.fill")
-//        .foregroundColor(Color("Color"))
-//        .font(.system(size: 75))
-//})

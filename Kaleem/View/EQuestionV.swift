@@ -39,7 +39,7 @@ struct EQuestionV: View {
           
             VStack( spacing: 10) {
 
-                AsyncImage(url: URL(string: quizManager1.question), scale: 3.0).frame(width: 330, height: 180 )}
+                AsyncImage(url: URL(string: quizManager1.question), scale: 4.0).frame(width: 330, height: 180 )}
 
             Text( quizManager1.questionText )
                     .font(.system(size: 20))

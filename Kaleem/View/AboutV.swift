@@ -43,18 +43,18 @@ struct AboutPopupView: View {
                                     .foregroundColor(.white)
                                     .padding(.vertical,10)
                                     .padding(.horizontal)
-                                // .background(Color.black.opacity(0.4))
+                   
                                     .background(Color("Color"))
                                     .cornerRadius(10)
                                  
                      
                         }).padding(.horizontal,25)
-        }  .padding(.top,-390)
+        }  .padding(.top,-420)
         ZStack(alignment: .topLeading) {
   
          
             Color.white.opacity(0.2)
-                .frame(width: 300, height: 680)
+                .frame(width: 300, height: 630)
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
                 .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 10)
                 .blur(radius: 1)
@@ -67,11 +67,11 @@ struct AboutPopupView: View {
 
                 
                 VStack(alignment: .trailing, spacing: 16) {
-                    Spacer(minLength: 5)
+                    Spacer(minLength: 2)
                     Text("١. ماهو كليم")
                         .font(Font.custom("Almarai-Bold", size: 20))
                         .multilineTextAlignment(.trailing)
-                   Text("دعم فئة الصم وضعاف السمع من خلال تمثيل تطبيق كليــم كمساعد شخصي لاحتياجاتهم")
+                   Text("كَلِّيم هو تطبيق عربي يتمثّل في كونه حلقة وصل بين أفراد المجتمع و فئتي الصم و ضعاف السمع، ")
                         .font(.footnote)
                         .multilineTextAlignment(TextAlignment.trailing)
                     
@@ -80,19 +80,19 @@ struct AboutPopupView: View {
                         .font(Font.custom("Almarai-Bold", size: 20))
                         .multilineTextAlignment(.trailing)
                     
-                    secondTerm()
+                    About1()
                     
                     Spacer(minLength: 10)
                  
               
-                        thirdTerm()
+                    About2()
                     Spacer(minLength: 10)
              
-                    Text("* يستمر حساب المستخدم مفعلاً ما لم يتم إنهاؤه من قبل إدارة تطبيق (كليــم)، أو بناءً على طلب من المستخدم يرسل إلى البريد الإلكتروني: (Kaleemapp.ksu@gmail.com)")
-                          .font(.footnote)
-
-                          .multilineTextAlignment(TextAlignment.center)
-                          .padding(.bottom)
+//                    Text("* يستمر حساب المستخدم مفعلاً ما لم يتم إنهاؤه من قبل إدارة تطبيق (كليــم)، أو بناءً على طلب من المستخدم يرسل إلى البريد الإلكتروني: (Kaleemapp.ksu@gmail.com)")
+//                          .font(.footnote)
+//
+//                          .multilineTextAlignment(TextAlignment.center)
+//                          .padding(.bottom)
                         
                 }
             }   .font(Font.custom("Almarai-Bold", size: 10))
@@ -107,11 +107,7 @@ struct About1: View {
 
     var body: some View {
         VStack(alignment: .trailing){
-        Text("١.٢  يتحمل المستخدم المسؤولية عن صحة البيانات  المدخلة في التطبيق")
-           
-            Text("")
-            
-            Text("٢.٢  يتحمل المستخدم المسؤولية عن صحة البيانات  المدخلة في التطبيق")
+        Text("يساعد فئتيّ الصم وضعاف السمع على التواصل مع المجتمع عبر ترجمة لغة الإشارة إلى نص مكتوب أومسموع باستخدام تقنية تتبع اليدين")
             
         
         }   .font(.footnote)
@@ -130,11 +126,12 @@ struct About2: View {
         VStack(alignment: .trailing) {
       
             
-        Text("١.٣  يجب أن تحتوي على الأقل ٧ خانات")
+        Text("١.٣  استخراج جمل حسب موقع المستخدم")
              
-            Text("")
+  
             
-            Text("٢.٣ يجب أن تحتوي حرف واحد على الأقل كبير، وحرف واحد على الأقل صغير، ورقم واحد على الأقل")
+           Text("٣.٢ الاستعانة بمتطوع عن طريق مكالمة مرئية")
+            Text("٣.٣ ترجمة لغة الاشارة إلى نص مقروء أو مسموع")
                   
         
         }   .font(.footnote)

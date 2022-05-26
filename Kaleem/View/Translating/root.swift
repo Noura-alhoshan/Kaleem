@@ -92,7 +92,8 @@ struct root: View {
                 showUploading = false
                 message = nil
                isLoading = false
-            }
+            }                .frame(width: 200, height:100)
+                .foregroundColor(Color("Color"))
         }
         Spacer(minLength: 10)
     }.onAppear {
